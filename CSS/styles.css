@@ -99,7 +99,7 @@ nav ul li a:hover {
   background-color: #ffccbc;
   min-width: 180px;
   z-index: 1;
-
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .dropdown:hover .dropdown-content {
@@ -110,6 +110,10 @@ nav ul li a:hover {
   color: #fff;
   padding: 12px;
   text-decoration: none;
+  max-width: 150px; /* Limit width to fit on one line */
+  overflow: hidden; /* Hide overflow if it exceeds the width */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+  display: block; /* Ensure it's treated as a block element */
 }
 
 .dropdown-content a:hover {
