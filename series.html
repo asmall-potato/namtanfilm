@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/series-social.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>NAMTANFILM | SERIES</title>
+</head>
+<body>
+    <header class="header-wallpaper-sub">
+        <div class="header-container">
+            <h1 class="logo">NAMTANFILM</h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+            ☰
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="series.html">Series</a>
+                        <div class="dropdown-content">
+                            <a href="pluto.html">Pluto นิทาน ดวงดาว ความรัก</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="live-count.html">Live Count</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="video.html">Video</a>
+                    </li>
+                    <li><a href="magazine.html">Magazine</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+       
+        
+    </header>
+    
+
+    <main>
+        <h2>Series</h2>
+        <div class="series-container">
+            <div class="column">
+                <h3>LAST TWILIGHT</h3>
+                <!-- Updated link -->
+                    <img src="Images/sub%20series/last-twilight-premiere-poster-v0-7m1x4roofgzb1.jpg" >
+
+               
+            </div>
+            <div class="column">
+                <h3>PLOY'S YEARBOOK</h3>
+                    <img src="Images/sub%20series/MV5BMmM2ODFhMjEtOTdhOS00MGNjLWI1ZTgtMTU3MTk5NTQ2NjAyXkEyXkFqcGdeQXVyNTkzNjEwMjI@._V1_FMjpg_UX1000_.jpg" >
+            </div>
+
+            <div class="column">
+                <h3>PLUTO SERIES</h3>
+                <a href="TSOU.html"> 
+                    <img src="Images/sub%20series/GZHk81nbgAA_6QJ.jfif">
+                </a>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NAMTANFILM. All rights reserved.</p>
+        <p>Website developed and designed by 一粒马铃薯potato.</p>
+        
+        </footer>
+        <!-- Google Translate Element -->
+        <div id="google_translate_element"></div>
+    
+        <script>
+        // Scroll reveal effect
+        const sections = document.querySelectorAll('section');
+        const options = {
+        root: null,
+        threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        observer.unobserve(entry.target);
+        }
+        });
+        }, options);
+        
+        sections.forEach(section => {
+        observer.observe(section);
+        });
+        
+        // Change header transparency on scroll
+        const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
+
+            //hamburger for only display at mobile devices
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('showing');
+        });
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'zh-CN,zh-TW,th,ko,ja,ms,id',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        // Load the Google Translate script
+        const script = document.createElement('script');
+        script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.body.appendChild(script);
+        </script>
+        </body>
+        </html>
+        

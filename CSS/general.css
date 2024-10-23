@@ -1,0 +1,67 @@
+.general-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Centers the items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Adds some padding around the container */
+}
+
+.general-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: calc(33.33% - 40px); /* Three items per row, accounting for gap */
+    max-width: 300px; /* Ensures items don't exceed 300px */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    background-color: #fff; /* Background color for visibility */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures that overflow content is hidden */
+}
+
+h4 {
+    font-weight: bold;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.general-item img {
+    max-width: 100%; /* Ensures the image scales to fit the width of the container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensures the image is treated as a block-level element */
+    margin: 0 auto 20px auto; /* Centers the image and adds spacing at the bottom */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.instagram-media {
+    min-width: 300px !important; /* Overrides minimum width */
+}
+
+.iframe {
+    display: block;
+    margin: 0 auto; /* Centers block elements */
+}
+
+.embed-container {
+    width: 300px; /* Set the width to 300px */
+    height: 563.99px; /* Set the height to 563.99px */
+    overflow: hidden; /* Hide any overflow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .general-item {
+        width: calc(50% - 40px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .general-item {
+        width: 100%; /* One item per row on small screens */
+    }
+}

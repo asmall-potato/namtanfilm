@@ -1,0 +1,69 @@
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f4f8; /* Light background for contrast */
+}
+
+.video-item {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
+    background-color: #ffffff;
+    border-radius: 15px; /* More rounded corners */
+    overflow: hidden;
+    position: relative; /* Required for absolute positioning */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add shadow transition */
+}
+
+.video-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.video-item::after {
+    content: '';
+    display: block;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px; /* Rounded corners for iframe */
+}
+
+/* Title Overlay */
+.video-title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 15px 15px; /* Rounded corners at the bottom */
+    font-size: 1.2em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .video-item {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .video-item {
+        flex: 0 0 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+}

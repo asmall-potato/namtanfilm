@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/sub-series.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>NAMTANFILM | Pluto นิทาน ดวงดาว ความรัก</title>
+</head>
+<body>
+    <header class="header-wallpaper-sub-series">
+        <div class="header-container">
+            <h1 class="logo">NAMTANFILM</h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+            ☰
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="series.html">Series</a>
+                        <div class="dropdown-content">
+                            <a href="pluto.html">Pluto นิทาน ดวงดาว ความรัก</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="live-count.html">Live Count</a>
+                        <div class="dropdown-content">
+                            <a href="pluto-live-count.html">Pluto Series</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="video.html">Video</a>
+                    </li>
+                    <li><a href="magazine.html">Magazine</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bottom-right-text-sub">
+            <h1>Pluto นิทาน ดวงดาว ความรัก</h1>
+        </div>
+        <div class="bottom-right-text-sub">
+            <p>#PlutoSeries</p>
+        </div>
+        
+    </header>
+
+    <main>
+        
+    
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <h2>ABOUT Pluto Series</h2>
+            <p>​​"Pluto Series" is GMMTV's second sapphire series, starring by Namtan Tipnaree and Film Rachanun.  </br>
+                The series is adapted from the novel "PLUTO: A Story, A Planet, and Love" written by Chao Planoy.</p>
+        </section>
+    
+        <!-- YouTube Section -->
+        <section class="video-section">
+            <h2>Watch the Official Trailer</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cBq6p5lMxvg?si=DhTughvFoCqJFCvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    
+        <!-- Watch Now Section -->
+        <section class="watch-section">
+            <h2>Related to Pluto Series</h2>
+            <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sU1Fiqt4Qe4?si=6onQtH6ATaDjzL5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/WdSUufq0Mfk?si=Q4-Quo0R-D-gJlO5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AMzlTbjBLDo?si=tqMQ-9DQuSs3gckE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Watch on Streaming Platforms Section -->
+        <section class="watch-platforms-section">
+            <h2>Watch the Series on Streaming Platforms</h2>
+            <p>You can watch the Pluto Series worldwide (except Thailand) on GMMTV's YouTube channel and in Thailand exclusively on VIU.</p>
+            <div class="platform-buttons">
+                <a href="https://youtube.com/playlist?list=PLszepnkojZI6L1DHV2vEaGdjo_QkQizF_&si=on-Q1jp-zff5o-2o" class="watch-link" target="_blank" rel="noopener noreferrer">Watch on GMMTV YouTube</a>
+                <a href="https://www.viu.com/ott/th/th/vod/2444938/Pluto-%E0%B8%99%E0%B8%B4%E0%B8%97%E0%B8%B2%E0%B8%99-%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%94%E0%B8%B2%E0%B8%A7-%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B1%E0%B8%81" class="watch-link" target="_blank" rel="noopener noreferrer">Watch on VIU (Thailand)</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NAMTANFILM. All rights reserved.</p>
+        <p>Website developed and designed by 一粒马铃薯potato.</p>
+        
+        </footer>
+        <!-- Google Translate Element -->
+        <div id="google_translate_element"></div>
+        <script>
+        // Scroll reveal effect
+        const sections = document.querySelectorAll('section');
+        const options = {
+        root: null,
+        threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        observer.unobserve(entry.target);
+        }
+        });
+        }, options);
+        
+        sections.forEach(section => {
+        observer.observe(section);
+        });
+        
+        // Change header transparency on scroll
+        const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
+
+            //hamburger for only display at mobile devices
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('showing');
+        });
+
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'zh-CN,zh-TW,th,ko,ja,ms,id',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        // Load the Google Translate script
+        const script = document.createElement('script');
+        script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.body.appendChild(script);
+        </script>
+        </body>
+        </html>

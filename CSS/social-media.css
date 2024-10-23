@@ -1,0 +1,126 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #F5F3F1;
+    line-height: 1.6; /* Added for better readability */
+}
+
+/* Container for the follow section */
+.follow-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper for centering content */
+.wrapper {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Series Container Styling */
+.series-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Individual Column Styling */
+.column {
+    text-align: center;
+    max-width: 280px;
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Hover Effect for Columns */
+.column:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.column img {
+    width: 100%;
+    height: auto;
+    max-width: 240px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.column img:hover {
+    transform: scale(1.1);
+}
+
+/* Styling for Headings and Text */
+.column h3 {
+    font-size: 1.4em; /* Increased font size for headings */
+    margin-top: 15px;
+    color: #2c3e50;
+}
+
+.column p {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #7f8c8d;
+}
+
+/* Link Styling */
+.column a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.column a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .series-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .series-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        max-width: 100%;
+    }
+
+    .column h3 {
+        font-size: 1.2em; /* Adjusted size for smaller screens */
+    }
+
+    .column p {
+        font-size: 0.9em;
+    }
+}

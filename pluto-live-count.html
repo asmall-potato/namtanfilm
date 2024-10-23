@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/live-count.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>NAMTANFILM | PLUTO LIVE COUNT</title>
+</head>
+<body>
+    <header class="header-wallpaper-sub">
+        <div class="header-container">
+            <h1 class="logo">NAMTANFILM</h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+            ☰
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="series.html">Series</a>
+                        <div class="dropdown-content">
+                            <a href="pluto.html">Pluto นิทาน ดวงดาว ความรัก</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="live-count.html">Live Count</a>
+                        <div class="dropdown-content">
+                            <a href="pluto-live-count.html">Pluto Series</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="video.html">Video</a>
+                    </li>
+                    <li><a href="magazine.html">Magazine</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        
+    </header>
+    
+
+    <main>
+        <h2 style="text-align: center; margin-bottom: 20px;">Pluto Series Live Counts</h2>
+        <div class="wrapper">
+        <div class="live-count-container">
+    
+            <div class="live-count-row">
+                <h3>Pluto Series (EP 1)</h3>
+                <div class="counter-container">
+                    <div class="counter-item">
+                        <h4>Pluto นิทาน ดวงดาว ความรัก | EP.1 [1/4]</h4>
+                        <iframe height="80px" width="300px" frameborder="0" src=https://livecounts.io/embed/youtube-live-view-counter/dObc3WRi6TU style="border: 0; width:300px; height:80px;"></iframe>
+                    </div>
+                    <div class="counter-item">
+                        <h4>Pluto นิทาน ดวงดาว ความรัก | EP.1 [2/4]</h4>
+                        <iframe height="80px" width="300px" frameborder="0" src=https://livecounts.io/embed/youtube-live-view-counter/R917TJeA-c4 style="border: 0; width:300px; height:80px;"></iframe>
+                    </div>
+                    <div class="counter-item">
+                        <h4>Pluto นิทาน ดวงดาว ความรัก | EP.1 [3/4]</h4>
+                        <iframe height="80px" width="300px" frameborder="0" src=https://livecounts.io/embed/youtube-live-view-counter/kNgQ_BdQovQ style="border: 0; width:300px; height:80px;"></iframe>
+                    </div>
+                    <div class="counter-item">
+                        <h4>Pluto นิทาน ดวงดาว ความรัก | EP.1 [4/4]</h4>
+                        <iframe height="80px" width="300px" frameborder="0" src=https://livecounts.io/embed/youtube-live-view-counter/8vc0dR-RzzM style="border: 0; width:300px; height:80px;"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 NAMTANFILM. All rights reserved.</p>
+        <p>Website developed and designed by 一粒马铃薯potato.</p>
+        
+        </footer>
+         <!-- Google Translate Element -->
+        <div id="google_translate_element"></div>
+        <script>
+        // Scroll reveal effect
+        const sections = document.querySelectorAll('section');
+        const options = {
+        root: null,
+        threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        observer.unobserve(entry.target);
+        }
+        });
+        }, options);
+        
+        sections.forEach(section => {
+        observer.observe(section);
+        });
+        
+        // Change header transparency on scroll
+        const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
+
+            //hamburger for only display at mobile devices
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('showing');
+        });
+
+            function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'zh-CN,zh-TW,th,ko,ja,ms,id',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        // Load the Google Translate script
+        const script = document.createElement('script');
+        script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.body.appendChild(script);
+        </script>
+        </body>
+        </html>
+        

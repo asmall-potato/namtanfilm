@@ -1,0 +1,123 @@
+
+
+/* Importing Open Sans from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  
+    background: linear-gradient(to bottom right, #e0f7fa, #a7ffeb); /* Gradient background */
+    font-family: 'Open Sans', sans-serif; /* Updated font style */
+   /* padding: 20px; /* Add some padding around the body */
+ /*  min-height: 100vh; /* Ensure the body takes full height */
+}
+
+.wrapper {
+    display: flex;
+    flex: 1; /* Allow the wrapper to grow and fill space */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px;
+}
+
+h2 {
+    margin: 20px 0; /* Spacing above and below */
+    font-size: 2.5em; /* Larger title font size */
+    color: #004d40; /* Darker color for headings */
+    text-align: center; /* Center the heading */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.live-count-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; /* Full width */
+    max-width: 800px; /* Limit max width for better readability */
+    background: linear-gradient(135deg, #ffffff, #b2dfdb); /* Gradient background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px; /* Padding inside container */
+}
+
+.live-count-row {
+    margin: 15px 0; 
+    width: 100%; 
+    text-align: center; 
+    background: linear-gradient(135deg, #ffffff, #b2dfdb); /* Linear gradient background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    padding: 20px; /* Padding inside each row */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.live-count-row:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.counter-container {
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+.counter-item {
+    text-align: center; /* Center align the text */
+    flex: 1; /* Allow items to grow and fill the space evenly */
+    min-width: 300px; /* Ensure minimum width for responsive design */
+    background: linear-gradient(135deg, #f9f9f9, #e0f7fa); /* Gradient background for items */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside each counter item */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.counter-item:hover {
+    background: linear-gradient(135deg, #e0f7fa, #b2dfdb); /* Change background on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+h4 {
+    margin: 5px 0; /* Add some spacing around the titles */
+    color: #004d40; /* Darker color for subheadings */
+}
+
+iframe {
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners for iframes */
+    transition: transform 0.2s; /* Smooth scaling effect */
+    width: 100%; /* Ensure iframe takes full width */
+    max-width: 600px; /* Limit max width */
+    background: linear-gradient(135deg, #ffffff, #b2dfdb); /* Gradient background for iframe */
+}
+
+iframe:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .counter-item {
+        min-width: 45%; /* Adjust min width for tablets */
+    }
+
+    iframe {
+        width: 100%; /* Ensure iframe takes full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-item {
+        min-width: 100%; /* Adjust min width for mobile devices */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Adjust font size for mobile devices */
+    }
+
+    h4 {
+        font-size: 1.2em; /* Adjust font size for mobile devices */
+    }
+}

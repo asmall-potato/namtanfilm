@@ -1,0 +1,32 @@
+Custom License for https://asmall-potato.github.io/namtanfilm/
+
+Version 1.0
+
+[2024/10/23]
+
+1. Grant of Use: You are granted permission to use, copy, modify, and distribute this code for personal and educational purposes only.
+
+2. Prohibited Uses: You may not use this code for commercial purposes, including but not limited to selling, licensing, or providing services based on this code. Additionally, you may not use this code in any fan community or related activities.
+
+3. Attribution: Attribution is not required when using this code.
+
+4. Disclaimer of Liability: This code is provided "as is," without warranty of any kind, express or implied. In no event shall the author be liable for any damages arising from the use of this code, including but not limited to direct, indirect, incidental, or consequential damages.
+
+5. Acceptance of Terms: By using this code, you agree to abide by the terms outlined in this license.
+
+https://asmall-potato.github.io/namtanfilm/ 自定义许可证
+
+版本 1.0
+
+[2024/10/23]
+
+1. 使用授权： 您被授予使用、复制、修改和分发本代码的权限，仅限于个人和教育用途。
+
+2. 禁止使用： 您不得将本代码用于商业目的，包括但不限于销售、许可或基于本代码提供服务。此外，您不得在任何粉丝社区或相关活动中使用本代码。
+
+3. 署名： 使用本代码时不要求署名。
+
+4. 免责声明： 本代码按“现状”提供，且不提供任何形式的明示或暗示担保。在任何情况下，作者对因使用本代码而引起的任何损害不承担责任，包括但不限于直接、间接、附带或后果性损害。
+
+5. 条款接受： 使用本代码即表示您同意遵守本许可证中列出的条款。
+
