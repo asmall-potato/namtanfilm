@@ -70,21 +70,19 @@ nav ul li {
 }
 
 
+/* Navigation */
 nav ul li a {
   text-decoration: none;
   color: #333;
   padding: 10px;
-  text-shadow: 
-  -1px -1px 0 white,  
-  1px -1px 0 white,
-  -1px 1px 0 white,
-  1px 1px 0 white; /* Create a border effect */
-  }
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for color */
+}
 
 /* Hover Effect for Links */
 nav ul li a:hover {
   background-color: #0056b3; /* Darker shade on hover */
   color: #fff; /* Keep text white on hover */
+  text-shadow: none; /* Remove text shadow to avoid blur effect */
 }
 
 .nav-toggle {
