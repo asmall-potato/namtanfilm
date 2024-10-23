@@ -80,11 +80,10 @@ nav ul li a {
 
 /* Hover Effect for Links */
 nav ul li a:hover {
-  background-color: #fff9c4; /* Light yellow */
-  color: #000000; 
-  font-weight: normal; /* Maintain normal weight on hover */
+    background-color: #fff9c4; /* Light yellow background on hover */
+    color: #333; /* Dark color for text on hover */
+    font-weight: normal; /* Normal weight on hover */
 }
-
 .nav-toggle {
   display: none;
   background: none;
