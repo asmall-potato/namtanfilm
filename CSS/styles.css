@@ -81,6 +81,7 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #fff9c4; /* Light yellow */
   color: #fff; /* Keep text white on hover */
+  font-weight: normal; /* Maintain normal weight on hover */
 }
 
 .nav-toggle {
