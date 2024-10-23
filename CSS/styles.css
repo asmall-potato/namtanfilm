@@ -80,7 +80,7 @@ nav ul li a {
 
 /* Hover Effect for Links */
 nav ul li a:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #fff9c4; /* Light yellow */
   color: #fff; /* Keep text white on hover */
   text-shadow: none; /* Remove text shadow to avoid blur effect */
 }
