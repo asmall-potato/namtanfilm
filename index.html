@@ -295,27 +295,18 @@
         header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
         });
 
-        //hamburger for only display at mobile devices
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-        document.querySelector('nav ul').classList.toggle('showing');
+            //Hamburger
+         document.addEventListener("DOMContentLoaded", function () {
+            const navToggle = document.querySelector(".nav-toggle");
+            const navUl = document.querySelector("nav ul");
+
+            navToggle.addEventListener("click", function () {
+                navUl.classList.toggle("showing"); // Toggle the 'showing' class to show/hide the menu
+            });
         });
 
             
-     window.onload = function() {
-        const notificationContainer = document.createElement('div');
-        fetch('notification.html')
-            .then(response => response.text())
-            .then(data => {
-                notificationContainer.innerHTML = data;
-                document.body.appendChild(notificationContainer);
-                const notification = document.getElementById('notification');
-                notification.style.display = 'block';
-                setTimeout(() => {
-                    notification.style.display = 'none';
-                }, 60000); // Hide after 60 seconds (1 minute)
-            });
-    };
-
+    
             
             
         </script>
