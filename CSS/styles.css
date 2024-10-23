@@ -72,7 +72,6 @@ nav ul li {
 
 /* Navigation */
 nav ul li a {
-  text-decoration: none;
   color: #333;
   padding: 10px;
   transition: color 0.3s, background-color 0.3s; /* Smooth transition for color */
@@ -82,7 +81,6 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #fff9c4; /* Light yellow */
   color: #fff; /* Keep text white on hover */
-  text-shadow: none; /* Remove text shadow to avoid blur effect */
 }
 
 .nav-toggle {
@@ -97,11 +95,10 @@ nav ul li a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #0056b3;
+  background-color: #ffccbc;
   min-width: 180px;
   z-index: 1;
- /* border-radius: 5px;*/
-  box-shadow: none; /* Removed shadow */
+
 }
 
 .dropdown:hover .dropdown-content {
