@@ -72,7 +72,7 @@ nav ul li {
 
 /* Navigation */
 nav ul li a {
-   color: f35353; /* Dark text color */
+   color: #f35353; /* Dark text color */
     padding: 10px;
     font-weight: bold; /* Bold by default */
     transition: color 0.3s, background-color 0.3s; /* Smooth transition */
