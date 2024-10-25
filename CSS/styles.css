@@ -76,6 +76,7 @@ nav ul li a {
     padding: 10px;
     font-weight: bold; /* Bold by default */
     transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 /* Hover Effect for Links */
@@ -83,6 +84,7 @@ nav ul li a:hover {
     background-color: #fff9c4; /* Light yellow background on hover */
     color: #333; /* Dark color for text on hover */
     font-weight: normal; /* Normal weight on hover */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 .nav-toggle {
   display: none;
