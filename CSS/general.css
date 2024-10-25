@@ -4,6 +4,7 @@
     justify-content: center; /* Centers the items horizontally */
     gap: 20px; /* Space between items */
     padding: 20px; /* Adds some padding around the container */
+    background-color: #B0B3B8; /* Background color for the general container */
 }
 
 .general-item {
@@ -13,13 +14,14 @@
     max-width: 300px; /* Ensures items don't exceed 300px */
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    background-color: #fff; /* Background color for visibility */
+    background-color: #A8D3E0; /* Background color for items, matching Pluto's theme */
     border-radius: 10px; /* Rounded corners */
     overflow: hidden; /* Ensures that overflow content is hidden */
 }
 
 h4 {
     font-weight: bold;
+    color: #004d40; /* Darker color for headings */
 }
 
 button {
