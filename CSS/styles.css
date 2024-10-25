@@ -90,6 +90,7 @@ nav ul li a:hover {
   border: none;
   font-size: 24px;
   cursor: pointer;
+  white-space: nowrap; /* Prevent text from wrapping */
   }
 
 /* Dropdown Menu */
