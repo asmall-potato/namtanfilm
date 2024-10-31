@@ -254,34 +254,32 @@ section {
     }
 }
 
-/* Music platform button styles */
-.music-platforms {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
 .platform-button {
     padding: 10px 20px;
+    margin: 5px;
     border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
     font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+/* Platform-specific colors */
 .spotify-button {
-    background-color: #1DB954; /* Spotify green */
+    background-color: #1ED760;
 }
 
 .apple-music-button {
-    background-color: #FA243C; /* Apple Music red */
+    background-color: #FA243C;
 }
 
 .youtube-music-button {
-    background-color: #FF0000; /* YouTube Music red */
+    background-color: #FF0000;
 }
 
+/* Hover effect */
 .platform-button:hover {
     opacity: 0.9;
 }
