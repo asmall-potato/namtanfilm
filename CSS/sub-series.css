@@ -254,63 +254,36 @@ section {
     }
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 0 15px;
-}
-
-/* Updated .ost-section styles to fit within .container */
-.ost-section {
-    text-align: center;
-    padding: 30px 15px;
-    background: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-}
-
-.ost-section h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.ost-section p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 25px;
-}
-
+/* Music platform button styles */
 .music-platforms {
     display: flex;
-    justify-content: center;
-    gap: 25px;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.platform-icon {
-    width: 60px;
-    height: 60px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+.platform-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.platform-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+.spotify-button {
+    background-color: #1DB954; /* Spotify green */
 }
 
-.spotify svg path { fill: #1ED760; }
-.apple-music svg path { fill: #FA243C; }
-.youtube-music svg path { fill: #FF0000; }
+.apple-music-button {
+    background-color: #FA243C; /* Apple Music red */
+}
 
-.spotify svg path { fill: #1ED760; }
-.apple-music svg path { fill: #FA243C; }
-.youtube-music svg path { fill: #FF0000; }
+.youtube-music-button {
+    background-color: #FF0000; /* YouTube Music red */
+}
+
+.platform-button:hover {
+    opacity: 0.9;
+}
+
 
