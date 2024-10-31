@@ -253,3 +253,26 @@ section {
         max-width: 100%;
     }
 }
+
+.ost-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.music-platforms {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.platform-icon {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.platform-icon:hover {
+    transform: scale(1.1);
+}
+
