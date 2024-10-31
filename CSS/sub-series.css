@@ -254,6 +254,13 @@ section {
     }
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Updated .ost-section styles to fit within .container */
 .ost-section {
     text-align: center;
     padding: 30px 15px;
@@ -298,6 +305,10 @@ section {
     transform: scale(1.1);
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
+
+.spotify svg path { fill: #1ED760; }
+.apple-music svg path { fill: #FA243C; }
+.youtube-music svg path { fill: #FF0000; }
 
 .spotify svg path { fill: #1ED760; }
 .apple-music svg path { fill: #FA243C; }
