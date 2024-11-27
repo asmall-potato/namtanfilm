@@ -33,6 +33,17 @@ body {
   background-size: cover;
   background-position: center;
   }
+
+/*girl rules*/
+.header-wallpaper-sub-series-gr {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Specific height for other pages */
+  background-image: url('../Images/sub series/1500x500.jpg'); /* Set your wallpaper for other pages */
+  background-size: cover;
+  background-position: center;
+  }
+
 /* Header Container */
 .header-container {
   display: flex;
