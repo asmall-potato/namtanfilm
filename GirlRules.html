@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/sub-series.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>NAMTANFILM | Girl Rules</title>
+</head>
+<body>
+    <header class="header-wallpaper-sub-series-gr">
+        <div class="header-container">
+            <h1 class="logo">NAMTANFILM</h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+            ☰
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="series.html">Series</a>
+                        <div class="dropdown-content">
+                            <a href="pluto.html">Pluto นิทาน ดวงดาว ความรัก</a>
+                            <a href="GirlRules.html">Girl Rules กฎหลัก ห้ามรักเธอ</a>                           
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="live-count.html">Live Count</a>
+                        <div class="dropdown-content">
+                            <a href="pluto-live-count.html">Pluto Series</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="video.html">Video</a>
+                    </li>
+                    <li><a href="magazine.html">Magazine</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bottom-right-text-sub">
+            <h1>Girl Rules กฎหลัก ห้ามรักเธอ</h1>
+        </div>
+        <div class="bottom-right-text-sub">
+            <p>#GirlRulesSeries</p>
+        </div>
+        
+    </header>
+
+    <main>
+        
+    
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <h2>ABOUT Girl Rules Series</h2>
+            <p>​​"Girl Rules Series" is GMMTV's sapphire series, starring by Namtan Tipnaree, Film Rachanun, Milk Pansa, Love Pattranite, View Benyapa & Mim Rattanawadee.</br>
+                The series is directed by Jojo.</p>
+        </section>
+    
+        <!-- YouTube Section -->
+        <section class="video-section">
+            <h2>Watch the Official Pilot</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dF7OAzebldM?si=VQ6Xx-HhdfK8GpxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    
+        <!-- Watch Now Section -->
+        <section class="watch-section">
+            <h2>Related to Girl Rules Series</h2>
+            <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/any7JGxoHg0?si=MUeMbIIbEOpj1X6Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+     
+
+     
+
+
+
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NAMTANFILM. All rights reserved.</p>
+        <p>Website developed and designed by 一粒马铃薯potato.</p>
+        
+        </footer>
+        <!-- Google Translate Element -->
+        <div id="google_translate_element"></div>
+        <script>
+        // Scroll reveal effect
+        const sections = document.querySelectorAll('section');
+        const options = {
+        root: null,
+        threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        observer.unobserve(entry.target);
+        }
+        });
+        }, options);
+        
+        sections.forEach(section => {
+        observer.observe(section);
+        });
+        
+        // Change header transparency on scroll
+        const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
+
+            //hamburger for only display at mobile devices
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('showing');
+        });
+
+           
+        </script>
+        </body>
+        </html>
