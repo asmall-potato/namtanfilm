@@ -177,54 +177,79 @@ section {
     transform: scale(1.05);
 }
 
-/* Circle Images Section */
-.circle-images-section {
-    background-color: #F5F3F1;
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
-    margin: 20px auto;
+.container {
+    display: flex; /* Arrange items side by side */
+    justify-content: center; /* Center the items */
+    margin: 40px 0; /* Space above and below the container */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.circle-images-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    color: #2c3e50;
+.item {
+    text-align: center; /* Center text below each image */
+    margin: 20px; /* Space between items */
 }
 
-.circle-images-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.circle-image-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 200px;
-}
-
-.circle-image-item img {
-    width: 150px;
+.circular-image {
+    width: 150px; /* Fixed size for the circular image */
     height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area */
+    border: 3px solid #fff; /* Optional: add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow */
 }
 
-.circle-image-item p {
+.link {
+    display: block; /* Change to block to ensure it takes the full width */
+    margin-top: 10px; /* Space between image and link */
     font-size: 16px;
-    color: #7f8c8d;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    margin: 0;
+    text-decoration: none;
+    color: #007BFF; /* Link color */
+    transition: color 0.3s; /* Smooth color transition */
 }
+
+.link:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        justify-content: space-around; /* Adjust alignment for tablets */
+    }
+
+    .item {
+        margin: 15px; /* Adjust margin for tablets */
+    }
+
+    .circular-image {
+        width: 120px; /* Adjust size for tablets */
+        height: 120px;
+    }
+
+    .link {
+        font-size: 14px; /* Adjust font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        justify-content: center; /* Center items for mobile devices */
+    }
+
+    .item {
+        margin: 10px; /* Adjust margin for mobile devices */
+    }
+
+    .circular-image {
+        width: 100px; /* Adjust size for mobile devices */
+        height: 100px;
+    }
+
+    .link {
+        font-size: 12px; /* Adjust font size for mobile devices */
+    }
+}
+
 
 
 
