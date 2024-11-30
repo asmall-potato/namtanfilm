@@ -179,50 +179,6 @@ section {
 
 
 
-/* Circle Image Section */
-.circle-image {
-    text-align: center;
-    margin: 40px 0;
-    padding: 20px;
-}
-
-.circular_container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensures responsiveness */
-}
-
-.circular_item {
-    text-align: center;
-}
-
-.circular-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.circular-image:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
-}
-
-.link {
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    color: #2c3e50;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-.link:hover {
-    color: #1ED760; /* Highlight link on hover */
-}
-
 
 
 
