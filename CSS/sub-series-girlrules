@@ -177,39 +177,7 @@ section {
     transform: scale(1.05);
 }
 
-.circular_container {
-    display: flex; /* Arrange items side by side */
-    justify-content: center; /* Center the items */
-    margin: 40px 0; /* Space above and below the container */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
 
-.circular_item {
-    text-align: center; /* Center text below each image */
-    margin: 20px; /* Space between items */
-}
-
-.circular-image {
-    width: 150px; /* Fixed size for the circular image */
-    height: 150px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image covers the area */
-    border: 3px solid #fff; /* Optional: add a border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow */
-}
-
-.link {
-    display: block; /* Change to block to ensure it takes the full width */
-    margin-top: 10px; /* Space between image and link */
-    font-size: 16px;
-    text-decoration: none;
-    color: #007BFF; /* Link color */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-.link:hover {
-    color: #0056b3; /* Darker color on hover */
-}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
