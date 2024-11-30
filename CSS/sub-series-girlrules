@@ -177,11 +177,6 @@ section {
     transform: scale(1.05);
 }
 
-
-
-
-
-
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .bottom-right-text-sub h1 {
