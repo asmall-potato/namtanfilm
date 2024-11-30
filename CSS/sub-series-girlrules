@@ -177,14 +177,14 @@ section {
     transform: scale(1.05);
 }
 
-.container {
+.circular_container {
     display: flex; /* Arrange items side by side */
     justify-content: center; /* Center the items */
     margin: 40px 0; /* Space above and below the container */
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.item {
+.circular_item {
     text-align: center; /* Center text below each image */
     margin: 20px; /* Space between items */
 }
