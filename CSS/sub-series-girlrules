@@ -283,23 +283,22 @@ section {
 
 /* Circular Image Styling */
 .circular-image {
-    width: 60px;         /* Set a fixed size for the circular image */
-    height: 60px;        /* Set a fixed size for the circular image */
-    border-radius: 50%;  /* Make the image circular */
-    object-fit: cover;   /* Ensure the image covers the area while maintaining aspect ratio */
-    margin: 10px auto;   /* Center the image */
+    width: 60px;         /* Set the width of the circular image box */
+    height: 60px;        /* Set the height of the circular image box */
+    border-radius: 50%;  /* This makes the image circular */
+    object-fit: cover;   /* Ensures the image covers the area while maintaining aspect ratio */
+    margin: 10px;        /* Center the image inside the container */
     display: block;
 }
-
 
 /* Container for all circular images */
 .image-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: center;   /* Align images horizontally */
+    gap: 20px;                 /* Add space between images */
     margin-top: 30px;
-    flex-wrap: wrap; /* Ensure images wrap on smaller screens */
-    align-items: center; /* Align images vertically if needed */
+    flex-wrap: wrap;           /* Allow images to wrap on smaller screens */
+    align-items: center;       /* Align images vertically */
 }
 
 /* Container for each image */
@@ -308,8 +307,12 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;  /* Ensures that each item is given equal space */
-    max-width: 100px; /* You can adjust this if needed */
-    min-width: 60px;  /* To prevent squishing on smaller screens */
+    max-width: 100px;         /* Max width for each image box */
+    min-width: 60px;          /* Ensure a minimum width */
+}
+
+/* Optional: if you want the container to align the images side by side */
+.item img {
+    max-width: 100%;  /* Ensure the image never exceeds the container size */
 }
 
