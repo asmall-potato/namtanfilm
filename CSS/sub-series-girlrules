@@ -280,6 +280,14 @@ section {
 .platform-button:hover {
     opacity: 0.9;
 }
+.image-section {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 12px;
+}
 
 /* Container for all images */
 .image-container {
