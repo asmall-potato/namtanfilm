@@ -283,8 +283,8 @@ section {
 
 /* Container for all images */
 .image-container {
-    display: flex;               /* Flexbox to align images side by side */
-    justify-content: center;     /* Center the images horizontally */
+    display: flex;               /* Align images side by side */
+    justify-content: center;     /* Center images horizontally */
     gap: 20px;                   /* Space between images */
     flex-wrap: wrap;             /* Allow images to wrap to the next line if needed */
     align-items: center;         /* Vertically align images in the center */
@@ -292,11 +292,11 @@ section {
 
 /* Image styling for small images */
 .image-container img {
-    width: 80px;                 /* Adjusted size for small images */
-    height: 80px;                /* Keep height consistent */
-    object-fit: cover;           /* Ensure images are not distorted */
-    border-radius: 8px;          /* Optional: add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
+    width: 80px;                 /* Fixed width for small images */
+    height: 80px;                /* Fixed height */
+    object-fit: cover;           /* Maintain aspect ratio */
+    border-radius: 8px;          /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
 }
 
 /* Each individual image item (wrapper) */
@@ -308,4 +308,5 @@ section {
     max-width: 120px;            /* Prevent the container from being too wide */
     min-width: 80px;             /* Ensure the container doesn't shrink too much */
 }
+
 
