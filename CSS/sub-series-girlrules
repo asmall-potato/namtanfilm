@@ -302,7 +302,7 @@ section {
 .item {
     text-align: center;      /* Center the text and image inside each item */
     display: flex;           /* Flexbox to center content */
-    flex-direction: column;  /* Arrange image and text vertically */
+  /*  flex-direction: column; */ /* Arrange image and text vertically */
     align-items: center;     /* Center items */
     max-width: 120px;        /* Prevent the container from being too wide */
 }
