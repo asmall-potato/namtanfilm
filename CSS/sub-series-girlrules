@@ -605,7 +605,7 @@ section {
 
 /* Ensure images scale and don't stretch */
 .image-container img {
-    width: 100%; /* Make sure the image takes up the full width of the container */
+    width: 50%; /* Make sure the image takes up the full width of the container */
     height: auto; /* Maintain the aspect ratio */
     display: block;
     object-fit: cover; /* Ensure the image covers the area without stretching */
