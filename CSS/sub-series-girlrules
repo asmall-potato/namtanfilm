@@ -600,12 +600,12 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
-    max-width: 280px; /* Limit the size of the items to prevent them from becoming too large */
+    max-width: 50px; /* Limit the size of the items to prevent them from becoming too large */
 }
 
 /* Ensure images scale and don't stretch */
 .image-container img {
-    width: 50%; /* Make sure the image takes up the full width of the container */
+    width: 100%; /* Make sure the image takes up the full width of the container */
     height: auto; /* Maintain the aspect ratio */
     display: block;
     object-fit: cover; /* Ensure the image covers the area without stretching */
