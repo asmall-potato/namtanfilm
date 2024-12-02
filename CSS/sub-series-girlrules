@@ -283,27 +283,21 @@ section {
 
 /* Circular Image Styling */
 .circular-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 100px;        /* Set the size of the circular image */
+    height: 100px;       /* Set the size of the circular image */
+    border-radius: 50%;  /* Make the image circular */
+    object-fit: cover;   /* Ensure the image covers the area while maintaining aspect ratio */
+    margin: 10px auto;   /* Center the image */
 }
 
-.container {
+/* Container for images */
+.image-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 20px;
     margin-top: 30px;
 }
 
 .item {
     text-align: center;
-}
-
-.link {
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
 }
