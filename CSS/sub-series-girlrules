@@ -283,26 +283,29 @@ section {
 
 /* Container for all images */
 .image-container {
-    display: flex;            /* Use flexbox to align images side by side */
-    justify-content: center;  /* Center the images horizontally */
-    gap: 20px;                /* Space between images */
-  /*  flex-wrap: wrap;  */        /* Allow images to wrap to the next line if needed */
-    align-items: center;      /* Vertically align images in the center */
+    display: flex;               /* Flexbox to align images side by side */
+    justify-content: center;     /* Center the images horizontally */
+    gap: 20px;                   /* Space between images */
+    flex-wrap: wrap;             /* Allow images to wrap to the next line if needed */
+    align-items: center;         /* Vertically align images in the center */
 }
 
-/* Image styling */
+/* Image styling for small images */
 .image-container img {
-    width: 30px;            /* Fixed size for images */
-    height: 30px;           /* Ensure height is consistent */
-   /* object-fit: cover;   */    /* Ensure the image fits the box without distortion */
-    margin: 10px;            /* Add space between images */
+    width: 80px;                 /* Adjusted size for small images */
+    height: 80px;                /* Keep height consistent */
+    object-fit: cover;           /* Ensure images are not distorted */
+    border-radius: 8px;          /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow */
 }
 
 /* Each individual image item (wrapper) */
 .item {
-    text-align: center;      /* Center the text and image inside each item */
-    display: flex;           /* Flexbox to center content */
-   flex-direction: column; /* Arrange image and text vertically */
-    align-items: center;     /* Center items */
-    max-width: 120px;        /* Prevent the container from being too wide */
+    text-align: center;          /* Center the text and image inside each item */
+    display: flex;               /* Flexbox to center content */
+    flex-direction: column;      /* Arrange image and text vertically */
+    align-items: center;         /* Center items */
+    max-width: 120px;            /* Prevent the container from being too wide */
+    min-width: 80px;             /* Ensure the container doesn't shrink too much */
 }
+
