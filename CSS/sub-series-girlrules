@@ -283,7 +283,7 @@ section {
 
 /* Container for all images */
 .image-container {
-    display: flex;               /* Align images side by side */
+    
     justify-content: center;     /* Center images horizontally */
     gap: 20px;                   /* Space between images */
     flex-wrap: wrap;             /* Allow images to wrap to the next line if needed */
