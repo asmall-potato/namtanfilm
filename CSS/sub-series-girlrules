@@ -306,7 +306,7 @@ section {
     display: flex;               /* Use flexbox for centering content inside each item */
     flex-direction: column;      /* Arrange the image and text vertically */
     align-items: center;         /* Center the content */
-    max-width: 100px;            /* Ensure the container doesn't get too wide */
+    max-width: 65px;            /* Ensure the container doesn't get too wide */
     min-width: 60px;             /* Prevent the container from getting too narrow */
 }
 
