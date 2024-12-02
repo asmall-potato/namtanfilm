@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/sub-series.css">
+    <link rel="stylesheet" href="CSS/sub-series-girlrules.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <title>NAMTANFILM | Girl Rules</title>
@@ -48,12 +48,9 @@
         <div class="bottom-right-text-sub">
             <p>#GirlRulesSeries</p>
         </div>
-        
     </header>
 
     <main>
-        
-    
         <!-- Introduction Section -->
         <section class="intro-section">
             <h2>ABOUT Girl Rules Series</h2>
@@ -67,13 +64,33 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/dF7OAzebldM?si=VQ6Xx-HhdfK8GpxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
 
-      
+        <!-- Circular Images Section -->
+        <section class="circular-images-section">
+            <h2>Meet the Cast</h2>
+            <div class="container">
+                <!-- Circular Image 1 -->
+                <div class="item">
+                    <img src="path_to_image1.jpg" alt="Namtan Tipnaree" class="circular-image">
+                    <a href="namtan-profile.html" class="link">Namtan Tipnaree</a>
+                </div>
+                <!-- Circular Image 2 -->
+                <div class="item">
+                    <img src="path_to_image2.jpg" alt="Film Rachanun" class="circular-image">
+                    <a href="film-profile.html" class="link">Film Rachanun</a>
+                </div>
+                <!-- Circular Image 3 -->
+                <div class="item">
+                    <img src="path_to_image3.jpg" alt="Milk Pansa" class="circular-image">
+                    <a href="milk-profile.html" class="link">Milk Pansa</a>
+                </div>
+            </div>
+        </section>
 
         <!-- Watch Now Section -->
         <section class="watch-section">
             <h2>Related to Girl Rules Series</h2>
             <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/any7JGxoHg0?si=MUeMbIIbEOpj1X6Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/any7JGxoHg0?si=MUeMbIIbEOpj1X6Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
 
@@ -82,44 +99,42 @@
     <footer>
         <p>&copy; 2024 NAMTANFILM. All rights reserved.</p>
         <p>Website developed and designed by 一粒马铃薯potato.</p>
-        
-        </footer>
-        <!-- Google Translate Element -->
-        <div id="google_translate_element"></div>
-        <script>
+    </footer>
+
+    <!-- Google Translate Element -->
+    <div id="google_translate_element"></div>
+    <script>
         // Scroll reveal effect
         const sections = document.querySelectorAll('section');
         const options = {
-        root: null,
-        threshold: 0.1,
+            root: null,
+            threshold: 0.1,
         };
         
         const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-        if (entry.isIntersecting) {
-        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-        observer.unobserve(entry.target);
-        }
-        });
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    observer.unobserve(entry.target);
+                }
+            });
         }, options);
         
         sections.forEach(section => {
-        observer.observe(section);
+            observer.observe(section);
         });
-        
+
         // Change header transparency on scroll
         const header = document.querySelector('.header-container');
         window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+            const scrollPosition = window.scrollY;
+            header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
         });
 
-            //hamburger for only display at mobile devices
+        // Hamburger for mobile devices
         document.querySelector('.nav-toggle').addEventListener('click', function() {
-        document.querySelector('nav ul').classList.toggle('showing');
+            document.querySelector('nav ul').classList.toggle('showing');
         });
-
-           
-        </script>
-        </body>
-        </html>
+    </script>
+</body>
+</html>
