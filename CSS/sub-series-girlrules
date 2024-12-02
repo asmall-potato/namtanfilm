@@ -571,6 +571,23 @@ section {
 .platform-button:hover {
     opacity: 0.9;
 }
+/* Styling for Meet the Cast Section */
+.meet-cast-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.meet-cast-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.meet-cast-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
 
 /* Container for all images */
 .image-container {
