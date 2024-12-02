@@ -572,15 +572,6 @@ section {
     opacity: 0.9;
 }
 
-.image-section {
-    background-color: #fff;
-    padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
-    margin: auto;
-    border-radius: 12px;
-}
-
 /* Container for all images */
 .image-container {
     display: flex;
@@ -592,18 +583,24 @@ section {
 
 /* Individual item container for each image */
 .item {
-    flex: 1 1 280px; /* Flexbox allows for resizing, but ensures a minimum width */
+    flex: 1 1 280px; /* Allow flex items to grow and shrink with a base size of 280px */
     text-align: center;
     margin: 10px;
-    background: linear-gradient(135deg, #ffffff, #e0e0e0);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffffff, #e0e0e0); /* Gradient background for modern look */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    max-width: 50px; /* Limit the size of the items to prevent them from becoming too large */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for box-shadow */
+    max-width: 100%; /* Ensure item takes full available space, but limited by flex */
 }
 
-/* Ensure images scale and don't stretch */
+/* Hover effect for individual items */
+.item:hover {
+    transform: scale(1.08); /* Increase scale on hover for more impact */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* More pronounced shadow on hover */
+}
+
+/* Image inside each item */
 .image-container img {
     width: 100%; /* Make sure the image takes up the full width of the container */
     height: auto; /* Maintain the aspect ratio */
