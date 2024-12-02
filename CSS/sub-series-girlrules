@@ -283,36 +283,30 @@ section {
 
 /* Circular Image Styling */
 .circular-image {
-    width: 60px;         /* Set the width of the circular image box */
-    height: 60px;        /* Set the height of the circular image box */
-    border-radius: 50%;  /* This makes the image circular */
-    object-fit: cover;   /* Ensures the image covers the area while maintaining aspect ratio */
-    margin: 10px;        /* Center the image inside the container */
+    width: 60px;         /* Set a fixed width for the circular image */
+    height: 60px;        /* Set a fixed height for the circular image */
+    border-radius: 50%;  /* Make the image circular */
+    object-fit: cover;   /* Ensure the image covers the area without distorting */
+    margin: 10px;        /* Add margin between images */
     display: block;
 }
 
 /* Container for all circular images */
 .image-container {
-    display: flex;
-    justify-content: center;   /* Align images horizontally */
-    gap: 20px;                 /* Add space between images */
-    margin-top: 30px;
-    flex-wrap: wrap;           /* Allow images to wrap on smaller screens */
-    align-items: center;       /* Align images vertically */
+    display: flex;           /* Use flexbox to align items side by side */
+    justify-content: center; /* Center the items horizontally */
+    gap: 20px;               /* Add space between images */
+    flex-wrap: wrap;         /* Allow images to wrap to the next line if needed */
+    align-items: center;     /* Vertically align the images in the center */
 }
 
 /* Container for each image */
 .item {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 100px;         /* Max width for each image box */
-    min-width: 60px;          /* Ensure a minimum width */
-}
-
-/* Optional: if you want the container to align the images side by side */
-.item img {
-    max-width: 100%;  /* Ensure the image never exceeds the container size */
+    text-align: center;         /* Center the text and image inside each item */
+    display: flex;               /* Use flexbox for centering content inside each item */
+    flex-direction: column;      /* Arrange the image and text vertically */
+    align-items: center;         /* Center the content */
+    max-width: 100px;            /* Ensure the container doesn't get too wide */
+    min-width: 60px;             /* Prevent the container from getting too narrow */
 }
 
