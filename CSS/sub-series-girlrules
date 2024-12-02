@@ -283,22 +283,14 @@ section {
 
 /* Circular Image Styling */
 .circular-image {
-    width: 60px;        /* Smaller size for testing */
-    height: 60px;       /* Smaller size for testing */
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover;  /* Ensure the image covers the area while maintaining aspect ratio */
-    margin: 10px auto;  /* Center the image */
+    width: 60px;         /* Set a fixed size for the circular image */
+    height: 60px;        /* Set a fixed size for the circular image */
+    border-radius: 50%;  /* Make the image circular */
+    object-fit: cover;   /* Ensure the image covers the area while maintaining aspect ratio */
+    margin: 10px auto;   /* Center the image */
     display: block;
 }
 
-
-/* Container for each image */
-.item {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /* Container for all circular images */
 .image-container {
@@ -306,5 +298,18 @@ section {
     justify-content: center;
     gap: 20px;
     margin-top: 30px;
-    flex-wrap: wrap; /* Ensure the images wrap on smaller screens */
+    flex-wrap: wrap; /* Ensure images wrap on smaller screens */
+    align-items: center; /* Align images vertically if needed */
 }
+
+/* Container for each image */
+.item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;  /* Ensures that each item is given equal space */
+    max-width: 100px; /* You can adjust this if needed */
+    min-width: 60px;  /* To prevent squishing on smaller screens */
+}
+
