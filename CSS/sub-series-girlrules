@@ -286,8 +286,8 @@ section {
     display: flex;            /* Use flexbox to align images side by side */
     justify-content: center;  /* Center the images horizontally */
     gap: 20px;                /* Space between images */
-    flex-wrap: wrap;          /* Allow images to wrap to the next line if needed */
-  /*  align-items: center; */     /* Vertically align images in the center */
+  /*  flex-wrap: wrap;  */        /* Allow images to wrap to the next line if needed */
+    align-items: center;      /* Vertically align images in the center */
 }
 
 /* Image styling */
