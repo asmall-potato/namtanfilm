@@ -571,6 +571,7 @@ section {
 .platform-button:hover {
     opacity: 0.9;
 }
+
 .image-section {
     background-color: #fff;
     padding: 40px;
@@ -582,29 +583,31 @@ section {
 
 /* Container for all images */
 .image-container {
-     display: flex;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px; /* Add space between items */
+    max-width: 100%; /* Ensure container does not exceed available width */
 }
 
-/* Image styling for small images */
-.image-container img {
-   width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 2px solid #ddd; /* Divider at the bottom of the image */
-}
-
-/* Each individual image item (wrapper) */
+/* Individual item container for each image */
 .item {
-     flex: 1;
-    max-width: 280px; /* Slightly narrower columns for better fit */
+    flex: 1 1 280px; /* Flexbox allows for resizing, but ensures a minimum width */
     text-align: center;
     margin: 10px;
-    background: linear-gradient(135deg, #ffffff, #e0e0e0); /* Gradient background for modern look */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for box-shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 280px; /* Limit the size of the items to prevent them from becoming too large */
+}
+
+/* Ensure images scale and don't stretch */
+.image-container img {
+    width: 100%; /* Make sure the image takes up the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block;
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    border-bottom: 2px solid #ddd; /* Divider at the bottom of the image */
 }
