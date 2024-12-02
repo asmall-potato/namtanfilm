@@ -292,8 +292,8 @@ section {
 
 /* Image styling */
 .image-container img {
-    width: 100px;            /* Fixed size for images */
-    height: 100px;           /* Ensure height is consistent */
+    width: 30px;            /* Fixed size for images */
+    height: 30px;           /* Ensure height is consistent */
     object-fit: cover;       /* Ensure the image fits the box without distortion */
     margin: 10px;            /* Add space between images */
 }
