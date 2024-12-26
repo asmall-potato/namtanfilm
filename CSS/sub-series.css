@@ -265,6 +265,27 @@ section {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+/* Wrapper for the side-by-side content */
+.ost-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* 40% width for Twitter Embed */
+.ost-twitter {
+    flex: 0 0 40%; /* 40% width */
+}
+
+/* 60% width for OST Tracks */
+.ost-tracks {
+    flex: 0 0 60%; /* 60% width */
+}
+
+/* Optional: Additional styling to ensure the sections are visually appealing */
+.ost-content > div {
+    box-sizing: border-box;
+}
 
 /* Platform-specific colors */
 .spotify-button {
