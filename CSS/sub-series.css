@@ -305,4 +305,20 @@ section {
     opacity: 0.9;
 }
 
+/* Mobile view - Stack vertically when screen width is 768px or less */
+@media (max-width: 768px) {
+    .ost-content {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center the elements */
+    }
 
+    .ost-twitter, .ost-tracks {
+        flex: 0 0 100%; /* Full width for both elements */
+        max-width: 100%; /* Ensure no element exceeds 100% width */
+    }
+
+    /* Optional: Add spacing for mobile */
+    .ost-content > div {
+        margin-bottom: 20px;
+    }
+}
