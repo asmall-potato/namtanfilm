@@ -1,0 +1,362 @@
+
+
+body {
+   
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F5F3F1;
+}
+
+/* Bottom-right Text inside Wallpaper */
+.bottom-right-text-sub {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    color: white;
+    text-align: right;
+}
+
+.bottom-right-text-sub h1 {
+    font-size: 80px;
+    font-weight: 600;
+    color: rgb(55, 232, 232);
+    font-family: 'Lora', serif;
+}
+
+.bottom-right-text-sub p {
+    font-size: 24px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Introduction Section */
+.intro-section {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 12px;
+}
+
+.intro-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+}
+
+.intro-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    color: #7f8c8d;
+}
+
+/* Video Section */
+.video-section {
+    background-color: #F5F3F1;
+    padding: 40px;
+}
+
+.video-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+}
+
+.video-section iframe {
+    max-width: 80%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Watch Section */
+.watch-section {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 12px;
+}
+
+.watch-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+}
+
+/* Flexbox for Side-by-Side Videos */
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.watch-section iframe {
+    flex: 1 1 30%; /* Each iframe takes up about one-third of the container width */
+    max-width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Watch Link Styling */
+.watch-link {
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 12px 24px;
+    background-color: rgb(36, 141, 108);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.watch-link:hover {
+    background-color: rgb(25, 100, 80);
+    transform: scale(1.05);
+}
+
+/* Watch on Streaming Platforms Section */
+.watch-platforms-section {
+    background-color: #F5F3F1;
+    padding: 40px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.watch-platforms-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+}
+
+.watch-platforms-section p {
+    font-size: 18px;
+    color: #7f8c8d;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+}
+
+.platform-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.watch-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: rgb(36, 141, 108);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.watch-link:hover {
+    background-color: rgb(25, 100, 80);
+    transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .bottom-right-text-sub h1 {
+        font-size: 60px;
+    }
+
+    .bottom-right-text-sub p {
+        font-size: 20px;
+    }
+
+    .intro-section, .watch-section {
+        padding: 30px;
+    }
+
+    .intro-section h2, .watch-section h2 {
+        font-size: 28px;
+    }
+
+    .intro-section p, .watch-section p {
+        font-size: 16px;
+    }
+
+    .video-section iframe {
+        max-width: 90%;
+    }
+
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .watch-section iframe {
+        flex: 1 1 100%;
+        max-width: 90%;
+    }
+
+    .platform-buttons {
+        flex-direction: column;
+    }
+
+    .watch-link {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bottom-right-text-sub h1 {
+        font-size: 40px;
+    }
+
+    .bottom-right-text-sub p {
+        font-size: 18px;
+    }
+
+    .intro-section, .watch-section {
+        padding: 20px;
+    }
+
+    .intro-section h2, .watch-section h2 {
+        font-size: 24px;
+    }
+
+    .intro-section p, .watch-section p {
+        font-size: 14px;
+    }
+
+    .video-section iframe {
+        max-width: 100%;
+    }
+
+    .watch-section iframe {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+.platform-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Wrapper for the side-by-side content */
+.ost-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* 40% width for Twitter Embed */
+.ost-twitter {
+    flex: 0 0 40%; /* 40% width */
+}
+
+/* 60% width for OST Tracks */
+.ost-tracks {
+    flex: 0 0 60%; /* 60% width */
+}
+
+/* Optional: Additional styling to ensure the sections are visually appealing */
+.ost-content > div {
+    box-sizing: border-box;
+}
+
+/* Platform-specific colors */
+.spotify-button {
+    background-color: #1ED760;
+}
+
+.apple-music-button {
+    background-color: #FA243C;
+}
+
+.youtube-music-button {
+    background-color: #FF0000;
+}
+
+/* Hover effect */
+.platform-button:hover {
+    opacity: 0.9;
+}
+
+/* Introduce Actresses Section */
+.cast-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of columns */
+    justify-content: space-evenly; /* Space out the columns evenly */
+    gap: 20px; /* Add gap between the columns */
+    margin: auto;
+    padding: 0 10px; /* Add padding to the container to avoid touching edges */
+    text-align: center;
+}
+
+.cast-container h3 {
+    width: 100%;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Column inside cast container */
+.column {
+    flex: 1 1 30%; /* Each column takes up 30% of the container width */
+    max-width: 30%; /* Ensure it doesn’t exceed 30% */
+    text-align: center;
+    margin: 10px;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0); /* Gradient background */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 10px; /* Padding inside the column */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for the column */
+.column:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Column image styling */
+.column img {
+    width: 100%; /* Ensure the image takes up the full width of the column */
+    height: auto; /* Maintain aspect ratio of the image */
+    display: block;
+    border-bottom: 2px solid #ddd; /* Divider at the bottom of the image */
+    object-fit: cover; /* Ensures images are cropped and maintain aspect ratio */
+    box-sizing: border-box; /* Make sure padding and border are included in the width calculation */
+}
+
+@media (max-width: 768px) {
+    .column {
+        flex: 1 1 100%; /* Each column takes up full width on smaller screens */
+        max-width: 100%; /* Ensures columns use full width on smaller screens */
+    }
+}
