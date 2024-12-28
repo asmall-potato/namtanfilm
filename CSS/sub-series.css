@@ -322,3 +322,70 @@ section {
         margin-bottom: 20px;
     }
 }
+
+/* Engagement Section */
+.engagement-section {
+    background-color: #fff;  /* White background */
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 30px auto;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.engagement-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;  /* Heading color */
+}
+
+/* Engagement Text */
+.engagement-text {
+    margin-bottom: 15px;
+}
+
+.engagement-text h3 {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.engagement-text p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* Flexbox container for side-by-side embeds */
+.embeds-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  /* Space between items */
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+}
+
+/* Each embed item (Tweet + Description) */
+.engagement-item {
+    flex: 1 1 calc(33.33% - 20px); /* Each item takes up about 1/3 of the row */
+    max-width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Prevent overflow */
+}
+
+/* Ensure the Twitter embed is responsive */
+.embeds-row blockquote {
+    width: 100%;
+}
+
+/* Mobile responsiveness: Stacking the items vertically */
+@media (max-width: 768px) {
+    .embeds-row {
+        flex-direction: column;  /* Stack items on smaller screens */
+        align-items: center;
+    }
+
+    .engagement-item {
+        flex: 1 1 100%;  /* Take full width on small screens */
+        max-width: 100%;
+    }
+}
