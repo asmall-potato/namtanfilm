@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/videohome-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>NAMTANFILM | VIDEO</title>
+</head>
+<body>
+    <header class="header-wallpaper-sub">
+        <div class="header-container">
+            <h1 class="logo">NAMTANFILM</h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+            ☰
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="series.html">Series</a>
+                        <div class="dropdown-content">
+                            <a href="pluto.html">Pluto นิทาน ดวงดาว ความรัก</a>
+                            <a href="GirlRules.html">Girl Rules กฎหลัก ห้ามรักเธอ</a>                           
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="live-count.html">Live Count</a>
+                        <div class="dropdown-content">
+                            <a href="pluto-live-count.html">Pluto Series</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="videohome.html">Video</a>
+                        <div class="dropdown-content">
+                        <a href="video.html">Video (Year 2024)</a>
+                        <a href="video2025.html">Video (Year 2025)</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="magazinehome.html">Magazine</a>
+                        <div class="dropdown-content">
+                        <a href="magazine.html">Magazine (Y2024)</a>
+                        <a href="magazine2025.html">Magazine (Y2025)</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="brandshome.html">Brands</a>
+                        <div class="dropdown-content">
+                        <a href="brands.html">Brands (Y2024)</a>
+                        <a href="brands2025.html">Brands (Y2025)</a>
+                        </div>
+                    </li>
+                    <li><a href="social-media.html">Social Media</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+       
+        
+    </header>
+    
+
+    <main>
+        <h2>VIDEO OF NAMTANFILM</h2>
+        <br>
+        <div class="video-container">
+            <div class="column">
+                <h3><a href="video.html">Video (Year 2024) </a></h3>            
+
+               
+            </div>
+            <div class="column">
+                <h3><a href="video2025.html">Video (Year 2025)</a></h3>
+                
+            </div>
+
+            
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 NAMTANFILM. All rights reserved.</p>
+        <p>Website developed and designed by @jieyan96.</p>
+        
+        </footer>
+        <!-- Google Translate Element -->
+        <div id="google_translate_element"></div>
+    
+        <script>
+        // Scroll reveal effect
+        const sections = document.querySelectorAll('section');
+        const options = {
+        root: null,
+        threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        observer.unobserve(entry.target);
+        }
+        });
+        }, options);
+        
+        sections.forEach(section => {
+        observer.observe(section);
+        });
+        
+        // Change header transparency on scroll
+        const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
+
+            //hamburger for only display at mobile devices
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('showing');
+        });
+
+       
+        </script>
+        </body>
+        </html>
+        
