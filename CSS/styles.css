@@ -72,31 +72,41 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap; /* Allow navigation items to wrap onto the next line */
+  justify-content: flex-start; /* Align items to the left */
+  width: 100%;
 }
 
+/* Navigation List Item */
 nav ul li {
   position: relative;
-  margin: 0 20px;
-  min-width: 80px;
+  margin: 0 15px; /* Adjust spacing between nav items */
+  min-width: 100px; /* Ensure items have a minimum width */
+  flex-shrink: 0; /* Prevent items from shrinking */
+  text-align: center; /* Center the text inside each li */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
-
-/* Navigation */
+/* Navigation Links */
 nav ul li a {
-   color: #f35353; /* Dark text color */
-    padding: 10px;
-    font-weight: bold; /* Bold by default */
-    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
-    white-space: nowrap; /* Prevent text from wrapping */
+  color: #f35353; /* Dark text color */
+  padding: 10px;
+  font-weight: bold; /* Bold by default */
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+  display: block; /* Make the link block-level to fill the entire space */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+  overflow: hidden; /* Hide overflowed text */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 /* Hover Effect for Links */
 nav ul li a:hover {
-    background-color: #fff9c4; /* Light yellow background on hover */
-    color: #333; /* Dark color for text on hover */
-    font-weight: normal; /* Normal weight on hover */
-    white-space: nowrap; /* Prevent text from wrapping */
+  background-color: #fff9c4; /* Light yellow background on hover */
+  color: #333; /* Dark color for text on hover */
+  font-weight: normal; /* Normal weight on hover */
 }
+
+
 .nav-toggle {
   display: none;
   background: none;
@@ -491,6 +501,27 @@ nav ul li a:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack the navigation items vertically */
+    width: 100%; /* Full width for mobile */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Spacing between items in the mobile view */
+    width: 100%; /* Full width on smaller screens */
+    min-width: unset; /* Remove minimum width to allow flexibility */
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  nav ul.showing {
+    display: flex; /* Display navigation when toggled */
+  }
+}
 
 
 @media (max-width: 768px) {
@@ -512,4 +543,3 @@ footer {
   padding: 15px 0;
   
 }
-
