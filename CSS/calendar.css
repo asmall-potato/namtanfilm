@@ -188,24 +188,82 @@
 @media (max-width: 768px) {
     .calendar-container {
         flex-direction: column;
+        padding: 15px; /* Reduce padding */
     }
 
+    /* Left and Right Calendar Section */
     .calendar-left, .calendar-right {
         width: 100%;
-        margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Add some spacing between the sections */
     }
 
     .calendar-header {
-        font-size: 22px;
+        font-size: 22px; /* Slightly smaller font */
     }
 
+    /* Calendar Table */
+    .calendar {
+        width: 100%;
+        overflow-x: auto; /* Allow horizontal scrolling on mobile */
+        margin-top: 15px;
+    }
+
+    .calendar th, .calendar td {
+        padding: 10px; /* Reduce padding to make cells more compact */
+        font-size: 14px; /* Adjust font size */
+        height: auto; /* Allow cell height to auto-adjust */
+    }
+
+    .calendar td {
+        word-wrap: break-word; /* Ensure word wrapping */
+        text-overflow: ellipsis;
+    }
+
+    /* Hover effects on calendar cells */
+    .calendar td:hover {
+        background-color: #e3f2fd;
+        transform: scale(1.05); /* Keep hover effect for interactivity */
+    }
+
+    /* Adjust the schedule list */
     .schedule-list h3 {
-        font-size: 20px;
+        font-size: 20px; /* Adjust header font size */
     }
 
     .schedule-list li {
         padding: 12px;
+        font-size: 14px; /* Smaller font for better fit */
+    }
+
+    /* General mobile improvements */
+    .schedule-list li:hover {
+        transform: translateY(-5px); /* Keep hover effect */
+    }
+
+    /* Adjust button sizes for smaller screens */
+    .calendar-header button {
         font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+/* Additional improvements for extra small screens */
+@media (max-width: 480px) {
+    .calendar-header {
+        font-size: 18px; /* Further reduce font size for very small screens */
+    }
+
+    .calendar th, .calendar td {
+        padding: 8px; /* Further reduce padding for tight spaces */
+        font-size: 12px; /* Decrease font size to fit the screen better */
+    }
+
+    .schedule-list h3 {
+        font-size: 18px; /* Slightly reduce schedule header font size */
+    }
+
+    .schedule-list li {
+        padding: 10px;
+        font-size: 12px; /* Even smaller font size for readability */
     }
 }
