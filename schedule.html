@@ -328,6 +328,16 @@ function clearScheduleList() {
 
     // Initialize calendar
     generateCalendar();
+
+    //Hamburger
+         document.addEventListener("DOMContentLoaded", function () {
+            const navToggle = document.querySelector(".nav-toggle");
+            const navUl = document.querySelector("nav ul");
+
+            navToggle.addEventListener("click", function () {
+                navUl.classList.toggle("showing"); // Toggle the 'showing' class to show/hide the menu
+            });
+        });
 </script>
 
 </body>
