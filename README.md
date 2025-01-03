@@ -9,6 +9,7 @@ Features
 5. Brands
 6. Magazine
 7. Live Count
+8. Fan Meeting
 
 License
 This project is licensed under a custom license. For more details, please refer to the LICENSE file.
