@@ -1,0 +1,211 @@
+/* Calendar Container - Adding gradient and smooth shadow */
+.calendar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+    background: linear-gradient(to right, #A8D3E0, #009688); /* Gradient background */
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    padding: 25px;
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect to lift the calendar on hover */
+.calendar-container:hover {
+    transform: translateY(-10px);
+}
+
+/* Left Side Calendar */
+.calendar-left {
+    width: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* White background */
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Right Side Schedule List */
+.calendar-right {
+    width: 35%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    border-left: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* Calendar Header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.calendar-header button {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.calendar-header button:hover {
+    background-color: #00796b;
+    transform: scale(1.05); /* Scale effect */
+}
+
+/* Calendar Table */
+.calendar {
+    width: 100%;
+    table-layout: fixed; /* Ensures equal column width */
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.calendar th, .calendar td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    height: 100px;   /* Fixed height for rows */
+    vertical-align: top;
+    background-color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    overflow: hidden;  /* Hide overflow text */
+    word-wrap: break-word; /* Ensure words break and wrap within the cell */
+    word-break: break-word; /* Prevent text from overflowing */
+}
+
+/* Prevent word breaks in calendar cells */
+.calendar td {
+    word-wrap: break-word; /* Break long words if necessary */
+    text-overflow: ellipsis; /* Add ellipsis when text overflows */
+}
+
+/* Hover Effects on Calendar Cells */
+.calendar td:hover {
+    background-color: #e3f2fd; /* Slight blue color on hover */
+    transform: scale(1.05); /* Zoom in slightly on hover */
+}
+
+/* Highlight Today */
+.today {
+    background-color: #ffeb3b;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+/* Has Schedule (Color coding) */
+.has-schedule {
+    background-color: #c8e6c9; /* Light green background for dates with events */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tooltip for events */
+.schedule-details {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Smooth hover transition for schedule cells */
+.schedule-details:hover {
+    color: #00796b; /* Color change on hover */
+}
+
+/* Schedule List */
+.schedule-list {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.schedule-list h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #009688;
+}
+
+.schedule-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.schedule-list li {
+    background-color: #ffffff;
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for each schedule item */
+.schedule-list li:hover {
+    background-color: #e0f2f1;
+    transform: translateY(-5px);
+}
+
+/* Schedule Links */
+.schedule-list a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.schedule-list a:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
+
+/* Small devices responsiveness */
+@media (max-width: 768px) {
+    .calendar-container {
+        flex-direction: column;
+    }
+
+    .calendar-left, .calendar-right {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .calendar-header {
+        font-size: 22px;
+    }
+
+    .schedule-list h3 {
+        font-size: 20px;
+    }
+
+    .schedule-list li {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
