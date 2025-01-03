@@ -187,45 +187,39 @@
 /* Small devices responsiveness */
 @media (max-width: 768px) {
     .calendar-container {
-        flex-direction: column;  /* Stack calendar left and right vertically */
-        padding: 15px;           /* Reduce padding */
+        flex-direction: column;  /* Stack the left and right calendar vertically */
+        padding: 20px;           /* Increase padding for better spacing */
+        margin-top: 30px;        /* Provide extra space from top */
     }
 
     .calendar-left, .calendar-right {
-        width: 100%;             /* Ensure both sections take full width */
-        margin-bottom: 20px;     /* Add spacing between the calendar and schedule */
+        width: 100%;             /* Take full width for both sections */
+        margin-bottom: 30px;     /* Add spacing between the calendar and schedule */
     }
 
     .calendar-header {
-        font-size: 22px; /* Slightly smaller font for header */
-        margin-bottom: 15px; /* Reduce margin for better spacing */
+        font-size: 22px;         /* Slightly smaller font for header */
+        margin-bottom: 20px;     /* Provide more margin between header and content */
     }
 
     /* Calendar Table */
     .calendar {
-        width: 100%;  /* Take full width of the parent container */
-        overflow-x: auto; /* Allow horizontal scroll */
-        margin-top: 10px; /* Adjust spacing */
+        width: 100%;  /* Full width */
+        overflow-x: auto; /* Allow horizontal scroll for tight spaces */
+        margin-top: 20px; /* Provide some top space */
     }
 
     .calendar th, .calendar td {
-        padding: 10px;      /* Reduce padding to avoid excess space */
-        font-size: 14px;    /* Reduce font size */
-        height: 60px;       /* Set fixed height for rows to maintain readability */
+        padding: 15px;        /* Slightly increased padding for comfort */
+        font-size: 16px;      /* Font size increased for readability */
+        height: 70px;         /* Reduced row height */
         text-align: center;
-    }
-
-    .calendar td {
-        word-wrap: break-word; /* Ensure word wrapping */
-        text-overflow: ellipsis; /* Add ellipsis if text overflows */
-        background-color: #fff;
-        box-sizing: border-box;
     }
 
     /* Hover effects on calendar cells */
     .calendar td:hover {
         background-color: #e3f2fd;
-        transform: scale(1.05);  /* Maintain zoom effect on hover */
+        transform: scale(1.05);
     }
 
     /* Highlight today's date */
@@ -237,50 +231,61 @@
 
     /* Schedule List */
     .schedule-list h3 {
-        font-size: 20px;  /* Reduce size of schedule list header */
-        margin-bottom: 15px; /* Reduce margin to save space */
+        font-size: 20px;   /* Larger schedule list header */
+        margin-bottom: 25px; /* Adequate space below the header */
     }
 
     .schedule-list li {
-        padding: 12px; /* Keep padding but reduce for tight fit */
-        font-size: 14px; /* Smaller font size */
+        padding: 15px;     /* Increased padding for schedule items */
+        font-size: 16px;   /* Improved font size */
+        margin-bottom: 10px; /* Added margin between schedule items */
     }
 
+    /* Hover effect for schedule list items */
     .schedule-list li:hover {
         background-color: #e0f2f1;
-        transform: translateY(-5px); /* Hover effect */
+        transform: translateY(-5px); /* Slight hover effect */
     }
 
     /* Adjust button sizes for smaller screens */
     .calendar-header button {
-        font-size: 14px;
-        padding: 6px 12px;  /* Reduce button padding */
+        font-size: 16px;        /* Larger button text */
+        padding: 8px 16px;      /* Larger padding for better tap target */
+        border-radius: 5px;     /* Slightly rounded buttons */
     }
 }
 
 /* Extra small devices (portrait mode on small screens like phones) */
 @media (max-width: 480px) {
     .calendar-header {
-        font-size: 18px;  /* Even smaller font size */
+        font-size: 18px;  /* Smaller header for very small screens */
     }
 
     .calendar th, .calendar td {
-        padding: 8px;   /* More compact padding */
-        font-size: 12px; /* Smaller text for smaller screens */
-        height: 50px;    /* Reduce row height */
+        padding: 12px;   /* More compact padding */
+        font-size: 14px; /* Adjust font size */
+        height: 50px;    /* Reduced row height */
     }
 
     .schedule-list h3 {
-        font-size: 18px; /* Smaller header size */
+        font-size: 18px;  /* Slightly smaller header */
     }
 
     .schedule-list li {
-        padding: 10px;
-        font-size: 12px;  /* Smaller text */
+        padding: 12px;    /* Reduced padding for smaller screens */
+        font-size: 14px;  /* Adjusted font size */
+        margin-bottom: 8px; /* Less margin between items */
     }
 
-    /* Keep the calendar cells and schedule items easily readable on small screens */
+    /* Schedule item hover effect */
     .schedule-list li:hover {
-        transform: translateY(-5px); /* Hover effect on items */
+        background-color: #e0f2f1;
+        transform: translateY(-3px); /* Slight hover effect */
+    }
+
+    /* Adjust button sizes */
+    .calendar-header button {
+        font-size: 14px;
+        padding: 6px 12px;   /* Smaller padding */
     }
 }
