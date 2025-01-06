@@ -52,8 +52,8 @@ h2 {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .column {
-        max-width: 45%; /* Adjust max width for tablets */
-        margin: 10px; /* Add spacing around columns */
+        max-width: 100%; /* Full width for tablets */
+        margin: 10px 0; /* Add vertical spacing around columns */
         padding: 15px; /* Add padding inside columns */
         background-color: #ffffff; /* White background for columns */
         border-radius: 10px; /* Rounded corners for a modern look */
@@ -81,8 +81,8 @@ h2 {
 
 @media (max-width: 480px) {
     .column {
-        max-width: 100%; /* Use full width for mobile devices */
-        margin: 8px 0; /* Adjust spacing for smaller screens */
+        max-width: 100%; /* Full width for mobile devices */
+        margin: 8px 0; /* Adjust vertical spacing for smaller screens */
         padding: 12px; /* Reduce padding for smaller screens */
     }
 
