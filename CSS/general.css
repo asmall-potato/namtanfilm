@@ -61,11 +61,45 @@ button {
 @media (max-width: 768px) {
     .general-item {
         width: calc(50% - 40px); /* Two items per row on medium screens */
+        margin: 20px; /* Add spacing around items */
+        padding: 15px; /* Add padding inside items */
+        background-color: #ffffff; /* White background for items */
+        border-radius: 10px; /* Rounded corners for a modern look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    }
+
+    .general-item:hover {
+        transform: translateY(-5px); /* Slight lift effect on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
+
+    .general-item h3 {
+        font-size: 1.2em; /* Adjust font size for medium screens */
+        color: #009688; /* Teal color for headings */
+        margin-bottom: 10px; /* Spacing below headings */
+    }
+
+    .general-item p {
+        font-size: 0.95em; /* Adjust font size for medium screens */
+        color: #555; /* Dark gray color for text */
+        line-height: 1.5; /* Improve readability with line height */
     }
 }
 
 @media (max-width: 480px) {
     .general-item {
         width: 100%; /* One item per row on small screens */
+        margin: 10px 0; /* Adjust spacing for smaller screens */
+        padding: 12px; /* Reduce padding for smaller screens */
+    }
+
+    .general-item h3 {
+        font-size: 1.1em; /* Slightly reduce font size for small screens */
+        margin-bottom: 8px; /* Reduce spacing below headings */
+    }
+
+    .general-item p {
+        font-size: 0.9em; /* Slightly reduce font size for small screens */
     }
 }
