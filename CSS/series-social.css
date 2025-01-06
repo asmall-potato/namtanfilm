@@ -52,7 +52,8 @@ h2 {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .column {
-        max-width: 100%; /* Full width for tablets */
+        width: 100%; /* Full width for tablets */
+        max-width: 100%; /* Ensure no column exceeds 100% width */
         margin: 10px 0; /* Add vertical spacing around columns */
         padding: 15px; /* Add padding inside columns */
         background-color: #ffffff; /* White background for columns */
@@ -81,7 +82,8 @@ h2 {
 
 @media (max-width: 480px) {
     .column {
-        max-width: 100%; /* Full width for mobile devices */
+        width: 100%; /* Full width for mobile devices */
+        max-width: 100%; /* Ensure no column exceeds 100% width */
         margin: 8px 0; /* Adjust vertical spacing for smaller screens */
         padding: 12px; /* Reduce padding for smaller screens */
     }
