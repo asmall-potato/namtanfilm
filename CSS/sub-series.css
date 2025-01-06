@@ -180,77 +180,117 @@ section {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .bottom-right-text-sub h1 {
-        font-size: 60px;
+        font-size: 60px; /* Adjust font size for tablets */
+        color: #009688; /* Teal color for headings */
+        margin-bottom: 10px; /* Spacing below headings */
     }
 
     .bottom-right-text-sub p {
-        font-size: 20px;
+        font-size: 20px; /* Adjust font size for tablets */
+        color: #555; /* Dark gray color for text */
+        line-height: 1.5; /* Improve readability with line height */
     }
 
     .intro-section, .watch-section {
-        padding: 30px;
+        padding: 30px; /* Add padding for better spacing */
+        background-color: #f9f9f9; /* Light background for sections */
+        border-radius: 10px; /* Rounded corners for a modern look */
+        margin: 20px 0; /* Add spacing between sections */
     }
 
     .intro-section h2, .watch-section h2 {
-        font-size: 28px;
+        font-size: 28px; /* Adjust font size for tablets */
+        color: #009688; /* Teal color for headings */
+        margin-bottom: 15px; /* Spacing below headings */
     }
 
     .intro-section p, .watch-section p {
-        font-size: 16px;
+        font-size: 16px; /* Adjust font size for tablets */
+        color: #333; /* Dark gray color for text */
+        line-height: 1.6; /* Improve readability with line height */
     }
 
     .video-section iframe {
-        max-width: 90%;
+        max-width: 90%; /* Ensure iframe doesn't exceed container width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners for iframe */
+        margin: 10px 0; /* Add spacing around iframe */
     }
 
     .video-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack video and content vertically */
+        align-items: center; /* Center-align items horizontally */
+        gap: 20px; /* Add spacing between items */
     }
 
     .watch-section iframe {
-        flex: 1 1 100%;
-        max-width: 90%;
+        flex: 1 1 100%; /* Full width for iframe */
+        max-width: 90%; /* Ensure iframe doesn't exceed container width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners for iframe */
+        margin: 10px 0; /* Add spacing around iframe */
     }
 
     .platform-buttons {
-        flex-direction: column;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center-align buttons horizontally */
+        gap: 15px; /* Add spacing between buttons */
     }
 
     .watch-link {
-        width: 80%;
-        margin-bottom: 15px;
+        width: 80%; /* Adjust button width */
+        margin-bottom: 15px; /* Add spacing below buttons */
+        padding: 12px 20px; /* Add padding for better clickability */
+        background-color: #009688; /* Teal background for buttons */
+        color: white; /* White text color */
+        border-radius: 5px; /* Rounded corners for buttons */
+        text-align: center; /* Center-align text */
+        text-decoration: none; /* Remove underline */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    }
+
+    .watch-link:hover {
+        background-color: #00796b; /* Darker teal on hover */
+        transform: translateY(-3px); /* Slight lift effect on hover */
     }
 }
 
 @media (max-width: 480px) {
     .bottom-right-text-sub h1 {
-        font-size: 40px;
+        font-size: 40px; /* Adjust font size for mobile devices */
+        margin-bottom: 8px; /* Reduce spacing below headings */
     }
 
     .bottom-right-text-sub p {
-        font-size: 18px;
+        font-size: 18px; /* Adjust font size for mobile devices */
     }
 
     .intro-section, .watch-section {
-        padding: 20px;
+        padding: 20px; /* Reduce padding for smaller screens */
+        margin: 15px 0; /* Adjust spacing between sections */
     }
 
     .intro-section h2, .watch-section h2 {
-        font-size: 24px;
+        font-size: 24px; /* Adjust font size for mobile devices */
+        margin-bottom: 12px; /* Reduce spacing below headings */
     }
 
     .intro-section p, .watch-section p {
-        font-size: 14px;
+        font-size: 14px; /* Adjust font size for mobile devices */
     }
 
     .video-section iframe {
-        max-width: 100%;
+        max-width: 100%; /* Full width for iframe on mobile */
     }
 
     .watch-section iframe {
-        flex: 1 1 100%;
-        max-width: 100%;
+        flex: 1 1 100%; /* Full width for iframe on mobile */
+        max-width: 100%; /* Full width for iframe on mobile */
+    }
+
+    .watch-link {
+        width: 90%; /* Adjust button width for smaller screens */
+        padding: 10px 15px; /* Reduce padding for smaller screens */
     }
 }
 
@@ -310,11 +350,23 @@ section {
     .ost-content {
         flex-direction: column; /* Stack elements vertically */
         align-items: center; /* Center the elements */
+        gap: 20px; /* Add spacing between elements */
+        padding: 15px; /* Add padding for better spacing */
     }
 
     .ost-twitter, .ost-tracks {
         flex: 0 0 100%; /* Full width for both elements */
         max-width: 100%; /* Ensure no element exceeds 100% width */
+        margin-bottom: 20px; /* Add spacing below each element */
+        background-color: #ffffff; /* White background for elements */
+        border-radius: 10px; /* Rounded corners for a modern look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    }
+
+    .ost-twitter:hover, .ost-tracks:hover {
+        transform: translateY(-5px); /* Slight lift effect on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
     }
 
     /* Optional: Add spacing for mobile */
@@ -380,12 +432,29 @@ section {
 /* Mobile responsiveness: Stacking the items vertically */
 @media (max-width: 768px) {
     .embeds-row {
-        flex-direction: column;  /* Stack items on smaller screens */
-        align-items: center;
+        flex-direction: column;  /* Stack items vertically on smaller screens */
+        align-items: center;  /* Center-align items horizontally */
+        gap: 20px;  /* Add spacing between items */
+        padding: 15px;  /* Add padding for better spacing */
     }
 
     .engagement-item {
         flex: 1 1 100%;  /* Take full width on small screens */
-        max-width: 100%;
+        max-width: 100%;  /* Ensure no item exceeds 100% width */
+        margin-bottom: 20px;  /* Add spacing below each item */
+        background-color: #ffffff;  /* White background for items */
+        border-radius: 10px;  /* Rounded corners for a modern look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transitions */
+    }
+
+    .engagement-item:hover {
+        transform: translateY(-5px);  /* Slight lift effect on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Enhanced shadow on hover */
+    }
+
+    /* Optional: Add padding inside engagement items */
+    .engagement-item {
+        padding: 15px;  /* Add padding inside items */
     }
 }
