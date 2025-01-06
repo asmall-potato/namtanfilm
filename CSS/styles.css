@@ -414,6 +414,21 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   .video-frame {
       width: 100%; /* Full width on smaller screens */
+      max-width: 100%; /* Ensure it doesn't exceed the container width */
+      height: auto; /* Maintain aspect ratio */
+      aspect-ratio: 16 / 9; /* Standard video aspect ratio (16:9) */
+      padding: 10px; /* Add some padding for better spacing */
+      margin: 0 auto; /* Center the video frame horizontally */
+      border-radius: 10px; /* Rounded corners for a modern look */
+      overflow: hidden; /* Ensure content doesn't overflow */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  /* Optional: Add a hover effect for interactivity */
+  .video-frame:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+      transform: scale(1.02); /* Slight zoom effect */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   }
 }
 
@@ -584,35 +599,99 @@ nav ul li a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Navigation Menu */
   nav ul {
-    flex-direction: column; /* Stack the navigation items vertically */
-    width: 100%; /* Full width for mobile */
+      flex-direction: column; /* Stack the navigation items vertically */
+      width: 100%; /* Full width for mobile */
+      display: none; /* Hide the menu by default */
+      background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+      position: absolute; /* Position the menu below the toggle button */
+      top: 60px; /* Adjust based on your header height */
+      left: 0;
+      margin: 0;
+      padding: 10px 0;
+      list-style: none;
+      border-radius: 5px; /* Rounded corners for the menu */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+      animation: slideDown 0.3s ease-out; /* Smooth slide-down animation */
   }
 
   nav ul li {
-    margin: 10px 0; /* Spacing between items in the mobile view */
-    width: 100%; /* Full width on smaller screens */
-    min-width: unset; /* Remove minimum width to allow flexibility */
+      margin: 10px 0; /* Spacing between items in the mobile view */
+      width: 100%; /* Full width on smaller screens */
+      min-width: unset; /* Remove minimum width to allow flexibility */
+      text-align: center; /* Center-align the text */
+  }
+
+  nav ul li a {
+      color: white; /* Text color for menu items */
+      text-decoration: none;
+      font-size: 1.1em;
+      padding: 10px 20px; /* Padding for clickable area */
+      display: block; /* Make the entire area clickable */
+      transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  }
+
+  nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+      color: #009688; /* Change text color on hover */
   }
 
   .nav-toggle {
-    display: block;
+      display: block; /* Show the toggle button */
+      background-color: #009688; /* Button background color */
+      color: white; /* Button text color */
+      border: none;
+      padding: 10px 15px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 5px; /* Rounded corners */
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  }
+
+  .nav-toggle:hover {
+      background-color: #00796b; /* Darker color on hover */
+      transform: scale(1.05); /* Slight zoom effect */
   }
 
   nav ul.showing {
-    display: flex; /* Display navigation when toggled */
+      display: flex; /* Display navigation when toggled */
   }
-}
 
+  /* Keyframes for slide-down animation */
+  @keyframes slideDown {
+      from {
+          opacity: 0;
+          transform: translateY(-20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
 
-@media (max-width: 768px) {
+  /* Social Media Container */
   .social-media-container {
       flex-direction: column; /* Stack columns on smaller screens */
-      align-items: center;
+      align-items: center; /* Center-align the columns */
+      gap: 20px; /* Add spacing between columns */
+      padding: 20px; /* Add padding for better spacing */
   }
 
   .column {
-      width: auto; /* Make columns full width */
+      width: 100%; /* Make columns full width */
+      max-width: 300px; /* Limit column width for better readability */
+      text-align: center; /* Center-align the content */
+      background-color: #f9f9f9; /* Light background for columns */
+      border-radius: 10px; /* Rounded corners */
+      padding: 15px; /* Add padding inside columns */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  }
+
+  .column:hover {
+      transform: translateY(-5px); /* Slight lift effect on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
   }
 }
 
