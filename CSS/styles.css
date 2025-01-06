@@ -424,12 +424,44 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   .gallery-container {
       grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+      gap: 15px; /* Add spacing between grid items */
+      padding: 10px; /* Add padding to the container */
+  }
+
+  .gallery-item {
+      border-radius: 10px; /* Rounded corners for gallery items */
+      overflow: hidden; /* Ensure images don't overflow */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+
+  .gallery-item img {
+      width: 100%; /* Ensure images fill the container */
+      height: auto; /* Maintain aspect ratio */
+      display: block; /* Remove extra space below images */
+  }
+
+  .gallery-item:hover {
+      transform: scale(1.05); /* Slight zoom on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
   }
 }
 
 @media (max-width: 480px) {
   .gallery-container {
       grid-template-columns: 1fr; /* 1 column on mobile */
+      gap: 10px; /* Reduce spacing for a compact look */
+      padding: 5px; /* Reduce padding for smaller screens */
+  }
+
+  .gallery-item {
+      border-radius: 8px; /* Slightly smaller radius for mobile */
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Lighter shadow for mobile */
+  }
+
+  .gallery-item:hover {
+      transform: scale(1.03); /* Smaller zoom effect for mobile */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow */
   }
 }
 
