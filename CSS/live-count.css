@@ -100,23 +100,57 @@ iframe:hover {
 @media (max-width: 768px) {
     .counter-item {
         min-width: 45%; /* Adjust min width for tablets */
+        margin: 10px; /* Add spacing around counter items */
+        padding: 15px; /* Add padding inside counter items */
+        background-color: #ffffff; /* White background for counter items */
+        border-radius: 10px; /* Rounded corners for a modern look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    }
+
+    .counter-item:hover {
+        transform: translateY(-5px); /* Slight lift effect on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
     }
 
     iframe {
         width: 100%; /* Ensure iframe takes full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners for iframe */
+        margin: 10px 0; /* Add spacing around iframe */
+    }
+
+    h2 {
+        font-size: 2em; /* Adjust font size for tablets */
+        color: #009688; /* Teal color for headings */
+        margin-bottom: 15px; /* Spacing below headings */
+    }
+
+    h4 {
+        font-size: 1.4em; /* Adjust font size for tablets */
+        color: #333; /* Dark gray color for subheadings */
+        margin-bottom: 10px; /* Spacing below subheadings */
     }
 }
 
 @media (max-width: 480px) {
     .counter-item {
         min-width: 100%; /* Adjust min width for mobile devices */
+        margin: 8px 0; /* Adjust spacing for smaller screens */
+        padding: 12px; /* Reduce padding for smaller screens */
+    }
+
+    iframe {
+        margin: 8px 0; /* Adjust spacing for smaller screens */
     }
 
     h2 {
         font-size: 1.8em; /* Adjust font size for mobile devices */
+        margin-bottom: 12px; /* Reduce spacing below headings */
     }
 
     h4 {
         font-size: 1.2em; /* Adjust font size for mobile devices */
+        margin-bottom: 8px; /* Reduce spacing below subheadings */
     }
 }
