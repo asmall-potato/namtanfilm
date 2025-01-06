@@ -51,10 +51,16 @@ h2 {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    .series-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items horizontally */
+        gap: 20px; /* Add spacing between items */
+    }
+
     .column {
         width: 100%; /* Full width for mobile */
         max-width: 100%; /* Ensure no column exceeds 100% width */
-        margin: 10px 0; /* Add vertical spacing around columns */
+        margin: 0; /* Remove margin to avoid extra spacing */
         padding: 15px; /* Add padding inside columns */
         background-color: #ffffff; /* White background for columns */
         border-radius: 10px; /* Rounded corners for a modern look */
