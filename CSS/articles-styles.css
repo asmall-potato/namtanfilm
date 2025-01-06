@@ -56,32 +56,54 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .articles-container {
-        padding: 15px;
-        margin: 10px;
-        max-width: 95%;
+        padding: 15px; /* Add padding for better spacing */
+        margin: 10px auto; /* Center the container horizontally */
+        max-width: 95%; /* Limit width for better readability */
+        background-color: #f9f9f9; /* Light background for the container */
+        border-radius: 10px; /* Rounded corners for a modern look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     }
 
     .articles-container li {
-        padding: 15px;
+        padding: 15px; /* Spacing inside each list item */
+        margin-bottom: 10px; /* Spacing between list items */
+        background-color: #ffffff; /* White background for list items */
+        border-radius: 8px; /* Rounded corners for list items */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for list items */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    }
+
+    .articles-container li:hover {
+        transform: translateY(-5px); /* Slight lift effect on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
     }
 
     .articles-container a {
-        font-size: 18px;
+        font-size: 18px; /* Font size for links */
+        color: #009688; /* Link color */
+        text-decoration: none; /* Remove underline */
+        font-weight: 600; /* Bold text for better readability */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+
+    .articles-container a:hover {
+        color: #00796b; /* Darker color on hover */
     }
 }
 
 @media (max-width: 480px) {
     .articles-container {
-        padding: 10px;
-        margin: 5px;
-        max-width: 100%;
+        padding: 10px; /* Reduced padding for smaller screens */
+        margin: 5px auto; /* Center the container horizontally */
+        max-width: 100%; /* Full width for very small screens */
     }
 
     .articles-container li {
-        padding: 10px;
+        padding: 10px; /* Reduced padding for smaller screens */
+        margin-bottom: 8px; /* Reduced spacing between list items */
     }
 
     .articles-container a {
-        font-size: 16px;
+        font-size: 16px; /* Smaller font size for very small screens */
     }
 }
