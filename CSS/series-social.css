@@ -53,15 +53,45 @@ h2 {
 @media (max-width: 768px) {
     .column {
         max-width: 45%; /* Adjust max width for tablets */
+        margin: 10px; /* Add spacing around columns */
+        padding: 15px; /* Add padding inside columns */
+        background-color: #ffffff; /* White background for columns */
+        border-radius: 10px; /* Rounded corners for a modern look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    }
+
+    .column:hover {
+        transform: translateY(-5px); /* Slight lift effect on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
+
+    .column h3 {
+        font-size: 1.3em; /* Adjust font size for tablets */
+        color: #009688; /* Teal color for headings */
+        margin-bottom: 10px; /* Spacing below headings */
+    }
+
+    .column p {
+        font-size: 0.95em; /* Adjust font size for tablets */
+        color: #555; /* Dark gray color for text */
+        line-height: 1.5; /* Improve readability with line height */
     }
 }
 
 @media (max-width: 480px) {
     .column {
         max-width: 100%; /* Use full width for mobile devices */
+        margin: 8px 0; /* Adjust spacing for smaller screens */
+        padding: 12px; /* Reduce padding for smaller screens */
     }
 
     .column h3 {
         font-size: 1.1em; /* Slightly reduce font size for mobile devices */
+        margin-bottom: 8px; /* Reduce spacing below headings */
+    }
+
+    .column p {
+        font-size: 0.9em; /* Slightly reduce font size for mobile devices */
     }
 }
