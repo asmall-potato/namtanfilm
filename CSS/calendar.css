@@ -226,19 +226,19 @@
         margin-bottom: 10px;    /* Added margin between schedule items */
     }
 
-    /* Hide event names in calendar cells */
+    /* Hide event wording in calendar cells */
     .calendar td .schedule-details {
         display: none;
     }
 
-    /* Show only the colored background for dates with events */
+    /* Show color label for dates with events */
     .calendar td.has-schedule {
         background-color: #c8e6c9; /* Light green background for dates with events */
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Ensure the calendar cells are still clickable and have the hover effect */
+    /* Hover effect for cells with events */
     .calendar td.has-schedule:hover {
         background-color: #a5d6a7; /* Slightly darker green on hover */
         transform: scale(1.05); /* Zoom in slightly on hover */
@@ -296,19 +296,19 @@
         padding: 5px 10px;      /* Smaller padding */
     }
 
-    /* Hide event names in calendar cells */
+    /* Hide event wording in calendar cells */
     .calendar td .schedule-details {
         display: none;
     }
 
-    /* Show only the colored background for dates with events */
+    /* Show color label for dates with events */
     .calendar td.has-schedule {
         background-color: #c8e6c9; /* Light green background for dates with events */
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Ensure the calendar cells are still clickable and have the hover effect */
+    /* Hover effect for cells with events */
     .calendar td.has-schedule:hover {
         background-color: #a5d6a7; /* Slightly darker green on hover */
         transform: scale(1.05); /* Zoom in slightly on hover */
