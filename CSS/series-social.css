@@ -50,6 +50,7 @@ h2 {
 }
 
 /* Media Queries for Responsiveness */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .series-container {
         flex-direction: column; /* Stack items vertically */
