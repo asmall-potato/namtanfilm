@@ -50,7 +50,6 @@ h2 {
 }
 
 /* Media Queries for Responsiveness */
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .series-container {
         flex-direction: column; /* Stack items vertically */
@@ -75,15 +74,16 @@ h2 {
     }
 
     .column h3 {
-        font-size: 1.3em; /* Adjust font size for mobile */
+        font-size: 1.4em; /* Larger font size for better readability */
         color: #009688; /* Teal color for headings */
-        margin-bottom: 10px; /* Spacing below headings */
+        margin-bottom: 15px; /* Add more space below the heading */
     }
 
     .column p {
-        font-size: 0.95em; /* Adjust font size for mobile */
+        font-size: 1em; /* Ensure text is readable */
         color: #555; /* Dark gray color for text */
-        line-height: 1.5; /* Improve readability with line height */
+        line-height: 1.6; /* Improved line height for readability */
+        margin-bottom: 15px; /* Add spacing below the paragraph */
     }
 
     .column img {
@@ -91,6 +91,7 @@ h2 {
         height: auto; /* Maintain aspect ratio */
         border-bottom: 2px solid #ddd; /* Divider at the bottom of the image */
         border-radius: 8px; /* Rounded corners for images */
+        margin-bottom: 15px; /* Add space below the image */
     }
 }
 
@@ -100,11 +101,17 @@ h2 {
     }
 
     .column h3 {
-        font-size: 1.1em; /* Slightly reduce font size for very small screens */
-        margin-bottom: 8px; /* Reduce spacing below headings */
+        font-size: 1.3em; /* Slightly reduce font size for very small screens */
+        margin-bottom: 12px; /* Adjust spacing below headings */
     }
 
     .column p {
-        font-size: 0.9em; /* Slightly reduce font size for very small screens */
+        font-size: 1em; /* Ensure readability on very small screens */
+    }
+
+    .column img {
+        width: 100%; /* Ensure images fit within the container */
+        height: auto; /* Maintain aspect ratio */
     }
 }
+
