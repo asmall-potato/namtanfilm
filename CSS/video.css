@@ -56,14 +56,54 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .video-item {
-        flex: 0 0 calc(50% - 20px);
-        max-width: calc(50% - 20px);
+        flex: 0 0 calc(50% - 20px); /* Two items per row with spacing */
+        max-width: calc(50% - 20px); /* Ensure no item exceeds 50% width */
+        margin: 10px; /* Add spacing around items */
+        padding: 15px; /* Add padding inside items */
+        background-color: #ffffff; /* White background for items */
+        border-radius: 10px; /* Rounded corners for a modern look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    }
+
+    .video-item:hover {
+        transform: translateY(-5px); /* Slight lift effect on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    }
+
+    .video-item iframe {
+        width: 100%; /* Ensure iframe takes full width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Rounded corners for iframe */
+    }
+
+    .video-item h3 {
+        font-size: 1.2em; /* Adjust font size for tablets */
+        color: #009688; /* Teal color for headings */
+        margin-bottom: 10px; /* Spacing below headings */
+    }
+
+    .video-item p {
+        font-size: 0.95em; /* Adjust font size for tablets */
+        color: #555; /* Dark gray color for text */
+        line-height: 1.5; /* Improve readability with line height */
     }
 }
 
 @media (max-width: 480px) {
     .video-item {
-        flex: 0 0 calc(100% - 20px);
-        max-width: calc(100% - 20px);
+        flex: 0 0 calc(100% - 20px); /* Full width for mobile devices */
+        max-width: calc(100% - 20px); /* Ensure no item exceeds 100% width */
+        margin: 8px 0; /* Adjust spacing for smaller screens */
+        padding: 12px; /* Reduce padding for smaller screens */
+    }
+
+    .video-item h3 {
+        font-size: 1.1em; /* Slightly reduce font size for mobile devices */
+        margin-bottom: 8px; /* Reduce spacing below headings */
+    }
+
+    .video-item p {
+        font-size: 0.9em; /* Slightly reduce font size for mobile devices */
     }
 }
