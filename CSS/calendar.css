@@ -185,96 +185,39 @@
 }
 
 @media (max-width: 768px) {
-    .calendar-container {
-        flex-direction: column;  /* Stack the left and right sections vertically */
-        padding: 15px;           /* Reduced padding for better spacing */
-        margin-top: 30px;        /* Provide extra space from top */
-        overflow-x: hidden;      /* Hide horizontal overflow */
+    /* Hide event names in calendar cells */
+    .calendar td .schedule-details {
+        display: none;
     }
 
-    .calendar-left, .calendar-right {
-        width: 100%;             /* Full width for both sections */
-        margin-bottom: 20px;     /* Add spacing between the calendar and schedule */
+    /* Show only the colored background for dates with events */
+    .calendar td.has-schedule {
+        background-color: #c8e6c9; /* Light green background for dates with events */
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .calendar-header {
-        font-size: 22px;        /* Slightly smaller font for header */
-        margin-bottom: 15px;    /* Provide more margin between header and content */
-    }
-
-    .calendar {
-        width: 100%;            /* Ensure the calendar takes full width */
-        margin-top: 15px;       /* Provide some top space */
-        overflow-x: auto;       /* Allow horizontal scroll for tight spaces */
-    }
-
-    .calendar th, .calendar td {
-        padding: 12px;          /* Slightly reduced padding for comfort */
-        font-size: 14px;        /* Font size adjusted for readability */
-        height: 60px;           /* Reduced row height */
-        text-align: center;
-    }
-
-    .schedule-list h3 {
-        font-size: 20px;        /* Larger schedule list header */
-        margin-bottom: 20px;    /* Adequate space below the header */
-    }
-
-    .schedule-list li {
-        padding: 12px;          /* Adjusted padding for schedule items */
-        font-size: 14px;        /* Improved font size */
-        margin-bottom: 10px;    /* Added margin between schedule items */
+    /* Ensure the calendar cells are still clickable and have the hover effect */
+    .calendar td.has-schedule:hover {
+        background-color: #a5d6a7; /* Slightly darker green on hover */
+        transform: scale(1.05); /* Zoom in slightly on hover */
     }
 }
 
 @media (max-width: 480px) {
-    .calendar-container {
-        flex-direction: column;  /* Stack the left and right sections vertically */
-        padding: 10px;           /* Reduced padding for better spacing */
-        margin-top: 20px;        /* Provide extra space from top */
-        overflow-x: hidden;      /* Hide horizontal overflow */
+    /* Repeat the same rules for smaller screens if needed */
+    .calendar td .schedule-details {
+        display: none;
     }
 
-    .calendar-left, .calendar-right {
-        width: 100%;             /* Full width for both sections */
-        margin-bottom: 15px;     /* Add spacing between the calendar and schedule */
+    .calendar td.has-schedule {
+        background-color: #c8e6c9;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .calendar-header {
-        font-size: 18px;        /* Smaller header for very small screens */
-        margin-bottom: 10px;    /* Provide more margin between header and content */
-    }
-
-    .calendar {
-        width: 100%;            /* Ensure the calendar takes full width */
-        margin-top: 10px;       /* Provide some top space */
-        overflow-x: auto;       /* Allow horizontal scroll for tight spaces */
-    }
-
-    .calendar th, .calendar td {
-        padding: 10px;          /* More compact padding */
-        font-size: 12px;        /* Adjust font size */
-        height: 50px;           /* Reduced row height */
-    }
-
-    .schedule-list h3 {
-        font-size: 18px;        /* Slightly smaller header */
-        margin-bottom: 15px;    /* Adequate space below the header */
-    }
-
-    .schedule-list li {
-        padding: 10px;          /* Reduced padding for smaller screens */
-        font-size: 12px;        /* Adjusted font size */
-        margin-bottom: 8px;     /* Less margin between items */
-    }
-
-    .schedule-list li:hover {
-        background-color: #e0f2f1;
-        transform: translateY(-3px); /* Slight hover effect */
-    }
-
-    .calendar-header button {
-        font-size: 12px;
-        padding: 5px 10px;      /* Smaller padding */
+    .calendar td.has-schedule:hover {
+        background-color: #a5d6a7;
+        transform: scale(1.05);
     }
 }
