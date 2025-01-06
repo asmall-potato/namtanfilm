@@ -52,7 +52,7 @@ h2 {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .column {
-        width: 100%; /* Full width for tablets */
+        width: 100%; /* Full width for mobile */
         max-width: 100%; /* Ensure no column exceeds 100% width */
         margin: 10px 0; /* Add vertical spacing around columns */
         padding: 15px; /* Add padding inside columns */
@@ -68,32 +68,36 @@ h2 {
     }
 
     .column h3 {
-        font-size: 1.3em; /* Adjust font size for tablets */
+        font-size: 1.3em; /* Adjust font size for mobile */
         color: #009688; /* Teal color for headings */
         margin-bottom: 10px; /* Spacing below headings */
     }
 
     .column p {
-        font-size: 0.95em; /* Adjust font size for tablets */
+        font-size: 0.95em; /* Adjust font size for mobile */
         color: #555; /* Dark gray color for text */
         line-height: 1.5; /* Improve readability with line height */
+    }
+
+    .column img {
+        width: 100%; /* Ensure images take full width */
+        height: auto; /* Maintain aspect ratio */
+        border-bottom: 2px solid #ddd; /* Divider at the bottom of the image */
+        border-radius: 8px; /* Rounded corners for images */
     }
 }
 
 @media (max-width: 480px) {
     .column {
-        width: 100%; /* Full width for mobile devices */
-        max-width: 100%; /* Ensure no column exceeds 100% width */
-        margin: 8px 0; /* Adjust vertical spacing for smaller screens */
         padding: 12px; /* Reduce padding for smaller screens */
     }
 
     .column h3 {
-        font-size: 1.1em; /* Slightly reduce font size for mobile devices */
+        font-size: 1.1em; /* Slightly reduce font size for very small screens */
         margin-bottom: 8px; /* Reduce spacing below headings */
     }
 
     .column p {
-        font-size: 0.9em; /* Slightly reduce font size for mobile devices */
+        font-size: 0.9em; /* Slightly reduce font size for very small screens */
     }
 }
