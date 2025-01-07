@@ -161,29 +161,83 @@ nav ul li a:hover {
 }
 
 /* Responsive Design */
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
-  .bottom-left-text {
-      font-size: 1.8em;
-  }
-
-  .nav-toggle {
-      display: block;
-  }
-
+  /* Navigation Menu */
   nav ul {
-      flex-direction: column;
-      display: none;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column; /* Stack navigation items vertically */
+    display: none; /* Hide navigation by default */
+    position: fixed; /* Fix the menu to the screen */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the menu */
+    width: 90%; /* Set a width for the menu */
+    max-width: 300px; /* Limit maximum width */
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    padding: 20px; /* Add padding inside the menu */
+    z-index: 1000; /* Ensure it appears above other content */
+    text-align: center; /* Center-align text */
   }
 
-  nav ul li {
-      margin: 10px 0;
-      text-align: center;
-  }
-
+  /* Show navigation menu when toggled */
   nav ul.showing {
-      display: flex;
+    display: flex; /* Display the menu */
+  }
+
+  /* Navigation List Items */
+  nav ul li {
+    margin: 10px 0; /* Add spacing between items */
+    width: 100%; /* Full width for each item */
+  }
+
+  /* Navigation Links */
+  nav ul li a {
+    color: #333; /* Dark text color for better readability */
+    font-size: 1.2em; /* Slightly larger font size */
+    padding: 10px; /* Add padding for better touch targets */
+    display: block; /* Make links block-level */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+
+  /* Hover Effect for Links */
+  nav ul li a:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    color: #000; /* Darker text color on hover */
+  }
+
+  /* Hamburger Toggle Button */
+  .nav-toggle {
+    display: block; /* Show the toggle button */
+    position: fixed; /* Fix the button to the screen */
+    top: 20px; /* Position from the top */
+    right: 20px; /* Position from the right */
+    z-index: 1001; /* Ensure it appears above the menu */
+    background: #527ef9; /* Match the logo color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.5em; /* Increase icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+
+  /* Overlay for Background when Menu is Open */
+  .overlay {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 999; /* Ensure it appears below the menu but above other content */
+  }
+
+  /* Show overlay when menu is open */
+  nav ul.showing + .overlay {
+    display: block;
   }
 }
 
