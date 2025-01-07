@@ -338,6 +338,13 @@ nav ul li a:hover {
   box-sizing: border-box; /* Make sure padding and border are included in the width calculation */
 }
 
+@media (max-width: 768px) {
+  .column {
+    flex: 1 1 100%; /* Make each column take 100% width on small screens */
+    max-width: 100%; /* Ensure columns take full width on smaller screens */
+  }
+}
+
 /* Modify for mobile view for section 2*/
 /* For Mobile View: */
 @media (max-width: 768px) {
