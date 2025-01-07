@@ -186,9 +186,8 @@ section {
     }
 
     .bottom-right-text-sub p {
-        font-size: 20px; /* Adjust font size for tablets */
-        color: #555; /* Dark gray color for text */
-        line-height: 1.8; /* Improve readability with line height */
+        font-size: 18px; /* Smaller text on mobile */
+        line-height: 1.5; /* Adjust line height for readability */
     }
 
     .intro-section, .watch-section {
@@ -263,6 +262,7 @@ section {
 
     .bottom-right-text-sub p {
         font-size: 18px; /* Adjust font size for mobile devices */
+        line-height: 1.4; /* Adjust line height for very small screens */
     }
 
     .intro-section, .watch-section {
