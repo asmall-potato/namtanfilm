@@ -156,50 +156,6 @@
         const scrollPosition = window.scrollY;
         header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
         });
-        
-        //pagination
-        const itemsPerPage = 12;
-        const generalItems = document.querySelectorAll('.general-item');
-        const totalPages = Math.ceil(generalItems.length / itemsPerPage);
-
-    function showPage(page) {
-        generalItems.forEach((item, index) => {
-            item.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? 'block' : 'none';
-        });
-    }
-
-    function createPagination() {
-        const paginationContainer = document.getElementById('pagination');
-        for (let i = 1; i <= totalPages; i++) {
-            const pageLink = document.createElement('a');
-            pageLink.href = "#";
-            pageLink.innerHTML = i;
-            pageLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                showPage(i);
-                updateActivePage(i);
-            });
-            paginationContainer.appendChild(pageLink);
-        }
-        updateActivePage(1); // Set page 1 as active on load
-    }
-
-    function updateActivePage(activePage) {
-        const paginationLinks = document.querySelectorAll('.pagination a');
-        paginationLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-        paginationLinks[activePage - 1].classList.add('active');
-    }
-
-    // Initialize pagination on page load
-    showPage(1);
-    createPagination();
-
-            //hamburger for only display at mobile devices
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-        document.querySelector('nav ul').classList.toggle('showing');
-        });
 
             //Hamburger
          document.addEventListener("DOMContentLoaded", function () {
