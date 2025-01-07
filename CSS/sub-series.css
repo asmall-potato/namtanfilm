@@ -201,7 +201,7 @@ section {
     .intro-section h2, .watch-section h2 {
         font-size: 28px; /* Adjust font size for tablets */
         color: #009688; /* Teal color for headings */
-        margin-bottom: 30px; /* Spacing below headings */
+        margin-bottom: 10px; /* Spacing below headings */
     }
 
     .intro-section p, .watch-section p {
