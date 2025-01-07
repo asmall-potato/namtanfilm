@@ -496,7 +496,7 @@ nav ul li a:hover {
   .social-media-container {
       display: flex;
       flex-direction: column; /* Stack columns vertically on smaller screens */
-      align-items: center; /* Center align items horizontally */
+      align-items: stretch; /* Make all columns stretch to the same width */
       gap: 1rem; /* Add spacing between stacked items */
   }
 
@@ -504,11 +504,12 @@ nav ul li a:hover {
       width: 100%; /* Make columns take full width of the container */
       max-width: 100%; /* Ensure columns don't exceed container width */
       text-align: center; /* Center text within columns */
-  }
-
-  /* Optional: Add padding or margin for better spacing */
-  .column:not(:last-child) {
-      margin-bottom: 1rem; /* Add margin between stacked columns */
+      flex: 1; /* Ensure all columns have equal height */
+      display: flex;
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      padding: 1rem; /* Add padding for better spacing */
+      box-sizing: border-box; /* Include padding in width/height calculations */
   }
 }
 
