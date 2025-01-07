@@ -1,0 +1,125 @@
+/* General Styles for the Page */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a clean and modern font */
+    background-color: #fafafa; /* Light gray background */
+    
+}
+
+/* Section 3 Styles */
+.section3, .section4 {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between; /* Space out items */
+    padding: 60px 20px; /* Add padding for better spacing */
+    border-radius: 10px; /* Rounded corners for the section */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow to add depth */
+    margin-bottom: 40px; /* Add space between sections */
+}
+
+/* Section 3 Background Gradient */
+.section3 {
+    background: linear-gradient(135deg, #f5f5f5, #e2e8f0); /* Soft gradient background */
+}
+
+/* Section 4 Background Color */
+.section4 {
+    background-color: #f5f5dc; /* Beige background for section 4 */
+}
+
+/* Left Image */
+.left-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px; /* Space between the image and text */
+    border-radius: 10px; /* Rounded corners for the image container */
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow around the image */
+}
+
+/* Image Styling */
+.left-image img {
+    width: 100%; /* Responsive width */
+    height: auto;
+    border-radius: 10px; /* Round the corners of the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth hover effect */
+}
+
+/* Image Hover Effect */
+.left-image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Details Text Under Left Image */
+.details {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px; /* Slightly smaller font for the details */
+    color: #555; /* Lighter text color for details */
+}
+
+/* Middle Text */
+.middle-text {
+    flex: 2;
+    padding: 40px;
+    background-color: #ffffff; /* White background for the text area */
+    border-radius: 10px; /* Rounded corners for the text container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for the text container */
+    max-width: 100%;
+    transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+/* Middle Text Hover Effect */
+.middle-text:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Typography for Text Content */
+h3 {
+    font-size: 24px; /* Larger font size for headers */
+    color: #333; /* Dark color for headings */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Styling for Paragraphs */
+p {
+    font-size: 16px; /* Standard font size for body text */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 12px; /* Space between paragraphs */
+   /* color: #444; /* Slightly lighter text color */
+}
+
+/* Hover Effect for Text Links */
+a {
+    color: #007BFF; /* Primary blue color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .section3, .section4 {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        padding: 40px 20px; /* Less padding on small screens */
+    }
+
+    .left-image {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add margin between image and text on small screens */
+    }
+
+    .middle-text {
+        padding: 20px; /* Less padding for smaller screens */
+    }
+}
