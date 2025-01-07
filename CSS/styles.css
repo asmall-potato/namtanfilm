@@ -469,50 +469,49 @@ nav ul li a:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
-/* Responsive Design */
+/* Responsive Design for Navigation and Social Media Container */
 @media (max-width: 768px) {
+  /* Navigation Styles */
   nav ul {
     flex-direction: column; /* Stack the navigation items vertically */
     width: 100%; /* Full width for mobile */
-  }
-
-  nav ul li {
-    margin: 10px 0; /* Spacing between items in the mobile view */
-    width: 100%; /* Full width on smaller screens */
-    min-width: unset; /* Remove minimum width to allow flexibility */
-  }
-
-  .nav-toggle {
-    display: block;
+    display: none; /* Hide navigation by default */
   }
 
   nav ul.showing {
     display: flex; /* Display navigation when toggled */
   }
-}
 
+  nav ul li {
+    margin: 10px 0; /* Spacing between items in the mobile view */
+    width: 100%; /* Full width on smaller screens */
+    text-align: center; /* Center-align navigation items */
+  }
 
-@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* Show toggle button for mobile */
+  }
+
+  /* Social Media Container Styles */
   .social-media-container {
-      display: flex;
-      flex-direction: column; /* Stack columns vertically on smaller screens */
-      align-items: stretch; /* Make all columns stretch to the same width */
-      gap: 1rem; /* Add spacing between stacked items */
+    display: flex;
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+    align-items: stretch; /* Make all columns stretch to the same width */
+    gap: 1rem; /* Add spacing between stacked items */
   }
 
   .column {
-      width: 100%; /* Make columns take full width of the container */
-      max-width: 100%; /* Ensure columns don't exceed container width */
-      text-align: center; /* Center text within columns */
-      flex: 1; /* Ensure all columns have equal height */
-      display: flex;
-      justify-content: center; /* Center content horizontally */
-      align-items: center; /* Center content vertically */
-      padding: 1rem; /* Add padding for better spacing */
-      box-sizing: border-box; /* Include padding in width/height calculations */
+    width: 100%; /* Make columns take full width of the container */
+    max-width: 100%; /* Ensure columns don't exceed container width */
+    text-align: center; /* Center text within columns */
+    flex: 1; /* Ensure all columns have equal height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 1rem; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in width/height calculations */
   }
 }
-
 
 /* Footer */
 footer {
