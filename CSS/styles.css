@@ -163,76 +163,27 @@ nav ul li a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   .bottom-left-text {
-      font-size: 1.8em; /* Adjust text size for mobile */
-      margin-bottom: 10px; /* Add spacing below the text */
+      font-size: 1.8em;
   }
 
   .nav-toggle {
-      display: block; /* Show the toggle button */
-      background-color: #009688; /* Button background color */
-      color: white; /* Button text color */
-      border: none;
-      padding: 10px 15px;
-      font-size: 1.2em;
-      cursor: pointer;
-      border-radius: 5px; /* Rounded corners */
-      transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-  }
-
-  .nav-toggle:hover {
-      background-color: #00796b; /* Darker color on hover */
-      transform: scale(1.05); /* Slight zoom effect */
+      display: block;
   }
 
   nav ul {
-      flex-direction: column; /* Stack navigation items vertically */
-      display: none; /* Hide the menu by default */
+      flex-direction: column;
+      display: none;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
-      position: absolute; /* Position the menu below the toggle button */
-      top: 60px; /* Adjust based on your header height */
-      left: 0;
-      margin: 0;
-      padding: 10px 0;
-      list-style: none;
-      border-radius: 5px; /* Rounded corners for the menu */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-      animation: slideDown 0.3s ease-out; /* Smooth slide-down animation */
+      background-color: rgba(0, 0, 0, 0.8);
   }
 
   nav ul li {
-      margin: 10px 0; /* Spacing between menu items */
+      margin: 10px 0;
       text-align: center;
   }
 
-  nav ul li a {
-      color: white; /* Text color for menu items */
-      text-decoration: none;
-      font-size: 1.1em;
-      padding: 10px 20px; /* Padding for clickable area */
-      display: block; /* Make the entire area clickable */
-      transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
-  }
-
-  nav ul li a:hover {
-      background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
-      color: #009688; /* Change text color on hover */
-  }
-
   nav ul.showing {
-      display: flex; /* Show the menu when toggled */
-  }
-
-  /* Keyframes for slide-down animation */
-  @keyframes slideDown {
-      from {
-          opacity: 0;
-          transform: translateY(-20px);
-      }
-      to {
-          opacity: 1;
-          transform: translateY(0);
-      }
+      display: flex;
   }
 }
 
@@ -278,94 +229,62 @@ nav ul li a:hover {
   padding: 0 20px; /* Add some padding around text */
 }
 
+/* Introduce namtanfilm Section */
+.cast-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of columns */
+  justify-content: space-evenly; /* Space out the columns evenly */
+  gap: 20px; /* Add gap between the columns */
+  margin: auto;
+  padding: 0 10px; /* Add padding to the container to avoid touching edges */
+  text-align: center;
+}
+
+.cast-container h3 {
+  width: 100%;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Column inside cast container */
+.column {
+  flex: 1 1 30%; /* Each column takes up 30% of the container width */
+  max-width: 30%; /* Ensure it doesn’t exceed 30% */
+  text-align: center;
+  margin: 10px;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0); /* Gradient background */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 10px; /* Padding inside the column */
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for the column */
+.column:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Column image styling */
+.column img {
+  width: 100%; /* Ensure the image takes up the full width of the column */
+  height: auto; /* Maintain aspect ratio of the image */
+  display: block;
+  border-bottom: 2px solid #ddd; /* Divider at the bottom of the image */
+  object-fit: cover; /* Ensures images are cropped and maintain aspect ratio */
+  box-sizing: border-box; /* Make sure padding and border are included in the width calculation */
+}
+
+@media (max-width: 768px) {
+  .column {
+      flex: 1 1 100%; /* Each column takes up full width on smaller screens */
+      max-width: 100%; /* Ensures columns use full width on smaller screens */
+  }
+}
+
 /* Other sections with different background colors */
-/* Section 3 Styles */
-.section3 {
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow wrapping */
-  align-items: flex-start; /* Align items at the top */
-  justify-content: space-between; /* Space out items */
-  padding: 40px 20px; /* Add padding */
-  background-color: #f5fffa; /* Set a background color */
-}
-
-.left-image {
-  flex: 1; /* Take up equal space */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center image horizontally */
-}
-
-.left-image img {
-  max-width: 100%; /* Responsive image */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.details {
-  text-align: center; /* Center the text below the left image */
-  margin-top: 10px; /* Space between image and text */
-}
-
-.middle-text {
-  flex: 2; /* Take up more space in the middle */
-  padding: 20px; /* Add padding for spacing */
-  text-align: left; /* Align text to the left */
-}
-
-.right-image {
-  flex: 1; /* Take up equal space */
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center image horizontally */
-  align-items: flex-start; /* Align image to the top */
-}
-
-.right-image img {
-  max-width: 100%; /* Responsive image */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.section4 {
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow wrapping */
-  align-items: flex-start; /* Align items at the top */
-  justify-content: space-between; /* Space out items */
-  padding: 40px 20px; /* Add padding */
-  background-color: #f5f5dc; /* Beige background for section4 */
-}
-.left-image {
-  flex: 1; /* Take up equal space */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center image horizontally */
-}
-
-.left-image img {
-  max-width: 100%; /* Responsive image */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.details {
-  text-align: center; /* Center the text below the left image */
-  margin-top: 10px; /* Space between image and text */
-}
-
-.middle-text {
-  flex: 2; /* Take up more space in the middle */
-  padding: 20px; /* Add padding for spacing */
-  text-align: left; /* Align text to the left */
-}
-
-.right-image {
-  flex: 1; /* Take up equal space */
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center image horizontally */
-  align-items: flex-start; /* Align image to the top */
-}
-
-.right-image img {
-  max-width: 100%; /* Responsive image */
-  height: auto; /* Maintain aspect ratio */
-}
 
 .section5 {
   background-color: #fafad2; /* Light goldenrod yellow for section5 */
@@ -414,21 +333,6 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   .video-frame {
       width: 100%; /* Full width on smaller screens */
-      max-width: 100%; /* Ensure it doesn't exceed the container width */
-      height: auto; /* Maintain aspect ratio */
-      aspect-ratio: 16 / 9; /* Standard video aspect ratio (16:9) */
-      padding: 10px; /* Add some padding for better spacing */
-      margin: 0 auto; /* Center the video frame horizontally */
-      border-radius: 10px; /* Rounded corners for a modern look */
-      overflow: hidden; /* Ensure content doesn't overflow */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  }
-
-  /* Optional: Add a hover effect for interactivity */
-  .video-frame:hover {
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-      transform: scale(1.02); /* Slight zoom effect */
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   }
 }
 
@@ -488,44 +392,12 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   .gallery-container {
       grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-      gap: 15px; /* Add spacing between grid items */
-      padding: 10px; /* Add padding to the container */
-  }
-
-  .gallery-item {
-      border-radius: 10px; /* Rounded corners for gallery items */
-      overflow: hidden; /* Ensure images don't overflow */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-  }
-
-  .gallery-item img {
-      width: 100%; /* Ensure images fill the container */
-      height: auto; /* Maintain aspect ratio */
-      display: block; /* Remove extra space below images */
-  }
-
-  .gallery-item:hover {
-      transform: scale(1.05); /* Slight zoom on hover */
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
   }
 }
 
 @media (max-width: 480px) {
   .gallery-container {
       grid-template-columns: 1fr; /* 1 column on mobile */
-      gap: 10px; /* Reduce spacing for a compact look */
-      padding: 5px; /* Reduce padding for smaller screens */
-  }
-
-  .gallery-item {
-      border-radius: 8px; /* Slightly smaller radius for mobile */
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Lighter shadow for mobile */
-  }
-
-  .gallery-item:hover {
-      transform: scale(1.03); /* Smaller zoom effect for mobile */
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly enhanced shadow */
   }
 }
 
@@ -599,99 +471,35 @@ nav ul li a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  /* Navigation Menu */
   nav ul {
-      flex-direction: column; /* Stack the navigation items vertically */
-      width: 100%; /* Full width for mobile */
-      display: none; /* Hide the menu by default */
-      background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
-      position: absolute; /* Position the menu below the toggle button */
-      top: 60px; /* Adjust based on your header height */
-      left: 0;
-      margin: 0;
-      padding: 10px 0;
-      list-style: none;
-      border-radius: 5px; /* Rounded corners for the menu */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-      animation: slideDown 0.3s ease-out; /* Smooth slide-down animation */
+    flex-direction: column; /* Stack the navigation items vertically */
+    width: 100%; /* Full width for mobile */
   }
 
   nav ul li {
-      margin: 10px 0; /* Spacing between items in the mobile view */
-      width: 100%; /* Full width on smaller screens */
-      min-width: unset; /* Remove minimum width to allow flexibility */
-      text-align: center; /* Center-align the text */
-  }
-
-  nav ul li a {
-      color: white; /* Text color for menu items */
-      text-decoration: none;
-      font-size: 1.1em;
-      padding: 10px 20px; /* Padding for clickable area */
-      display: block; /* Make the entire area clickable */
-      transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
-  }
-
-  nav ul li a:hover {
-      background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
-      color: #009688; /* Change text color on hover */
+    margin: 10px 0; /* Spacing between items in the mobile view */
+    width: 100%; /* Full width on smaller screens */
+    min-width: unset; /* Remove minimum width to allow flexibility */
   }
 
   .nav-toggle {
-      display: block; /* Show the toggle button */
-      background-color: #009688; /* Button background color */
-      color: white; /* Button text color */
-      border: none;
-      padding: 10px 15px;
-      font-size: 1.2em;
-      cursor: pointer;
-      border-radius: 5px; /* Rounded corners */
-      transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-  }
-
-  .nav-toggle:hover {
-      background-color: #00796b; /* Darker color on hover */
-      transform: scale(1.05); /* Slight zoom effect */
+    display: block;
   }
 
   nav ul.showing {
-      display: flex; /* Display navigation when toggled */
+    display: flex; /* Display navigation when toggled */
   }
+}
 
-  /* Keyframes for slide-down animation */
-  @keyframes slideDown {
-      from {
-          opacity: 0;
-          transform: translateY(-20px);
-      }
-      to {
-          opacity: 1;
-          transform: translateY(0);
-      }
-  }
 
-  /* Social Media Container */
+@media (max-width: 768px) {
   .social-media-container {
       flex-direction: column; /* Stack columns on smaller screens */
-      align-items: center; /* Center-align the columns */
-      gap: 20px; /* Add spacing between columns */
-      padding: 20px; /* Add padding for better spacing */
+      align-items: center;
   }
 
   .column {
-      width: 100%; /* Make columns full width */
-      max-width: 300px; /* Limit column width for better readability */
-      text-align: center; /* Center-align the content */
-      background-color: #f9f9f9; /* Light background for columns */
-      border-radius: 10px; /* Rounded corners */
-      padding: 15px; /* Add padding inside columns */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-  }
-
-  .column:hover {
-      transform: translateY(-5px); /* Slight lift effect on hover */
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+      width: auto; /* Make columns full width */
   }
 }
 
