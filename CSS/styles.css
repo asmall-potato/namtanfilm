@@ -391,7 +391,8 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
   .gallery-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 15px; /* Reduce gap for mobile */
   }
 }
 
