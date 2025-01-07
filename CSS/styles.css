@@ -161,64 +161,42 @@ nav ul li a:hover {
 }
 
 /* Responsive Design */
-/* Responsive Design for Mobile */
+/* Mobile navigation styles */
 @media (max-width: 768px) {
   /* Navigation Menu */
   nav ul {
     flex-direction: column; /* Stack navigation items vertically */
     display: none; /* Hide navigation by default */
     position: fixed; /* Fix the menu to the screen */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center the menu */
-    width: 90%; /* Set a width for the menu */
-    max-width: 300px; /* Limit maximum width */
-    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
-    border-radius: 10px; /* Rounded corners */
+    top: 0; /* Start from the top */
+    left: -250px; /* Hide off-screen initially */
+    width: 250px; /* Set a width for the side menu */
+    height: 100vh; /* Take up full height of the screen */
+    background-color: rgba(255, 255, 255, 0.95); /* White background */
+    border-radius: 10px; /* Rounded corners for the menu */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
     padding: 20px; /* Add padding inside the menu */
+    transition: left 0.3s ease; /* Smooth transition when opening/closing */
     z-index: 1000; /* Ensure it appears above other content */
-    text-align: center; /* Center-align text */
   }
 
-  /* Show navigation menu when toggled */
+  /* Show the navigation when toggled */
   nav ul.showing {
-    display: flex; /* Display the menu */
-  }
-
-  /* Navigation List Items */
-  nav ul li {
-    margin: 10px 0; /* Add spacing between items */
-    width: 100%; /* Full width for each item */
-  }
-
-  /* Navigation Links */
-  nav ul li a {
-    color: #333; /* Dark text color for better readability */
-    font-size: 1.2em; /* Slightly larger font size */
-    padding: 10px; /* Add padding for better touch targets */
-    display: block; /* Make links block-level */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-  }
-
-  /* Hover Effect for Links */
-  nav ul li a:hover {
-    background-color: #f0f0f0; /* Light background on hover */
-    color: #000; /* Darker text color on hover */
+    left: 0; /* Move the menu to the left (visible) */
   }
 
   /* Hamburger Toggle Button */
   .nav-toggle {
     display: block; /* Show the toggle button */
-    position: fixed; /* Fix the button to the screen */
-    top: 20px; /* Position from the top */
-    right: 20px; /* Position from the right */
+    position: fixed; /* Fix the button to the top right corner */
+    top: 20px;
+    right: 20px;
     z-index: 1001; /* Ensure it appears above the menu */
     background: #527ef9; /* Match the logo color */
     color: #fff; /* White text color */
-    border: none; /* Remove border */
-    padding: 10px 15px; /* Add padding */
-    border-radius: 5px; /* Rounded corners */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
     font-size: 1.5em; /* Increase icon size */
     cursor: pointer; /* Pointer cursor on hover */
   }
@@ -231,15 +209,40 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     z-index: 999; /* Ensure it appears below the menu but above other content */
   }
 
-  /* Show overlay when menu is open */
+  /* Show the overlay when the menu is open */
   nav ul.showing + .overlay {
-    display: block;
+    display: block; /* Show the overlay */
+  }
+
+  /* Navigation List Items */
+  nav ul li {
+    margin: 15px 0; /* Add spacing between items */
+    width: 100%; /* Full width on smaller screens */
+    text-align: center; /* Center text inside each item */
+  }
+
+  /* Navigation Links */
+  nav ul li a {
+    color: #333; /* Dark text color for readability */
+    font-size: 1.2em; /* Slightly larger font size */
+    padding: 10px; /* Add padding for better touch targets */
+    display: block; /* Make links block-level */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+
+  /* Hover Effect for Links */
+  nav ul li a:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    color: #000; /* Darker text color on hover */
   }
 }
+
+
+
 
 /* Button Styling */
 .button {
