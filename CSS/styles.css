@@ -338,10 +338,29 @@ nav ul li a:hover {
   box-sizing: border-box; /* Make sure padding and border are included in the width calculation */
 }
 
+/* Modify for mobile view for section 2*/
 @media (max-width: 768px) {
-  .column {
-      flex: 1 1 100%; /* Each column takes up full width on smaller screens */
-      max-width: 100%; /* Ensures columns use full width on smaller screens */
+  .section2 {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .left-image, .right-image {
+    flex: none; /* Remove equal space distribution */
+    width: 100%; /* Make both images/text full-width */
+    margin-bottom: 20px; /* Add spacing between image and text */
+  }
+
+  .left-image img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .right-text {
+    flex: none; /* Remove equal space distribution */
+    width: 100%; /* Full-width for text */
+    text-align: center; /* Center text */
+    padding: 0 20px; /* Add some padding around text */
   }
 }
 
