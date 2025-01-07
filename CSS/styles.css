@@ -290,6 +290,36 @@ nav ul li a:hover {
   padding: 0 20px; /* Add some padding around text */
 }
 
+/* For Mobile View Section 2: */
+@media (max-width: 768px) {
+  .section2 {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  /* Adjust left image */
+  .left-image {
+    width: 100%; /* Ensure it takes full width */
+    margin-bottom: 20px; /* Add space between left image and text */
+  }
+
+  .left-image img {
+    width: 100%; /* Ensure image takes full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Adjust right text */
+  .right-image {
+    width: 100%; /* Ensure it takes full width */
+    text-align: center; /* Center text */
+  }
+
+  .right-text {
+    width: 100%; /* Ensure text takes full width */
+    padding: 0 20px; /* Add some padding around text */
+  }
+}
+
 /* Introduce namtanfilm Section */
 .cast-container {
   display: flex;
