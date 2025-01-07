@@ -188,7 +188,7 @@ section {
     .bottom-right-text-sub p {
         font-size: 20px; /* Adjust font size for tablets */
         color: #555; /* Dark gray color for text */
-        line-height: 1.5; /* Improve readability with line height */
+        line-height: 3; /* Improve readability with line height */
     }
 
     .intro-section, .watch-section {
