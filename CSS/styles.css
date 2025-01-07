@@ -213,6 +213,10 @@ nav ul li a:hover {
     z-index: 999; /* Ensure it appears below the menu but above other content */
   }
 
+  .bottom-left-text {
+      font-size: 1.8em;
+  }
+  
   /* Show the overlay when the menu is open */
   nav ul.showing + .overlay {
     display: block; /* Show the overlay */
