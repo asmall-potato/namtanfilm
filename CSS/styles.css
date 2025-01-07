@@ -340,41 +340,11 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
   .column {
-    flex: 1 1 100%; /* Make each column take 100% width on small screens */
-    max-width: 100%; /* Ensure columns take full width on smaller screens */
+      flex: 1 1 100%; /* Each column takes up full width on smaller screens */
+      max-width: 100%; /* Ensures columns use full width on smaller screens */
   }
 }
 
-/* Modify for mobile view for section 2*/
-/* For Mobile View: */
-@media (max-width: 768px) {
-  .section2 {
-    flex-direction: column; /* Stack elements vertically on small screens */
-    padding: 20px; /* Reduce padding on smaller screens */
-  }
-
-  /* Adjust left image */
-  .left-image {
-    width: 100%; /* Ensure it takes full width */
-    margin-bottom: 20px; /* Add space between left image and text */
-  }
-
-  .left-image img {
-    width: 100%; /* Ensure image takes full width */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  /* Adjust right text */
-  .right-image {
-    width: 100%; /* Ensure it takes full width */
-    text-align: center; /* Center text */
-  }
-
-  .right-text {
-    width: 100%; /* Ensure text takes full width */
-    padding: 0 20px; /* Add some padding around text */
-  }
-}
 /* Other sections with different background colors */
 
 .section5 {
