@@ -493,15 +493,29 @@ nav ul li a:hover {
 
 
 @media (max-width: 768px) {
+  /* Adjust social media container layout on mobile */
   .social-media-container {
-      flex-direction: column; /* Stack columns on smaller screens */
-      align-items: center;
+      flex-direction: column; /* Stack the columns vertically */
+      align-items: center; /* Center the items horizontally */
+      gap: 20px; /* Add space between the stacked columns */
+      padding: 20px; /* Add padding to prevent items touching the edges */
   }
 
+  /* Adjust the columns inside the social media container */
   .column {
-      width: auto; /* Make columns full width */
+      width: 100%; /* Make columns take full width on smaller screens */
+      margin-bottom: 20px; /* Add margin between columns for spacing */
+      padding: 15px; /* Add some padding inside columns */
+      text-align: center; /* Center the text inside the columns */
+  }
+
+  /* Adjust the links inside the columns */
+  .column a {
+      font-size: 16px; /* Ensure the font size is appropriate for small screens */
+      margin-bottom: 10px; /* Add spacing between links */
   }
 }
+
 
 /* Footer */
 footer {
