@@ -197,7 +197,7 @@ nav ul li a:hover {
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
-    /*font-size: 1.5em; /* Increase icon size */
+    font-size: 1.5em; /* Increase icon size */
     cursor: pointer; /* Pointer cursor on hover */
   }
 
@@ -228,7 +228,7 @@ nav ul li a:hover {
   /* Navigation Links */
   nav ul li a {
     color: #333; /* Dark text color for readability */
-    font-size: 1.2em; /* Slightly larger font size */
+    /*font-size: 1.2em; /* Slightly larger font size */
     padding: 10px; /* Add padding for better touch targets */
     display: block; /* Make links block-level */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
