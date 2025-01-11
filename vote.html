@@ -183,7 +183,8 @@
 
     // Toggle the navigation menu on mobile
         document.querySelector('.nav-toggle').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('showing');
+            const navLinks = document.querySelector('nav ul');
+            navLinks.classList.toggle('showing');
         });
 
 
