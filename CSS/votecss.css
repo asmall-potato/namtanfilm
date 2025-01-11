@@ -50,19 +50,7 @@ h1 {
       width: 45%; /* On smaller screens, allow two items per row */
     }
 
-    .nav-toggle {
-        display: block; /* Show the hamburger button on small screens */
-    }
-
-    nav ul {
-        display: none; /* Hide the navigation menu by default on small screens */
-        flex-direction: column; /* Stack the items vertically */
-        width: 100%; /* Full width on mobile */
-    }
-
-    nav ul.showing {
-        display: block; /* Show the menu when 'showing' class is added */
-    }
+    
   }
   
   @media (max-width: 480px) {
