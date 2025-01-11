@@ -1,0 +1,58 @@
+body {
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(244, 197, 66, 0.7)); /* Blue to Yellow with transparency */
+  }
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+
+  }
+  
+  main {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto new rows */
+    justify-content: space-evenly; /* Space items evenly across the rows */
+  }
+  
+  .award {
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Make each award item take up 30% of the row's width */
+    box-sizing: border-box; /* Ensure padding does not affect the total width */
+    
+  }
+  
+  .award h2 {
+    margin-top: 0;
+  }
+  
+  .award a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  a:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .award {
+      width: 45%; /* On smaller screens, allow two items per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .award {
+      width: 100%; /* On very small screens, make each item take up the full row */
+    }
+  }
