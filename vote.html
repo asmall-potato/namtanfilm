@@ -69,10 +69,10 @@
        
     </header>
 
-        <h1>Vote for NamtanFilm</h1>
-    
         <main>
-
+            
+         <h1>Vote for NamtanFilm</h1>
+            
             <section class="award">
                 <h2>Hub Awards 2024</h2>
                 <p>Nominee: Pluto , NamtanFilm , AioonMay</p>
@@ -102,7 +102,7 @@
             </section>
         
             
-        
+         <div class="pagination" id="pagination"></div>
             <!-- More awards can be added here -->
           </main>
 
@@ -181,9 +181,9 @@
     showPage(1);
     createPagination();
 
-    //hamburger for only display at mobile devices
+    // Toggle the navigation menu on mobile
         document.querySelector('.nav-toggle').addEventListener('click', function() {
-        document.querySelector('nav ul').classList.toggle('showing');
+            document.querySelector('nav ul').classList.toggle('showing');
         });
 
 
