@@ -1,60 +1,70 @@
-body {
-    background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(244, 197, 66, 0.7)); /* Blue to Yellow with transparency */
-  }
 
-h1 {
-    font-size: 2em;
-    text-align: center;
 
-  }
-  
-  main {
-    padding: 20px;
-    text-align: center;
+.general-container {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap onto new rows */
-    justify-content: space-evenly; /* Space items evenly across the rows */
-  }
-  
-  .award {
-    background-color: white;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 30%; /* Make each award item take up 30% of the row's width */
-    box-sizing: border-box; /* Ensure padding does not affect the total width */
-    
-  }
-  
-  .award h2 {
-    margin-top: 0;
-  }
-  
-  .award a {
-    display: inline-block;
-    margin-top: 10px;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Centers the items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Adds some padding around the container */
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(244, 197, 66, 0.7)); /* Blue to Yellow with transparency */
+}
+
+.general-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: calc(33.33% - 40px); /* Three items per row, accounting for gap */
+    max-width: 300px; /* Ensures items don't exceed 300px */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    background-color: #f2fcff; /* Background color for items, matching Pluto's theme */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures that overflow content is hidden */
+}
+
+/* Style for the external link button */
+.general-item a.external-link-button {
+  display: inline-block; /* Makes the anchor behave like a block element */
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none; /* Removes the underline */
+  color: #fff; /* Text color */
+  background-color: #007bff; /* Button background color (blue) */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #007bff; /* Border color */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Hover effect for the external link button */
+.general-item a.external-link-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3; /* Darker border on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+h4 {
+    font-weight: bold;
+    color: #004d40; /* Darker color for headings */
+}
+
+button {
+    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  a:hover {
-    background-color: #0056b3;
-  }
+    font-size: 14px;
+    cursor: pointer;
+}
 
-  @media (max-width: 768px) {
-    .award {
-      width: 45%; /* On smaller screens, allow two items per row */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .general-item {
+        width: calc(50% - 40px); /* Two items per row on medium screens */
     }
+}
 
-    
-  }
-  
-  @media (max-width: 480px) {
-    .award {
-      width: 100%; /* On very small screens, make each item take up the full row */
+@media (max-width: 480px) {
+    .general-item {
+        width: 100%; /* One item per row on small screens */
     }
-  }
+}
