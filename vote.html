@@ -66,10 +66,13 @@
                 </ul>
             </nav>
         </div>
-       
+        </div>
+        
+        
+        
     </header>
-    
-            <main>
+
+        <main>
             <h2 style="text-align: center; margin-bottom: 20px;">Vote for NamtanFilm</h2>
             <div class="general-container">
 
@@ -105,11 +108,11 @@
         <div class="pagination" id="pagination"></div>
         
     </main>
-
+    
     <footer>
         <p>&copy; 2025 NAMTANFILM. All rights reserved.</p>
         <p>Website developed and designed by @jieyan96.</p>
-       
+        
         </footer>
         <!-- Google Translate Element -->
         <div id="google_translate_element"></div>
@@ -142,8 +145,8 @@
         header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
         });
         
-        //pagination
-        const itemsPerPage = 12;
+         //pagination
+         const itemsPerPage = 12;
         const generalItems = document.querySelectorAll('.general-item');
         const totalPages = Math.ceil(generalItems.length / itemsPerPage);
 
@@ -181,15 +184,13 @@
     showPage(1);
     createPagination();
 
-    // Ensure the JavaScript is working and toggles the 'showing' class
-document.querySelector('.nav-toggle').addEventListener('click', function() {
-    const navLinks = document.querySelector('nav ul');
-    navLinks.classList.toggle('showing');
-});
+        //hamburger for only display at mobile devices
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('showing');
+        });
 
-
-
-            
+        
         </script>
         </body>
         </html>
+        
