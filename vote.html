@@ -181,14 +181,9 @@
     showPage(1);
     createPagination();
 
-            //Hamburger
-         document.addEventListener("DOMContentLoaded", function () {
-            const navToggle = document.querySelector(".nav-toggle");
-            const navUl = document.querySelector("nav ul");
-
-            navToggle.addEventListener("click", function () {
-                navUl.classList.toggle("showing"); // Toggle the 'showing' class to show/hide the menu
-            });
+    //hamburger for only display at mobile devices
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('showing');
         });
 
 
