@@ -14,7 +14,7 @@
     max-width: 300px; /* Ensures items don't exceed 300px */
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-    background-color: #A8D3E0; /* Background color for items, matching Pluto's theme */
+    background-color: #fff3e0; /* Background color for items, matching Pluto's theme */
     border-radius: 10px; /* Rounded corners */
     overflow: hidden; /* Ensures that overflow content is hidden */
 }
