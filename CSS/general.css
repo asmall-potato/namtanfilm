@@ -6,7 +6,7 @@
     justify-content: center; /* Centers the items horizontally */
     gap: 20px; /* Space between items */
     padding: 20px; /* Adds some padding around the container */
-    background-color: #B0B3B8; /* Background color for the general container */
+    background: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(244, 197, 66, 0.7)); /* Blue to Yellow with transparency */
 }
 
 .general-item {
