@@ -137,144 +137,214 @@
         });
         
         // Change header transparency on scroll
-        const header = document.querySelector('.header-container');
-        window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
-        });
-        
-    const schedules = {
-        "2025-01-04": [
-            {
-                description: "Pluto Final EP Fan Meeting",
-                time: "7:30PM (BKK Time)",
-                location: "6th Fl. Siam Paragon - Siam Pavalai, Paragon Cineplex",
-                artist: "NamtanFilm",
-                url: "https://x.com/GMMTV/status/1867945305901298077"
-            }
-        ],
-        "2025-01-05": [
-            {
-                description: "泰小象来了",
-                time: "7:00 PM (BKK Time)",
-                live: "Taobao Account: 泰小象来了",
-                artist: "NamtanFilm",
-                url: "https://x.com/GMMTV/status/1873572505975419150"
-            }
-        ],
-        "2025-01-12": [
-            {
-                description: "Dr.Ally Sweet Time with Namtan",
-                time: "3:00 PM (BKK Time)",
-                artist: "Namtan Tipnaree",
-                url: "https://x.com/GMMTV/status/1876140791825133736/photo/2"
-            }
-        ],
-        "2025-01-14": [
-            {
-                description: "OPPO Reno13 Series 5G Launch Event",
-                time: "5:00 PM (BKK Time)",
-                live: "Oppo Thailand official channel",
-                artist: "NamtanFilm",
-                url: "https://x.com/OPPOThailand/status/1876826168394936478"
-            }
-        ],
-        "2025-01-17": [
-            {
-                description: "FENDI SS25 COLLECTION PREVIEW",
-                time: "10:30 AM (BKK Time)",
-                location:"Siam Paragon",
-                artist: "Namtan Tipnaree",
-                url: "https://x.com/GMMTV/status/1878689380644397506/photo/1"
-            }
-        ],
-        "2025-01-26": [
-            {
-                description: "GMMTV FANDAY 16 IN CAMBODIA",
-                time: "3:00 PM (Cambodia Time)",
-                location:"Aeon Hall, 3rd Floor Aeon Mall Sensok City",
-                artist: "NamtanFilm",
-                url: "https://x.com/GMMTV/status/1856658222230422000"
-            }
-        ],
-        // Other dates and events...
-    };
-
-    let currentMonth = new Date().getMonth(); // January = 0, December = 11
-    let currentYear = new Date().getFullYear();
-    let selectedDate = null; // To store the currently selected date
-
-    function generateCalendar() {
-        const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
-        const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
-        const lastDateOfMonth = lastDayOfMonth.getDate();
-        const firstWeekday = firstDayOfMonth.getDay();
-
-        // Set the calendar title
-        document.getElementById("calendar-title").textContent = `${firstDayOfMonth.toLocaleString('default', { month: 'long' })} ${currentYear}`;
-        document.getElementById("schedule-month").textContent = `${firstDayOfMonth.toLocaleString('default', { month: 'long' })} ${currentYear}`;
-        
-        let calendarBody = '';
-        let dayCounter = 1;
-
-        // Generate the calendar grid with the first event displayed
-        for (let i = 0; i < 6; i++) {
-            calendarBody += '<tr>';
-            for (let j = 0; j < 7; j++) {
-                // Fill days of the current month
-                if (i === 0 && j < firstWeekday) {
-                    calendarBody += '<td></td>';
-                } else if (dayCounter <= lastDateOfMonth) {
-                    const dayString = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${dayCounter.toString().padStart(2, '0')}`;
-                    const isToday = dayCounter === new Date().getDate() && currentMonth === new Date().getMonth() && currentYear === new Date().getFullYear();
-                    const hasSchedule = schedules[dayString] !== undefined;
-
-                    // Show only the first event in the calendar cell
-                    const firstEvent = hasSchedule ? schedules[dayString][0].description : "";
-
-                    calendarBody += `<td class="${isToday ? 'today' : ''} ${hasSchedule ? 'has-schedule' : ''}" onclick="showScheduleDetails('${dayString}')">
-                                        <strong>${dayCounter}</strong>
-                                        ${firstEvent ? `<div class="schedule-details">${firstEvent}</div>` : ''}
-                                       </td>`;
-                    dayCounter++;
-                } else {
-                    calendarBody += '<td></td>';
-                }
-            }
-            calendarBody += '</tr>';
-            if (dayCounter > lastDateOfMonth) break;
+        const schedules = {
+    "2025-01-04": [
+        {
+            description: "Pluto Final EP Fan Meeting",
+            time: "7:30PM (BKK Time)",
+            location: "6th Fl. Siam Paragon - Siam Pavalai, Paragon Cineplex",
+            artist: "NamtanFilm",
+            url: "https://x.com/GMMTV/status/1867945305901298077",
+            status: "passed" // Marked as passed
         }
+    ],
+    "2025-01-05": [
+        {
+            description: "泰小象来了",
+            time: "7:00 PM (BKK Time)",
+            live: "Taobao Account: 泰小象来了",
+            artist: "NamtanFilm",
+            url: "https://x.com/GMMTV/status/1873572505975419150",
+            status: "passed" // Marked as passed
+        }
+    ],
+    "2025-01-12": [
+        {
+            description: "Dr.Ally Sweet Time with Namtan",
+            time: "3:00 PM (BKK Time)",
+            artist: "Namtan Tipnaree",
+            url: "https://x.com/GMMTV/status/1876140791825133736/photo/2",
+            status: "passed" // Marked as passed
+        }
+    ],
+    "2025-01-14": [
+        {
+            description: "OPPO Reno13 Series 5G Launch Event",
+            time: "5:00 PM (BKK Time)",
+            live: "Oppo Thailand official channel",
+            artist: "NamtanFilm",
+            url: "https://x.com/OPPOThailand/status/1876826168394936478",
+            status: "postponed" // Marked as postponed
+        }
+    ],
+    "2025-01-17": [
+        {
+            description: "FENDI SS25 COLLECTION PREVIEW",
+            time: "10:30 AM (BKK Time)",
+            location: "Siam Paragon",
+            artist: "Namtan Tipnaree",
+            url: "https://x.com/GMMTV/status/1878689380644397506/photo/1"
+        }
+    ],
+    "2025-01-26": [
+        {
+            description: "GMMTV FANDAY 16 IN CAMBODIA",
+            time: "3:00 PM (Cambodia Time)",
+            location: "Aeon Hall, 3rd Floor Aeon Mall Sensok City",
+            artist: "NamtanFilm",
+            url: "https://x.com/GMMTV/status/1856658222230422000"
+        }
+    ],
+    // Other dates and events...
+};
 
-        document.getElementById("calendar-body").innerHTML = calendarBody;
-        updateScheduleList(); // Update the full schedule list on the right side
+// Get the current date in Malaysia's timezone (UTC+8)
+const today = new Date().toLocaleString("en-US", { timeZone: "Asia/Kuala_Lumpur" });
+const malaysiaDate = new Date(today);
+let currentMonth = malaysiaDate.getMonth(); // January = 0, December = 11
+let currentYear = malaysiaDate.getFullYear();
+let selectedDate = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${malaysiaDate.getDate().toString().padStart(2, '0')}`; // Set today's date based on Malaysia time
+
+function generateCalendar() {
+    const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
+    const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
+    const lastDateOfMonth = lastDayOfMonth.getDate();
+    const firstWeekday = firstDayOfMonth.getDay();
+
+    // Set the calendar title
+    document.getElementById("calendar-title").textContent = `${firstDayOfMonth.toLocaleString('default', { month: 'long' })} ${currentYear}`;
+    document.getElementById("schedule-month").textContent = `${firstDayOfMonth.toLocaleString('default', { month: 'long' })} ${currentYear}`;
+
+    let calendarBody = '';
+    let dayCounter = 1;
+
+    // Generate the calendar grid
+    for (let i = 0; i < 6; i++) {
+        calendarBody += '<tr>';
+        for (let j = 0; j < 7; j++) {
+            // Fill days of the current month
+            if (i === 0 && j < firstWeekday) {
+                calendarBody += '<td></td>';
+            } else if (dayCounter <= lastDateOfMonth) {
+                const dayString = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${dayCounter.toString().padStart(2, '0')}`;
+                const isToday = dayCounter === malaysiaDate.getDate() && currentMonth === malaysiaDate.getMonth() && currentYear === malaysiaDate.getFullYear();
+                const hasSchedule = schedules[dayString] !== undefined;
+                const eventStatus = hasSchedule ? schedules[dayString][0].status : null;
+
+                // Show only the first event in the calendar cell
+                const firstEvent = hasSchedule ? schedules[dayString][0].description : "";
+
+                // Apply styles based on event status
+                let cellClass = "";
+                if (isToday) {
+                    cellClass = "today"; // Add "today" class if it's today's date
+                }
+                if (eventStatus === "postponed") {
+                    cellClass += " postponed-event"; // For postponed events, apply red text
+                }
+                if (eventStatus === "passed") {
+                    cellClass += " passed-event"; // For passed events, add a stroke
+                }
+
+                calendarBody += `<td class="${cellClass}" onclick="showScheduleDetails('${dayString}')">
+                                    <strong>${dayCounter}</strong>
+                                    ${firstEvent ? `<div class="schedule-details">${firstEvent}</div>` : ''}
+                                </td>`;
+                dayCounter++;
+            } else {
+                calendarBody += '<td></td>';
+            }
+        }
+        calendarBody += '</tr>';
+        if (dayCounter > lastDateOfMonth) break;
     }
 
-    function updateScheduleList() {
-        const scheduleItems = document.getElementById("schedule-items");
-        scheduleItems.innerHTML = ''; // Clear previous schedule
+    document.getElementById("calendar-body").innerHTML = calendarBody;
+    updateScheduleList(); // Update the full schedule list on the right side
+}
 
-        // If a specific date is selected, show its details
-        if (selectedDate && schedules[selectedDate]) {
-            const events = schedules[selectedDate];
+function updateScheduleList() {
+    const scheduleItems = document.getElementById("schedule-items");
+    scheduleItems.innerHTML = ''; // Clear previous schedule
+
+    // Filter events for the current month and year
+    const filteredEvents = Object.keys(schedules).filter(date => {
+        const eventDate = new Date(date);
+        return eventDate.getMonth() === currentMonth && eventDate.getFullYear() === currentYear;
+    });
+
+    // If a specific date is selected, show its details
+    if (selectedDate && schedules[selectedDate]) {
+        const events = schedules[selectedDate];
+        events.forEach(event => {
+            const li = document.createElement("li");
+            li.innerHTML = `<div class="schedule-details"><strong>${event.description}</strong> (${event.time})</div>`;
+
+            // Check if there's a 'location' or 'live' field and display accordingly
+            if (event.location) {
+                li.innerHTML += `<div>Location: ${event.location}</div>`;
+            } else if (event.live) {
+                li.innerHTML += `<div>Live: ${event.live}</div>`;
+            } else {
+                li.innerHTML += `<div>No location or live link available</div>`;
+            }
+
+            // Add the Artist information (if available)
+            if (event.artist) {
+                li.innerHTML += `<div>Artist: ${event.artist}</div>`;
+            } else {
+                li.innerHTML += `<div>No artist information available</div>`;
+            }
+
+            // Add a "Postponed" stamp if the event is postponed
+            if (event.status === "postponed") {
+                li.innerHTML += `<div class="postponed-stamp">Postponed</div>`;
+            }
+
+            // If a URL is provided, add a link
+            if (event.url) {
+                const link = document.createElement("a");
+                link.href = event.url;
+                link.textContent = "View Details";
+                link.target = "_blank";
+                li.appendChild(link);
+            }
+
+            scheduleItems.appendChild(li);
+        });
+    } else {
+        // Otherwise, show the entire month's schedule
+        filteredEvents.forEach(date => {
+            const events = schedules[date];
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${date}</strong>`;
             events.forEach(event => {
-                const li = document.createElement("li");
-                li.innerHTML = `<div class="schedule-details"><strong>${event.description}</strong> (${event.time})</div>`;
+                const eventLine = document.createElement("div");
+                eventLine.classList.add("schedule-details");
+                eventLine.innerHTML = `<strong>${event.description}</strong> (${event.time})`;
 
                 // Check if there's a 'location' or 'live' field and display accordingly
                 if (event.location) {
-                    li.innerHTML += `<div>Location: ${event.location}</div>`;
+                    eventLine.innerHTML += `<br>Location: ${event.location}`;
                 } else if (event.live) {
-                    li.innerHTML += `<div>Live: ${event.live}</div>`;
+                    eventLine.innerHTML += `<br>Live: ${event.live}`;
                 } else {
-                    li.innerHTML += `<div>No location or live link available</div>`;
+                    eventLine.innerHTML += `<br>No location or live link available`;
                 }
 
                 // Add the Artist information (if available)
                 if (event.artist) {
-                    li.innerHTML += `<div>Artist: ${event.artist}</div>`;
+                    eventLine.innerHTML += `<br>Artist: ${event.artist}`;
                 } else {
-                    li.innerHTML += `<div>No artist information available</div>`;
+                    eventLine.innerHTML += `<br>No artist information available`;
                 }
+
+                // Add a "Postponed" stamp if the event is postponed
+                if (event.status === "postponed") {
+                    eventLine.innerHTML += `<br><span class="postponed-stamp">Postponed</span>`;
+                }
+
+                li.appendChild(eventLine);
 
                 // If a URL is provided, add a link
                 if (event.url) {
@@ -284,58 +354,21 @@
                     link.target = "_blank";
                     li.appendChild(link);
                 }
-
-                scheduleItems.appendChild(li);
             });
-        } else {
-            // Otherwise, show the entire month's schedule
-            Object.keys(schedules).forEach(date => {
-                const events = schedules[date];
-                const li = document.createElement("li");
-                li.innerHTML = `<strong>${date}</strong>`;
-                events.forEach(event => {
-                    const eventLine = document.createElement("div");
-                    eventLine.classList.add("schedule-details");
-                    eventLine.innerHTML = `<strong>${event.description}</strong> (${event.time})`;
-
-                    // Check if there's a 'location' or 'live' field and display accordingly
-                    if (event.location) {
-                        eventLine.innerHTML += `<br>Location: ${event.location}`;
-                    } else if (event.live) {
-                        eventLine.innerHTML += `<br>Live: ${event.live}`;
-                    } else {
-                        eventLine.innerHTML += `<br>No location or live link available`;
-                    }
-
-                    // Add the Artist information (if available)
-                    if (event.artist) {
-                        eventLine.innerHTML += `<br>Artist: ${event.artist}`;
-                    } else {
-                        eventLine.innerHTML += `<br>No artist information available`;
-                    }
-
-                    li.appendChild(eventLine);
-
-                    // If a URL is provided, add a link
-                    if (event.url) {
-                        const link = document.createElement("a");
-                        link.href = event.url;
-                        link.textContent = "View Details";
-                        link.target = "_blank";
-                        li.appendChild(link);
-                    }
-                });
-                scheduleItems.appendChild(li);
-            });
-        }
+            scheduleItems.appendChild(li);
+        });
     }
+}
 
-    function showScheduleDetails(date) {
-        selectedDate = date;
-        updateScheduleList(); // Update the right-side schedule details when a date is clicked
-    }
+function showScheduleDetails(date) {
+    selectedDate = date;
+    updateScheduleList(); // Update the right-side schedule details when a date is clicked
+}
 
-    // Change month forward
+// Initialize calendar with today's date (Malaysia time)
+generateCalendar();
+
+// Change month forward
 document.getElementById("next-month").addEventListener("click", () => {
     if (currentMonth === 11) {
         currentMonth = 0;
@@ -345,7 +378,7 @@ document.getElementById("next-month").addEventListener("click", () => {
     }
     selectedDate = null; // Reset the selected date
     generateCalendar();
-    clearScheduleList(); // Clear the schedule list on month change
+    updateScheduleList(); // Update the schedule list for the new month
 });
 
 // Change month backward
@@ -358,19 +391,17 @@ document.getElementById("prev-month").addEventListener("click", () => {
     }
     selectedDate = null; // Reset the selected date
     generateCalendar();
-    clearScheduleList(); // Clear the schedule list on month change
+    updateScheduleList(); // Update the schedule list for the new month
 });
 
-// Function to clear the schedule list
-function clearScheduleList() {
-    const scheduleItems = document.getElementById("schedule-items");
-    scheduleItems.innerHTML = ''; // This clears all items inside the schedule list
-}
 
 
-
-    // Initialize calendar
-    generateCalendar();
+// Change header transparency on scroll
+const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
 
     //Hamburger
          document.addEventListener("DOMContentLoaded", function () {
