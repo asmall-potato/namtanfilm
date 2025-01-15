@@ -109,9 +109,9 @@
 
 /* Highlight Today */
 .today {
-    background-color: #ffeb3b;
+    background-color: #FFD700 !important; /* Yellow for today */
+    color: rgb(13, 82, 39);
     font-weight: bold;
-    border-radius: 50%;
 }
 
 /* Has Schedule (Color coding) */
@@ -183,6 +183,51 @@
     color: #004d40;
     text-decoration: underline;
 }
+
+/* Style for postponed events (Red text in calendar) */
+.postponed-event {
+    color: red;  /* Red color for postponed events text */
+    font-weight: bold;
+    border: 2px solid red;  /* Red border outline for postponed events */
+    box-sizing: border-box;  /* Ensure border doesn't affect layout */
+}
+
+/* Add a postponed stamp to event details */
+.schedule-details .postponed-stamp {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+/* Style for passed events (With a stroke on the calendar box) */
+.passed-event {
+    text-decoration: line-through; /* Strike-through for passed events */
+    background-color: #f0f0f0;  /* Light gray background for passed events */
+    box-shadow: none; /* Remove box-shadow for passed events */
+}
+/* Style for postponed events (Red border outline only) */
+.calendar td.postponed-event {
+    border: 2px solid red;  /* Red border outline for postponed events */
+    background-color: #ffebee;
+}
+
+/* Hover effects on postponed events */
+.calendar td.postponed-event:hover {
+    
+    transform: scale(1.05); /* Zoom in slightly */
+    
+}
+
+/* Apply stroke to passed events in the calendar */
+.calendar td.passed-event {
+    border: 2px solid #aaa; /* Thin border */
+    background-color: #f0f0f0; /* Light gray background */
+}
+
 
 @media (max-width: 768px) {
     .calendar-container {
