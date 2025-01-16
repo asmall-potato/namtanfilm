@@ -430,54 +430,189 @@ nav ul li a:hover {
 
 .section7 {
   padding: 60px 20px;
-  background-color: #F5F3F1; /* Light background for contrast */
+  background-color: #F5F3F1;
+  overflow: hidden; /* Hide overflow for the slideshow */
 }
 
 .gallery-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns for better symmetry */
-  gap: 20px; /* Space between images */
-  justify-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Adjust based on your needs */
+  height: 300px; /* Fixed height for the container */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gallery-item {
-  position: relative;
-  overflow: hidden;
+  position: absolute;
+  width: 200px; /* Fixed width for the images */
+  height: 300px; /* Fixed height for the images */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 250px; /* Limit image size */
-}
-
-.gallery-item:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.5s ease;
+  overflow: hidden; /* Ensure the image doesn't overflow */
 }
 
 .gallery-item img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
   border-radius: 10px;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
 }
 
-.gallery-item .caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay for readability */
-  color: #fff;
-  text-align: center;
-  font-size: 16px;
-  opacity: 0; /* Hidden by default */
-  transition: opacity 0.3s ease;
+/* Position the images symmetrically */
+.gallery-item:nth-child(1) {
+  transform: translateX(-440px) scale(0.6); /* Far left */
+  opacity: 0.5;
+  z-index: 0;
 }
 
-.gallery-item:hover .caption {
-  opacity: 1; /* Show caption on hover */
+.gallery-item:nth-child(2) {
+  transform: translateX(-330px) scale(0.7); /* Middle left */
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.gallery-item:nth-child(3) {
+  transform: translateX(-220px) scale(0.8); /* Left side */
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.gallery-item:nth-child(4) {
+  transform: translateX(-110px) scale(0.9); /* Near left */
+  opacity: 0.8;
+  z-index: 3;
+}
+
+.gallery-item:nth-child(5) {
+  transform: translateX(0) scale(1); /* Center */
+  opacity: 1;
+  z-index: 4;
+}
+
+.gallery-item:nth-child(6) {
+  transform: translateX(110px) scale(0.9); /* Near right */
+  opacity: 0.8;
+  z-index: 3;
+}
+
+.gallery-item:nth-child(7) {
+  transform: translateX(220px) scale(0.8); /* Right side */
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.gallery-item:nth-child(8) {
+  transform: translateX(330px) scale(0.7); /* Middle right */
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.gallery-item:nth-child(9) {
+  transform: translateX(440px) scale(0.6); /* Far right */
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* Slideshow animation */
+@keyframes slideShow {
+  0% {
+    transform: translateX(-440px) scale(0.6);
+    opacity: 0.5;
+    z-index: 0;
+  }
+  12.5% {
+    transform: translateX(-330px) scale(0.7);
+    opacity: 0.6;
+    z-index: 1;
+  }
+  25% {
+    transform: translateX(-220px) scale(0.8);
+    opacity: 0.7;
+    z-index: 2;
+  }
+  37.5% {
+    transform: translateX(-110px) scale(0.9);
+    opacity: 0.8;
+    z-index: 3;
+  }
+  50% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 4;
+  }
+  62.5% {
+    transform: translateX(110px) scale(0.9);
+    opacity: 0.8;
+    z-index: 3;
+  }
+  75% {
+    transform: translateX(220px) scale(0.8);
+    opacity: 0.7;
+    z-index: 2;
+  }
+  87.5% {
+    transform: translateX(330px) scale(0.7);
+    opacity: 0.6;
+    z-index: 1;
+  }
+  100% {
+    transform: translateX(440px) scale(0.6);
+    opacity: 0.5;
+    z-index: 0;
+  }
+}
+
+/* Apply the animation to each image */
+.gallery-item {
+  animation: slideShow 24s infinite; /* Adjust timing as needed */
+}
+
+.gallery-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.gallery-item:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.gallery-item:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.gallery-item:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.gallery-item:nth-child(5) {
+  animation-delay: 12s;
+}
+
+.gallery-item:nth-child(6) {
+  animation-delay: 15s;
+}
+
+.gallery-item:nth-child(7) {
+  animation-delay: 18s;
+}
+
+.gallery-item:nth-child(8) {
+  animation-delay: 21s;
+}
+
+.gallery-item:nth-child(9) {
+  animation-delay: 24s;
+}
+
+/* Hover effect */
+.gallery-item:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  opacity: 1;
+  z-index: 5;
+ /* animation-play-state: paused; /* Pause animation on hover */
 }
 
 @media (max-width: 768px) {
