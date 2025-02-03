@@ -116,181 +116,82 @@
     
     </footer>
 <script>
-    // Scroll reveal effect
-    const sections = document.querySelectorAll('section');
-        const options = {
+    
+ // Scroll reveal effect
+ const sections = document.querySelectorAll('section');
+    const options = {
         root: null,
         threshold: 0.1,
-        };
-        
-        const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-        if (entry.isIntersecting) {
-        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-        observer.unobserve(entry.target);
-        }
-        });
-        }, options);
-        
-        sections.forEach(section => {
-        observer.observe(section);
-        });
-        
-        // Change header transparency on scroll
-        const schedules = {
-    "2025-01-04": [
-        {
-            description: "Pluto Final EP Fan Meeting",
-            time: "7:30PM (BKK Time)",
-            location: "6th Fl. Siam Paragon - Siam Pavalai, Paragon Cineplex",
-            artist: "NamtanFilm",
-            url: "https://x.com/GMMTV/status/1867945305901298077",
-            status: "passed" // Marked as passed
-        }
-    ],
-    "2025-01-05": [
-        {
-            description: "泰小象来了",
-            time: "7:00 PM (BKK Time)",
-            live: "Taobao Account: 泰小象来了",
-            artist: "NamtanFilm",
-            url: "https://x.com/GMMTV/status/1873572505975419150",
-            status: "passed" // Marked as passed
-        }
-    ],
-    "2025-01-12": [
-        {
-            description: "Dr.Ally Sweet Time with Namtan",
-            time: "3:00 PM (BKK Time)",
-            artist: "Namtan Tipnaree",
-            url: "https://x.com/GMMTV/status/1876140791825133736/photo/2",
-            status: "passed" // Marked as passed
-        }
-    ],
-    "2025-01-14": [
-        {
-            description: "OPPO Reno13 Series 5G Launch Event",
-            time: "5:00 PM (BKK Time)",
-            live: "Oppo Thailand official channel",
-            artist: "NamtanFilm",
-            url: "https://x.com/OPPOThailand/status/1876826168394936478",
-            status: "postponed" // Marked as postponed
-        }
-    ],
-    "2025-01-17": [
-        {
-            description: "FENDI SS25 COLLECTION PREVIEW",
-            time: "10:30 AM (BKK Time)",
-            location: "Siam Paragon",
-            artist: "Namtan Tipnaree",
-            url: "https://x.com/GMMTV/status/1878689380644397506/photo/1",
-            status: "passed" // Marked as passed
-        }
-    ],
-    "2025-01-26": [
-        {
-            description: "GMMTV FANDAY 16 IN CAMBODIA",
-            time: "3:00 PM (Cambodia Time)",
-            location: "Aeon Hall, 3rd Floor Aeon Mall Sensok City",
-            artist: "NamtanFilm",
-            url: "https://x.com/GMMTV/status/1856658222230422000",
-            status: "passed" // Marked as passed
-        }
-    ],
-    "2025-01-30": [
-        {
-            description: "Destiny Clinic",
-            time: "6:00 PM (BKK Time)",
-            location: "Central Pinklao",
-            artist: "NamtanFilm",
-            url: "https://www.facebook.com/share/p/19v5Vh63vB/",
-            status: "passed" // Marked as passed
-        }
-    ],
-    "2025-01-31": [
-        {
-            description: "Fansign event of GMMTV Official Merchandise Booth",
-            time: "7:00 PM (BKK Time)",
-            location: "Meeting Rooms 2-3, 5th Floor, Samyan Mitrtown (FANSIGN) | Sky Garden (cinema side) 5th Floor, Samyan Mitrtown (Meeting Point)",
-            artist: "NamtanFilm",
-            url: "https://x.com/GmmtvShop/status/1885159793859715273",
-            status: "passed" // Marked as passed
-        }
-    ],
-    //February
-    "2025-02-05": [
-        {
-            description: "BRAVE NEW WORLD NIGHT RUN",
-            time: "17:00 (BKK Time)",
-            location: "ONE BANGKOK PARK at ONE BANGKOK",
-            artist: "NamtanFilm",
-            url: "https://x.com/WeLoveSF/status/1886002936272286130",
-        }
-    ],
-    "2025-02-06": [
-        {
-            description: "TAG HEUER F1 Partnership and Exclusive Preview",
-            time: "1:00PM (BKK Time)",
-            location: "Raze Arcade, EmSphere",
-            artist: "Namtan Tipnaree",
-            url: "https://x.com/GMMTV/status/1886376720334274561/photo/2"
-        },
-        {
-            description: "GMMTV Live House",
-            time: "21:30 (BKK Time)",
-            live: "YouTube : GMMTV Official",
-            artist: "NamtanFilm",
-            url: "https://x.com/GMMTV/status/1886383503786590300"
-        }
-    ],
-    "2025-02-15": [
-        {
-            description: "Namtan 1st fan meeting in Nanning",
-            time: "13:00",
-            location: "南宁国际会展中心-金桂花厅",
-            artist: "Namtan Tipnaree",
-            url: "https://x.com/GMMTV/status/1882662199686259171",
-        }
-    ],
-    "2025-02-16": [
-        {
-            description: "Film 1st fan meeting in Nanning",
-            time: "13:00",
-            location: "南宁国际会展中心-金桂花厅",
-            artist: "Film Rachanun",
-            url: "https://x.com/GMMTV/status/1882662333211910624",
-        }
-    ],
-    //March
-    "2025-03-08": [
-        {
-            description: "NAMTANFILM 1st Fan Meeting in Thailand",
-            time: "TBC",
-            location: "MCC HALL THE MALL LIFESTORE BANGKAPI",
-            artist: "NamtanFilm",
-            url: "https://x.com/GMMTV/status/1880553748659130824",
-        }
-    ],
-            
-    //June
-    "2025-06-28": [
-        {
-            description: "BLUSH BLOSSOM FAN FEST",
-            time: "TBC",
-            location: "Union Hall",
-            artist: "NamtanFilm (with MilkLove and EmiBonnie)",
-            url: "https://x.com/GMMTV/status/1880553748659130824",
-        }
-    ],
-    // Other dates and events...
-};
+    };
 
-// Get the current date in Malaysia's timezone (UTC+8)
-const today = new Date().toLocaleString("en-US", { timeZone: "Asia/Kuala_Lumpur" });
-const malaysiaDate = new Date(today);
-let currentMonth = malaysiaDate.getMonth(); // January = 0, December = 11
-let currentYear = malaysiaDate.getFullYear();
-let selectedDate = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${malaysiaDate.getDate().toString().padStart(2, '0')}`; // Set today's date based on Malaysia time
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Global schedule data
+    let schedules = {};
+
+    // Fetch schedule data
+    /*
+    async function loadScheduleData() {
+    try {
+       /* const response = await fetch('data/schedule.json');
+        const response = await fetch('http://localhost:8000/data/schedule.json');
+        if (!response.ok) throw new Error('Failed to load schedule data');
+        schedules = await response.json();
+        initializeCalendar();
+    } catch (error) {
+        console.error('Error loading schedule data:', error);
+        // You can add error handling UI here if needed
+        alert('There was an issue loading the schedule data.');
+    }
+}
+*/
+async function loadScheduleData() {
+    try {
+        const response = await fetch('data/schedule.json', {
+            method: 'GET',
+            mode: 'no-cors',  // Disables CORS for this request
+        });
+        if (!response.ok) throw new Error('Failed to load schedule data');
+        schedules = await response.json();
+        initializeCalendar();
+    } catch (error) {
+        console.error('Error loading schedule data:', error);
+        // You can add error handling UI here if needed
+        alert('There was an issue loading the schedule data.');
+    }
+}
+
+    // Global variables
+    let currentYear, currentMonth, selectedDate;
+    let malaysiaDate; // Declare globally
+
+    // Initialize calendar after data load
+    function initializeCalendar() {
+    // Get the current date in Malaysia's timezone (UTC+8)
+    const today = new Date().toLocaleString("en-US", { timeZone: "Asia/Kuala_Lumpur" });
+    malaysiaDate = new Date(today); // Now malaysiaDate is available globally
+
+    // Initialize currentYear and currentMonth
+    currentMonth = malaysiaDate.getMonth();
+    currentYear = malaysiaDate.getFullYear();
+    selectedDate = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${malaysiaDate.getDate().toString().padStart(2, '0')}`;
+    
+    generateCalendar(); // Call after malaysiaDate is defined
+    }
+
+    // Call initializeCalendar to initialize the current month and year
+    initializeCalendar();
 
 function generateCalendar() {
     const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
@@ -481,7 +382,8 @@ document.getElementById("prev-month").addEventListener("click", () => {
     updateScheduleList(); // Update the schedule list for the new month
 });
 
-
+// Initial load
+loadScheduleData();
 
 // Change header transparency on scroll
 const header = document.querySelector('.header-container');
