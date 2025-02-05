@@ -253,12 +253,16 @@
 
         //show the dialog box for today schedule
        
-        document.addEventListener("DOMContentLoaded", function () {
+       document.addEventListener("DOMContentLoaded", function () {
     const today = new Date();
-    const todayDate = today.toLocaleDateString('en-GB'); // Formats the date as DD/MM/YYYY, or you can use 'en-US' for MM/DD/YYYY
+    
+    // Get today's date in YYYY-MM-DD format using local time
+    const todayDateISO = new Date(today.getFullYear(), today.getMonth(), today.getDate()).toISOString().split("T")[0];
+    
+    const todayDateDisplay = today.toLocaleDateString('en-GB'); // Formats as DD/MM/YYYY
 
     // Fetch the schedule data from the JSON file
-    fetch("data/schedule.json") // Update the path to your JSON file
+    fetch("data/schedule.json")
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -267,9 +271,9 @@
         })
         .then(data => {
             // Check if there are events for today
-            const eventsToday = data[today.toISOString().split("T")[0]]; // Using ISO format (YYYY-MM-DD)
+            const eventsToday = data[todayDateISO]; // Using corrected local date
 
-            let message = `Today's Events (${todayDate}):\n\n`; // Adding today's date here
+            let message = `Today's Events (${todayDateDisplay}):\n\n`;
             if (eventsToday && eventsToday.length > 0) {
                 // Build the message for today's events with line breaks
                 message += eventsToday.map(event => {
@@ -298,8 +302,8 @@
             }
         })
         .catch(error => console.error("Error fetching schedule:", error));
-});    
-    
+});
+
             
             
         </script>
