@@ -255,38 +255,34 @@
        
        document.addEventListener("DOMContentLoaded", function () {
     const today = new Date();
-    
-    // Get today's date in YYYY-MM-DD format using local time
-    const todayDateISO = new Date(today.getFullYear(), today.getMonth(), today.getDate()).toISOString().split("T")[0];
-    
-    const todayDateDisplay = today.toLocaleDateString('en-GB'); // Formats as DD/MM/YYYY
+    const todayDate = today.toLocaleDateString('en-GB'); // Formats the date as DD/MM/YYYY, or you can use 'en-US' for MM/DD/YYYY
 
     // Fetch the schedule data from the JSON file
-    fetch("data/schedule.json")
+    fetch("data/schedule.json") // Update the path to your JSON file
         .then(response => {
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                throw new Error(HTTP error! Status: ${response.status});
             }
             return response.json();
         })
         .then(data => {
             // Check if there are events for today
-            const eventsToday = data[todayDateISO]; // Using corrected local date
+            const eventsToday = data[today.toISOString().split("T")[0]]; // Using ISO format (YYYY-MM-DD)
 
-            let message = `Today's Events (${todayDateDisplay}):\n\n`;
+            let message = Today's Events (${todayDate}):\n\n; // Adding today's date here
             if (eventsToday && eventsToday.length > 0) {
                 // Build the message for today's events with line breaks
                 message += eventsToday.map(event => {
-                    let eventDetails = `- ${event.description}\n`;
-                    eventDetails += `Time: ${event.time}\n`;
+                    let eventDetails = - ${event.description}\n;
+                    eventDetails += Time: ${event.time}\n;
                     if (event.location) {
-                        eventDetails += `Location: ${event.location}\n`;
+                        eventDetails += Location: ${event.location}\n;
                     }
                     if (event.live) {
-                        eventDetails += `Live: ${event.live}\n`;
+                        eventDetails += Live: ${event.live}\n;
                     }
                     if (event.artist) {
-                        eventDetails += `Artist: ${event.artist}\n`;
+                        eventDetails += Artist: ${event.artist}\n;
                     }
                     return eventDetails;
                 }).join("\n");
@@ -302,7 +298,7 @@
             }
         })
         .catch(error => console.error("Error fetching schedule:", error));
-});
+});    
 
             
             
