@@ -440,26 +440,25 @@ section {
 
 /* Mobile responsiveness: Stacking the items vertically */
 @media (max-width: 768px) {
-    .embeds-row {
-        flex-direction: column;  /* Stack items vertically on smaller screens */
-        align-items: center;  /* Center-align items horizontally */
-        gap: 20px;  /* Add spacing between items */
-        padding: 15px;  /* Add padding for better spacing */
-    }
-
     .engagement-item {
-        flex: 1 1 100%;  /* Take full width on small screens */
-        max-width: 100%;  /* Ensure no item exceeds 100% width */
-        margin-bottom: 20px;  /* Add spacing below each item */
-        background-color: #ffffff;  /* White background for items */
-        border-radius: 10px;  /* Rounded corners for a modern look */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
-        padding: 15px;  /* Add padding inside items */
+        flex: 1 1 100%; /* Take full width on small screens */
+        max-width: 100%; /* Ensure no item exceeds 100% width */
+        margin-bottom: 20px; /* Add spacing below each item */
+        background-color: #ffffff; /* White background for items */
+        border-radius: 10px; /* Rounded corners for a modern look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        padding: 15px; /* Add padding inside items */
+        overflow: hidden; /* Ensure content doesn't overflow */
     }
 
     /* Ensure embedded posts are responsive */
-    .embeds-row blockquote {
+    .engagement-item blockquote {
         width: 100% !important; /* Force the embed to take full width */
-        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        max-width: 100% !important; /* Ensure it doesn't exceed the container width */
+    }
+
+    .engagement-item iframe {
+        width: 100% !important; /* Force the iframe to take full width */
+        max-width: 100% !important; /* Ensure it doesn't exceed the container width */
     }
 }
