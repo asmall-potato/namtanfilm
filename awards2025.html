@@ -17,61 +17,7 @@
             <button class="nav-toggle" aria-label="toggle navigation">
             ☰
             </button>
-             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="series.html">Series</a>
-                        <div class="dropdown-content">
-                            <a href="pluto.html">Pluto นิทาน ดวงดาว ความรัก</a>
-                            <a href="GirlRules.html">Girl Rules กฎหลัก ห้ามรักเธอ</a>                           
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="live-count.html">Live Count</a>
-                        <div class="dropdown-content">
-                            <a href="pluto-live-count.html">Pluto Series</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="awards.html">Awards</a>
-                        <div class="dropdown-content">
-                            <a href="awards2025.html">Awards (Year 2025)</a>
-                            </div>
-                    
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Fan Meeting</a>
-                        <div class="dropdown-content">
-                            <a href="fm2025.html">2025</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="videohome.html">Video</a>
-                        <div class="dropdown-content">
-                        <a href="video.html">Video (Year 2024)</a>
-                        <a href="video2025.html">Video (Year 2025)</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="magazinehome.html">Magazine</a>
-                        <div class="dropdown-content">
-                        <a href="magazine.html">Magazine (Y2024)</a>
-                        <a href="magazine2025.html">Magazine (Y2025)</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="brandshome.html">Brands</a>
-                        <div class="dropdown-content">
-                        <a href="brands.html">Brands (Y2024)</a>
-                        <a href="brands2025.html">Brands (Y2025)</a>
-                        </div>
-                    </li>
-                    <li><a href="vote.html">Voting</a></li>
-                    <li><a href="social-media.html">Social Media</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                </ul>
-            </nav>
+             <div id="navigation"></div>
         </div>
         </div>
         
@@ -108,6 +54,25 @@
         <div id="google_translate_element"></div>
     
         <script>
+
+        // Fetch navigation list from navigation.html
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
+
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
+
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
+    
         // Scroll reveal effect
         const sections = document.querySelectorAll('section');
         const options = {
@@ -173,13 +138,13 @@
     // Initialize pagination on page load
     showPage(1);
     createPagination();
-
+/*
             //hamburger for only display at mobile devices
         document.querySelector('.nav-toggle').addEventListener('click', function() {
         document.querySelector('nav ul').classList.toggle('showing');
         });
 
-            
+       */     
         </script>
         </body>
         </html>
