@@ -182,12 +182,14 @@ section {
     .bottom-right-text-sub h1 {
         font-size: 60px; /* Adjust font size for tablets */
         color: #009688; /* Teal color for headings */
-        margin-bottom: 10px; /* Spacing below headings */
+        margin-bottom: 20px; /* Increase spacing below headings */
+        line-height: 1.2; /* Adjust line height to prevent overlap */
     }
 
     .bottom-right-text-sub p {
         font-size: 18px; /* Smaller text on mobile */
         line-height: 1.5; /* Adjust line height for readability */
+        margin-top: 10px; /* Add spacing above the paragraph */
     }
 
     .intro-section, .watch-section {
@@ -257,12 +259,14 @@ section {
 @media (max-width: 480px) {
     .bottom-right-text-sub h1 {
         font-size: 40px; /* Adjust font size for mobile devices */
-        margin-bottom: 8px; /* Reduce spacing below headings */
+        margin-bottom: 15px; /* Reduce spacing below headings */
+        line-height: 1.1; /* Tighten line height for smaller screens */
     }
 
     .bottom-right-text-sub p {
-        font-size: 18px; /* Adjust font size for mobile devices */
+        font-size: 16px; /* Adjust font size for mobile devices */
         line-height: 1.4; /* Adjust line height for very small screens */
+        margin-top: 8px; /* Add spacing above the paragraph */
     }
 
     .intro-section, .watch-section {
