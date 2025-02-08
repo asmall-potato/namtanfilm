@@ -186,8 +186,6 @@ section {
         right: 30px; /* Move closer to the right */
         text-align: right;
         padding: 10px; /* Add padding for better spacing */
-        background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
-        border-radius: 10px; /* Optional: Add rounded corners */
     }
 
     .bottom-right-text-sub h1 {
