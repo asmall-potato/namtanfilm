@@ -179,17 +179,30 @@ section {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    /* Adjust .bottom-right-text-sub for tablets */
+    .bottom-right-text-sub {
+        position: absolute;
+        bottom: 30px; /* Move closer to the bottom */
+        right: 30px; /* Move closer to the right */
+        text-align: right;
+        padding: 10px; /* Add padding for better spacing */
+        background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
+        border-radius: 10px; /* Optional: Add rounded corners */
+    }
+
     .bottom-right-text-sub h1 {
-        font-size: 60px; /* Adjust font size for tablets */
-        color: #009688; /* Teal color for headings */
-        margin-bottom: 20px; /* Increase spacing below headings */
+        font-size: 40px; /* Reduce font size for tablets */
+        font-weight: 600;
+        color: rgb(55, 232, 232);
+        margin-bottom: 10px; /* Add spacing below <h1> */
         line-height: 1.2; /* Adjust line height to prevent overlap */
     }
 
     .bottom-right-text-sub p {
-        font-size: 18px; /* Smaller text on mobile */
-        line-height: 1.5; /* Adjust line height for readability */
-        margin-top: 10px; /* Add spacing above the paragraph */
+        font-size: 18px; /* Reduce font size for tablets */
+        color: white;
+        margin-top: 0; /* Remove default margin */
+        line-height: 1.4; /* Adjust line height for readability */
     }
 
     .intro-section, .watch-section {
@@ -257,16 +270,22 @@ section {
 }
 
 @media (max-width: 480px) {
+    /* Adjust .bottom-right-text-sub for mobile devices */
+    .bottom-right-text-sub {
+        bottom: 20px; /* Move closer to the bottom */
+        right: 20px; /* Move closer to the right */
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+
     .bottom-right-text-sub h1 {
-        font-size: 40px; /* Adjust font size for mobile devices */
-        margin-bottom: 15px; /* Reduce spacing below headings */
+        font-size: 30px; /* Further reduce font size for mobile */
+        margin-bottom: 8px; /* Reduce spacing below <h1> */
         line-height: 1.1; /* Tighten line height for smaller screens */
     }
 
     .bottom-right-text-sub p {
-        font-size: 16px; /* Adjust font size for mobile devices */
-        line-height: 1.4; /* Adjust line height for very small screens */
-        margin-top: 8px; /* Add spacing above the paragraph */
+        font-size: 16px; /* Further reduce font size for mobile */
+        line-height: 1.3; /* Adjust line height for very small screens */
     }
 
     .intro-section, .watch-section {
