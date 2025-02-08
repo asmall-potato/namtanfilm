@@ -80,20 +80,23 @@
     <div id="google_translate_element"></div>
     <script>
 
-        //fetch navigation list from navigation.html
-    fetch('navigation.html')
-    .then(response => {
-        console.log('Fetching navigation.html:', response);
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.text();
-    })
-    .then(data => {
-        console.log('Navigation HTML loaded:', data);
-        document.getElementById('navigation').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navigation:', error));
+       // Fetch navigation list from navigation.html
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
+
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
+
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
         
         // Scroll reveal effect
         const sections = document.querySelectorAll('section');
@@ -121,11 +124,11 @@
             const scrollPosition = window.scrollY;
             header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
         });
-
+/*
         // Hamburger for mobile devices
         document.querySelector('.nav-toggle').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('showing');
-        });
+        });*/
     </script>
 </body>
 </html>
