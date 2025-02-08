@@ -177,24 +177,23 @@
     
         <script>
 
-        //Fetch navigation list from navigation.html
+        // Fetch navigation list from navigation.html
         document.addEventListener("DOMContentLoaded", function () {
-    fetch('navigation.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navigation').innerHTML = data;
-            
-            // Now attach the event listener after navigation is loaded
-            const navToggle = document.querySelector(".nav-toggle");
-            const navMenu = document.getElementById("navigation");
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
 
-            navToggle.addEventListener("click", function () {
-                navMenu.classList.toggle("showing");
-            });
-        })
-        .catch(error => console.error('Error loading navigation:', error));
-});
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
 
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
     
         // Scroll reveal effect
         const sections = document.querySelectorAll('section');
@@ -224,7 +223,7 @@
         });
 
             //Hamburger
-         document.addEventListener("DOMContentLoaded", function () {
+       /*  document.addEventListener("DOMContentLoaded", function () {
             const navToggle = document.querySelector(".nav-toggle");
             const navUl = document.querySelector("nav ul");
 
@@ -232,7 +231,7 @@
                 navUl.classList.toggle("showing"); // Toggle the 'showing' class to show/hide the menu
             });
         });
-
+*/
         //show the dialog box for today schedule
        
        document.addEventListener("DOMContentLoaded", function () {
