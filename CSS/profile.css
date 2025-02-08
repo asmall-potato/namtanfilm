@@ -107,6 +107,30 @@ a:hover {
     text-decoration: underline; /* Underline on hover for links */
 }
 
+.linkcolumn {
+    flex: 1;
+    max-width: 280px; /* Slightly narrower columns for better fit */
+    text-align: center;
+    margin: 10px;
+    background: linear-gradient(135deg, #ffffff, #e0e0e0); /* Gradient background for modern look */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for box-shadow */
+}
+
+.linkcolumn:hover {
+    transform: scale(1.08); /* Increase scale on hover for more impact */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* More pronounced shadow on hover */
+}
+
+.linkcolumn h3 {
+    margin: 15px 0;
+    color: #222; /* Darker shade for better contrast */
+    font-size: 1.2em; /* Increase font size for more emphasis */
+    font-weight: 600; /* Bolder font for headings */
+}
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .section3, .section4 {
