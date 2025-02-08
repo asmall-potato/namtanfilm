@@ -454,16 +454,12 @@ section {
         background-color: #ffffff;  /* White background for items */
         border-radius: 10px;  /* Rounded corners for a modern look */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transitions */
-    }
-
-    .engagement-item:hover {
-        transform: translateY(-5px);  /* Slight lift effect on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Enhanced shadow on hover */
-    }
-
-    /* Optional: Add padding inside engagement items */
-    .engagement-item {
         padding: 15px;  /* Add padding inside items */
+    }
+
+    /* Ensure embedded posts are responsive */
+    .embeds-row blockquote {
+        width: 100% !important; /* Force the embed to take full width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
     }
 }
