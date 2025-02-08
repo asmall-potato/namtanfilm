@@ -178,19 +178,23 @@
         <script>
 
         //Fetch navigation list from navigation.html
-        fetch('navigation.html')
-        .then(response => {
-        console.log('Fetching navigation.html:', response);
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.text();
-        })
+        document.addEventListener("DOMContentLoaded", function () {
+    fetch('navigation.html')
+        .then(response => response.text())
         .then(data => {
-        console.log('Navigation HTML loaded:', data);
-        document.getElementById('navigation').innerHTML = data;
+            document.getElementById('navigation').innerHTML = data;
+            
+            // Now attach the event listener after navigation is loaded
+            const navToggle = document.querySelector(".nav-toggle");
+            const navMenu = document.getElementById("navigation");
+
+            navToggle.addEventListener("click", function () {
+                navMenu.classList.toggle("showing");
+            });
         })
         .catch(error => console.error('Error loading navigation:', error));
+});
+
     
         // Scroll reveal effect
         const sections = document.querySelectorAll('section');
