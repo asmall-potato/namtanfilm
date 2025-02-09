@@ -120,7 +120,8 @@
             "time": "22:00 (BKK Time)",
             "live":"10:00 PM on Channel One 31 & 11:00 PM on YouTube: GMMTV OFFICIAL",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1887802930763604391"
+            "url": "https://x.com/GMMTV/status/1887802930763604391",
+            "status": "passed"
         }
     ],
     "2025-02-10": [
@@ -168,6 +169,15 @@
             "location": "MCC HALL FL. 3, THE MALL LIFESTORE BANGKAPI",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/1885266892853829689"
+        }
+    ],
+    "2025-03-09": [
+        {
+            "description": "NAMTANFILM PRINCESS'S TALE FAN MEETING (Day 2)",
+            "time": "3:00PM (BKK Time)",
+            "location": "MCC HALL FL. 3, THE MALL LIFESTORE BANGKAPI",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1888450107387064706"
         }
     ],
     "2025-06-28": [
