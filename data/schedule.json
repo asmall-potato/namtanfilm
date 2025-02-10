@@ -130,11 +130,31 @@
             "time": "6:00PM (BKK Time)",
             "location":"OPPO Space, centralwOrld",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1887844302795260151/photo/2"
+            "url": "https://x.com/GMMTV/status/1887844302795260151/photo/2",
+            "status": "passed"
             
         }
     ],
-    
+    "2025-02-11": [
+        {
+            "description": "MILLE SKIN OF NEW GEN",
+            "time": "5:30PM (BKK Time)",
+            "location":"CentralwOrld, Central Court, 1st Floor",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/GMMTV/status/1888859728874483877"
+            
+        }
+    ],
+    "2025-02-13": [
+        {
+            "description": "Thom Browne Siam Paragon Store Opening",
+            "time": "1:00PM (BKK Time)",
+            "location":"Thom Browne Siam Paragon",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/1888859736705323179/photo/1"
+            
+        }
+    ],
     "2025-02-15": [
         {
             "description": "Namtan 1st fan meeting in Nanning",
