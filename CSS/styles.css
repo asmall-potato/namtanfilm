@@ -5,8 +5,6 @@ body {
   
 }
 
-
-
 /* Header Wallpaper */
 .header-wallpaper {
   position: relative;
@@ -64,8 +62,66 @@ body {
 /* Logo */
 .logo {
   font-size: 2em;
-  color:#527ef9; /* Changed logo color to white for contrast */
+  font-weight: bold;
   text-transform: uppercase;
+  display: flex;
+  gap: 2px; /* Adds spacing for clarity */
+}
+
+/* Blue characters (first 6 letters) */
+.blue {
+  color: #00FFFF;
+  -webkit-text-stroke: 1.5px black; /* Adds black border */
+  animation: glowBlue 1.5s infinite alternate ease-in-out;
+  display: inline-block;
+}
+
+/* Yellow characters (last 4 letters) */
+.yellow {
+  color: #FFFF00;
+  -webkit-text-stroke: 1.5px black; /* Adds black border */
+  animation: glowYellow 1.5s infinite alternate ease-in-out;
+  display: inline-block;
+}
+
+/* Glow effect for blue letters */
+@keyframes glowBlue {
+  0% {
+    text-shadow: 
+      0 0 5px #00BFFF, 
+      0 0 10px #00BFFF, 
+      0 0 20px #00BFFF, 
+      0 0 40px #00BFFF;
+    transform: translateY(0);
+  }
+  100% {
+    text-shadow: 
+      0 0 10px #B0E0E6, 
+      0 0 20px #B0E0E6, 
+      0 0 40px #B0E0E6, 
+      0 0 80px #B0E0E6;
+    transform: translateY(-5px);
+  }
+}
+
+/* Glow effect for yellow letters */
+@keyframes glowYellow {
+  0% {
+    text-shadow: 
+      0 0 5px #FFFF00, 
+      0 0 10px #FFFF00, 
+      0 0 20px #FFFF00, 
+      0 0 40px #FFFF00;
+    transform: translateY(0);
+  }
+  100% {
+    text-shadow: 
+      0 0 10px #FFFFE0, 
+      0 0 20px #FFFFE0, 
+      0 0 40px #FFFFE0, 
+      0 0 80px #FFFFE0;
+    transform: translateY(5px);
+  }
 }
 
 /* Navigation */
@@ -249,7 +305,41 @@ nav ul li a:hover {
   }
 }
 
+/* Mobile View Adjustments for logo */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.5em; /* Reduce size for mobile */
+    gap: 1px; /* Reduce spacing */
+    justify-content: center; /* Center text on smaller screens */
+  }
+  
+  .blue, .yellow {
+    -webkit-text-stroke: 1px black; /* Reduce border thickness */
+  }
 
+  /* Softer glow for mobile */
+  @keyframes glowBlue {
+    0% {
+      text-shadow: 0 0 3px #00BFFF, 0 0 6px #00BFFF, 0 0 10px #00BFFF;
+      transform: translateY(0);
+    }
+    100% {
+      text-shadow: 0 0 6px #B0E0E6, 0 0 12px #B0E0E6, 0 0 20px #B0E0E6;
+      transform: translateY(-3px);
+    }
+  }
+
+  @keyframes glowYellow {
+    0% {
+      text-shadow: 0 0 3px #FFFF00, 0 0 6px #FFFF00, 0 0 10px #FFFF00;
+      transform: translateY(0);
+    }
+    100% {
+      text-shadow: 0 0 6px #FFFFE0, 0 0 12px #FFFFE0, 0 0 20px #FFFFE0;
+      transform: translateY(3px);
+    }
+  }
+}
 
 
 /* Button Styling */
