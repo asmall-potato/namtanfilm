@@ -735,6 +735,6 @@ footer {
   color: #bbb;
   text-align: center;
   padding: 15px 0;
-  margin-top: auto; /* Push the footer to the bottom */
+  flex-shrink: 0; /* Prevent the footer from shrinking */
   
 }
