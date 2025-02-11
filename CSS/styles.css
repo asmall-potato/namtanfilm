@@ -5,6 +5,15 @@ body {
   
 }
 
+/* Ensure the HTML and body take up the full height of the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Make the body a flex container with a vertical layout */
+}
+
 /* Header Wallpaper */
 .header-wallpaper {
   position: relative;
@@ -148,6 +157,11 @@ nav ul li a:hover {
 /* Main Content */
 .main {
   padding-top: 80px;
+}
+
+/* Main content wrapper */
+.main-content {
+  flex: 1; /* Allow the main content to grow and take up remaining space */
 }
 
 /* Text Overlays */
