@@ -2,7 +2,8 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 
@@ -739,6 +740,5 @@ footer {
   color: #bbb;
   text-align: center;
   padding: 15px 0;
- 
-  
+
 }
