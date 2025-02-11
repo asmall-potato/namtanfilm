@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for the whole page */
+    background: linear-gradient(135deg, #89CFF0, #FFFACD); /* Soft gradient from pastel blue to light yellow */
+}
+
+button.collapsible {
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    padding: 12px 30px; /* Balanced padding */
+    border: 2px solid #0056b3; /* Border to define the button's shape */
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners */
+    width: 90%; /* Set width to 90% of the container's width */
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+    display: block; /* Block display for vertical stacking */
+    margin: 15px auto; /* Center buttons and add space between them */
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative; /* To position the icon inside the button */
+}
+
+button.collapsible .icon {
+    position: absolute;
+    right: 15px; /* Align the icon to the right */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the icon */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* On hover, change background and icon */
+button.collapsible:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+}
+
+/* On focus, add yellow glow */
+button.collapsible:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 5px 3px rgba(255, 204, 0, 0.6); /* Yellow glow on focus */
+}
+
+.content {
+    padding: 20px;
+    display: none;
+    background-color: #FFFACD; /*LemonChiffon*/
+    margin-top: 15px;
+    border-left: 5px solid #fbc02d; /* Yellow accent border on the left */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    width: 90%; /* Set content width to 90% */
+    margin: 15px auto; /* Center the content */
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between columns */
+    width: 100%; /* Ensure the columns take up full width */
+}
+
+.column {
+    width: 30%; /* Each column takes 30% of the available content width */
+    padding: 20px;
+    background-color: #e3f2fd; /* Light blue background for columns */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.column h3 {
+    margin-top: 0;
+    color: #FF4500; /* OrangeRed for headings */
+}
+
+.column p {
+    color: #555; /* Darker text for better readability */
+}
+
+/* Responsive Adjustments for Mobile View */
+@media (max-width: 768px) {
+    /* Adjust the collapsible button for smaller screens */
+    button.collapsible {
+        width: 100%; /* Full width for better touch interaction */
+        padding: 12px 20px; /* Slightly reduce padding for smaller screens */
+        font-size: 14px; /* Smaller font size for mobile */
+        margin: 10px auto; /* Reduce margin for compact layout */
+    }
+
+    button.collapsible .icon {
+        right: 10px; /* Adjust icon position */
+        font-size: 16px; /* Smaller icon size */
+    }
+
+    /* Adjust the content area */
+    .content {
+        width: 100%; /* Full width for better readability */
+        padding: 15px; /* Slightly reduce padding */
+        margin: 10px auto; /* Reduce margin */
+    }
+
+    /* Adjust the columns layout for smaller screens */
+    .columns {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 10px; /* Reduce gap between columns */
+    }
+
+    .column {
+        width: 100%; /* Full width for each column */
+        padding: 15px; /* Adjust padding */
+        margin-bottom: 10px; /* Add space between stacked columns */
+    }
+
+    .column h3 {
+        font-size: 1.1em; /* Smaller heading size */
+    }
+
+    .column p {
+        font-size: 0.9em; /* Smaller text size */
+    }
+
+    /* Adjust general items for smaller screens */
+    .general-item {
+        width: 100%; /* Full width for better touch interaction */
+        margin: 10px 0; /* Adjust margin */
+        padding: 12px; /* Adjust padding */
+    }
+
+    .general-item h3 {
+        font-size: 1.1em; /* Smaller heading size */
+    }
+
+    .general-item p {
+        font-size: 0.9em; /* Smaller text size */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    button.collapsible {
+        padding: 10px 15px; /* Even smaller padding */
+        font-size: 13px; /* Smaller font size */
+    }
+
+    .content {
+        padding: 10px; /* Reduce padding further */
+    }
+
+    .column {
+        padding: 10px; /* Reduce padding further */
+    }
+
+    .column h3 {
+        font-size: 1em; /* Smaller heading size */
+    }
+
+    .column p {
+        font-size: 0.85em; /* Smaller text size */
+    }
+
+    .general-item {
+        padding: 10px; /* Reduce padding further */
+    }
+
+    .general-item h3 {
+        font-size: 1em; /* Smaller heading size */
+    }
+
+    .general-item p {
+        font-size: 0.85em; /* Smaller text size */
+    }
+}
