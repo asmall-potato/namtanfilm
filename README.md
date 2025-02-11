@@ -12,6 +12,7 @@ Features
 8. Fan Meeting
 9. Awards
 10. Voting
+11. Trend X Highest Rank
 
 License
 This project is licensed under a custom license. For more details, please refer to the LICENSE file.
