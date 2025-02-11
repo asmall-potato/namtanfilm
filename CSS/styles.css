@@ -66,6 +66,7 @@ body {
   text-transform: uppercase;
   display: flex;
   gap: 2px; /* Adds spacing for clarity */
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Blue characters (first 6 letters) */
