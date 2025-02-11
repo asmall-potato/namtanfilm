@@ -735,5 +735,6 @@ footer {
   color: #bbb;
   text-align: center;
   padding: 15px 0;
+  margin-top: auto; /* Push the footer to the bottom */
   
 }
