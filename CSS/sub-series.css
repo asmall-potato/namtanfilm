@@ -56,7 +56,7 @@ section {
 
 .intro-section p {
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1;
     font-family: 'Roboto', sans-serif;
     color: #7f8c8d;
 }
@@ -210,7 +210,7 @@ section {
     .intro-section p, .watch-section p {
         font-size: 16px; /* Adjust font size for tablets */
         color: #333; /* Dark gray color for text */
-        line-height: 1.6; /* Improve readability with line height */
+        line-height: 1; /* Improve readability with line height */
     }
 
     .video-section iframe {
