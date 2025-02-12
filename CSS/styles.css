@@ -233,6 +233,7 @@ nav ul li a:hover {
     left: -250px; /* Hide off-screen initially */
     width: 250px; /* Set a width for the side menu */
     height: 100vh; /* Take up full height of the screen */
+    overflow-y: auto; /* Enable vertical scrolling */
     background-color: rgba(255, 255, 255, 0.95); /* White background */
     border-radius: 10px; /* Rounded corners for the menu */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
@@ -293,7 +294,6 @@ nav ul li a:hover {
   /* Navigation Links */
   nav ul li a {
     color: #333; /* Dark text color for readability */
-    /*font-size: 1.2em; /* Slightly larger font size */
     padding: 10px; /* Add padding for better touch targets */
     display: block; /* Make links block-level */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
