@@ -256,6 +256,10 @@ section {
         background-color: #00796b; /* Darker teal on hover */
         transform: translateY(-3px); /* Slight lift effect on hover */
     }
+   .nav ul{
+      display: flex;
+    flex-direction: column; /* Ensures vertical stacking */
+   }
 }
 
 @media (max-width: 480px) {
