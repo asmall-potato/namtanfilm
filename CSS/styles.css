@@ -232,7 +232,7 @@ nav ul li a:hover {
     top: 0; /* Start from the top */
     left: -250px; /* Hide off-screen initially */
     width: 250px; /* Set a width for the side menu */
-    height: 100vh; /* Take up full height of the screen */
+    height: calc(100vh - 40px); /* Subtract padding from height */
     overflow-y: auto; /* Enable vertical scrolling */
     background-color: rgba(255, 255, 255, 0.95); /* White background */
     border-radius: 10px; /* Rounded corners for the menu */
@@ -240,6 +240,7 @@ nav ul li a:hover {
     padding: 20px; /* Add padding inside the menu */
     transition: left 0.3s ease; /* Smooth transition when opening/closing */
     z-index: 1000; /* Ensure it appears above other content */
+    box-sizing: border-box; /* Include padding in height calculation */
   }
 
   /* Show the navigation when toggled */
