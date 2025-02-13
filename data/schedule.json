@@ -141,7 +141,8 @@
             "time": "5:30PM (BKK Time)",
             "location":"CentralwOrld, Central Court, 1st Floor",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/1888859728874483877"
+            "url": "https://x.com/GMMTV/status/1888859728874483877",
+            "status": "passed"
             
         }
     ],
@@ -151,7 +152,8 @@
             "time": "1:00PM (BKK Time)",
             "location":"Thom Browne Siam Paragon",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1888859736705323179/photo/1"
+            "url": "https://x.com/GMMTV/status/1888859736705323179/photo/1",
+            "status": "passed"
             
         }
     ],
