@@ -902,12 +902,15 @@ nav ul li a:hover {
   /* Adjust gallery layout for smaller screens */
   .gallery-container {
     width: 100%; /* Full width for gallery container */
-    height: 200px; /* Reduce gallery height */
+    /*height: 200px; /* Reduce gallery height */
+    height: auto; /* Allow height to adjust */
+    min-height: 200px; /* Minimum height */
   }
 
   .gallery-item {
     width: 150px; /* Adjust image size */
-    height: 200px; /* Adjust height */
+    /*height: 200px; /* Adjust height */
+    height: auto; /* Allow height to adjust */
   }
   
   /* Ensure footer stays at the bottom */
