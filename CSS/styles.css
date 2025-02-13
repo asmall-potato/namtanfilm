@@ -909,6 +909,12 @@ nav ul li a:hover {
     width: 150px; /* Adjust image size */
     height: 200px; /* Adjust height */
   }
+  
+  /* Ensure footer stays at the bottom */
+  footer {
+    position: relative;
+    margin-top: auto;
+  }
 }
 
 
