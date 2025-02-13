@@ -825,6 +825,94 @@ nav ul li a:hover {
   }
 }
 
+
+/* Mobile View Adjustments for screens around 400px */
+@media (max-width: 480px) {
+  
+  /* Mobile Navigation Menu */
+  nav ul {
+    left: 0; /* Ensure menu is visible when toggled */
+    width: 100%; /* Full width for smaller screens */
+    height: calc(100vh - 40px); /* Adjust height for small screens */
+    padding: 10px; /* Reduce padding */
+  }
+
+  /* Adjust Navigation Links for Small Screens */
+  nav ul li {
+    margin: 8px 0; /* Reduce margin between items */
+    width: 100%; /* Ensure full width for links */
+    text-align: center; /* Keep text centered */
+  }
+
+  nav ul li a {
+    font-size: 16px; /* Reduce font size */
+    padding: 8px; /* Adjust padding */
+    color: #333; /* Ensure readability */
+  }
+
+  /* Adjust Logo for Small Screens */
+  .logo {
+    font-size: 1.3em; /* Slightly reduce logo size */
+    gap: 0.5px; /* Reduce space between letters */
+    justify-content: center; /* Center logo on small screens */
+  }
+
+  /* Smaller font size for bottom left text */
+  .bottom-left-text {
+    font-size: 1.5em; /* Reduce size for small screens */
+    padding: 5px; /* Padding adjustment */
+  }
+
+  /* Adjust section2 layout for small screens */
+  .section2 {
+    padding: 10px; /* Reduce padding */
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .left-image, .right-image {
+    width: 100%; /* Full width for images */
+  }
+
+  /* Adjust text in right-text section */
+  .right-text {
+    width: 100%; /* Full width */
+    padding: 0 10px; /* Reduce padding */
+  }
+
+  /* Adjust cast-container */
+  .cast-container {
+    gap: 15px; /* Reduce gap between columns */
+  }
+
+  .column {
+    flex: 1 1 100%; /* Each column takes up full width */
+    margin: 10px 0; /* Reduce margin */
+  }
+
+  .column img {
+    width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Adjust video frames on small screens */
+  .video-frame {
+    width: 100%; /* Ensure video frames take full width */
+  }
+
+  /* Adjust gallery layout for smaller screens */
+  .gallery-container {
+    width: 100%; /* Full width for gallery container */
+    height: 200px; /* Reduce gallery height */
+  }
+
+  .gallery-item {
+    width: 150px; /* Adjust image size */
+    height: 200px; /* Adjust height */
+  }
+}
+
+
+
 /* Footer */
 footer {
   background: #111;
