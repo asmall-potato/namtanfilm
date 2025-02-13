@@ -823,6 +823,12 @@ nav ul li a:hover {
   .column {
       width: auto; /* Make columns full width */
   }
+
+  /* Ensure footer stays at the bottom */
+  footer {
+    position: relative;
+    margin-top: auto;
+  }
 }
 
 
