@@ -14,7 +14,7 @@ body {
     padding: 60px 20px; /* Add padding for better spacing */
     border-radius: 10px; /* Rounded corners for the section */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow to add depth */
-    margin-bottom: 40px; /* Add space between sections */
+    margin-bottom: 10px; /* Add space between sections */
 }
 
 /* Section 3 Background Gradient */
