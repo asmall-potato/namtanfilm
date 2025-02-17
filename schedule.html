@@ -88,22 +88,7 @@
     // Global schedule data
     let schedules = {};
 
-    // Fetch schedule data
-    /*
-    async function loadScheduleData() {
-    try {
-       /* const response = await fetch('data/schedule.json');
-        const response = await fetch('http://localhost:8000/data/schedule.json');
-        if (!response.ok) throw new Error('Failed to load schedule data');
-        schedules = await response.json();
-        initializeCalendar();
-    } catch (error) {
-        console.error('Error loading schedule data:', error);
-        // You can add error handling UI here if needed
-        alert('There was an issue loading the schedule data.');
-    }
-}
-*/
+    
 async function loadScheduleData() {
     try {
         const response = await fetch('data/schedule.json', {
@@ -357,17 +342,8 @@ const header = document.querySelector('.header-container');
                 })
                 .catch(error => console.error('Error loading navigation:', error));
         });
-/*
-    //Hamburger
-         document.addEventListener("DOMContentLoaded", function () {
-            const navToggle = document.querySelector(".nav-toggle");
-            const navUl = document.querySelector("nav ul");
 
-            navToggle.addEventListener("click", function () {
-                navUl.classList.toggle("showing"); // Toggle the 'showing' class to show/hide the menu
-            });
-        });
-        */
+    
 </script>
 
 </body>
