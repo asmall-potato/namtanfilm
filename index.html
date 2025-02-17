@@ -130,25 +130,36 @@
                     <a href="https://x.com/GirlRulesGMMTV">@GirlRulesGMMTV</a>
                 </div>
                 
-                <div class="column"><b>Instagram</b>
+                <div class="column"><b>GMMTV Official Account</b>
                 </br>
                 </br>
-                    <a href="https://www.instagram.com/gmmtv/?hl=en">gmmtv</a>
-                </br>
+                <p style="display: inline;">Instagram →</p> <a href="https://www.instagram.com/gmmtv/?hl=en" style="display: inline;" target="_blank">gmmtv</a>
+                </br></br></br>
+                <p style="display: inline;">Tiktok →</p> <a href="https://www.tiktok.com/@gmmtvofficial?lang=en" style="display: inline;" target="_blank">@gmmtvofficial</a>
+                </br></br></br>
+                <p style="display: inline;">Facebook →</p> <a href="https://www.facebook.com/gmmtvofficial" style="display: inline;" target="_blank">gmmtvofficial</a>
+                </br></br></br>
+                <p style="display: inline;">Weibo →</p> <a href="https://weibo.com/gmmtvofficial" style="display: inline;" target="_blank">gmmtv_official</a>
                 </div>
 
-                <div class="column"><b>TikTok</b>
+                <div class="column"><b>Official Fanclub</b>
                 </br>
                 </br>
-                    <a href="https://www.tiktok.com/@gmmtvofficial?lang=en">@gmmtvofficial</a>
+                    <p>Namtan Tipnaree Official Fanclub</p>
+                    <a href="https://x.com/Tipnaree_OFC">@Tipnaree_OFC</a>
                 </br>
+                    <p>Film Rachanun Official Fanclub</p>
+                    <a href="https://x.com/RachanunFanbase">@RachanunFanbase</a>
+                </br>
+                    <p>NamtanFilm Official Fanclub</p>
+                    <a href="https://x.com/NamtanFilmFC">@NamtanFilmFC</a>
                 </div>
 
-                <div class="column"><b>Facebook</b>
+                <div class="column"><b>Official Trending Account</b>
                 </br>
                 </br>
-                    <a href="https://www.facebook.com/gmmtvofficial">gmmtvofficial</a>
-                </br>
+                    <p>Trend For NamtanFilm</p>
+                    <a href="https://x.com/NamtanFilmTrend">@NamtanFilmTrend</a>
                 </div>
 
                 <div class="column"><b>Get NamtanFilm's official merchandise at</b>
@@ -259,20 +270,29 @@
             let message = `Today's Events (${todayDate}):\n\n`; // Adding today's date here
             if (eventsToday && eventsToday.length > 0) {
                 // Build the message for today's events with line breaks
-                message += eventsToday.map(event => {
-                    let eventDetails = `- ${event.description}\n`;
-                    eventDetails += `Time: ${event.time}\n`;
-                    if (event.location) {
-                        eventDetails += `Location: ${event.location}\n`;
-                    }
-                    if (event.live) {
-                        eventDetails += `Live: ${event.live}\n`;
-                    }
-                    if (event.artist) {
-                        eventDetails += `Artist: ${event.artist}\n`;
-                    }
-                    return eventDetails;
-                }).join("\n");
+                message += eventsToday.map((event, index) => {
+                let eventDetails = `- ${event.description}\n`;
+                eventDetails += `Time: ${event.time}\n`;
+        
+                // Show both location and live if available
+                if (event.location) {
+                    eventDetails += `Location: ${event.location}\n`;
+                }
+                if (event.live) {
+                    eventDetails += `Live: ${event.live}\n`;
+                }
+        
+                if (event.artist) {
+                    eventDetails += `Artist: ${event.artist}\n`;
+                }
+        
+                // Add a break line between events, except after the last one
+                if (index < eventsToday.length - 1) {
+                    eventDetails += `---\n`;
+                }
+        
+                return eventDetails;
+            }).join("\n");
             } else {
                 message += "There is no event for NamtanFilm today.";
             }
