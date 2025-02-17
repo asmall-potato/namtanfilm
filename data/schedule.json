@@ -190,7 +190,8 @@
         {
             "description": "GARNIER SERUM CLEANSER FACEPERIENCE AT EMSPHERE",
             "time": "12:00PM-1:00PM (BKK time)",
-            "live": "TikTok : @GarnierThailand  | Location: Emsphere" ,
+            "location": "Emsphere",
+            "live": "TikTok : @GarnierThailand" ,
             "artist": "Film Rachanun",
             "url": "https://x.com/GMMTV/status/1891368240095379825/photo/2"
         },
@@ -206,7 +207,8 @@
         {
             "description": "3CE DREAM IN CASHMERE IN BKK",
             "time": "Shopee live: 4:00PM BKK time | Show: 6:00PM BKK time",
-            "live": "Shopee: 3CE Thailand  | Location: Parc Paragon",
+            "location": "Parc Paragon",
+            "live": "Shopee: 3CE Thailand",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/1891368256327369075/photo/1"
         }
