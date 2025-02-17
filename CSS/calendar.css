@@ -228,6 +228,21 @@
     background-color: #f0f0f0; /* Light gray background */
 }
 
+.legend-color {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.blue_1 {
+    background-color: blue;
+}
+
+.yellow_1 {
+    background-color: #f1c40f;
+}
 
 @media (max-width: 768px) {
     .calendar-container {
