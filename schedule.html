@@ -52,7 +52,9 @@
     <!-- Right side: Full Schedule List -->
     <div class="calendar-right">
         <div class="schedule-list">
-            <h3>NamtanFilm's Schedule for <span id="schedule-month"></span></h3>
+            <h3>NamtanFilm's Schedule for <span id="schedule-month"></span></h3>           
+                <p><span class="legend-color blue_1"></span> represents Namtan Tipnaree</p>
+                <p><span class="legend-color yellow_1"></span> represents Film Rachanun</p>
             <ul id="schedule-items"></ul>
         </div>
     </div>
@@ -88,7 +90,22 @@
     // Global schedule data
     let schedules = {};
 
-    
+    // Fetch schedule data
+    /*
+    async function loadScheduleData() {
+    try {
+       /* const response = await fetch('data/schedule.json');
+        const response = await fetch('http://localhost:8000/data/schedule.json');
+        if (!response.ok) throw new Error('Failed to load schedule data');
+        schedules = await response.json();
+        initializeCalendar();
+    } catch (error) {
+        console.error('Error loading schedule data:', error);
+        // You can add error handling UI here if needed
+        alert('There was an issue loading the schedule data.');
+    }
+}
+*/
 async function loadScheduleData() {
     try {
         const response = await fetch('data/schedule.json', {
@@ -126,7 +143,7 @@ async function loadScheduleData() {
     // Call initializeCalendar to initialize the current month and year
     initializeCalendar();
 
-function generateCalendar() {
+    function generateCalendar() {
     const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
     const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
     const lastDateOfMonth = lastDayOfMonth.getDate();
@@ -167,9 +184,29 @@ function generateCalendar() {
                     cellClass += " passed-event"; // For passed events, add a stroke
                 }
 
+                // Display multiple events for the day
+                const eventList = hasSchedule ? schedules[dayString] : [];
+
+                let eventDetails = '';
+                eventList.forEach(event => {
+                    const artistName = event.artist;
+
+                    // Check for exact match on artist name
+                    let eventColor = 'black';  // Default color
+                    if (artistName === "Namtan Tipnaree") {
+                        eventColor = 'blue';
+                    } else if (artistName === "Film Rachanun") {
+                        eventColor = '#e0b300';
+                    }
+
+                    eventDetails += `<div class="schedule-event" style="color: ${eventColor}; word-wrap: break-word; max-width: 100%; white-space: normal;">
+                                        <strong>${event.description}</strong>
+                                      </div>`;
+                });
+
                 calendarBody += `<td class="${cellClass}" onclick="showScheduleDetails('${dayString}')">
                                     <strong>${dayCounter}</strong>
-                                    ${firstEvent ? `<div class="schedule-details">${firstEvent}</div>` : ''}
+                                    <div class="schedule-details" style="overflow-y: auto; max-height: 60px;">${eventDetails}</div>
                                 </td>`;
                 dayCounter++;
             } else {
@@ -184,6 +221,8 @@ function generateCalendar() {
     updateScheduleList(); // Update the full schedule list on the right side
 }
 
+
+
 function updateScheduleList() {
     const scheduleItems = document.getElementById("schedule-items");
     scheduleItems.innerHTML = ''; // Clear previous schedule
@@ -197,17 +236,21 @@ function updateScheduleList() {
     // If a specific date is selected, show its details
     if (selectedDate && schedules[selectedDate]) {
         const events = schedules[selectedDate];
-        events.forEach(event => {
+        events.forEach((event, index) => {
             const li = document.createElement("li");
-            li.innerHTML = `<div class="schedule-details"><strong>${event.description}</strong> (${event.time})</div>`;
 
-            // Check if there's a 'location' or 'live' field and display accordingly
+            // Event description
+            li.innerHTML = `<div class="schedule-details"><strong>${event.description}</strong></div>`;
+
+            // Event time (separate line)
+            li.innerHTML += `<div>Time: ${event.time}</div>`;
+
+            // Display both location and live (if available)
             if (event.location) {
                 li.innerHTML += `<div>Location: ${event.location}</div>`;
-            } else if (event.live) {
+            }
+            if (event.live) {
                 li.innerHTML += `<div>Live: ${event.live}</div>`;
-            } else {
-                li.innerHTML += `<div>No location or live link available</div>`;
             }
 
             // Add the Artist information (if available)
@@ -231,6 +274,11 @@ function updateScheduleList() {
                 li.appendChild(link);
             }
 
+            // Add a break line (`<hr>`) between events, but not after the last event
+            if (index < events.length - 1) {
+                li.innerHTML += `<hr>`;
+            }
+
             scheduleItems.appendChild(li);
         });
     } else {
@@ -239,18 +287,22 @@ function updateScheduleList() {
             const events = schedules[date];
             const li = document.createElement("li");
             li.innerHTML = `<strong>${date}</strong>`;
-            events.forEach(event => {
+            events.forEach((event, index) => {
                 const eventLine = document.createElement("div");
                 eventLine.classList.add("schedule-details");
-                eventLine.innerHTML = `<strong>${event.description}</strong> (${event.time})`;
 
-                // Check if there's a 'location' or 'live' field and display accordingly
+                // Event description
+                eventLine.innerHTML = `<strong>${event.description}</strong>`;
+
+                // Event time (separate line)
+                eventLine.innerHTML += `<br>Time: ${event.time}`;
+
+                // Display both location and live (if available)
                 if (event.location) {
                     eventLine.innerHTML += `<br>Location: ${event.location}`;
-                } else if (event.live) {
+                }
+                if (event.live) {
                     eventLine.innerHTML += `<br>Live: ${event.live}`;
-                } else {
-                    eventLine.innerHTML += `<br>No location or live link available`;
                 }
 
                 // Add the Artist information (if available)
@@ -275,11 +327,19 @@ function updateScheduleList() {
                     link.target = "_blank";
                     li.appendChild(link);
                 }
+
+                // Add a break line (`<hr>`) between events, but not after the last event
+                if (index < events.length - 1) {
+                    li.appendChild(document.createElement("hr"));
+                }
             });
             scheduleItems.appendChild(li);
         });
     }
 }
+
+
+
 
 function showScheduleDetails(date) {
     selectedDate = date;
@@ -342,8 +402,17 @@ const header = document.querySelector('.header-container');
                 })
                 .catch(error => console.error('Error loading navigation:', error));
         });
+/*
+    //Hamburger
+         document.addEventListener("DOMContentLoaded", function () {
+            const navToggle = document.querySelector(".nav-toggle");
+            const navUl = document.querySelector("nav ul");
 
-    
+            navToggle.addEventListener("click", function () {
+                navUl.classList.toggle("showing"); // Toggle the 'showing' class to show/hide the menu
+            });
+        });
+        */
 </script>
 
 </body>
