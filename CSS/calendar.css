@@ -109,9 +109,12 @@
 
 /* Highlight Today */
 .today {
-    background-color: #FFD700 !important; /* Yellow for today */
-    color: rgb(13, 82, 39);
-    font-weight: bold;
+    background-color: transparent !important;
+    outline: 3px solid #006400; /* Creates a border that overlaps adjacent boxes */
+    border-radius: 12px; /* Match the shape of the box */
+    margin: -2px; /* Expands the highlight outward, overlapping adjacent borders */
+    position: relative; /* Ensures it layers properly */
+    z-index: 1; /* Keeps it on top */
 }
 
 /* Has Schedule (Color coding) */
