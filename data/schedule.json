@@ -183,7 +183,8 @@
             "time": "6:00PM (BKK time)",
             "live": "YOUTUBE: GMMTV OFFICIAL",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1891442470585798953"
+            "url": "https://x.com/GMMTV/status/1891442470585798953",
+            "status": "passed"
         }
     ],
     "2025-02-19": [
@@ -193,14 +194,16 @@
             "location": "Emsphere",
             "live": "TikTok : @GarnierThailand" ,
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/1891368240095379825/photo/2"
+            "url": "https://x.com/GMMTV/status/1891368240095379825/photo/2",
+            "status": "passed"
         },
         {
             "description": "TWOTWICE FLAGSHIP STORE GRAND OPENING",
             "time": "5:00PM (BKK time)",
             "location": "Twotwice house: Nakniwat 20",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1891368244159582404/photo/1"
+            "url": "https://x.com/GMMTV/status/1891368244159582404/photo/1",
+            "status": "passed"
         }
     ],
     "2025-02-22":[
