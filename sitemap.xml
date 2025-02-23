@@ -3,7 +3,7 @@
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            https://www.sitemaps.org/schemas/sitemap/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
@@ -120,13 +120,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://asmall-potato.github.io/namtanfilm/GirlRules.html</loc>
-  <lastmod>2025-02-23T09:10:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://asmall-potato.github.io/namtanfilm/video.htmll</loc>
+  <loc>https://asmall-potato.github.io/namtanfilm/video.html</loc>
   <lastmod>2025-02-23T09:10:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
