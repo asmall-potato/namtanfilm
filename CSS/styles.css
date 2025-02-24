@@ -497,29 +497,66 @@ nav ul li a:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  padding: 20px;  /* Add padding around the video container */
 }
 
 /* Individual Video Frame Styling */
-.video-frame {
+.video-wrapper {
   position: relative;
-  width: calc(50% - 20px);
+  width: calc(33.33% - 20px); /* Adjust for 3 videos per row */
   max-width: 560px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Depth with shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+  background-color: #fff;  /* White background for the wrapper */
 }
 
 /* Hover Effect for Videos */
-.video-frame:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+.video-wrapper:hover {
+  transform: scale(1.05);  /* Slight zoom on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deep shadow on hover */
 }
 
-/* Responsive Design */
+/* Styling for the iframe (video) */
+.video-wrapper iframe {
+  width: 100%;
+  height: 360px;  /* Set the height of the video player */
+  border: none;
+  border-radius: 10px;
+}
+
+/* Custom Play Button Styling */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;  /* Rounded edges for the button */
+  transition: background-color 0.3s ease;  /* Smooth background color change */
+}
+
+/* Play Button Hover Effect */
+.play-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);  /* Darker shade on hover */
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .video-frame {
-      width: 100%; /* Full width on smaller screens */
+  .video-wrapper {
+    width: calc(50% - 20px); /* Two videos per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-wrapper {
+    width: 100%;  /* Full-width for mobile screens */
   }
 }
 
@@ -527,201 +564,91 @@ nav ul li a:hover {
 .section7 {
   padding: 60px 20px;
   background-color: #F5F3F1;
-  overflow: hidden; /* Hide overflow for the slideshow */
+  overflow: hidden;
 }
 
-.gallery-container {
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
   position: relative;
-  width: 100%;
-  max-width: 800px; /* Adjust based on your needs */
-  height: 300px; /* Fixed height for the container */
-  margin: 0 auto;
+  margin: auto;
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Slide wrapper - contains all images in a row */
+.slide-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 300%; /* 9 images total, show 3 at a time, so 300% width */
+  transition: transform 0.5s ease-in-out;
 }
 
-.gallery-item {
+/* Individual slides */
+.mySlides {
+  flex: 0 0 33.33%; /* Each image takes 1/3 of the container width */
+  padding: 0 10px;
+}
+
+/* Slide images */
+.mySlides img {
+  width: 32%; /* Each image takes up roughly 1/3 of the slide */
+  height: 500px; /* Set a fixed height for consistency */
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the images fill the area without stretching */
+}
+
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
   position: absolute;
-  width: 200px; /* Fixed width for the images */
-  height: 300px; /* Fixed height for the images */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.5s ease;
-  overflow: hidden; /* Ensure the image doesn't overflow */
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 18px;
+  border: none;
+  z-index: 10;
 }
 
-.gallery-item img {
-  width: 100%; /* Ensure the image fills the container */
-  height: 100%; /* Ensure the image fills the container */
-  object-fit: cover; /* Ensures the image covers the container without distortion */
-  border-radius: 10px;
+.prev {
+  left: 10px;
 }
 
-/* Position the images symmetrically */
-.gallery-item:nth-child(1) {
-  transform: translateX(-440px) scale(0.6); /* Far left */
-  opacity: 0.5;
-  z-index: 0;
-}
-
-.gallery-item:nth-child(2) {
-  transform: translateX(-330px) scale(0.7); /* Middle left */
-  opacity: 0.6;
-  z-index: 1;
-}
-
-.gallery-item:nth-child(3) {
-  transform: translateX(-220px) scale(0.8); /* Left side */
-  opacity: 0.7;
-  z-index: 2;
-}
-
-.gallery-item:nth-child(4) {
-  transform: translateX(-110px) scale(0.9); /* Near left */
-  opacity: 0.8;
-  z-index: 3;
-}
-
-.gallery-item:nth-child(5) {
-  transform: translateX(0) scale(1); /* Center */
-  opacity: 1;
-  z-index: 4;
-}
-
-.gallery-item:nth-child(6) {
-  transform: translateX(110px) scale(0.9); /* Near right */
-  opacity: 0.8;
-  z-index: 3;
-}
-
-.gallery-item:nth-child(7) {
-  transform: translateX(220px) scale(0.8); /* Right side */
-  opacity: 0.7;
-  z-index: 2;
-}
-
-.gallery-item:nth-child(8) {
-  transform: translateX(330px) scale(0.7); /* Middle right */
-  opacity: 0.6;
-  z-index: 1;
-}
-
-.gallery-item:nth-child(9) {
-  transform: translateX(440px) scale(0.6); /* Far right */
-  opacity: 0.5;
-  z-index: 0;
-}
-
-/* Slideshow animation */
-@keyframes slideShow {
-  0% {
-    transform: translateX(-440px) scale(0.6);
-    opacity: 0.5;
-    z-index: 0;
-  }
-  12.5% {
-    transform: translateX(-330px) scale(0.7);
-    opacity: 0.6;
-    z-index: 1;
-  }
-  25% {
-    transform: translateX(-220px) scale(0.8);
-    opacity: 0.7;
-    z-index: 2;
-  }
-  37.5% {
-    transform: translateX(-110px) scale(0.9);
-    opacity: 0.8;
-    z-index: 3;
-  }
-  50% {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-    z-index: 4;
-  }
-  62.5% {
-    transform: translateX(110px) scale(0.9);
-    opacity: 0.8;
-    z-index: 3;
-  }
-  75% {
-    transform: translateX(220px) scale(0.8);
-    opacity: 0.7;
-    z-index: 2;
-  }
-  87.5% {
-    transform: translateX(330px) scale(0.7);
-    opacity: 0.6;
-    z-index: 1;
-  }
-  100% {
-    transform: translateX(440px) scale(0.6);
-    opacity: 0.5;
-    z-index: 0;
-  }
-}
-
-/* Apply the animation to each image */
-.gallery-item {
-  animation: slideShow 24s infinite; /* Adjust timing as needed */
-}
-
-.gallery-item:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.gallery-item:nth-child(2) {
-  animation-delay: 3s;
-}
-
-.gallery-item:nth-child(3) {
-  animation-delay: 6s;
-}
-
-.gallery-item:nth-child(4) {
-  animation-delay: 9s;
-}
-
-.gallery-item:nth-child(5) {
-  animation-delay: 12s;
-}
-
-.gallery-item:nth-child(6) {
-  animation-delay: 15s;
-}
-
-.gallery-item:nth-child(7) {
-  animation-delay: 18s;
-}
-
-.gallery-item:nth-child(8) {
-  animation-delay: 21s;
-}
-
-.gallery-item:nth-child(9) {
-  animation-delay: 24s;
+.next {
+  right: 10px;
 }
 
 /* Hover effect */
-.gallery-item:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  opacity: 1;
-  z-index: 5;
- /* animation-play-state: paused; /* Pause animation on hover */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Media query for mobile devices for section 7*/
 @media (max-width: 768px) {
-  .gallery-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  .slide-wrapper {
+    width: 100%; /* Reset to normal width */
+  }
+
+  .mySlides {
+    flex: 0 0 50%; /* Show 2 slides at a time on mobile */
+    padding: 0 5px; /* Reduce spacing between slides */
+  }
+
+  .mySlides img {
+    width: 100%; /* Ensure the image fills the slide */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Set a reasonable max height for mobile */
+    object-fit: contain; /* Ensures full image is visible without cropping */
+  }
+
+  /* Adjust buttons for smaller screens */
+  .prev, .next {
+    padding: 10px; /* Smaller buttons */
+    font-size: 16px; /* Smaller font size */
   }
 }
 
-@media (max-width: 480px) {
-  .gallery-container {
-      grid-template-columns: 1fr; /* 1 column on mobile */
-  }
-}
+
 
 
 .section8 {
@@ -816,12 +743,20 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
   .social-media-container {
-      flex-direction: column; /* Stack columns on smaller screens */
-      align-items: center;
+    display: flex;
+    flex-direction: column; /* Stack columns on smaller screens */
+    align-items: stretch; /* Ensure all columns have the same height */
   }
 
   .column {
-      width: auto; /* Make columns full width */
+    flex: 1; /* Make columns take up equal space */
+    width: 100%; /* Ensure full width */
+    min-width: 0; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 10px; /* Add padding for spacing */
+    margin-bottom: 10px; /* Add margin between columns */
+    background-color: #f5f5f5; /* Optional: Add background color */
+    border: 1px solid #ddd; /* Optional: Add border */
   }
 
   /* Ensure footer stays at the bottom */
@@ -858,7 +793,7 @@ nav ul li a:hover {
 
   /* Adjust Logo for Small Screens */
   .logo {
-    font-size: 1.3em; /* Slightly reduce logo size */
+    font-size: 1.7em; /* Slightly reduce logo size */
     gap: 0.5px; /* Reduce space between letters */
     justify-content: center; /* Center logo on small screens */
   }
