@@ -1,4 +1,0 @@
-Sitemap: https://asmall-potato.github.io/namtanfilm/sitemap_1.xml
-
-User-agent: *
-Disallow:
