@@ -233,7 +233,8 @@
             "time": "7:00PM (BKK time)",
             "live": "Youtube : FEED",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1895083527248715932"
+            "url": "https://x.com/GMMTV/status/1895083527248715932",
+            "status": "passed"
             
         }
     ],
@@ -243,7 +244,8 @@
             "time": "4:00PM (BKK Time)",
             "location": "CENTERPOINT SIAM SQUARE",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1893890694151905567/photo/3"
+            "url": "https://x.com/GMMTV/status/1893890694151905567/photo/3",
+            "status": "passed"
         }
     ],
     "2025-03-08": [
