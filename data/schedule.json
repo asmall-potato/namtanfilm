@@ -254,7 +254,19 @@
             "time": "6:00PM (BKK time)",
             "live": "YOUTUBE: GMMTV OFFICIAL",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1896470602258489740"
+            "url": "https://x.com/GMMTV/status/1896470602258489740",
+            "status": "passed"
+            
+        }
+    ],
+    "2025-03-06": [
+        {
+            "description": "LIVE before NAMTAN FILM PRINCESS'S TALE FAN MEETING on 8 & 9 March",
+            "time": "7:00PM (BKK time)",
+            "live": "IG: GMMTV",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1897225741689086004"
+            
             
         }
     ],
