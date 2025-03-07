@@ -265,14 +265,16 @@
             "time": "7:00PM (BKK time)",
             "live": "IG: GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1897225741689086004"
+            "url": "https://x.com/GMMTV/status/1897225741689086004",
+            "status": "passed"
         },
         {
             "description": "GMMTV Live House @ บุกห้องซ้อมเต้น NAMTAN FILM PRINCESS'S TALE FAN MEETING",
             "time": "21:30PM (BKK time)",
             "live": "YouTube : GMMTV Official | TikTok : GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1897608235471052941"
+            "url": "https://x.com/GMMTV/status/1897608235471052941",
+            "status": "passed"
         }
     ],
     "2025-03-08": [
