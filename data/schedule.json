@@ -303,14 +303,16 @@
             "time": "12:30PM (BKK Time)",
             "location": "Central Phuket Floresta, 2nd floor",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1897989402221023443/photo/3"
+            "url": "https://x.com/GMMTV/status/1897989402221023443/photo/3",
+            "status": "passed"
         },
         {
             "description": "GMMTV Live House @ NAMTAN FILM PRINCESS'S TALE FAN MEETING",
             "time": "21:30PM (BKK Time)",
             "live": "YouTube : GMMTV Official | TikTok : GMMTV ",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1899346148298498102"
+            "url": "https://x.com/GMMTV/status/1899346148298498102",
+            "status": "passed"
         }
     ],
     "2025-03-17":[
