@@ -265,13 +265,22 @@ function updateScheduleList() {
                 li.innerHTML += `<div class="postponed-stamp">Postponed</div>`;
             }
 
-            // If a URL is provided, add a link
-            if (event.url) {
-                const link = document.createElement("a");
-                link.href = event.url;
-                link.textContent = "View Details";
-                link.target = "_blank";
-                li.appendChild(link);
+            // Handle URL(s)
+            if (event.url || event.url1) {
+                // Create an array of URLs (url, url1)
+                const urls = [];
+                if (event.url) urls.push(event.url);
+                if (event.url1) urls.push(event.url1);
+
+                // Display each URL as a separate link
+                urls.forEach(url => {
+                    const link = document.createElement("a");
+                    link.href = url;
+                    link.textContent = "View Details";
+                    link.target = "_blank";
+                    li.appendChild(link);
+                    li.innerHTML += "<br>"; // Add line break after each URL
+                });
             }
 
             // Add a break line (`<hr>`) between events, but not after the last event
@@ -319,13 +328,22 @@ function updateScheduleList() {
 
                 li.appendChild(eventLine);
 
-                // If a URL is provided, add a link
-                if (event.url) {
-                    const link = document.createElement("a");
-                    link.href = event.url;
-                    link.textContent = "View Details";
-                    link.target = "_blank";
-                    li.appendChild(link);
+                // Handle URL(s)
+                if (event.url || event.url1) {
+                    // Create an array of URLs (url, url1)
+                    const urls = [];
+                    if (event.url) urls.push(event.url);
+                    if (event.url1) urls.push(event.url1);
+
+                    // Display each URL as a separate link
+                    urls.forEach(url => {
+                        const link = document.createElement("a");
+                        link.href = url;
+                        link.textContent = "View Details";
+                        link.target = "_blank";
+                        li.appendChild(link);
+                        li.innerHTML += "<br>"; // Add line break after each URL
+                    });
                 }
 
                 // Add a break line (`<hr>`) between events, but not after the last event
