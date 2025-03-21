@@ -343,8 +343,18 @@
             "time": "4:00PM (BKK Time)",
             "live": "BigxShow app",
             "artist": "Namtan Tipnaree",
-            "url": "https://share.shopglobal.ai/L17k?si=RXtmTNApnnpiAanb"
+            "url": "https://share.shopglobal.ai/L17k?si=RXtmTNApnnpiAanb"，
+            "status": "cancelled"
             
+        }
+    ],
+    "2025-03-22":[
+        {
+            "description": "X The Live",
+            "time": "2:00PM (BKK Time)",
+            "live": "BigxShow app",
+            "artist": "Namtan Tipnaree",
+            "url": "https://share.shopglobal.ai/L17k?si=RXtmTNApnnpiAanb"，
         }
     ],
     "2025-03-24":[
@@ -353,7 +363,7 @@
             "time": "18:00 (BKK Time)",
             "location": "SF World Cinema Central World",
             "artist": "NamtanFilm",
-            "url": "https://x.com/WeLoveSF/status/1898268353216889006"
+            "url": "https://x.com/GMMTV/status/1903061982238199954/photo/1"
         }
     ],
     "2025-03-29":[
@@ -365,6 +375,16 @@
             "url": "https://x.com/GMMTV/status/1896787746255245553"
         }
     ],
+    "2025-04-05": [
+        {
+            "description": "Fan Sign eventduring the 53rd National Book Fair & 23rd Bangkok International Book Fair 2025",
+            "time": "7:00PM (BKK Time)",
+            "location": "Exhibition Hall 5 - 8, LG Floor, Queen Sirikit National Convention Center",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1902991075729412582/photo/4",
+            "url1": "https://x.com/GmmtvShop/status/1902986043797934136"
+        }
+    ],
     "2025-04-20": [
         {
             "description": "NamtanFilm Fanmeeting in Macao",
@@ -372,6 +392,15 @@
             "location": "The Venetian Theatre, The Venetian Macao",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/1901583041430221245"
+        }
+    ],
+    "2025-05-09": [
+        {
+            "description": "The 25th Thai Festival Tokyo 2025 Special Fanmeeting",
+            "time": "2:00PM (Tokyo Time)",
+            "location": "New Pier Hall",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1903008809444077640"
         }
     ],
     "2025-06-28": [
