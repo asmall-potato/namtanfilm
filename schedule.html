@@ -169,9 +169,6 @@ async function loadScheduleData() {
                 const hasSchedule = schedules[dayString] !== undefined;
                 const eventStatus = hasSchedule ? schedules[dayString][0].status : null;
 
-                // Show only the first event in the calendar cell
-                const firstEvent = hasSchedule ? schedules[dayString][0].description : "";
-
                 // Apply styles based on event status
                 let cellClass = "";
                 if (isToday) {
@@ -179,9 +176,8 @@ async function loadScheduleData() {
                 }
                 if (eventStatus === "postponed") {
                     cellClass += " postponed-event"; // For postponed events, apply red text
-                }
-                if (eventStatus === "passed") {
-                    cellClass += " passed-event"; // For passed events, add a stroke
+                } else if (eventStatus === "cancelled") {
+                    cellClass += " cancelled-event"; // For cancelled events, apply grey text and strikethrough
                 }
 
                 // Display multiple events for the day
@@ -260,9 +256,11 @@ function updateScheduleList() {
                 li.innerHTML += `<div>No artist information available</div>`;
             }
 
-            // Add a "Postponed" stamp if the event is postponed
+            // Add a "Postponed" or "Cancelled" stamp if the event is postponed or cancelled
             if (event.status === "postponed") {
                 li.innerHTML += `<div class="postponed-stamp">Postponed</div>`;
+            } else if (event.status === "cancelled") {
+                li.innerHTML += `<div class="cancelled-stamp">Cancelled</div>`;
             }
 
             // Handle URL(s)
@@ -321,9 +319,11 @@ function updateScheduleList() {
                     eventLine.innerHTML += `<br>No artist information available`;
                 }
 
-                // Add a "Postponed" stamp if the event is postponed
+                // Add a "Postponed" or "Cancelled" stamp if the event is postponed or cancelled
                 if (event.status === "postponed") {
                     eventLine.innerHTML += `<br><span class="postponed-stamp">Postponed</span>`;
+                } else if (event.status === "cancelled") {
+                    eventLine.innerHTML += `<br><span class="cancelled-stamp">Cancelled</span>`;
                 }
 
                 li.appendChild(eventLine);
@@ -355,9 +355,6 @@ function updateScheduleList() {
         });
     }
 }
-
-
-
 
 function showScheduleDetails(date) {
     selectedDate = date;
