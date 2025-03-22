@@ -10,10 +10,13 @@ body {
 .follow-container {
     display: flex;
     justify-content: center;
-    padding: 30px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 60px 20px; /* Increased padding for better spacing */
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 20px; /* Rounded corners for a modern look */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 20px auto;
+    max-width: 1400px; /* Wider container */
+    width: 95%; /* Ensure it takes up most of the screen width */
 }
 
 /* Wrapper for centering content */
@@ -32,125 +35,134 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
+    max-width: 1400px; /* Match the container width */
+    width: 100%; /* Ensure it takes up the full width */
 }
 
 /* Individual Column Styling */
 .column {
     text-align: center;
-    max-width: 280px;
+    max-width: 320px; /* Slightly wider columns */
     flex: 1;
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 16px; /* Rounded corners for a modern look */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Soft shadow */
     margin: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Very subtle border */
 }
 
 /* Hover Effect for Columns */
 .column:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px); /* Slightly stronger lift effect */
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 /* Image Styling */
 .column img {
     width: 100%;
     height: auto;
-    max-width: 240px;
-    border-radius: 10px;
+    max-width: 280px; /* Slightly larger images */
+    border-radius: 12px; /* Rounded corners for images */
     object-fit: cover;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease-in-out;
+    margin-bottom: 25px; /* Increased margin for better spacing */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.column img:hover {
-    transform: scale(1.1);
+.column:hover img {
+    transform: scale(1.05); /* Slightly stronger zoom effect */
+    opacity: 0.9; /* Slightly fade the image on hover */
 }
 
 /* Styling for Headings and Text */
 .column h3 {
-    font-size: 1.4em; /* Increased font size for headings */
-    margin-top: 15px;
-    color: #2c3e50;
+    font-size: 1.6em; /* Larger font size for headings */
+    margin-top: 20px; /* Increased margin for better spacing */
+    color: #2c3e50; /* Dark blue for headings */
+    font-weight: 700; /* Bold font weight for emphasis */
+    transition: color 0.3s ease-in-out;
+}
+
+.column:hover h3 {
+    color: #3498db; /* Change heading color on hover */
 }
 
 .column p {
-    font-size: 1em;
-    margin: 10px 0;
-    color: #7f8c8d;
+    font-size: 1.1em; /* Slightly larger font size for text */
+    margin: 20px 0; /* Increased margin for better spacing */
+    color: #483D8B; /* Gray for text */
+    line-height: 1.6; /* Improved readability */
+    transition: color 0.3s ease-in-out;
+}
+
+.column:hover p {
+    color: #555; /* Darken text color on hover */
 }
 
 /* Link Styling */
 .column a {
-    color: #3498db;
+    display: inline-block;
+    margin-top: 20px; /* Increased margin for better spacing */
+    padding: 12px 24px; /* Slightly larger padding for buttons */
+    background-color: #3498db; /* Blue background for links */
+    color: #ffffff; /* White text */
     text-decoration: none;
     font-weight: 600;
+    border-radius: 30px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .column a:hover {
-    text-decoration: underline;
-    color: #2980b9;
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
 }
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    .series-container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center-align items horizontally */
-        gap: 20px; /* Add spacing between columns */
-        padding: 15px; /* Add padding for better spacing */
+    .follow-container {
+        padding: 40px 15px; /* Adjusted padding for tablets */
     }
 
     .column {
-        max-width: 80%; /* Adjust max width for tablets */
-        margin: 10px; /* Add spacing around columns */
-        padding: 15px; /* Add padding inside columns */
-        background-color: #ffffff; /* White background for columns */
-        border-radius: 10px; /* Rounded corners for a modern look */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    }
-
-    .column:hover {
-        transform: translateY(-5px); /* Slight lift effect on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        max-width: 45%; /* Two columns per row on tablets */
+        padding: 25px; /* Adjusted padding */
     }
 
     .column h3 {
-        font-size: 1.4em; /* Adjust font size for tablets */
-        color: #009688; /* Teal color for headings */
-        margin-bottom: 10px; /* Spacing below headings */
+        font-size: 1.4em; /* Adjusted font size for tablets */
     }
 
     .column p {
-        font-size: 0.95em; /* Adjust font size for tablets */
-        color: #555; /* Dark gray color for text */
-        line-height: 1.5; /* Improve readability with line height */
+        font-size: 1em; /* Adjusted font size for tablets */
     }
 }
 
 @media (max-width: 480px) {
+    .follow-container {
+        padding: 30px 10px; /* Adjusted padding for mobile */
+    }
+
     .series-container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center-align items horizontally */
-        gap: 15px; /* Reduce spacing between columns */
-        padding: 10px; /* Reduce padding for smaller screens */
+        flex-direction: column; /* Stack columns vertically */
+        gap: 20px; /* Adjusted gap for mobile */
     }
 
     .column {
-        max-width: 100%; /* Use full width for mobile devices */
-        margin: 8px 0; /* Adjust spacing for smaller screens */
-        padding: 12px; /* Reduce padding for smaller screens */
+        max-width: 100%; /* Full width for mobile */
+        padding: 20px; /* Adjusted padding */
     }
 
     .column h3 {
-        font-size: 1.2em; /* Adjusted size for smaller screens */
-        margin-bottom: 8px; /* Reduce spacing below headings */
+        font-size: 1.3em; /* Adjusted font size for mobile */
     }
 
     .column p {
-        font-size: 0.9em; /* Slightly reduce font size for mobile devices */
+        font-size: 0.95em; /* Adjusted font size for mobile */
+    }
+
+    .column a {
+        padding: 10px 20px; /* Adjusted padding for mobile */
     }
 }
