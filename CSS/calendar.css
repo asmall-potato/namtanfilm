@@ -249,7 +249,10 @@
 
 /* Style for cancelled events in the calendar */
 .cancelled-event {
-    color: grey; /* Grey text */
+    color: red;  /* Red color for postponed events text */
+    font-weight: bold;
+    border: 2px solid red;  /* Red border outline for postponed events */
+    box-sizing: border-box;  /* Ensure border doesn't affect layout */
     text-decoration: line-through; /* Strikethrough */
 }
 
