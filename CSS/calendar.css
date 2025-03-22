@@ -247,6 +247,18 @@
     background-color: #f1c40f;
 }
 
+/* Style for cancelled events in the calendar */
+.cancelled-event {
+    color: grey; /* Grey text */
+    text-decoration: line-through; /* Strikethrough */
+}
+
+/* Style for the "Cancelled" stamp in the schedule list */
+.cancelled-stamp {
+    color: red; /* Red text */
+    font-weight: bold; /* Bold text */
+}
+
 @media (max-width: 768px) {
     .calendar-container {
         flex-direction: column;  /* Stack the left and right sections vertically */
