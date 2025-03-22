@@ -178,6 +178,8 @@ async function loadScheduleData() {
                     cellClass += " postponed-event"; // For postponed events, apply red text
                 } else if (eventStatus === "cancelled") {
                     cellClass += " cancelled-event"; // For cancelled events, apply grey text and strikethrough
+                } else if (eventStatus === "passed") {
+                    cellClass += " passed-event"; // For passed events, add a stroke
                 }
 
                 // Display multiple events for the day
@@ -216,7 +218,6 @@ async function loadScheduleData() {
     document.getElementById("calendar-body").innerHTML = calendarBody;
     updateScheduleList(); // Update the full schedule list on the right side
 }
-
 
 
 function updateScheduleList() {
