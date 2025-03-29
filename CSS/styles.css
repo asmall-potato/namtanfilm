@@ -861,7 +861,62 @@ nav ul li a:hover {
   }
 }
 
+/* Donation Prompt Styles */
+.donation-prompt {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 1000;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
 
+.donation-prompt h3 {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.donation-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.donation-button {
+  display: block;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.donation-button:hover {
+  background-color: #2980b9;
+}
+
+.close-donation {
+  padding: 8px 15px;
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.close-donation:hover {
+  background-color: #7f8c8d;
+}
 
 /* Footer */
 footer {
