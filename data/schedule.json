@@ -374,7 +374,8 @@
             "time": "03:00PM (BKK Time)",
             "location": "Birkenstock Store, 1st Floor, Eden Zone @ Central World",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1904037865912455372/photo/1"
+            "url": "https://x.com/GMMTV/status/1904037865912455372/photo/1",
+            "status": "passed"
         }
     ],
     "2025-03-29":[
@@ -383,7 +384,8 @@
             "time": "14:00 (Vietnam Time)",
             "location": "BEN THANH THEATER, HO CHI MINH CITY",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1896787746255245553"
+            "url": "https://x.com/GMMTV/status/1896787746255245553",
+            "status": "passed"
         }
     ],
     "2025-04-05": [
