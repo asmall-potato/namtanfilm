@@ -1,4 +1,4 @@
-/* Redesigned .articles-container */
+/* Redesigned .articles-container with pagination */
 .articles-container {
     display: flex;
     flex-direction: column;
@@ -53,57 +53,107 @@
     border-radius: 5px;
 }
 
+/* Pagination Container */
+.pagination {
+    display: flex;
+    flex-direction: row; /* This ensures the pagination items are aligned horizontally */
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px; /* This will add spacing between pagination buttons */
+}
+
+/* Pagination Buttons */
+.pagination a {
+    color: #ff6f61;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 0 4px;
+    transition: all 0.3s ease;
+    border: 1px solid #ff6f61;
+    margin-bottom: 5px;
+    font-size: 16px; /* Ensure readability */
+}
+
+/* Hover and Active Styles */
+.pagination a:hover {
+    background-color: #ff6f61;
+    color: white;
+    cursor: pointer;
+}
+
+.pagination .current {
+    background-color: #ff6f61;
+    color: white;
+    border-color: #ff6f61;
+}
+
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .articles-container {
-        padding: 15px; /* Add padding for better spacing */
-        margin: 10px auto; /* Center the container horizontally */
-        max-width: 95%; /* Limit width for better readability */
-        background-color: #f9f9f9; /* Light background for the container */
-        border-radius: 10px; /* Rounded corners for a modern look */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        padding: 15px;
+        margin: 10px auto;
+        max-width: 95%;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .articles-container li {
-        padding: 15px; /* Spacing inside each list item */
-        margin-bottom: 10px; /* Spacing between list items */
-        background-color: #ffffff; /* White background for list items */
-        border-radius: 8px; /* Rounded corners for list items */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for list items */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        padding: 15px;
+        margin-bottom: 10px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .articles-container li:hover {
-        transform: translateY(-5px); /* Slight lift effect on hover */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .articles-container a {
-        font-size: 18px; /* Font size for links */
-        color: #009688; /* Link color */
-        text-decoration: none; /* Remove underline */
-        font-weight: 600; /* Bold text for better readability */
-        transition: color 0.3s ease; /* Smooth color transition */
+        font-size: 18px;
+        color: #009688;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
     }
 
     .articles-container a:hover {
-        color: #00796b; /* Darker color on hover */
+        color: #00796b;
+    }
+    
+    .pagination a {
+        padding: 6px 12px;
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
     .articles-container {
-        padding: 10px; /* Reduced padding for smaller screens */
-        margin: 5px auto; /* Center the container horizontally */
-        max-width: 100%; /* Full width for very small screens */
+        padding: 10px;
+        margin: 5px auto;
+        max-width: 100%;
     }
 
     .articles-container li {
-        padding: 10px; /* Reduced padding for smaller screens */
-        margin-bottom: 8px; /* Reduced spacing between list items */
+        padding: 10px;
+        margin-bottom: 8px;
     }
 
     .articles-container a {
-        font-size: 16px; /* Smaller font size for very small screens */
+        font-size: 16px;
+    }
+    
+    .pagination a {
+        padding: 4px 8px;
+        margin: 2px;
+        font-size: 12px;
     }
 }
