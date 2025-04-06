@@ -406,7 +406,8 @@
             "location": "Exhibition Hall 5 - 8, LG Floor, Queen Sirikit National Convention Center",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/1902991075729412582/photo/4",
-            "url1": "https://x.com/GmmtvShop/status/1902986043797934136"
+            "url1": "https://x.com/GmmtvShop/status/1902986043797934136",
+            "status": "passed"
         }
     ],
     "2025-04-06": [
@@ -458,9 +459,18 @@
         {
             "description": "BLUSH BLOSSOM FAN FEST",
             "time": "TBC",
-            "location": "Union Hall",
-            "artist": "NamtanFilm (with MilkLove and EmiBonnie)",
-            "url": "https://x.com/GMMTV/status/1880553748659130824"
+            "location": "Union Hall, Union Mall",
+            "artist": "NamtanFilm (with MilkLove, EmiBonnie, ViewMim & JuneMewnich)",
+            "url": "https://x.com/GMMTV/status/1908474706396668401"
+        }
+    ],
+    "2025-06-29": [
+        {
+            "description": "BLUSH BLOSSOM FAN FEST",
+            "time": "TBC",
+            "location": "Union Hall, Union Mall",
+            "artist": "NamtanFilm (with MilkLove, EmiBonnie, ViewMim & JuneMewnich)",
+            "url": "https://x.com/GMMTV/status/1908474706396668401"
         }
     ]
 }
