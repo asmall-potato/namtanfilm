@@ -1,0 +1,92 @@
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons button {
+    padding: 10px 24px;
+    margin: 0 8px;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background-color: #3498db; /* Blue */
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  }
+  
+  .filter-buttons button:hover,
+  .filter-buttons button.active {
+    background-color: #f1c40f; /* Yellow */
+    color: black;
+    transform: scale(1.05);
+  }
+  
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .item {
+    text-align: center;
+  }
+  .item img {
+    width: 100%;
+    max-width: 200px; /* Optional: Adjust width */
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .pagination {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .pagination button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  
+    .item img {
+      max-width: 100%; /* Let image scale better on small screens */
+    }
+  
+    .filter-buttons {
+      padding: 0 10px;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+  
+    .filter-buttons button {
+      margin: 6px 5px;
+      padding: 8px 18px;
+      font-size: 14px;
+    }
+  
+    .pagination button {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+  
