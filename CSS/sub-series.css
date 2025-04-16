@@ -393,81 +393,168 @@ section {
     }
 }
 
-/* Engagement Section */
-.engagement-section {
-    background-color: #fff;  /* White background */
-    padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
-    margin: 30px auto;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.engagement-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    color: #2c3e50;  /* Heading color */
-}
-
-/* Engagement Text */
-.engagement-text {
-    margin-bottom: 15px;
-}
-
-.engagement-text h3 {
-    font-size: 24px;
-    color: #2c3e50;
-}
-
-.engagement-text p {
+button.collapsible {
+    background-color: #4A90E2; /* Softer Blue */
+    color: white;
+    padding: 12px 30px;
+    border: 2px solid #357ABD; /* Darker Blue border */
+    cursor: pointer;
     font-size: 16px;
-    color: #7f8c8d;
+    border-radius: 8px;
+    width: 90%;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 15px auto;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.2); /* Light blue shadow */
+    position: relative;
 }
 
-/* Flexbox container for side-by-side embeds */
-.embeds-row {
+button.collapsible .icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hover Effects */
+button.collapsible:hover {
+    background-color: #357ABD; /* Darker on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(53, 122, 189, 0.3);
+}
+
+/* Focus Effect */
+button.collapsible:focus {
+    outline: none;
+    box-shadow: 0 0 6px 3px rgba(255, 235, 59, 0.6); /* Bright Yellow glow */
+}
+
+/* Content Panel */
+.content {
+    padding: 20px;
+    display: none;
+    background-color: #FFF9C4; /* Light Yellow */
+    margin-top: 15px;
+    border-left: 5px solid #FFEB3B; /* Bright Yellow Accent */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    margin: 15px auto;
+}
+
+.columns {
     display: flex;
     justify-content: space-between;
-    gap: 20px;  /* Space between items */
-    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
-}
-
-/* Each embed item (Tweet + Description) */
-.engagement-item {
-    flex: 1 1 calc(33.33% - 20px); /* Each item takes up about 1/3 of the row */
-    max-width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    box-sizing: border-box; /* Prevent overflow */
-}
-
-/* Ensure the Twitter embed is responsive */
-.embeds-row blockquote {
+    gap: 20px;
     width: 100%;
 }
 
-/* Mobile responsiveness: Stacking the items vertically */
+.column {
+    width: 30%;
+    padding: 20px;
+    background-color: #E3F2FD; /* Very light blue */
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column h3 {
+    margin-top: 0;
+    color: #F9A825; /* Warm Yellow/Gold */
+}
+
+.column p {
+    color: #333; /* Darker text for readability */
+}
+
+/* Responsive Styles (unchanged except color consistency) */
 @media (max-width: 768px) {
-    .engagement-item {
-        flex: 1 1 100%; /* Take full width on small screens */
-        max-width: 100%; /* Ensure no item exceeds 100% width */
-        margin-bottom: 20px; /* Add spacing below each item */
-        background-color: #ffffff; /* White background for items */
-        border-radius: 10px; /* Rounded corners for a modern look */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        padding: 15px; /* Add padding inside items */
-        overflow: hidden; /* Ensure content doesn't overflow */
+    button.collapsible {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+        margin: 10px auto;
     }
 
-    /* Ensure embedded posts are responsive */
-    .engagement-item blockquote {
-        width: 100% !important; /* Force the embed to take full width */
-        max-width: 100% !important; /* Ensure it doesn't exceed the container width */
+    button.collapsible .icon {
+        right: 10px;
+        font-size: 16px;
     }
 
-    .engagement-item iframe {
-        width: 100% !important; /* Force the iframe to take full width */
-        max-width: 100% !important; /* Ensure it doesn't exceed the container width */
+    .content {
+        width: 100%;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .columns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .column {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    .column h3 {
+        font-size: 1.1em;
+    }
+
+    .column p {
+        font-size: 0.9em;
+    }
+
+    .general-item {
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px;
+    }
+
+    .general-item h3 {
+        font-size: 1.1em;
+    }
+
+    .general-item p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    button.collapsible {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .column {
+        padding: 10px;
+    }
+
+    .column h3 {
+        font-size: 1em;
+    }
+
+    .column p {
+        font-size: 0.85em;
+    }
+
+    .general-item {
+        padding: 10px;
+    }
+
+    .general-item h3 {
+        font-size: 1em;
+    }
+
+    .general-item p {
+        font-size: 0.85em;
     }
 }
