@@ -13,6 +13,7 @@ Features
 9. Awards
 10. Voting
 11. Trend X Highest Rank
+12. Sold Out
 
 License
 This project is licensed under a custom license. For more details, please refer to the LICENSE file.
