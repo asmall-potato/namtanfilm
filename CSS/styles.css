@@ -918,6 +918,138 @@ nav ul li a:hover {
   background-color: #7f8c8d;
 }
 
+/*Flag and official fanclub*/
+/* Global Support Container */
+.global-support-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Support Title */
+.support-title {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #000380;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.support-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #00FFFF, #FFFF00);
+}
+
+/* Support Grid Layout */
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Support Block Styling */
+.support-block {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.support-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.support-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.flag-img {
+  width: 40px;
+  height: 25px;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.support-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.support-link {
+  display: block;
+  margin-left: 55px;
+  font-size: 0.95em;
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s;
+  word-break: break-all;
+}
+
+.support-link:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+.global-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .global-support-container {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+  
+  .support-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .support-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .support-block {
+    padding: 15px;
+  }
+  
+  .flag-img {
+    width: 30px;
+    height: 20px;
+  }
+  
+  .support-link {
+    margin-left: 45px;
+  }
+}
+
+
 /* Footer */
 footer {
   background: #111;
