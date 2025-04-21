@@ -475,7 +475,26 @@
             "time": "4:00PM",
             "location": "The Venetian Theatre, The Venetian Macao",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1901583041430221245"
+            "url": "https://x.com/GMMTV/status/1901583041430221245",
+            "status": "passed"
+        }
+    ],
+    "2025-04-26": [
+        {
+            "description": "#LUX ผิวโกลว์หอมแกลม Live",
+            "time": "6:00PM (BKK Time)",
+            "live": "Facebook: LUX(TH), Tiktok: Unilever Thailand Shop",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1914179409667637458"
+        }
+    ],
+    "2025-04-29": [
+        {
+            "description": "MCM Pop-up store event in Hong Kong",
+            "time": "2:00PM (Hong Kong Time)",
+            "location": "Atrium I, Gateway Arcade, Harbour City",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/1914179422342848551"
         }
     ],
     "2025-05-09": [
