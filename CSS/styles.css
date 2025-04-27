@@ -20,9 +20,9 @@ body {
 .header-wallpaper-sub {
   height: 30vh; /* Use viewport height */
   max-height: 250px; /* Keep a maximum height */
-  background-image: url('../Images/GYuANrBbwAAwCQ9.jfif');
+  background-image: url('../Images/GhAv2K4aYAApf1y.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 85%;
 }
 
 .header-wallpaper-sub-series {
@@ -57,6 +57,7 @@ body {
   z-index: 2;
   background-color: #FFFFFF(0, 123, 255, 0.8); /* Changed to a blue shade */
   transition: background-color 0.3s;
+  
 }
 
 /* Logo */
@@ -148,22 +149,29 @@ nav ul li {
 
 /* Navigation Links */
 nav ul li a {
-  color: #f35353; /* Dark text color */
+  color: #ffeb3b; /* Bright yellow text */
   padding: 10px;
-  font-weight: bold; /* Bold by default */
-  transition: color 0.3s, background-color 0.3s; /* Smooth transition */
-  display: block; /* Make the link block-level to fill the entire space */
-  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
-  overflow: hidden; /* Hide overflowed text */
-  white-space: nowrap; /* Prevent text from wrapping */
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s, text-shadow 0.3s; /* Add text-shadow transition */
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: 
+    -1px -1px 0 #0d47a1,  
+    1px -1px 0 #0d47a1,
+    -1px 1px 0 #0d47a1,
+    1px 1px 0 #0d47a1; /* Blue "border" effect using shadow */
 }
 
 /* Hover Effect for Links */
 nav ul li a:hover {
-  background-color: #fff9c4; /* Light yellow background on hover */
-  color: #333; /* Dark color for text on hover */
-  font-weight: normal; /* Normal weight on hover */
+  background-color: #0d47a1; /* Deep blue background on hover */
+  color: #fff; /* White text on hover */
+  font-weight: normal;
+  text-shadow: none; /* Remove text border on hover for clean look */
 }
+
 
 
 .nav-toggle {
@@ -179,10 +187,10 @@ nav ul li a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #ffccbc;
+  background-color: #e3f2fd; /* Light blue background */
   min-width: 180px;
   z-index: 1;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
 }
 
 .dropdown:hover .dropdown-content {
@@ -190,18 +198,27 @@ nav ul li a:hover {
 }
 
 .dropdown-content a {
-  color: #fff;
+  color: #ffeb3b; /* Bright yellow text */
   padding: 12px;
   text-decoration: none;
-  max-width: 150px; /* Limit width to fit on one line */
-  overflow: hidden; /* Hide overflow if it exceeds the width */
-  text-overflow: ellipsis; /* Add ellipsis for long text */
-  display: block; /* Ensure it's treated as a block element */
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  text-shadow: 
+    -1px -1px 0 #0d47a1,  
+    1px -1px 0 #0d47a1,
+    -1px 1px 0 #0d47a1,
+    1px 1px 0 #0d47a1; /* Dark blue text border */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
 }
 
 .dropdown-content a:hover {
-  background-color: #fff085; /* Changed hover background color */
+  background-color: #bbdefb; /* Soft blue on hover */
+  color: #0d47a1; /* Dark blue text on hover */
+  text-shadow: none; /* Remove border when hovering for clear reading */
 }
+
 
 
 /* Main Content */
