@@ -266,18 +266,19 @@ nav ul li a:hover {
 
   /* Hamburger Toggle Button */
   .nav-toggle {
-    display: block; /* Show the toggle button */
-    position: fixed; /* Fix the button to the top right corner */
+    display: block;
+    position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1001; /* Ensure it appears above the menu */
-    background: #527ef9; /* Match the logo color */
-    color: #fff; /* White text color */
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 1.5em; /* Increase icon size */
-    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1001;
+    background: transparent; /* No background */
+    color: #000; /* Black text (adjust if needed) */
+    border: none; /* No border */
+    padding: 10px;
+    font-size: 1.8em; /* Adjust size as needed */
+    cursor: pointer;
+    box-shadow: none; /* Ensure no shadow */
+    text-shadow: none; /* Ensure no text shadow */
   }
 
   /* Overlay for Background when Menu is Open */
