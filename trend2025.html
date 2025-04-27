@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/general-xtrend.css">
+    <link rel="stylesheet" href="CSS/switchlanguage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <title>NAMTANFILM | Trend X Highest Rank (Y2025)</title>
@@ -19,6 +20,19 @@
             ☰
             </button>
             <div id="navigation"></div>
+
+            <!-- Language Switcher (Updated) -->
+            <div class="language-switcher">
+                <button class="language-button" onclick="toggleDropdown()">
+                <span class="current-language">ENGLISH</span>
+                <span class="dropdown-icon">▼</span>
+                </button>
+              <div class="language-dropdown" id="languageDropdown">
+                <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
+                <a href="#" onclick="switchLanguage('zh')">中文</a>
+            </div>
+            </div>
+
         </div>
         
         
@@ -26,9 +40,9 @@
     
 
     <main>
-        <h2 style="text-align: center; margin-bottom: 20px;">Trend X Highest Rank (Year 2025)</h2>
-        <p><center>Follow <a href="https://x.com/NamtanFilmTrend" target="_blank" rel="noopener noreferrer">@NamtanFilmTrend</a> to stay updated with the latest trending activities.</center></p>
-        <button class="collapsible">January 2025<span class="icon">+</span></button>
+        <h2 style="text-align: center; margin-bottom: 20px;" data-i18n="followTitle">Trend X Highest Rank (Year 2025)</h2>
+        <p><center data-i18n="description" data-i18n-html>Follow <a href="https://x.com/NamtanFilmTrend" target="_blank" rel="noopener noreferrer">@NamtanFilmTrend</a> to stay updated with the latest trending activities.</center></p>
+        <button class="collapsible" data-i18n="jan" data-i18n-html>January 2025<span class="icon">+</span></button>
         <div class="content">
             
             <div class="columns">
@@ -78,7 +92,7 @@
             </div>
         </div>
         
-        <button class="collapsible">February 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="feb" data-i18n-html>February 2025<span class="icon">+</span></button>
         <div class="content">
             <div class="columns">
                 <div class="column">
@@ -235,7 +249,7 @@
             </div>
         </div>
 
-        <button class="collapsible">March 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="march" data-i18n-html>March 2025<span class="icon">+</span></button>
         <div class="content">
             <div class="columns">
                 <div class="column">
@@ -311,7 +325,7 @@
             </div>
         </div>
 
-        <button class="collapsible">April 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="apr" data-i18n-html>April 2025<span class="icon">+</span></button>
         <div class="content">
             <div class="columns">
                 <div class="column">
@@ -393,40 +407,43 @@
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="column">
-                    
+                    <h3>NAMTANFILM OISHI GLAMTASTIC</h3>
+                    <p>More than <b>77.4 K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="und" dir="ltr">🎉Congrats to NamtanFilm “อร่อยติดแกลมกับโออิชิไอซ์เลมอนที“<br><br>- สูงสุดอันดับ 25 เทรนด์ X โลก<br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 6 เทรนด์ X ฮ่องกง<br><br>📈 Trend X Highest Rank <br><br>KW: NAMTANFILM OISHI GLAMTASTIC<br><br>#1 Vietnam <br>#6 Hong Kong<br>#13 Indonesia<br>#15 Thailand<br>#25… <a href="https://t.co/CqpM525GLM">pic.twitter.com/CqpM525GLM</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1915989559902670983?ref_src=twsrc%5Etfw">April 26, 2025</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </div>
 
-        <button class="collapsible">May 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="may" data-i18n-html>May 2025<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">June 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="june" data-i18n-html>June 2025<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">July 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="july" data-i18n-html>July 2025<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">August 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="aug" data-i18n-html>August 2025<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">September 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="sep" data-i18n-html>September 2025<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">October 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="oct" data-i18n-html>October 2025<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">November 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="nov" data-i18n-html>November 2025<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">December 2025<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="dec" data-i18n-html>December 2025<span class="icon">+</span></button>
         <div class="content">
         </div>
         
@@ -437,9 +454,11 @@
         <p>Website developed and designed by @jieyan96.</p>
         
         </footer>
-        <!-- Google Translate Element -->
-        <div id="google_translate_element"></div>
+        
+        <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+        <script src="js/trend2025_i18next.js"></script>
     
+
         <script>
 
         // Fetch navigation list from navigation.html
