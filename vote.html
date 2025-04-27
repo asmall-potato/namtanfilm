@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/votecss.css">
     <link rel="stylesheet" href="CSS/pagination.css">
+    <link rel="stylesheet" href="CSS/switchlanguage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <title>NAMTANFILM | Award Voting Links</title>
@@ -20,6 +21,19 @@
             ☰
             </button>
              <div id="navigation"></div>
+
+             <!-- Language Switcher (Updated) -->
+            <div class="language-switcher">
+                <button class="language-button" onclick="toggleDropdown()">
+                <span class="current-language">ENGLISH</span>
+                <span class="dropdown-icon">▼</span>
+                </button>
+              <div class="language-dropdown" id="languageDropdown">
+                <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
+                <a href="#" onclick="switchLanguage('zh')">中文</a>
+            </div>
+            </div>
+
         </div>
         </div>
         
@@ -28,43 +42,43 @@
     </header>
 
         <main>
-            <h2 style="text-align: center; margin-bottom: 20px;">Vote for NamtanFilm</h2>
+            <h2 style="text-align: center; margin-bottom: 20px;" data-i18n="followTitle">Vote for NamtanFilm</h2>
             <div class="general-container">
 
             <div class="general-item">
                 <h4>NINEENTERTAIN AWARDS 2025</h4>
-                <p>Nominee: <b>Y5 - Namtan Film</b> (Couple Of The Year)</p>
-                <p>SMS: Type Y5 and send it to 4689191 (6 baht per vote)</p>
-                <p>Voting Deadline: May 21, 2025, at 23:59</p>
-                <p>Voting Breakdown: 
+                <p data-i18n="nominee1" data-i18n-html>Nominee: <b>Y5 - Namtan Film</b> (Couple Of The Year)</p>
+                <p data-i18n="way">SMS: Type Y5 and send it to 4689191 (6 baht per vote)</p>
+                <p data-i18n="deadline1">Voting Deadline: May 21, 2025, at 23:59</p>
+                <p data-i18n="votedesc1" data-i18n-html>Voting Breakdown: 
                 </br>1. 50% from SMS votes 
                 </br>2. 50% from votes on website</p>
-                <a href="https://9entertainawards.mcot.net/Vote/Candidate/B" class="external-link-button">Vote Here</a>
+                <a href="https://9entertainawards.mcot.net/Vote/Candidate/B" class="external-link-button" data-i18n="votehere">Vote Here</a>
             </div>
                 
             <div class="general-item">
                 <h4>KOM CHAD LUEK AWARDS 2025</h4>
-                <p>Nominee: นํ้าตาล - ฟิล์ม (KA8. Popular Yuri Couple)</p>
-                <p>Voting Deadline: May 4, 2025</p>
-                <a href="https://awards.komchadluek.net/KA8" class="external-link-button">Vote Here</a>
+                <p data-i18n="nominee2">Nominee: นํ้าตาล - ฟิล์ม (KA8. Popular Yuri Couple)</p>
+                <p data-i18n="deadline2">Voting Deadline: May 4, 2025</p>
+                <a href="https://awards.komchadluek.net/KA8" class="external-link-button" data-i18n="votehere">Vote Here</a>
             </div>
 
             <div class="general-item">
-                <h4>Nominations for BANGKOK PRIDE AWARDS 2025</h4>
-                <p>Nomination Deadline: April 29, 2025</p>
-                <p>Award Selection: PRIDE POPULAR: 
+                <h4 data-i18n="vote3">Nominations for BANGKOK PRIDE AWARDS 2025</h4>
+                <p data-i18n="deadline3">Nomination Deadline: April 29, 2025</p>
+                <p >Award Selection: PRIDE POPULAR: 
                 </br>1. Category: Series and Movies
                 </br>- POPULAR Sapphic Series Star
                 </br>- Nominee Name: <b>ซีรีส์ Pluto นิทาน ดวงดาว ความรัก</b>
                 </br>- Information: <b>GMMTV</b>
-                </br>- <i>Attach an image of Pluto</i></p>
+                </br>- <i>Attach an image of Pluto</i>
                 </br>
                 </br>2. Category: Actors Category
                 </br>- Pride Popular of Series/Drama
                 </br>- Nominee Name: <b>น้ำตาล ทิพนารี วีรวัฒโนดม, ฟิล์ม รชานันท์ มหาวรรณ์</b>
                 </br>- Information: <b>GMMTV</b>
                 </br>- <i>Attach an image of Namtan and Film</i></p>
-                <a href="https://submit.jotform.com/Bangkokpride/Awards-n" class="external-link-button">Nominate Here</a>
+                <a href="https://submit.jotform.com/Bangkokpride/Awards-n" class="external-link-button" data-i18n="nominatehere">Nominate Here</a>
             </div>
                 
         </div>    
@@ -79,6 +93,9 @@
         </footer>
         <!-- Google Translate Element -->
         <div id="google_translate_element"></div>
+
+        <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+        <script src="js/vote_i18next.js"></script>
     
         <script>
 
