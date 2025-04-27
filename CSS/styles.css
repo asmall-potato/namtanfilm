@@ -306,7 +306,7 @@ nav ul li a:hover {
 
   /* Navigation Links */
   nav ul li a {
-    color: #000; /* Black text for links */
+    color: #78eddf; /* Black text for links */
     padding: 10px; /* Add padding for better touch targets */
     display: block; /* Make links block-level */
     text-decoration: none; /* Remove underline from links */
