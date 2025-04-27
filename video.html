@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/video.css">
     <link rel="stylesheet" href="CSS/pagination.css">
+    <link rel="stylesheet" href="CSS/switchlanguage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <title>NAMTANFILM | VIDEO (Year 2024)</title>
@@ -20,13 +21,26 @@
             ☰
             </button>
              <div id="navigation"></div>
+
+             <!-- Language Switcher (Updated) -->
+            <div class="language-switcher">
+                <button class="language-button" onclick="toggleDropdown()">
+                <span class="current-language">ENGLISH</span>
+                <span class="dropdown-icon">▼</span>
+                </button>
+              <div class="language-dropdown" id="languageDropdown">
+                <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
+                <a href="#" onclick="switchLanguage('zh')">中文</a>
+            </div>
+            </div>
+
         </div>
         
         
     </header>
 
     <main>
-        <h2 style="text-align: center; margin-bottom: 20px;">Video of Namtan & Film (Year 2024)</h2>
+        <h2 style="text-align: center; margin-bottom: 20px;" data-i18n="followTitle">Video of Namtan & Film (Year 2024)</h2>
         
         <div class="video-container">
 
@@ -282,6 +296,9 @@
         </footer>
         <!-- Google Translate Element -->
         <div id="google_translate_element"></div>
+
+        <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+        <script src="js/video2024_i18next.js"></script>
     
         <script>
 
