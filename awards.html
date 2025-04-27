@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/brandshome-styles.css">
+    <link rel="stylesheet" href="CSS/switchlanguage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+
     <title>NAMTANFILM | AWARDS</title>
 </head>
 <body>
@@ -19,6 +23,19 @@
             ☰
             </button>
             <div id="navigation"></div>
+
+            <!-- Language Switcher (Updated) -->
+            <div class="language-switcher">
+                <button class="language-button" onclick="toggleDropdown()">
+                <span class="current-language">ENGLISH</span>
+                <span class="dropdown-icon">▼</span>
+                </button>
+            <div class="language-dropdown" id="languageDropdown">
+                <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
+                <a href="#" onclick="switchLanguage('zh')">中文</a>
+            </div>
+            </div>
+
         </div>
        
         
@@ -26,11 +43,11 @@
     
 
     <main>
-        <h2>AWARDS</h2>
+        <h2 data-i18n="followTitle">AWARDS</h2>
         <br>
         <div class="brands-container">
             <div class="column">
-                <h3><a href="awards2025.html">AWARDS (Year 2025)</a></h3>
+                <h3 ><a href="awards2025.html" data-i18n="description">AWARDS (Year 2025)</a></h3>
                 
             </div>
 
@@ -48,6 +65,9 @@
         <!-- Google Translate Element -->
         <div id="google_translate_element"></div>
     
+        
+        <script src="js/awards_i18next.js"></script>
+
         <script>
 
         // Fetch navigation list from navigation.html
