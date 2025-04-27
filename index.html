@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A Namtanfilm fan site built to help more people discover Namtanfilm. Stay updated and access a variety of contents in one place.">
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/switchlanguage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+
+    
    
     <title>NAMTANFILM | น้ำตาลฟิล์ม</title>
 </head>
@@ -20,6 +24,19 @@
             ☰
             </button>
              <div id="navigation"></div>
+
+            <!-- Language Switcher (Updated) -->
+            <div class="language-switcher">
+                <button class="language-button" onclick="toggleDropdown()">
+                <span class="current-language">ENGLISH</span>
+                <span class="dropdown-icon">▼</span>
+                </button>
+            <div class="language-dropdown" id="languageDropdown">
+                <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
+                <a href="#" onclick="switchLanguage('zh')">中文</a>
+            </div>
+            </div>
+
         </div>
         <div class="bottom-left-text">NAMTAN TIPNAREE </br>
             FILM RACHANUN
@@ -38,17 +55,17 @@
                 <p>NAMTAN TIPNAREE & FILM RACHANUN</p>
                 </br>
                 <h2><i>NAMTANFILM | น้ำตาลฟิล์ม</i></h2>
-                <p>Namtan Tipnaree & Film Rachanun are GMMTV artists. </br>
-                    They are the second official GL cp from GMMTV.
+                <p data-i18n="description">Namtan Tipnaree & Film Rachanun are GMMTV artists. </p>
+                <p data-i18n="description1">They are the second official GL cp from GMMTV. </p>
                 </br></br>
-                    <b>Collaborative series</b></br></br>
-                    Last Twilight </br>
-                    Ploy's Yearbook </br>
-                    Pluto Series </br>
-                    Girl Rules Series </br></br></p>
-                <p><b>Fandom Name & Mascot: </b><b><a href= "https://x.com/GMMTV/status/1865412198534914250" title="Information about NamtanFilm's official fandom name & mascot">Lunar</a></b></p>
+                    <b data-i18n="collaboratetitle">Collaborative series</b></br></br>
+                    <p data-i18n="description2">Last Twilight</p> 
+                    <p data-i18n="description3">Ploy's Yearbook</p> 
+                    <p data-i18n="description4">Pluto Series</p> 
+                    <p data-i18n="description5">Girl Rules Series </p>
+                <p><b data-i18n="mascot">Fandom Name & Mascot: </b><b><a href= "https://x.com/GMMTV/status/1865412198534914250" title="Information about NamtanFilm's official fandom name & mascot">Lunar</a></b></p>
                 </br>
-                    <a href="schedule.html" class="button" title = "NamtanFilm Schedule">FOLLOW THEIR LATEST SCHEDULE</a>
+                    <a href="schedule.html" class="button" title = "NamtanFilm Schedule" data-i18n="schedule">FOLLOW THEIR LATEST SCHEDULE</a>
                 </p>
                 </br>
             </div>
@@ -56,16 +73,16 @@
 
         <!--Introduce namtanfilm-->
         <section class="cast-container">
-            <h3>NAMTANFILM's PROFILE</h3>
+            <h3 data-i18n="profile">NAMTANFILM's PROFILE</h3>
             <div class="column">
                 <img src="Images/Homepage/GYId_VOaMAAgAp9.jfif" alt="NAMTAN TIPNAREE">
                 <p><center>NAMTAN TIPNAREE</center></p>
-                <a href="namtanprofile.html" class="button" title = "Namtan Tipnaree's Profile"><center>Click to view their profile</center></a>
+                <a href="namtanprofile.html" class="button" title = "Namtan Tipnaree's Profile"><center data-i18n="clickprofile">Click to view their profile</center></a>
             </div>
             <div class="column">
                 <img src="Images/Homepage/GfEuMw6bUAEXSyS.jpg" alt="FILM RACHANUN">
                 <p><center>FILM RACHANUN</center></p>
-                <a href="filmprofile.html" class="button" title = "Film Rachanun's Profile"><center>Click to view their profile</center></a>
+                <a href="filmprofile.html" class="button" title = "Film Rachanun's Profile"><center data-i18n="clickprofile">Click to view their profile</center></a>
             </div>
         </section>
                
@@ -104,9 +121,9 @@
         
         
         <section id="section8" class="section8">
-            <h3 class="small-title">To get the latest info, follow on:</h3>
+            <h3 class="small-title" data-i18n="info">To get the latest info, follow on:</h3>
             <div class="social-media-container">
-                <div class="column"><b>X Account</b>
+                <div class="column" ><b data-i18n="xaccount">X Account</b>
                 </br>
                 </br>
                     <a href="https://x.com/PlutoSeriesTH" title = "Pluto Series Official X account">@PlutoSeriesTH</a>
@@ -116,7 +133,7 @@
                     <a href="https://x.com/GirlRulesGMMTV" title = "Girl Rules Series Official X account">@GirlRulesGMMTV</a>
                 </div>
                 
-                <div class="column"><b>GMMTV Official Account</b>
+                <div class="column"><b data-i18n="gmmtvofficial">GMMTV Official Account</b>
                 </br>
                 </br>
                 <p style="display: inline;">Instagram →</p> <a href="https://www.instagram.com/gmmtv/?hl=en" style="display: inline;" target="_blank" title = "GMMTV Official IG account">gmmtv</a>
@@ -128,7 +145,7 @@
                 <p style="display: inline;">Weibo →</p> <a href="https://weibo.com/gmmtvofficial" style="display: inline;" target="_blank" title = "GMMTV Official Weibo account">gmmtv_official</a>
                 </div>
 
-                <div class="column"><b>Official Fanclub</b>
+                <div class="column"><b data-i18n="officialfc">Official Fanclub</b>
                 </br>
                 </br>
                     <p>Namtan Tipnaree Official Fanclub</p>
@@ -141,14 +158,14 @@
                     <a href="https://x.com/NamtanFilmFC" title = "NamtanFilm Official Fanclub X account">@NamtanFilmFC</a>
                 </div>
 
-                <div class="column"><b>Official Trending Account</b>
+                <div class="column"><b data-i18n="officialTA">Official Trending Account</b>
                 </br>
                 </br>
                     <p>Trend For NamtanFilm</p>
                     <a href="https://x.com/NamtanFilmTrend" title = "NamtanFilm Official Trending X account">@NamtanFilmTrend</a>
                 </div>
 
-                <div class="column"><b>Get NamtanFilm's official merchandise at</b>
+                <div class="column"><b data-i18n="gmmtvshop">Get NamtanFilm's official merchandise at</b>
                 </br>
                 </br>
                     <a href="https://www.gmm-tv.com/shop/" class="button" title = "GMMTV Shop">GMMTV SHOP</a>
@@ -162,7 +179,7 @@
 
                 <!--For each ntf fanclub account support-->
                 <div class="global-support-container">
-                <h2 class="support-title">Global Lunar Support</h2>
+                <h2 class="support-title" data-i18n="globalofc">Global Lunar Support</h2>
   
                 <div class="support-grid">
                 <!-- Korea Support -->
@@ -315,9 +332,11 @@
         <p>Website developed and designed by @jieyan96.</p>
         
         </footer>
-        <!-- Google Translate Element -->
-        <div id="google_translate_element"></div>
+        
     
+        <script src="js/index_i18next.js"></script>
+        
+
         <script>
 
         // Fetch navigation list from navigation.html
