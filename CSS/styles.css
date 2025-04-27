@@ -310,6 +310,7 @@ nav ul li a:hover {
     padding: 10px; /* Add padding for better touch targets */
     display: block; /* Make links block-level */
     text-decoration: none; /* Remove underline from links */
+    outline: none; /* Remove focus outline/blue border */
   }
 
   /* Hover Effect for Links */
@@ -317,6 +318,7 @@ nav ul li a:hover {
     background-color: #f0f0f0; /* Light background on hover */
     color: #000; /* Keep the text black on hover */
   }
+  
 }
 
 
