@@ -253,7 +253,6 @@ nav ul li a:hover {
     overflow-y: auto; /* Enable vertical scrolling */
     background-color: rgba(255, 255, 255, 0.95); /* White background */
     border-radius: 10px; /* Rounded corners for the menu */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
     padding: 20px; /* Add padding inside the menu */
     transition: left 0.3s ease; /* Smooth transition when opening/closing */
     z-index: 1000; /* Ensure it appears above other content */
@@ -298,10 +297,6 @@ nav ul li a:hover {
     display: block; /* Show the overlay */
   }
 
-  .bottom-left-text {
-    font-size: 1.8em;
-  }
-
   /* Navigation List Items */
   nav ul li {
     margin: 15px 0; /* Add spacing between items */
@@ -311,18 +306,19 @@ nav ul li a:hover {
 
   /* Navigation Links */
   nav ul li a {
-    color: #fff; /* White text for better contrast */
+    color: #000; /* Black text for links */
     padding: 10px; /* Add padding for better touch targets */
     display: block; /* Make links block-level */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    text-decoration: none; /* Remove underline from links */
   }
 
   /* Hover Effect for Links */
   nav ul li a:hover {
     background-color: #f0f0f0; /* Light background on hover */
-    color: #333; /* Darker text color on hover for better readability */
+    color: #000; /* Keep the text black on hover */
   }
 }
+
 
 
 /* Mobile View Adjustments for logo */
