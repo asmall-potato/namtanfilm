@@ -1,0 +1,102 @@
+/* Base styling for desktop (unchanged) */
+.language-switcher {
+  position: relative;
+  margin-right: 40px;
+}
+
+.language-button {
+  background: #1e88e5;
+  color: white;
+  border: 2px solid #ffeb3b;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  min-width: 100px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+  /* Ensure burger and language buttons are stacked vertically */
+  .navbar-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      position: relative;
+      margin-right: 20px;
+  }
+
+  /* Position burger button */
+  .burger-button {
+      position: relative;
+  }
+
+  /* Position language button directly below the burger button */
+  .language-switcher {
+      position: relative;
+      margin-top: 60px; /* Increase space between the burger and language buttons */
+      right: 0;
+      align-self: flex-start; /* Keeps it aligned to the left side of the container */
+      z-index: 9999; /* Ensures it appears on top */
+  }
+
+  /* Optional: Resize language button for smaller screens */
+  .language-button {
+      font-size: 12px; /* Smaller font for mobile */
+      padding: 6px 12px; /* Adjust padding */
+  }
+}
+
+/* Show the language dropdown */
+.language-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: white;
+  border: 2px solid #1e88e5;
+  border-radius: 8px;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(30, 136, 229, 0.2);
+  overflow: hidden;
+}
+
+.language-dropdown a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+/* Hover states */
+.language-dropdown a:hover {
+  background: #e3f2fd;
+  color: #0d47a1;
+}
+
+/* Active language highlight */
+.language-dropdown a[data-active="true"] {
+  background: #bbdefb;
+  font-weight: bold;
+}
+
+.dropdown-icon {
+  color: #ffeb3b;
+  transition: transform 0.3s;
+}
+
+/* Rotate arrow when open */
+.language-button.active .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.show {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
