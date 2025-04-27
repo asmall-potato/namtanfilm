@@ -318,7 +318,19 @@ nav ul li a:hover {
     background-color: #f0f0f0; /* Light background on hover */
     color: #000; /* Keep the text black on hover */
   }
-  
+
+  /* Target the mobile navigation menu links */
+  nav ul.showing li a {
+    text-shadow: none !important; /* Remove blue text border */
+    color: #000 !important; /* Set text color (adjust if needed) */
+    background: transparent !important; /* Remove background (if any) */
+  }
+
+  /* Remove hover effects on mobile menu links */
+  nav ul.showing li a:hover {
+    text-shadow: none !important;
+    background: transparent !important;
+  }
 }
 
 
