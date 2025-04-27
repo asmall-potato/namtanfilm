@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/general-xtrend.css">
+    <link rel="stylesheet" href="CSS/switchlanguage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <title>NAMTANFILM | Trend X Highest Rank (Y2024)</title>
@@ -19,6 +20,19 @@
             ☰
             </button>
             <div id="navigation"></div>
+
+            <!-- Language Switcher (Updated) -->
+            <div class="language-switcher">
+                <button class="language-button" onclick="toggleDropdown()">
+                <span class="current-language">ENGLISH</span>
+                <span class="dropdown-icon">▼</span>
+                </button>
+              <div class="language-dropdown" id="languageDropdown">
+                <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
+                <a href="#" onclick="switchLanguage('zh')">中文</a>
+            </div>
+            </div>
+
         </div>
         
         
@@ -26,29 +40,29 @@
     
 
     <main>
-        <h2 style="text-align: center; margin-bottom: 20px;">Trend X Highest Rank (Year 2024)</h2>
-        <p><center>Follow <a href="https://x.com/NamtanFilmTrend" target="_blank" rel="noopener noreferrer">@NamtanFilmTrend</a> to stay updated with the latest trending activities.</center></p>
-        <button class="collapsible">January 2024<span class="icon">+</span></button>
+        <h2 style="text-align: center; margin-bottom: 20px;" data-i18n="followTitle">Trend X Highest Rank (Year 2024)</h2>
+        <p><center data-i18n="description" data-i18n-html>Follow <a href="https://x.com/NamtanFilmTrend" target="_blank" rel="noopener noreferrer">@NamtanFilmTrend</a> to stay updated with the latest trending activities.</center></p>
+        <button class="collapsible" data-i18n="jan" data-i18n-html>January 2024<span class="icon">+</span></button>
         <div class="content">
         </div>
         
-        <button class="collapsible">February 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="feb" data-i18n-html>February 2024<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">March 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="march" data-i18n-html>March 2024<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">April 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="apr" data-i18n-html>April 2024<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">May 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="may" data-i18n-html>May 2024<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">June 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="june" data-i18n-html>June 2024<span class="icon">+</span></button>
         <div class="content">
             <div class="columns">
                 <div class="column">
@@ -62,15 +76,15 @@
             </div>
         </div>
 
-        <button class="collapsible">July 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="july" data-i18n-html>July 2024<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">August 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="aug" data-i18n-html>August 2024<span class="icon">+</span></button>
         <div class="content">
         </div>
 
-        <button class="collapsible">September 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="sep" data-i18n-html>September 2024<span class="icon">+</span></button>
         <div class="content">
             <div class="columns">
                 <div class="column">
@@ -82,7 +96,7 @@
             </div>
         </div>
 
-        <button class="collapsible">October 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="oct" data-i18n-html>October 2024<span class="icon">+</span></button>
         <div class="content">
             <div class="columns">
                 <div class="column">
@@ -162,7 +176,7 @@
             </div>
         </div>
 
-        <button class="collapsible">November 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="nov" data-i18n-html>November 2024<span class="icon">+</span></button>
         <div class="content">
             <div class="columns">
                 <div class="column">
@@ -218,7 +232,7 @@
             </div>
         </div>
 
-        <button class="collapsible">December 2024<span class="icon">+</span></button>
+        <button class="collapsible" data-i18n="dec" data-i18n-html>December 2024<span class="icon">+</span></button>
         <div class="content">
             <div class="columns">
                 <div class="column">
@@ -347,9 +361,453 @@
         <p>Website developed and designed by @jieyan96.</p>
         
         </footer>
-        <!-- Google Translate Element -->
-        <div id="google_translate_element"></div>
+        
     
+        <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+        <script src="js/trend2024_i18next.js"></script>
+
+        <script>
+
+        // Fetch navigation list from navigation.html
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
+
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
+
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
+
+
+        //collapse
+        const collapsibles = document.querySelectorAll('.collapsible');
+
+collapsibles.forEach(function(button) {
+    button.addEventListener('click', function() {
+        const content = this.nextElementSibling; // Get the associated content div
+        const icon = this.querySelector('.icon'); // Get the icon span inside the button
+        
+        // Toggle content visibility
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        
+        // Change icon between "+" and "-" depending on content visibility
+        if (content.style.display === 'block') {
+            icon.textContent = "-"; // Change to minus when expanded
+        } else {
+            icon.textContent = "+"; // Change to plus when collapsed
+        }
+    });
+});
+
+        // Scroll reveal effect
+        const sections = document.querySelectorAll('section');
+        const options = {
+        root: null,
+        threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        observer.unobserve(entry.target);
+        }
+        });
+        }, options);
+        
+        sections.forEach(section => {
+        observer.observe(section);
+        });
+        
+        // Change header transparency on scroll
+        const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
+        
+       
+    
+        </script>
+        </body>
+        </html>
+        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/general-xtrend.css">
+    <link rel="stylesheet" href="CSS/switchlanguage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>NAMTANFILM | Trend X Highest Rank (Y2024)</title>
+</head>
+<body>
+    <header class="header-wallpaper-sub">
+        <div class="header-container">
+            <h1 class="logo">
+                <span class="blue">NAMTAN</span><span class="yellow">FILM</span>
+            </h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+            ☰
+            </button>
+            <div id="navigation"></div>
+
+            <!-- Language Switcher (Updated) -->
+            <div class="language-switcher">
+                <button class="language-button" onclick="toggleDropdown()">
+                <span class="current-language">ENGLISH</span>
+                <span class="dropdown-icon">▼</span>
+                </button>
+              <div class="language-dropdown" id="languageDropdown">
+                <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
+                <a href="#" onclick="switchLanguage('zh')">中文</a>
+            </div>
+            </div>
+
+        </div>
+        
+        
+    </header>
+    
+
+    <main>
+        <h2 style="text-align: center; margin-bottom: 20px;" data-i18n="followTitle">Trend X Highest Rank (Year 2024)</h2>
+        <p><center data-i18n="description" data-i18n-html>Follow <a href="https://x.com/NamtanFilmTrend" target="_blank" rel="noopener noreferrer">@NamtanFilmTrend</a> to stay updated with the latest trending activities.</center></p>
+        <button class="collapsible" data-i18n="jan" data-i18n-html>January 2024<span class="icon">+</span></button>
+        <div class="content">
+        </div>
+        
+        <button class="collapsible" data-i18n="feb" data-i18n-html>February 2024<span class="icon">+</span></button>
+        <div class="content">
+        </div>
+
+        <button class="collapsible" data-i18n="march" data-i18n-html>March 2024<span class="icon">+</span></button>
+        <div class="content">
+        </div>
+
+        <button class="collapsible" data-i18n="apr" data-i18n-html>April 2024<span class="icon">+</span></button>
+        <div class="content">
+        </div>
+
+        <button class="collapsible" data-i18n="may" data-i18n-html>May 2024<span class="icon">+</span></button>
+        <div class="content">
+        </div>
+
+        <button class="collapsible" data-i18n="june" data-i18n-html>June 2024<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                <div class="column">
+                    <h3>#PlutoSeriesQ1</h3>
+                    <p>More than <b>59K</b> Posts on X</p>
+                    <h3>PLUTO GAME ON Q1</h3>
+                    <p>More than <b>59.8K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="th" dir="ltr">💫 Congratulations <br><br>ขอบคุณทุกคนสำหรับยอดเทรนด์แฮชแท็กอันดับ 1 ประเทศไทย คีย์เวิร์ดอันดับ 2 ประเทศไทย และยอดเทรนด์ต่างๆ ในต่างประเทศ<br><br>มาเอาใจช่วยสำหรับการถ่ายทำ Pluto Series ให้ดำเนินไปอย่างราบรื่นจนกว่าจะปิดกล้องด้วยกันนะคะ<a href="https://twitter.com/hashtag/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1?src=hash&amp;ref_src=twsrc%5Etfw">#น้ำตาลฟิล์ม</a> <a href="https://twitter.com/hashtag/NamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanFilm</a><a href="https://twitter.com/hashtag/NamtanTipnaree?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanTipnaree</a> <a href="https://twitter.com/hashtag/filmracha?src=hash&amp;ref_src=twsrc%5Etfw">#filmracha</a> <a href="https://t.co/9JrHeweUZd">pic.twitter.com/9JrHeweUZd</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1804375102882222329?ref_src=twsrc%5Etfw">June 22, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+
+        <button class="collapsible" data-i18n="july" data-i18n-html>July 2024<span class="icon">+</span></button>
+        <div class="content">
+        </div>
+
+        <button class="collapsible" data-i18n="aug" data-i18n-html>August 2024<span class="icon">+</span></button>
+        <div class="content">
+        </div>
+
+        <button class="collapsible" data-i18n="sep" data-i18n-html>September 2024<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                <div class="column">
+                    <h3>NamtanFilm X OishiHKDcorn</h3>
+                    <p>More than <b>70K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎉Congratulations To NamtanFilm For 70k Repost On X<br><br># 44 Worldwide Trend<br># 2 Vietnam<br># 7 Thailand<br># 9 Indonesia<br><br>NamtanFilm X OishiHKDcorn<a href="https://twitter.com/hashtag/OishiHokkaidoCorn?src=hash&amp;ref_src=twsrc%5Etfw">#OishiHokkaidoCorn</a><a href="https://twitter.com/hashtag/OISHIXJimmySea?src=hash&amp;ref_src=twsrc%5Etfw">#OISHIXJimmySea</a><a href="https://twitter.com/hashtag/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1?src=hash&amp;ref_src=twsrc%5Etfw">#น้ำตาลฟิล์ม</a> <a href="https://twitter.com/hashtag/NamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanFilm</a> <a href="https://t.co/0o2fAfxKS3">pic.twitter.com/0o2fAfxKS3</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1831274108782612683?ref_src=twsrc%5Etfw">September 4, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+
+        <button class="collapsible" data-i18n="oct" data-i18n-html>October 2024<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                <div class="column">
+                    <h3>#MaybellinexNamtanFilm</h3>
+                    <h3>NAMTANFILM X FIREWORK</h3>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎉Congrats To NamtanFilm✨<br><br>NAMTANFILM X FIREWORK<a href="https://twitter.com/hashtag/MaybellinexNamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#MaybellinexNamtanFilm</a><br><br>🌎33<br>🇹🇭10<br>🇻🇳2<br>🇮🇩12<br>🇲🇾33<br><br>Number of Trending User🚀💫<a href="https://twitter.com/hashtag/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1?src=hash&amp;ref_src=twsrc%5Etfw">#น้ำตาลฟิล์ม</a> <a href="https://twitter.com/hashtag/NamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanFilm</a><a href="https://twitter.com/hashtag/NamtanTipnaree?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanTipnaree</a> <a href="https://twitter.com/hashtag/filmracha?src=hash&amp;ref_src=twsrc%5Etfw">#filmracha</a> <a href="https://t.co/0IHMbDd5YY">pic.twitter.com/0IHMbDd5YY</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1844602222686110141?ref_src=twsrc%5Etfw">October 11, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>NAMTAN X MIUMIU</h3>
+                    <p>More than <b>18.7K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎉Congrats To Namtan Tipnaree✨<br><br>KEYWORD : NAMTAN X MIUMIU<br><br>RESULTS: 18.7K+<br>ENGAGEMENT : 31.1K+<br>POTENTIAL REACH : 2.8M<a href="https://twitter.com/hashtag/NamtanTipnaree?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanTipnaree</a> <a href="https://twitter.com/hashtag/%E0%B9%82%E0%B8%A1%E0%B8%88%E0%B8%B4%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%95?src=hash&amp;ref_src=twsrc%5Etfw">#โมจิของนต</a><a href="https://twitter.com/hashtag/MiuBalmoral?src=hash&amp;ref_src=twsrc%5Etfw">#MiuBalmoral</a> <a href="https://twitter.com/hashtag/MiuMiu?src=hash&amp;ref_src=twsrc%5Etfw">#MiuMiu</a> <a href="https://t.co/YcowBOICuh">pic.twitter.com/YcowBOICuh</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1845033313628537170?ref_src=twsrc%5Etfw">October 12, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#กระหายเล่าXฟิล์มรชานันท์</h3>
+                    <h3>FilmRacha X KHL</h3>
+                    <blockquote class="twitter-tweet"><p lang="th" dir="ltr">🎉Congrats To Film Rachanun<a href="https://twitter.com/hashtag/%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%AB%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%B2X%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%A3%E0%B8%8A%E0%B8%B2%E0%B8%99%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B9%8C?src=hash&amp;ref_src=twsrc%5Etfw">#กระหายเล่าXฟิล์มรชานันท์</a><br>- สูงสุดอันดับ 27 เทรนด์ X ไทย <br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br><br>FilmRacha X KHL<br>- สูงสุดอันดับ 10 เทรนด์ X ไทย <br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br><br>ติดเทรนด์ 3 แห่ง ทั่วโลก🔥<br><br>🇻🇳 1<br>🇹🇭 10<br>🇮🇩 40<br><br>Number of Trending User🎞️… <a href="https://t.co/tYit8fHbhq">pic.twitter.com/tYit8fHbhq</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1846726190004126140?ref_src=twsrc%5Etfw">October 17, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <h3>#PlutoSeriesPressTour</h3>
+                    <h3>PLUTO PRESS TOUR</h3>
+                    <blockquote class="twitter-tweet"><p lang="th" dir="ltr">🎉 Congrats To PlutoSeries 🎉<a href="https://twitter.com/hashtag/PlutoSeriesPressTour?src=hash&amp;ref_src=twsrc%5Etfw">#PlutoSeriesPressTour</a><br>- สูงสุดอันดับ 4 เทรนด์ X ไทย <br><br>PLUTO PRESS TOUR<br>- สูงสุดอันดับ 3 เทรนด์ X ไทย <br>- สูงสุดอันดับ 46 เทรนด์ X โลก<br><br>ติดเทรนด์ 5 แห่ง ทั่วโลก🔥<br><br>🌎 46<br>🇹🇭 3<br>🇻🇳 2<br>🇲🇾 7<br>🇮🇩 7<br>🇵🇭 20<a href="https://twitter.com/hashtag/PlutoSeries?src=hash&amp;ref_src=twsrc%5Etfw">#PlutoSeries</a><a href="https://twitter.com/hashtag/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1?src=hash&amp;ref_src=twsrc%5Etfw">#น้ำตาลฟิล์ม</a> <a href="https://twitter.com/hashtag/NamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanFilm</a><a href="https://twitter.com/hashtag/NamtanTipnaree?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanTipnaree</a>… <a href="https://t.co/GkZzitSKje">pic.twitter.com/GkZzitSKje</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1847148745160643051?ref_src=twsrc%5Etfw">October 18, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#1Y_With_NamtanFilm</h3>
+                    <p>More than <b>25.3K</b> Posts on X in 24 hours</p>
+                    <h3>PLUTO 1st Anniversary</h3>
+                    <p>More than <b>26.7K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="und" dir="ltr">🎉Congrats To PLUTO 1st Anniversary<a href="https://twitter.com/hashtag/1Y_With_NamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#1Y_With_NamtanFilm</a><br>- สูงสุดอันดับ 27 เทรนด์ X ไทย <br><br>PLUTO 1st Anniversary<br>- สูงสุดอันดับ 8 เทรนด์ X ไทย <br>- สูงสุดอันดับ 44 เทรนด์ X โลก<br><br>ติดเทรนด์ 4 แห่ง และ ทั่วโลก🔥<br><br>🌎46<br>🇹🇭8<br>🇻🇳4<br>🇮🇩9<br>🇵🇭 41<br><br>✨RESULTS : 26.7 K<br>✨ENGAGEMENT : 46.4 K… <a href="https://t.co/QsNMeqnBCW">pic.twitter.com/QsNMeqnBCW</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1847247775018451377?ref_src=twsrc%5Etfw">October 18, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#BOOKEXPO2024XNF</h3>
+                    <p>More than <b>76K</b> Posts on X in 24 hours</p>
+                    <h3>NamtanFilm x BookExpo2024</h3>
+                    <p>More than <b>66.4K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎉Congrats To NamtanFilm-x-BookExpo2024<br><br>NamtanFilm x BookExpo2024<br><br>🇹🇭 15<br><br>✨RESULTS : 76 K<br>✨ENGAGEMENT : 164.6 K<br>✨POTENTIAL REACH : 10.4 M<a href="https://twitter.com/hashtag/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1?src=hash&amp;ref_src=twsrc%5Etfw">#น้ำตาลฟิล์ม</a> <a href="https://twitter.com/hashtag/NamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanFilm</a><a href="https://twitter.com/hashtag/NamtanTipnaree?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanTipnaree</a> <a href="https://twitter.com/hashtag/filmracha?src=hash&amp;ref_src=twsrc%5Etfw">#filmracha</a> <a href="https://t.co/rrZV1zUApY">pic.twitter.com/rrZV1zUApY</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1848300577467531768?ref_src=twsrc%5Etfw">October 21, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <h3>#หัวท้ายตายก่อนXน้ำตาลทิพนารี</h3>
+                    <h3>FIRST AND LAST X NAMTAN</h3>
+                    <blockquote class="twitter-tweet"><p lang="th" dir="ltr">🎉Congrats To Namtan Tipnaree<a href="https://twitter.com/hashtag/%E0%B8%AB%E0%B8%B1%E0%B8%A7%E0%B8%97%E0%B9%89%E0%B8%B2%E0%B8%A2%E0%B8%95%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99X%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%97%E0%B8%B4%E0%B8%9E%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B5?src=hash&amp;ref_src=twsrc%5Etfw">#หัวท้ายตายก่อนXน้ำตาลทิพนารี</a><br>- สูงสุดอันดับ 33 เทรนด์ X ไทย <br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br><br>FIRST AND LAST X NAMTAN <br>- สูงสุดอันดับ 11 เทรนด์ X ไทย <br>- สูงสุดอันดับ 2 เทรนด์ X เวียดนาม<br><br>ติดเทรนด์ 3 แห่ง ทั่วโลก🔥<br><br>🇻🇳 2<br>🇹🇭 11<br>🇵🇭 50… <a href="https://t.co/YNSrDtb5ME">pic.twitter.com/YNSrDtb5ME</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1848707124383137913?ref_src=twsrc%5Etfw">October 22, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>SchoolStar x NamtanFilm</h3>
+                    <p>More than <b>84K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="und" dir="ltr">🎉Congrats To Namtan-Film<br><br>Keyword :<br>SchoolStar x NamtanFilm<br><br>- สูงสุดอันดับ 8 เทรนด์ X ไทย <br>- สูงสุดอันดับ 20 เทรนด์ X โลก<br><br>ติดเทรนด์ 6 แห่ง และ ทั่วโลก🔥<br><br>🌎20<br>🇹🇭8<br>🇻🇳4<br>🇲🇾4<br>🇮🇩14<br>🇸🇬 18<br>🇵🇭 35<br><br>✨RESULTS : 84 K<br>✨ENGAGEMENT : 143.6 K<br>✨POTENTIAL REACH : 8.5 M<a href="https://twitter.com/hashtag/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1?src=hash&amp;ref_src=twsrc%5Etfw">#น้ำตาลฟิล์ม</a>… <a href="https://t.co/5akFgfUGtm">pic.twitter.com/5akFgfUGtm</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1849493016173740145?ref_src=twsrc%5Etfw">October 24, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#NamtanxPAÑPURIHoliday2025</h3>
+                    <p>More than <b>16.4K</b> Posts on X</p>
+                    <h3>NT JOURNEY TO THE PEAK</h3>
+                    <p>More than <b>15K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎉Congrats To Namtan Tipnaree✨<br><br>KEYWORD : NT JOURNEY TO THE PEAK<br><br>RESULTS: 16.4K+<br>ENGAGEMENT : 25.4K+<br>POTENTIAL REACH : 2.6M<a href="https://twitter.com/hashtag/NamtanTipnaree?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanTipnaree</a> <a href="https://twitter.com/hashtag/%E0%B9%82%E0%B8%A1%E0%B8%88%E0%B8%B4%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%95?src=hash&amp;ref_src=twsrc%5Etfw">#โมจิของนต</a><a href="https://twitter.com/hashtag/JourneytothePeak?src=hash&amp;ref_src=twsrc%5Etfw">#JourneytothePeak</a> <a href="https://twitter.com/hashtag/PA%C3%91PURIHoliday2025?src=hash&amp;ref_src=twsrc%5Etfw">#PAÑPURIHoliday2025</a> <a href="https://twitter.com/hashtag/PA%C3%91PURI?src=hash&amp;ref_src=twsrc%5Etfw">#PAÑPURI</a> <a href="https://t.co/rZ99FYaKpw">pic.twitter.com/rZ99FYaKpw</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1850032392334966898?ref_src=twsrc%5Etfw">October 26, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <h3>#MLBThailandxNF</h3>
+                    <p>More than <b>123K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTANFILM OPENING MLB</h3>
+                    <p>More than <b>116K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="th" dir="ltr">🎉Congrats To NamtanFilm &quot;MLB FLAGSHIP STORE OPENING&quot;<a href="https://twitter.com/hashtag/MLBThailandxNF?src=hash&amp;ref_src=twsrc%5Etfw">#MLBThailandxNF</a><br>- สูงสุดอันดับ 8 เทรนด์ X ไทย <br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br><br>NAMTANFILM OPENING MLB<br>- สูงสุดอันดับ 10 เทรนด์ X ไทย <br>- สูงสุดอันดับ 20 เทรนด์ X โลก<br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br><br>ติดเทรนด์ 6 แห่ง และ… <a href="https://t.co/mUjQ0D1QZk">pic.twitter.com/mUjQ0D1QZk</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1851573823445020935?ref_src=twsrc%5Etfw">October 30, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+
+        <button class="collapsible" data-i18n="nov" data-i18n-html>November 2024<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                <div class="column">
+                    <h3>#GMMTVLIVEHOUSExNF</h3>
+                    <p>More than <b>63.9K</b> Posts on X in 24 hours</p>
+                    <h3>LIVEHOUSE x NAMTANFILM</h3>
+                    <p>More than <b>63.8K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="vi" dir="ltr">🎉Congrats To NamtanFilm &quot;GMMTV LIVE HOUSE&quot;<br><br>- สูงสุดอันดับ 6 เทรนด์ X ไทย 🇹🇭 <br>- สูงสุดอันดับ 14 เทรนด์ X โลก 🌍<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/GMMTVLIVEHOUSExNF?src=hash&amp;ref_src=twsrc%5Etfw">#GMMTVLIVEHOUSExNF</a><br><br>#.2 Vietnam<br>#.18 Thailand<br>#.41 Indonesia<br>#.44 Philippines<br><br>KW: LIVEHOUSE x NAMTANFILM<br><br>#.2 Vietnam<br>#.6 Thailand <br>#.10… <a href="https://t.co/EwWBpYqYrf">pic.twitter.com/EwWBpYqYrf</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1852502242202722804?ref_src=twsrc%5Etfw">November 2, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#LaysOkexNamtanFilm</h3>
+                    <p>More than <b>80.1K</b> Posts on X in 24 hours</p>
+                    <h3>NamtanFilm x LAYS TH</h3>
+                    <p>More than <b>77.8K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="et" dir="ltr">🎉Congrats To NamtanFilm &quot;LayOke NamtanFilm&quot;<br><br>- สูงสุดอันดับ 2 เทรนด์ X ไทย 🇹🇭 <br>- สูงสุดอันดับ 10 เทรนด์ X โลก 🌍<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/LaysOkexNamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#LaysOkexNamtanFilm</a><br><br>#2 Thailand<br>#2 Indonesia<br>#3 Vietnam<br>#17 Brazil<br><br>KW: NamtanFilm x LAYS TH<br><br>#3 Thailand <br>#3 Indonesia<br>#9 Malaysia <br>#10… <a href="https://t.co/Q2owE3QJgy">pic.twitter.com/Q2owE3QJgy</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1853052349071389087?ref_src=twsrc%5Etfw">November 3, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#GrabThumbsUpXNFML</h3>
+                    <p>More than <b>308K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTANFILM x GRAB</h3>
+                    <p>More than <b>102K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎉Congrats To NamtanFilm &quot;GrabThumbsUp&quot;<br><br>- สูงสุดอันดับ 2 เทรนด์ X ไทย 🇹🇭 <br>- สูงสุดอันดับ 17 เทรนด์ X โลก 🌍<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/GrabThumbsUpXNFML?src=hash&amp;ref_src=twsrc%5Etfw">#GrabThumbsUpXNFML</a><br><br>#1 Vietnam<br>#2 Thailand<br>#3 Malaysia <br>#5 Singapore<br>#17 Worldwide<br>#28 Philippines<br>#32 Indonesia<br><br>KW: NAMTANFILM x GRAB <br><br>#3… <a href="https://t.co/Y6pWOBFcsO">pic.twitter.com/Y6pWOBFcsO</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1855634778701349171?ref_src=twsrc%5Etfw">November 10, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <h3>#NamtanFilmxFANDOMLIVE</h3>
+                    <p>More than <b>121K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTANFILM AT EFM</h3>
+                    <p>More than <b>113K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="vi" dir="ltr">🎉Congrats To NamtanFilm “EFM FANDOM AWARDS EP.46 (LIVE)”<br><br>- สูงสุดอันดับ 13 เทรนด์ X โลก<br>- สูงสุดอันดับ 2 เทรนด์ X ไทย<br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/NamtanFilmxFANDOMLIVE?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanFilmxFANDOMLIVE</a><br><br>#1 Vietnam<br>#2 Thailand<br>#2 Taiwan<br>#33 Philippines<br>#40 Indonesia<br><br>KW:… <a href="https://t.co/TYze4FxAbX">pic.twitter.com/TYze4FxAbX</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1859983948673417320?ref_src=twsrc%5Etfw">November 22, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#NAMTANGRADUATION</h3>
+                    <p>More than <b>108.4K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="et" dir="ltr">🎉Congrats To Namtan Tipnaree “🎓Namtan Tipnaree Graduation : ป.โท จ๋าน้ำตาลจบแล้ว “<br><br>- สูงสุดอันดับ 12 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/NAMTANGRADUATION?src=hash&amp;ref_src=twsrc%5Etfw">#NAMTANGRADUATION</a><br><br>#3 Vietnam<br>#12 Thailand<br>#18 Indonesia<br><br>✨RESULTS : 108.4 K<br>✨ENGAGEMENT : 270.6 K<br>✨POTENTIAL REACH : 25.8 M… <a href="https://t.co/dP2mCrcj2x">pic.twitter.com/dP2mCrcj2x</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1860656957306360150?ref_src=twsrc%5Etfw">November 24, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#น้ำตาลฟิล์ม</h3>
+                    <p>More than <b>389.7K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTANFILM NEW CHAPTER</h3>
+                    <p>More than <b>289.3K</b> Posts on X in 24 hours</p>
+                    <h3>#GirlRulesSeries</h3>
+                    <p>More than <b>339.5K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="vi" dir="ltr">🎉 Congrats To NamtanFilm “GMMTV2025 RIDING THE WAVE”<br><br>- สูงสุดอันดับ 22 เทรนด์ X โลก<br>- สูงสุดอันดับ 10 เทรนด์ X ไทย<br>- สูงสุดอันดับ 4 เทรนด์ X เวียดนาม<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1?src=hash&amp;ref_src=twsrc%5Etfw">#น้ำตาลฟิล์ม</a><br><br># 5 Vietnam<br># 30 Thailand<br># 31 Philippines<br># 47 Indonesia <br><br>KW: NAMTANFILM NEW CHAPTER… <a href="https://t.co/0FFMiEHDqF">pic.twitter.com/0FFMiEHDqF</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1861795960256680345?ref_src=twsrc%5Etfw">November 27, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+
+        <button class="collapsible" data-i18n="dec" data-i18n-html>December 2024<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                <div class="column">
+                    <h3>#หนึ่งล้านฟอลขอรักฟิล์มรชา</h3>
+                    <p>More than <b>27.8K</b> Posts on X</p>
+                    <h3>FILMRACHA 1M LOVE MOMENTS</h3>
+                    <p>More than <b>28.7K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="et" dir="ltr">🎉Congrats To Film “Congratulations 1M Followers on Instagram”<br><br>- สูงสุดอันดับ 40 เทรนด์ X โลก<br>- สูงสุดอันดับ 3 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 6 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%9F%E0%B8%AD%E0%B8%A5%E0%B8%82%E0%B8%AD%E0%B8%A3%E0%B8%B1%E0%B8%81%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%A3%E0%B8%8A%E0%B8%B2?src=hash&amp;ref_src=twsrc%5Etfw">#หนึ่งล้านฟอลขอรักฟิล์มรชา</a><br><br>#3 Vietnam<br>#18 Thailand<br><br>KW: FILMRACHA 1M LOVE MOMENTS<br><br>#4 Vietnam… <a href="https://t.co/AnTvPkpDf4">pic.twitter.com/AnTvPkpDf4</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1863969199821091263?ref_src=twsrc%5Etfw">December 3, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#น้ำตาลทิพนารีแฝดคนละฝา</h3>
+                    <p>More than <b>10.1K</b> Posts on X</p>
+                    <h3>Namtan AT Faceoff</h3>
+                    <p>More than <b>11.2K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎉Congrats To NAMTAN “FACE OFF แฝดคนละฝา”<br><br>- สูงสุดอันดับ 13 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%97%E0%B8%B4%E0%B8%9E%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B9%81%E0%B8%9D%E0%B8%94%E0%B8%84%E0%B8%99%E0%B8%A5%E0%B8%B0%E0%B8%9D%E0%B8%B2?src=hash&amp;ref_src=twsrc%5Etfw">#น้ำตาลทิพนารีแฝดคนละฝา</a><br><br># 41 Thailand<br><br>KW : Namtan AT Faceoff<br><br># 13 Thailand<br><br>✨RESULTS : 11.2 K <br>✨ENGAGEMENT : 18.4 K<br>✨POTENTIAL REACH : 1.5 M<a href="https://twitter.com/NamtanTipnaree?ref_src=twsrc%5Etfw">@NamtanTipnaree</a><a href="https://twitter.com/hashtag/NamtanTipnaree?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanTipnaree</a>… <a href="https://t.co/TSZboiZOcg">pic.twitter.com/TSZboiZOcg</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1864491895323537821?ref_src=twsrc%5Etfw">December 5, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>NAMTANFILM WEREWOLF</h3>
+                    <p>More than <b>32.2K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🎉Congrats To NamtanFilm <a href="https://twitter.com/hashtag/ARMSHARE168?src=hash&amp;ref_src=twsrc%5Etfw">#ARMSHARE168</a><br><br>📈 Trend X Highest Rank<br><br>NAMTANFILM WEREWOLF<br><br>#15 Thailand<br>#16 Vietnam<br><br>✨RESULTS : 32.2 K<br>✨ENGAGEMENT : 120.8 K<br>✨POTENTIAL REACH : 31.3 M<a href="https://twitter.com/NamtanTipnaree?ref_src=twsrc%5Etfw">@NamtanTipnaree</a> <a href="https://twitter.com/filmracha?ref_src=twsrc%5Etfw">@filmracha</a><a href="https://twitter.com/hashtag/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B2%E0%B8%A5%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B9%8C%E0%B8%A1?src=hash&amp;ref_src=twsrc%5Etfw">#น้ำตาลฟิล์ม</a> <a href="https://twitter.com/hashtag/NamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanFilm</a> <a href="https://twitter.com/hashtag/NamtanTipnaree?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanTipnaree</a> <a href="https://twitter.com/hashtag/filmracha?src=hash&amp;ref_src=twsrc%5Etfw">#filmracha</a> <a href="https://t.co/k09HFV1mdM">pic.twitter.com/k09HFV1mdM</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1865240225934643670?ref_src=twsrc%5Etfw">December 7, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <h3>#LSOULxNamtanFilm </h3>
+                    <p>More than <b>189K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTANFILM OPENING LSOUL</h3>
+                    <p>More than <b>167.8K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="vi" dir="ltr">🎉Congrats To NamtanFilm “LSOUL Grand Opening”<br><br>- สูงสุดอันดับ 18 เทรนด์ X โลก<br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 6 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/LSOULxNamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#LSOULxNamtanFilm</a> <br><br>#1 Vietnam<br>#15 Thailand<br>#16 Philippines<br>#36 Indonesia<br><br>KW: NAMTANFILM OPENING LSOUL<br><br>#1… <a href="https://t.co/MJmKkhKNPl">pic.twitter.com/MJmKkhKNPl</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1866734655627837848?ref_src=twsrc%5Etfw">December 11, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#SFxNamtanFilmKapookCiize</h3>
+                    <p>More than <b>221K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTANFILM SF MOANA2</h3>
+                    <p>More than <b>190.7K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="vi" dir="ltr">🎉Congrats to NamtanFilm “MOANA2 SF Friends Screening”<br><br>- สูงสุดอันดับ 44 เทรนด์ X โลก<br>- สูงสุดอันดับ 4 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 7 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/SFxNamtanFilmKapookCiize?src=hash&amp;ref_src=twsrc%5Etfw">#SFxNamtanFilmKapookCiize</a><br><br>#4 Vietnam<br>#14 Thailand<br><br>KW: NAMTANFILM SF MOANA2<br><br>#4 Vietnam<br>#7 Thailand… <a href="https://t.co/ahjKGgWyO3">pic.twitter.com/ahjKGgWyO3</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1867045050246693190?ref_src=twsrc%5Etfw">December 12, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#NamtanTipnareexFITAuto</h3>
+                    <p>More than <b>27.2K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTAN IN FIT AUTO LIVE</h3>
+                    <p>More than <b>26.9K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="und" dir="ltr">🎉Congrats To Namtan “12.12 FIT Auto x Shopee Live FIT MAS ฟิตน้ำมันเครื่องลดส่งท้ายปี”<br><br>- สูงสุดอันดับ 7 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 9 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/NamtanTipnareexFITAuto?src=hash&amp;ref_src=twsrc%5Etfw">#NamtanTipnareexFITAuto</a><br><br>#24 Thailand<br><br>KW: NAMTAN IN FIT AUTO LIVE<br><br>#7 Vietnam<br>#9 Thailand… <a href="https://t.co/yVMsR48g3Y">pic.twitter.com/yVMsR48g3Y</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1867552983090909531?ref_src=twsrc%5Etfw">December 13, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <h3>#CELINExFilmRacha</h3>
+                    <p>More than <b>67.3K</b> Posts on X in 24 hours</p>
+                    <h3>FILMRACHA CELINE GOP</h3>
+                    <p>More than <b>67.3K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="et" dir="ltr">🎉Congrats To Film “CELINE Central Chidlom Grand Opening”<br><br>- สูงสุดอันดับ 30 เทรนด์ X โลก<br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 7 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/CELINExFilmRacha?src=hash&amp;ref_src=twsrc%5Etfw">#CELINExFilmRacha</a><br><br>#1 Vietnam <br>#31 Thailand<br>#39 Korea<br>#44 Indonesia<br><br>KW: FILMRACHA CELINE GOP<br><br>#1… <a href="https://t.co/fpuHSySPyN">pic.twitter.com/fpuHSySPyN</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1867557661069463762?ref_src=twsrc%5Etfw">December 13, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#LANEIGExMARKNAMTAN</h3>
+                    <p>More than <b>39.3K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTAN LANEIGE MID-MONTH</h3>
+                    <p>More than <b>37.6K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet" data-media-max-width="560"><p lang="et" dir="ltr">🎉Congrats To Namtan “Laneige Mid-Month Celebrations”<br><br>- สูงสุดอันดับ 5 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 5 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/LANEIGExMARKNAMTAN?src=hash&amp;ref_src=twsrc%5Etfw">#LANEIGExMARKNAMTAN</a><br><br>#5 Vietnam<br>#5 Thailand<br><br>KW: NAMTAN LANEIGE MID-MONTH<br><br>#6 Vietnam<br>#6 Thailand<br>#41 Philippines<br>#42 Indonesia… <a href="https://t.co/IZ5tZvIq7S">pic.twitter.com/IZ5tZvIq7S</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1869258910055760283?ref_src=twsrc%5Etfw">December 18, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#ChairstosharexNamtanFilm</h3>
+                    <p>More than <b>145K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTANFILM PLUTO PRESS TOUR</h3>
+                    <p>More than <b>184.2K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="et" dir="ltr">🎉Congrats to NamtanFilm “NAMTANFILM PLUTO PRESS TOUR”<br><br>- สูงสุดอันดับ 14 เทรนด์ X โลก<br>- สูงสุดอันดับ 1 เทรนด์ X ไทย<br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/ChairstosharexNamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#ChairstosharexNamtanFilm</a><br><br>#1 Thailand<br>#2 Vietnam<br>#10 Philippines<br>#42 Indonesia<br><br>KW: NAMTANFILM PLUTO… <a href="https://t.co/y4zf5HS282">pic.twitter.com/y4zf5HS282</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1869326475994042578?ref_src=twsrc%5Etfw">December 18, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <h3>MENTOR NAMTANFILM</h3>
+                    <p>More than <b>45.5K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="und" dir="ltr">🎉Congrats to NamtanFilm “MENTOR NAMTANFILM”<br><br>- สูงสุดอันดับ 29 เทรนด์ X โลก<br>- สูงสุดอันดับ 5 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 8 เทรนด์ X อินโดนีเซีย<br>- สูงสุดอันดับ 11 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<br><br>KW: MENTOR NAMTANFILM<br><br>#5 Vietnam<br>#8 Indonesia<br>#11 Thailand<br>#29 Worldwide… <a href="https://t.co/ZGF4GbRFZp">pic.twitter.com/ZGF4GbRFZp</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1871028068476977385?ref_src=twsrc%5Etfw">December 23, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>NAMTANFILM STARLYMPICS 2024</h3>
+                    <p>More than <b>248.3K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="th" dir="ltr">🎉Congrats to NamtanFilm “NAMTANFILM STARLYMPICS 2024”<br><br>- สูงสุดอันดับ 15 เทรนด์ X โลก<br>- สูงสุดอันดับ 2 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 8 เทรนด์ X ฟิลิปปินส์<br>- สูงสุดอันดับ 10 เทรนด์ X อินโดนีเซีย<br>- สูงสุดอันดับ 14 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<br><br>KW: NAMTANFILM… <a href="https://t.co/8iF5I5vecE">pic.twitter.com/8iF5I5vecE</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1871059149678919783?ref_src=twsrc%5Etfw">December 23, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#LANEIGExNJNM</h3>
+                    <p>More than <b>65.1K</b> Posts on X</p>
+                    <h3>NAMTAN LANEIGE FAMILY</h3>
+                    <p>More than <b>35.9K</b> Posts on X</p>
+                    <blockquote class="twitter-tweet"><p lang="vi" dir="ltr">🎉Congrats To Namtan “Laneige Family X’Mas Party!”<br><br>- สูงสุดอันดับ 46 เทรนด์ X โลก<br>- สูงสุดอันดับ 1 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 9 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/LANEIGExNJNM?src=hash&amp;ref_src=twsrc%5Etfw">#LANEIGExNJNM</a><br><br>#1 Vietnam<br>#20 Thailand<br>#41 Indonesia<br><br>KW: NAMTAN LANEIGE FAMILY<br><br>#4 Vietnam<br>#9 Thailand… <a href="https://t.co/A2kp3soLfs">pic.twitter.com/A2kp3soLfs</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1872119745467777327?ref_src=twsrc%5Etfw">December 26, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <h3>#GrabMerryMunchxNamtanFilm</h3>
+                    <p>More than <b>193.2K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTANFILM GRABFOOD</h3>
+                    <p>More than <b>185.1K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="und" dir="ltr">🎉Congrats to NamtanFilm “Grab Merry and Munch อิ่ม สนุก สุข ฟิน อินจุฬาซอย 5”<br><br>- สูงสุดอันดับ 33 เทรนด์ X โลก<br>- สูงสุดอันดับ 2 เทรนด์ X เวียดนาม<br>- สูงสุดอันดับ 6 เทรนด์ X ไทย<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/GrabMerryMunchxNamtanFilm?src=hash&amp;ref_src=twsrc%5Etfw">#GrabMerryMunchxNamtanFilm</a><br><br>#2 Vietnam<br>#6 Thailand<br>#10 Philippines<br><br>KW:… <a href="https://t.co/Qvt48oUYQb">pic.twitter.com/Qvt48oUYQb</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1872247339072786616?ref_src=twsrc%5Etfw">December 26, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                    <h3>#SFxNamtanFilmKapookCiizeEarn</h3>
+                    <p>More than <b>265.5K</b> Posts on X in 24 hours</p>
+                    <h3>NAMTANFILM SF MUFASA</h3>
+                    <p>More than <b>222.6K</b> Posts on X in 24 hours</p>
+                    <blockquote class="twitter-tweet"><p lang="und" dir="ltr">🎉Congrats to NamtanFilm ”MUFASA THE LION KING SF FRIENDS SCREENING”<br><br>- สูงสุดอันดับ 35 เทรนด์ X โลก<br>- สูงสุดอันดับ 2 เทรนด์ X ไทย/ไต้หวัน<br>- สูงสุดอันดับ 3 เทรนด์ X เวียดนาม<br><br>📈 Trend X Highest Rank<a href="https://twitter.com/hashtag/SFxNamtanFilmKapookCiizeEarn?src=hash&amp;ref_src=twsrc%5Etfw">#SFxNamtanFilmKapookCiizeEarn</a><br><br>#2 Thailand<br>#2 Taiwan<br>#3 Vietnam<br>#8 Indonesia<br>#10… <a href="https://t.co/nhEJ7vBtJu">pic.twitter.com/nhEJ7vBtJu</a></p>&mdash; Trend For NamtanFilm (@NamtanFilmTrend) <a href="https://twitter.com/NamtanFilmTrend/status/1872529061161128139?ref_src=twsrc%5Etfw">December 27, 2024</a></blockquote> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="column">
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 NAMTANFILM. All rights reserved.</p>
+        <p>Website developed and designed by @jieyan96.</p>
+        
+        </footer>
+        
+    
+        <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
+        <script src="js/trend2024_i18next.js"></script>
+
         <script>
 
         // Fetch navigation list from navigation.html
