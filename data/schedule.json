@@ -505,7 +505,8 @@
             "time": "2:00PM (Hong Kong Time)",
             "location": "Atrium I, Gateway Arcade, Harbour City",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1914179422342848551"
+            "url": "https://x.com/GMMTV/status/1914179422342848551",
+            "status": "passed"
         },
         {
             "description": "THUNDERBOLTS* Thailand Gala Premiere",
@@ -513,7 +514,8 @@
             "location": "ลานกิจกรรม Outdoor Square A Central World",
             "live": "TikTok / YouTube / Facebook : SF Cinema",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/1915325858782601674"
+            "url": "https://x.com/GMMTV/status/1915325858782601674",
+            "status": "passed"
         }
     ],
     "2025-05-09": [
