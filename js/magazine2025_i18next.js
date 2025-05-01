@@ -123,7 +123,9 @@ document.addEventListener('DOMContentLoaded', function() {
             "bazaar": "HARPER'S BAZAAR THAILAND",
             "bazaar1": "BAZAAR デジタル版",
             "wink": "WINK MAGAZINE",
-            "wink1": "発売日：2025年1月11日"
+            "wink1": "発売日：2025年1月11日",
+            "elle": "ELLE Thailand",
+            "elle1": "2025年5月号の表紙"
           }
         },
         tl: {
@@ -162,7 +164,9 @@ document.addEventListener('DOMContentLoaded', function() {
             "bazaar": "HARPER'S BAZAAR THAILAND",
             "bazaar1": "BAZAAR Digital",
             "wink": "WINK MAGAZINE",
-            "wink1": "Petsa ng paglabas: 11/01/2025"
+            "wink1": "Petsa ng paglabas: 11/01/2025",
+            "elle": "ELLE Thailand",
+            "elle1": "Cover ng isyu ng Mayo 2025"
           }
         }
       }
