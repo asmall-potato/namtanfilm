@@ -1,10 +1,11 @@
 // Initialize i18next when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
 // awards2025_i18next.js
-i18next.init({
-  lng: 'en',
-  resources: {
-    en: {
+const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    i18next.init({
+      lng: savedLang,
+      resources: {
+      en: {
       translation: {
         // NAVIGATION
         "nav_home": "Home",
@@ -80,14 +81,105 @@ i18next.init({
         "watch": "观看先行预告片",
         "maincast": "主要演员",
         "title2": "与《Girl Rules》相关的"
-        
-        
+    
+      }
+    },
+    ja: {
+      translation: {
+
+        // NAVIGATION
+        "nav_home": "ホーム",
+        "nav_series": "シリーズ",
+        "nav_pluto_series": "Pluto Series",
+        "nav_girl_rules": "Girl Rules Series",
+        "nav_livecount": "リアルタイムデータ",
+        "nav_livecount_pluto": "リアルタイムデータ(Pluto Series)",
+        "nav_awards": "アワード",
+        "nav_awards2025": "アワード（2025年）",
+        "nav_fm": "ファンミーティング",
+        "nav_fm2025": "2025",
+        "nav_video": "ビデオ",
+        "nav_video2024": "ビデオ（2024年）",
+        "nav_video2025": "ビデオ（2025年）",
+        "nav_magazine": "雑誌",
+        "nav_magazine2024": "雑誌（2024年）",
+        "nav_magazine2025": "雑誌（2025年）",
+        "nav_brands": "ブランド",
+        "nav_brands2024": "ブランド（2024年）",
+        "nav_brands2025": "ブランド（2025年）",
+        "nav_vote": "投票",
+        "nav_social": "ソーシャルメディア",
+        "nav_articles": "記事",
+        "nav_trend": "トレンドX最高順位",
+        "nav_trend2024": "トレンド（2024年）",
+        "nav_trend2025": "トレンド（2025年）",
+        "nav_soldout": "完売",
+
+        //-------
+        "followTitle": "『Girl Rules Series』について",
+        "description": "「Girl Rules Series」は、GMMTVが手掛けるオリジナルシリーズであり、Namtan Tipnaree、 Film Rachanun、Milk Pansa、Love Pattranite、View Benyapa、Mim Rattanawadeeが主演を務めています",
+        "description2": "監督はJojo Tichakornが担当しています",
+        "watch": "公式パイロット版予告を視聴する",
+        "maincast": "メインキャスト",
+        "title2": "『Girl Rules Series』関連"
+      }
+    },
+    tl: {
+      translation: {
+
+        // NAVIGATION
+        "nav_home": "Home",
+        "nav_series": "Mga Serye",
+        "nav_pluto_series": "Pluto",
+        "nav_girl_rules": "Girl Rules",
+        "nav_livecount": "Live Count",
+        "nav_livecount_pluto": "Live Count(Pluto)",
+        "nav_awards": "Mga Parangal",
+        "nav_awards2025": "Mga Parangal (2025)",
+        "nav_fm": "Fan Meeting",
+        "nav_fm2025": "2025",
+        "nav_video": "Bidyo",
+        "nav_video2024": "Bidyo (2024)",
+        "nav_video2025": "Bidyo (2025)",
+        "nav_magazine": "Magasin",
+        "nav_magazine2024": "Magasin (2024)",
+        "nav_magazine2025": "Magasin (2025)",
+        "nav_brands": "Brands",
+        "nav_brands2024": "Brands (Y2024)",
+        "nav_brands2025": "Brands (Y2025)",
+        "nav_vote": "Botohan",
+        "nav_social": "Social Media",
+        "nav_articles": "Mga Artikulo",
+        "nav_trend": "Pinakamataas na Trend sa X",
+        "nav_trend2024": "Trend(2024)",
+        "nav_trend2025": "Trend(2025)",
+        "nav_soldout": "Sold Out",
+
+        //-------
+        "followTitle": "ABOUT Girl Rules Series",
+        "description": "Ang \"Girl Rules Series\" ay isang serye tungkol sa mga sapphic mula sa GMMTV na pinagbibidahan nina Namtan Tipnaree, Film Rachanun, Milk Pansa, Love Pattranite, View Benyapa & Mim Rattanawadee.",
+        "description2": "Ang serye ay idinirek ni Jojo Tichakorn.",
+        "watch": "Panoorin ang Official Pilot",
+        "maincast": "MAIN CAST",
+        "title2": "Kaugnay sa Girl Rules Series"
       }
     }
   }
 }, function(err, t) {
   updateAllContent(); // Update translatable elements after initialization
 });
+
+// Set button text on page load
+//Add this inside the callback after i18next.init(...), right before or after updateAllContent();:
+const displayText = savedLang === 'en' 
+? 'ENGLISH' 
+: savedLang === 'zh' 
+? '中文' 
+: savedLang === 'ja' 
+? '日本語' 
+: 'FILIPINO';
+document.querySelector('.current-language').textContent = displayText;
+
 
 // Toggle dropdown visibility
 document.querySelector(".language-switcher").addEventListener("click", function () {
@@ -97,18 +189,27 @@ document.querySelector(".language-switcher").addEventListener("click", function 
 
 // Switch language and update UI
 function switchLanguage(lang) {
-  i18next.changeLanguage(lang, (err, t) => {
-      if (err) return console.error('Language change failed:', err);
-      updateAllContent();
+i18next.changeLanguage(lang, (err, t) => {
+    if (err) return console.error('Language change failed:', err);
+    updateAllContent();
 
-      // Update button text
-      const displayText = lang === 'en' ? 'ENGLISH' : '中文';
-      document.querySelector('.current-language').textContent = displayText;
+    //Save selected language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
 
-      // Close dropdown
-      document.getElementById("languageDropdown").classList.remove("show");
-  });
-  return false;
+    //Use the new lang, not savedLang
+    const displayText = lang === 'en' 
+        ? 'ENGLISH' 
+        : lang === 'zh' 
+        ? '中文' 
+        : lang === 'ja' 
+        ? '日本語' 
+        : 'FILIPINO';
+    document.querySelector('.current-language').textContent = displayText;
+
+    // Close dropdown
+    document.getElementById("languageDropdown").classList.remove("show");
+});
+return false;
 }
 
 // Close dropdown when clicking outside
@@ -124,21 +225,14 @@ document.addEventListener('click', function(event) {
 
 // Function to update all translatable content
 function updateAllContent() {
-// Translate navigation items
-document.querySelectorAll('[data-i18n-nav]').forEach(el => {
-  el.textContent = i18next.t(el.getAttribute('data-i18n-nav'));
-});
+document.querySelectorAll('[data-i18n], [data-i18n-nav]').forEach(element => {
+const key = element.getAttribute('data-i18n') || element.getAttribute('data-i18n-nav');
 
-// Translate other content
-document.querySelectorAll('[data-i18n]').forEach(element => {
-  const key = element.getAttribute('data-i18n');
-  
-  // If the element has a special attribute like data-i18n-html, use innerHTML
-  if (element.hasAttribute('data-i18n-html')) {
-      element.innerHTML = i18next.t(key);
-  } else {
-      element.textContent = i18next.t(key);
-  }
+if (element.hasAttribute('data-i18n-html')) {
+  element.innerHTML = i18next.t(key);
+} else {
+  element.textContent = i18next.t(key);
+}
 });
 }
 
@@ -150,7 +244,13 @@ i18next.changeLanguage(lang, (err, t) => {
   updateAllContent();
   
   // Update button text
-  const displayText = lang === 'en' ? 'ENGLISH' : '中文';
+  const displayText = lang === 'en' 
+  ? 'ENGLISH' 
+  : lang === 'zh' 
+  ? '中文' 
+  : lang === 'ja' 
+  ? '日本語' 
+  : 'FILIPINO';
   document.querySelector('.current-language').textContent = displayText;
   
   // Close dropdown
