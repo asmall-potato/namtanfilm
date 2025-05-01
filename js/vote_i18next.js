@@ -1,9 +1,10 @@
 // Initialize i18next when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-  i18next.init({
-    lng: 'en',
-    debug: true,
-    resources: {
+  const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    i18next.init({
+      lng: savedLang,
+      debug: true,
+      resources: {
       en: {
         translation: {
           // NAVIGATION
@@ -94,11 +95,109 @@ document.addEventListener('DOMContentLoaded', function() {
           "nominatehere": "点击提名"
 
         }
+      },
+      ja: {
+        translation: {
+
+          // NAVIGATION
+          "nav_home": "ホーム",
+          "nav_series": "シリーズ",
+          "nav_pluto_series": "Pluto Series",
+          "nav_girl_rules": "Girl Rules Series",
+          "nav_livecount": "リアルタイムデータ",
+          "nav_livecount_pluto": "リアルタイムデータ(Pluto Series)",
+          "nav_awards": "アワード",
+          "nav_awards2025": "アワード（2025年）",
+          "nav_fm": "ファンミーティング",
+          "nav_fm2025": "2025",
+          "nav_video": "ビデオ",
+          "nav_video2024": "ビデオ（2024年）",
+          "nav_video2025": "ビデオ（2025年）",
+          "nav_magazine": "雑誌",
+          "nav_magazine2024": "雑誌（2024年）",
+          "nav_magazine2025": "雑誌（2025年）",
+          "nav_brands": "ブランド",
+          "nav_brands2024": "ブランド（2024年）",
+          "nav_brands2025": "ブランド（2025年）",
+          "nav_vote": "投票",
+          "nav_social": "ソーシャルメディア",
+          "nav_articles": "記事",
+          "nav_trend": "トレンドX最高順位",
+          "nav_trend2024": "トレンド（2024年）",
+          "nav_trend2025": "トレンド（2025年）",
+          "nav_soldout": "完売",
+
+          //-------
+          "followTitle": "NAMTANFILM 投票キャンペーン",
+          "nominee1": "ノミネート: <b>Y5 - Namtan Film</b>  (年間最優秀カップル賞)",
+          "way": "SMS投票:「Y5」と入力し 4689191 へ送信（1票6バーツ）",
+          "deadline1": "締切: 2025年5月21日 23:59",
+          "votedesc1": "集計比率: </br>1. SMS投票: 50% </br>2. ウェブサイト投票: 50%",
+          "votehere": "投票はこちら",
+          "nominee2": "ノミネート:นํ้าตาล - ฟิล์ม (KA8. Popular Yuri Couple)",
+          "deadline2": "締切: 2025年5月4日",
+          
+        }
+      },
+      tl: {
+        translation: {
+
+          // NAVIGATION
+          "nav_home": "Home",
+          "nav_series": "Mga Serye",
+          "nav_pluto_series": "Pluto",
+          "nav_girl_rules": "Girl Rules",
+          "nav_livecount": "Live Count",
+          "nav_livecount_pluto": "Live Count(Pluto)",
+          "nav_awards": "Mga Parangal",
+          "nav_awards2025": "Mga Parangal (2025)",
+          "nav_fm": "Fan Meeting",
+          "nav_fm2025": "2025",
+          "nav_video": "Bidyo",
+          "nav_video2024": "Bidyo (2024)",
+          "nav_video2025": "Bidyo (2025)",
+          "nav_magazine": "Magasin",
+          "nav_magazine2024": "Magasin (2024)",
+          "nav_magazine2025": "Magasin (2025)",
+          "nav_brands": "Brands",
+          "nav_brands2024": "Brands (Y2024)",
+          "nav_brands2025": "Brands (Y2025)",
+          "nav_vote": "Botohan",
+          "nav_social": "Social Media",
+          "nav_articles": "Mga Artikulo",
+          "nav_trend": "Pinakamataas na Trend sa X",
+          "nav_trend2024": "Trend(2024)",
+          "nav_trend2025": "Trend(2025)",
+          "nav_soldout": "Sold Out",
+
+          //-------
+          "followTitle": "Bumoto Para Kina NamtanFilm",
+          "nominee1": "Nominado: <b>Y5 - Namtan Film</b> (Couple Of The Year)",
+          "way": "SMS: I-type Y5 at i-send sa 4689191 (1 boto ay 6 baht)",
+          "deadline1": "Deadline ng Pagboto: May 21, 2025, 23:59",
+          "votedesc1": "Breakdown ng voting: </br>1. 50% mula SMS vote </br>2. 50% mula sa boto sa website",
+          "votehere": "Bumoto Dito",
+          "nominee2": "Nominado: นํ้าตาล - ฟิล์ม (KA8. Popular Yuri Couple)",
+          "deadline2": "Deadline ng Pagboto: Mayo 4, 2025",
+    
+        }
       }
     }
   }, function(err, t) {
     updateAllContent(); // Update translatable elements after initialization
 });
+
+// Set button text on page load
+//Add this inside the callback after i18next.init(...), right before or after updateAllContent();:
+  const displayText = savedLang === 'en' 
+  ? 'ENGLISH' 
+  : savedLang === 'zh' 
+  ? '中文' 
+  : savedLang === 'ja' 
+  ? '日本語' 
+  : 'FILIPINO';
+  document.querySelector('.current-language').textContent = displayText;
+
 
 // Toggle dropdown visibility
 document.querySelector(".language-switcher").addEventListener("click", function () {
@@ -108,18 +207,27 @@ document.querySelector(".language-switcher").addEventListener("click", function 
 
 // Switch language and update UI
 function switchLanguage(lang) {
-    i18next.changeLanguage(lang, (err, t) => {
-        if (err) return console.error('Language change failed:', err);
-        updateAllContent();
+  i18next.changeLanguage(lang, (err, t) => {
+      if (err) return console.error('Language change failed:', err);
+      updateAllContent();
 
-        // Update button text
-        const displayText = lang === 'en' ? 'ENGLISH' : '中文';
-        document.querySelector('.current-language').textContent = displayText;
+      //Save selected language to localStorage
+      localStorage.setItem('selectedLanguage', lang);
 
-        // Close dropdown
-        document.getElementById("languageDropdown").classList.remove("show");
-    });
-    return false;
+      //Use the new lang, not savedLang
+      const displayText = lang === 'en' 
+          ? 'ENGLISH' 
+          : lang === 'zh' 
+          ? '中文' 
+          : lang === 'ja' 
+          ? '日本語' 
+          : 'FILIPINO';
+      document.querySelector('.current-language').textContent = displayText;
+
+      // Close dropdown
+      document.getElementById("languageDropdown").classList.remove("show");
+  });
+  return false;
 }
 
 // Close dropdown when clicking outside
@@ -135,21 +243,14 @@ document.addEventListener('click', function(event) {
 
 // Function to update all translatable content
 function updateAllContent() {
-// Translate navigation items
-document.querySelectorAll('[data-i18n-nav]').forEach(el => {
-    el.textContent = i18next.t(el.getAttribute('data-i18n-nav'));
-});
+document.querySelectorAll('[data-i18n], [data-i18n-nav]').forEach(element => {
+  const key = element.getAttribute('data-i18n') || element.getAttribute('data-i18n-nav');
 
-// Translate other content
-document.querySelectorAll('[data-i18n]').forEach(element => {
-    const key = element.getAttribute('data-i18n');
-    
-    // If the element has a special attribute like data-i18n-html, use innerHTML
-    if (element.hasAttribute('data-i18n-html')) {
-        element.innerHTML = i18next.t(key);
-    } else {
-        element.textContent = i18next.t(key);
-    }
+  if (element.hasAttribute('data-i18n-html')) {
+    element.innerHTML = i18next.t(key);
+  } else {
+    element.textContent = i18next.t(key);
+  }
 });
 }
 
@@ -161,7 +262,13 @@ function switchLanguage(lang) {
     updateAllContent();
     
     // Update button text
-    const displayText = lang === 'en' ? 'ENGLISH' : '中文';
+    const displayText = lang === 'en' 
+    ? 'ENGLISH' 
+    : lang === 'zh' 
+    ? '中文' 
+    : lang === 'ja' 
+    ? '日本語' 
+    : 'FILIPINO';
     document.querySelector('.current-language').textContent = displayText;
     
     // Close dropdown
