@@ -30,10 +30,12 @@
                 <span class="current-language">ENGLISH</span>
                 <span class="dropdown-icon">▼</span>
                 </button>
-            <div class="language-dropdown" id="languageDropdown">
-                <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
-                <a href="#" onclick="switchLanguage('zh')">中文</a>
-            </div>
+                <div class="language-dropdown" id="languageDropdown">
+                    <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
+                    <a href="#" onclick="switchLanguage('zh')">中文</a>
+                    <a href="#" onclick="switchLanguage('ja')">日本語</a>
+                    <a href="#" onclick="switchLanguage('tl')">FILIPINO</a>
+                  </div>
             </div>
 
         </div>
@@ -72,21 +74,24 @@
 
         // Fetch navigation list from navigation.html
         document.addEventListener("DOMContentLoaded", function () {
-            fetch('navigation.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('navigation').innerHTML = data;
+        fetch('navigation.html') // Fix the typo here: 'navigation.html' should be inside quotes
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navigation').innerHTML = data;
 
-                    // Now attach the event listener after navigation is loaded
-                    const navToggle = document.querySelector(".nav-toggle");
-                    const navMenu = document.querySelector("#navigation ul");
+            // Now update the content after navigation is loaded
+            updateAllContent(); // Make sure this runs after the navigation is inserted
 
-                    navToggle.addEventListener("click", function () {
-                        navMenu.classList.toggle("showing");
-                    });
-                })
-                .catch(error => console.error('Error loading navigation:', error));
-        });
+            // Attach the event listener after navigation is loaded
+            const navToggle = document.querySelector(".nav-toggle");
+            const navMenu = document.querySelector("#navigation ul");
+
+            navToggle.addEventListener("click", function () {
+                navMenu.classList.toggle("showing");
+            });
+        })
+        .catch(error => console.error('Error loading navigation:', error));
+});
         
         // Scroll reveal effect
         const sections = document.querySelectorAll('section');
