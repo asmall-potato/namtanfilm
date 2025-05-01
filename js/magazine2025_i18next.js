@@ -39,8 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
             "bazaar": "HARPER'S BAZAAR THAILAND",
             "bazaar1": "BAZAAR Digital",
             "wink": "WINK MAGAZINE",
-            "wink1": "Released Date: 11/1/2025"
-            
+            "wink1": "Released Date: 11/1/2025",
+            "elle": "ELLE Thailand",
+            "elle1": "Cover of the May 2025 issue"
 
             }
         },
@@ -79,7 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
             "bazaar": "泰国时尚芭莎",
             "bazaar1": "《芭莎》数字刊",
             "wink": "WiNK 杂志",
-            "wink1": "发行日期：2025年1月11日"
+            "wink1": "发行日期：2025年1月11日",
+            "elle": "ELLE Thailand",
+            "elle1": "2025年5月刊封面"
           }
         }
       }
