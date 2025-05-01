@@ -1,7 +1,8 @@
 // film_i18next.js
 document.addEventListener('DOMContentLoaded', function() {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     i18next.init({
-        lng: 'en', // default language
+        lng: savedLang,
         debug: false,
         resources: {
             en: {
@@ -164,11 +165,182 @@ document.addEventListener('DOMContentLoaded', function() {
                     "plutoSong": "\"พลูโต (Pluto)\" 与Namtan Tipnaree (《Pluto》原声带)",
                     "linger": "\"รอนะ (Linger)\" (《Pluto》原声带)"
                 }
-            }
+            },
+            ja: {
+                translation: {
+      
+                  // NAVIGATION
+                  "nav_home": "ホーム",
+                  "nav_series": "シリーズ",
+                  "nav_pluto_series": "Pluto Series",
+                  "nav_girl_rules": "Girl Rules Series",
+                  "nav_livecount": "リアルタイムデータ",
+                  "nav_livecount_pluto": "リアルタイムデータ(Pluto Series)",
+                  "nav_awards": "アワード",
+                  "nav_awards2025": "アワード（2025年）",
+                  "nav_fm": "ファンミーティング",
+                  "nav_fm2025": "2025",
+                  "nav_video": "ビデオ",
+                  "nav_video2024": "ビデオ（2024年）",
+                  "nav_video2025": "ビデオ（2025年）",
+                  "nav_magazine": "雑誌",
+                  "nav_magazine2024": "雑誌（2024年）",
+                  "nav_magazine2025": "雑誌（2025年）",
+                  "nav_brands": "ブランド",
+                  "nav_brands2024": "ブランド（2024年）",
+                  "nav_brands2025": "ブランド（2025年）",
+                  "nav_vote": "投票",
+                  "nav_social": "ソーシャルメディア",
+                  "nav_articles": "記事",
+                  "nav_trend": "トレンドX最高順位",
+                  "nav_trend2024": "トレンド（2024年）",
+                  "nav_trend2025": "トレンド（2025年）",
+                  "nav_soldout": "完売",
+      
+                  //-------
+                  // Personal Info
+                  "filmName": "FILM RACHANUN",
+                  "background": "経歴",
+                  "born": "生年月日：2000年7月14日",
+                  "height": "身長：164cm",
+                  "agency": "所属：GMMTV",
+                  "profileDetail": "プロフィールの詳細",
+                  
+                  "dramaSeries": "ドラマ",
+                  "year2019": "2019年：",
+                  "darkBlueKiss": "『Dark Blue Kiss』 - Namwan（第12話 ゲスト出演）",
+                  "year2020": "2020年：",
+                  "angelBesideMe": "『Angel Beside Me』 - Bitoey（第1～6話 ゲスト出演）",
+                  "2gether": "『2gether』 - Earn（脇役）",
+                  "imteemetoo": "『I'm Tee, Me Too』 - Looksorn（第2、5、8話ゲスト出演）",
+                  "year2021": "2021年：",
+                  "thedebut": "『The Debut』 - Farn（脇役）",
+                  "thecomments": "『The Comments』 - Theerata / 「Toon」（主役）",
+                  "notme": "『Not Me』 - Eugene（脇役）",
+                  "year2022": "2022年：",
+                  "the3gentlebros": "『The Three GentleBros』 - Nareeya / 「View」（主役）",
+                  "year2023": "2023年：",
+                  "dirtylaundry": "『Dirty Laundry』 - Neon（主役）",
+                  "doublesavage": "『Double Savage』 - 「Rung」Rungtawan（主役）",
+                  "homeschool": "『Home School』 - Maki（主役）",
+                  "wednesdayclub": "『Wednesday Club』 - Tam（主役）",
+                  "lasttwilight": "『Last Twilight』 - Gee（脇役）",
+                  "year2024": "2024年：",
+                  "myprecious": "『My Precious』 - Lin（主役）",
+                  "ployyearbook": "『Ploy's Yearbook』 - 「Ploy」Pandara（主役）",
+                  "pluto": "『Pluto Series』 - 「May」Metavee（主役）",
+                  "year2025": "2025年：",
+                  "girlrules": "『Girl Rules Series』 - Bambi（主役）",
+
+                  //电影
+                  "movie": "映画",
+                  "2gethermovie": "『2gether: The Movie』 - Earn（脇役）",
+                  "mypreciousmovie": "『My Precious』 - Lin（主役）",
+                  
+                  // Songs
+                  "songs": "曲",
+                  "firstLove": " 「รักแรก (First Love) (หลิน Version)」 （『My Precious The Series』OST）",
+                  "princessTale": "「เรื่องเล่าของเจ้าหญิง (A Princess' Tale)」 with Namtan Tipnaree（『Pluto Series』OST）",
+                  "plutoSong": "「พลูโต (Pluto)」 with Namtan Tipnaree（『Pluto Series』OST）",
+                  "linger": "「รอนะ (Linger)」（『Pluto Series』OST）"
+                }
+              },
+              tl: {
+                translation: {
+      
+                  // NAVIGATION
+                  "nav_home": "Home",
+                  "nav_series": "Mga Serye",
+                  "nav_pluto_series": "Pluto",
+                  "nav_girl_rules": "Girl Rules",
+                  "nav_livecount": "Live Count",
+                  "nav_livecount_pluto": "Live Count(Pluto)",
+                  "nav_awards": "Mga Parangal",
+                  "nav_awards2025": "Mga Parangal (2025)",
+                  "nav_fm": "Fan Meeting",
+                  "nav_fm2025": "2025",
+                  "nav_video": "Bidyo",
+                  "nav_video2024": "Bidyo (2024)",
+                  "nav_video2025": "Bidyo (2025)",
+                  "nav_magazine": "Magasin",
+                  "nav_magazine2024": "Magasin (2024)",
+                  "nav_magazine2025": "Magasin (2025)",
+                  "nav_brands": "Brands",
+                  "nav_brands2024": "Brands (Y2024)",
+                  "nav_brands2025": "Brands (Y2025)",
+                  "nav_vote": "Botohan",
+                  "nav_social": "Social Media",
+                  "nav_articles": "Mga Artikulo",
+                  "nav_trend": "Pinakamataas na Trend sa X",
+                  "nav_trend2024": "Trend(2024)",
+                  "nav_trend2025": "Trend(2025)",
+                  "nav_soldout": "Sold Out",
+      
+                  //-------
+                  // Personal Info
+                  "filmName": "FILM RACHANUN",
+                  "background": "Background",
+                  "born": "Pinanganak: Hulyo 24, 2000",
+                  "height": "Taas: 5\"3",
+                  "agency": "Kumpanya: GMMTV",
+                  "profileDetail": "Detalye ng Profile",
+                  
+                  // Drama Series
+                  "dramaSeries": "Seryeng Drama",
+                  "year2019": "2019:",
+                  "darkBlueKiss": "Dark Blue Kiss - Namwan - Guest Role (Ep. 12)",
+                  "year2020": "2020:",
+                  "angelBesideMe": "Angel Beside Me - Bitoey - Guest Role (Ep. 1-6)",
+                  "2gether":"​2gether - Earn - Support Role",
+                  "imteemetoo": "I'm Tee, Me Too - Looksorn - Guest Role (Ep, 2, 5, 8)",
+                  "year2021": "2021:",
+                  "thedebut": "The Debut - Farn - Support Role",
+                  "thecomments": "The Comments - Theerata / 'Toon' - Main Role",
+                  "notme": "Not Me - Eugene - Support Role",
+                  "year2022": "2022:",
+                  "the3gentlebros": "The Three GentleBros - Nareeya / 'View' - Main Role",
+                  "year2023": "2023:",
+                  "dirtylaundry": "Dirty Laundry - Neon - Main Role",
+                  "doublesavage": "Double Savage - 'Rung' Rungtawan - Main Role",
+                  "homeschool": "Home School - Maki - Main Role",
+                  "wednesdayclub": "Wednesday Club - Tam - Main Role",
+                  "lasttwilight": "Last Twilight - Gee - Support Role",
+                  "year2024": "2024:",
+                  "myprecious": "My Precious - Lin - Main Role",
+                  "ployyearbook": "Ploy's Yearbook - 'Ploy' Pandara - Main Role",
+                  "pluto": "Pluto Series - 'May' Metavee - Main Role",
+                  "year2025": "2025:",
+                  "girlrules": "Girl Rules Series - Bambi - Main Role",
+                  
+                  //movie
+                  "movie": "Pelikula",
+                  "2gethermovie": "2gether: The Movie - Earn - Support Role",
+                  "mypreciousmovie": "My Precious - Lin - Main Role",
+
+                  // Songs
+                  "songs": "Kanta",
+                  "firstLove": "\"รักแรก (First Love) (หลิน Version)\" (OST My Precious The Series)",
+                  "princessTale": "\"เรื่องเล่าของเจ้าหญิง (A Princess' Tale)\" with Namtan Tipnaree (OST Pluto Series)",
+                  "plutoSong": "\"พลูโต (Pluto)\" with Namtan Tipnaree (OST Pluto Series)",
+                  "linger": "\"รอนะ (Linger)\" (OST Pluto Series)"
+                }
+              }
         }
-      }, function(err, t) {
+    }, function(err, t) {
         updateAllContent(); // Update translatable elements after initialization
     });
+  
+    // Set button text on page load
+    //Add this inside the callback after i18next.init(...), right before or after updateAllContent();:
+      const displayText = savedLang === 'en' 
+      ? 'ENGLISH' 
+      : savedLang === 'zh' 
+      ? '中文' 
+      : savedLang === 'ja' 
+      ? '日本語' 
+      : 'FILIPINO';
+      document.querySelector('.current-language').textContent = displayText;
+  
   
     // Toggle dropdown visibility
     document.querySelector(".language-switcher").addEventListener("click", function () {
@@ -178,19 +350,28 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Switch language and update UI
     function switchLanguage(lang) {
-        i18next.changeLanguage(lang, (err, t) => {
-            if (err) return console.error('Language change failed:', err);
-            updateAllContent();
+      i18next.changeLanguage(lang, (err, t) => {
+          if (err) return console.error('Language change failed:', err);
+          updateAllContent();
   
-            // Update button text
-            const displayText = lang === 'en' ? 'ENGLISH' : '中文';
-            document.querySelector('.current-language').textContent = displayText;
+          //Save selected language to localStorage
+          localStorage.setItem('selectedLanguage', lang);
   
-            // Close dropdown
-            document.getElementById("languageDropdown").classList.remove("show");
-        });
-        return false;
-    }
+          //Use the new lang, not savedLang
+          const displayText = lang === 'en' 
+              ? 'ENGLISH' 
+              : lang === 'zh' 
+              ? '中文' 
+              : lang === 'ja' 
+              ? '日本語' 
+              : 'FILIPINO';
+          document.querySelector('.current-language').textContent = displayText;
+  
+          // Close dropdown
+          document.getElementById("languageDropdown").classList.remove("show");
+      });
+      return false;
+  }
   
     // Close dropdown when clicking outside
     document.addEventListener('click', function(event) {
@@ -205,21 +386,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Function to update all translatable content
   function updateAllContent() {
-    // Translate navigation items
-    document.querySelectorAll('[data-i18n-nav]').forEach(el => {
-        el.textContent = i18next.t(el.getAttribute('data-i18n-nav'));
-    });
+    document.querySelectorAll('[data-i18n], [data-i18n-nav]').forEach(element => {
+      const key = element.getAttribute('data-i18n') || element.getAttribute('data-i18n-nav');
   
-    // Translate other content
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        
-        // If the element has a special attribute like data-i18n-html, use innerHTML
-        if (element.hasAttribute('data-i18n-html')) {
-            element.innerHTML = i18next.t(key);
-        } else {
-            element.textContent = i18next.t(key);
-        }
+      if (element.hasAttribute('data-i18n-html')) {
+        element.innerHTML = i18next.t(key);
+      } else {
+        element.textContent = i18next.t(key);
+      }
     });
   }
   
@@ -231,7 +405,13 @@ document.addEventListener('DOMContentLoaded', function() {
         updateAllContent();
         
         // Update button text
-        const displayText = lang === 'en' ? 'ENGLISH' : '中文';
+        const displayText = lang === 'en' 
+        ? 'ENGLISH' 
+        : lang === 'zh' 
+        ? '中文' 
+        : lang === 'ja' 
+        ? '日本語' 
+        : 'FILIPINO';
         document.querySelector('.current-language').textContent = displayText;
         
         // Close dropdown
