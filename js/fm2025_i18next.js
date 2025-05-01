@@ -1,8 +1,10 @@
 // Initialize i18next when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
 // awards2025_i18next.js
-i18next.init({
-  lng: 'en',
+const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+
+  i18next.init({
+  lng: savedLang,
   resources: {
     en: {
       translation: {
@@ -112,11 +114,133 @@ i18next.init({
         "titlehz1": "梦幻假期-Film粉丝答谢会"
         
       }
+    },
+    ja: {
+      translation: {
+
+        // NAVIGATION
+        "nav_home": "ホーム",
+        "nav_series": "シリーズ",
+        "nav_pluto_series": "Pluto Series",
+        "nav_girl_rules": "Girl Rules Series",
+        "nav_livecount": "リアルタイムデータ",
+        "nav_livecount_pluto": "リアルタイムデータ(Pluto Series)",
+        "nav_awards": "アワード",
+        "nav_awards2025": "アワード（2025年）",
+        "nav_fm": "ファンミーティング",
+        "nav_fm2025": "2025",
+        "nav_video": "ビデオ",
+        "nav_video2024": "ビデオ（2024年）",
+        "nav_video2025": "ビデオ（2025年）",
+        "nav_magazine": "雑誌",
+        "nav_magazine2024": "雑誌（2024年）",
+        "nav_magazine2025": "雑誌（2025年）",
+        "nav_brands": "ブランド",
+        "nav_brands2024": "ブランド（2024年）",
+        "nav_brands2025": "ブランド（2025年）",
+        "nav_vote": "投票",
+        "nav_social": "ソーシャルメディア",
+        "nav_articles": "記事",
+        "nav_trend": "トレンドX最高順位",
+        "nav_trend2024": "トレンド（2024年）",
+        "nav_trend2025": "トレンド（2025年）",
+        "nav_soldout": "完売",
+
+        //-------
+        "followTitle": "ファンミーティング",
+        "description": "国内外ファンミーティング",
+        "year": "（2025年）",
+        "ticketsales": "チケット販売開始：2025年4月19日 午前10:00（バンコク時間） ThaiTicketMajor にて",
+        "getticket": "チケット購入はこちら → ThaiTicketMajor", 
+        "getticket2": "チケット購入はこちら → ticket board",
+        "venue": "会場：The Venetian Theatre（ザ・ヴェネチアン・マカオ）",
+        "ticketsales2": "チケット販売開始：2025年3月19日 15:00（Cotaiticketing・Damaiにて）",
+        "venue2": "会場：Straits Culture and Art Center オペラハウス",
+        "ticketsales4": "チケット販売開始：2025年4月2日 18:00（GMT+8）秀動ShowStartにて",
+        "venue3": "会場：ベンタイン劇場（ホーチミン市）",
+        "ticketsales5": "チケット販売開始：2025年3月8日 12:00（Ticketboxにて）",
+        "description1": "全世界ライブ配信：TTM LIVE にて",
+        "ticketsales6": "チケット販売開始：2025年2月9日 12:30（バンコク時間）",
+        "getticket4": "チケット購入はこちら",
+        "ticketsales3": "チケット販売開始：2025年4月2日 19:00（GMT+8）秀動ShowStartにて",
+        "venuehz": "会場：杭州市（浙江省）",
+        "ticketsaleshz": "チケット販売開始：2025年5月1日（木）12:00（Xiaomang APPにて）",
+        "ticketsaleshz1": "チケット販売開始：2025年5月2日（金）12:00（Xiaomang APPにて）",
+        "titlehz": "Sweet Journey - Namtan ファン感謝イベント",
+        "titlehz1": "Dream Vacation - Film ファン感謝イベント"
+      }
+    },
+    tl: {
+      translation: {
+
+        // NAVIGATION
+        "nav_home": "Home",
+        "nav_series": "Mga Serye",
+        "nav_pluto_series": "Pluto",
+        "nav_girl_rules": "Girl Rules",
+        "nav_livecount": "Live Count",
+        "nav_livecount_pluto": "Live Count(Pluto)",
+        "nav_awards": "Mga Parangal",
+        "nav_awards2025": "Mga Parangal (2025)",
+        "nav_fm": "Fan Meeting",
+        "nav_fm2025": "2025",
+        "nav_video": "Bidyo",
+        "nav_video2024": "Bidyo (2024)",
+        "nav_video2025": "Bidyo (2025)",
+        "nav_magazine": "Magasin",
+        "nav_magazine2024": "Magasin (2024)",
+        "nav_magazine2025": "Magasin (2025)",
+        "nav_brands": "Brands",
+        "nav_brands2024": "Brands (Y2024)",
+        "nav_brands2025": "Brands (Y2025)",
+        "nav_vote": "Botohan",
+        "nav_social": "Social Media",
+        "nav_articles": "Mga Artikulo",
+        "nav_trend": "Pinakamataas na Trend sa X",
+        "nav_trend2024": "Trend(2024)",
+        "nav_trend2025": "Trend(2025)",
+        "nav_soldout": "Sold Out",
+
+        //-------
+        "followTitle": "FAN MEETING",
+        "description": "Local & Overseas fan meeting",
+        "year": "(Year 2025)",
+        "ticketsales": "Bentahan ng Ticket: 19 ABRIL 2025, 10 AM (BKK Time) sa ThaiTicketMajor",
+        "getticket": "Bumili ng ticket sa ThaiTicketMajor", 
+        "getticket2": "Bumili ng ticket sa ticket board",
+        "venue": "The Venetian Theatre, The Venetian Macao",
+        "ticketsales2": "Bentahan ng Ticket: 3:00PM, Marso 19, 2025 sa Cotaiticketing at Damai",
+        "venue2": "Straits Culture and Art Center Opera House",
+        "ticketsales4": "Bentahan ng Ticket: 6:00PM(GMT+8), Abril 2, 2025 sa 秀动ShowStart",
+        "venue3": "BEN THANH THEATER, HO CHI MINH CITY",
+        "ticketsales5": "Simula ng Bentahan ng Ticket: 12:00, 08/03/2025 sa Ticketbox",
+        "description1": "Worldwide live streaming sa TTM LIVE",
+        "ticketsales6": "Bentahan ng Ticket: PEBRERO 9, 2025, 12:30 PM (BKK Time)",
+        "getticket4": "Bumili ng ticket dito",
+        "ticketsales3": "Bentahan ng Ticket: 7:00PM(GMT+8), Abril 2, 2025 sa 秀动ShowStart",
+        "venuehz": "Hangzhou, Zhejiang Province",
+        "ticketsaleshz": "Bentahan ng Ticket: Huwebes, Mayo 1, 2025,12:00 sa Xiaomang APP",
+        "ticketsaleshz1": "Bentahan ng Ticket: Biyernes, Mayo 2, 2025, 12:00 sa Xiaomang APP",
+        "titlehz": "Sweet Journey - Namtan Fan Appreciation Party",
+        "titlehz1": "Dream Vacation-Film Fan Appreciation Party"
+      }
     }
   }
 }, function(err, t) {
   updateAllContent(); // Update translatable elements after initialization
 });
+
+// Set button text on page load
+//Add this inside the callback after i18next.init(...), right before or after updateAllContent();:
+const displayText = savedLang === 'en' 
+? 'ENGLISH' 
+: savedLang === 'zh' 
+? '中文' 
+: savedLang === 'ja' 
+? '日本語' 
+: 'FILIPINO';
+document.querySelector('.current-language').textContent = displayText;
+
 
 // Toggle dropdown visibility
 document.querySelector(".language-switcher").addEventListener("click", function () {
@@ -126,18 +250,27 @@ document.querySelector(".language-switcher").addEventListener("click", function 
 
 // Switch language and update UI
 function switchLanguage(lang) {
-  i18next.changeLanguage(lang, (err, t) => {
-      if (err) return console.error('Language change failed:', err);
-      updateAllContent();
+i18next.changeLanguage(lang, (err, t) => {
+    if (err) return console.error('Language change failed:', err);
+    updateAllContent();
 
-      // Update button text
-      const displayText = lang === 'en' ? 'ENGLISH' : '中文';
-      document.querySelector('.current-language').textContent = displayText;
+    //Save selected language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
 
-      // Close dropdown
-      document.getElementById("languageDropdown").classList.remove("show");
-  });
-  return false;
+    //Use the new lang, not savedLang
+    const displayText = lang === 'en' 
+        ? 'ENGLISH' 
+        : lang === 'zh' 
+        ? '中文' 
+        : lang === 'ja' 
+        ? '日本語' 
+        : 'FILIPINO';
+    document.querySelector('.current-language').textContent = displayText;
+
+    // Close dropdown
+    document.getElementById("languageDropdown").classList.remove("show");
+});
+return false;
 }
 
 // Close dropdown when clicking outside
@@ -153,21 +286,14 @@ document.addEventListener('click', function(event) {
 
 // Function to update all translatable content
 function updateAllContent() {
-// Translate navigation items
-document.querySelectorAll('[data-i18n-nav]').forEach(el => {
-  el.textContent = i18next.t(el.getAttribute('data-i18n-nav'));
-});
+document.querySelectorAll('[data-i18n], [data-i18n-nav]').forEach(element => {
+const key = element.getAttribute('data-i18n') || element.getAttribute('data-i18n-nav');
 
-// Translate other content
-document.querySelectorAll('[data-i18n]').forEach(element => {
-  const key = element.getAttribute('data-i18n');
-  
-  // If the element has a special attribute like data-i18n-html, use innerHTML
-  if (element.hasAttribute('data-i18n-html')) {
-      element.innerHTML = i18next.t(key);
-  } else {
-      element.textContent = i18next.t(key);
-  }
+if (element.hasAttribute('data-i18n-html')) {
+  element.innerHTML = i18next.t(key);
+} else {
+  element.textContent = i18next.t(key);
+}
 });
 }
 
@@ -179,7 +305,13 @@ i18next.changeLanguage(lang, (err, t) => {
   updateAllContent();
   
   // Update button text
-  const displayText = lang === 'en' ? 'ENGLISH' : '中文';
+  const displayText = lang === 'en' 
+  ? 'ENGLISH' 
+  : lang === 'zh' 
+  ? '中文' 
+  : lang === 'ja' 
+  ? '日本語' 
+  : 'FILIPINO';
   document.querySelector('.current-language').textContent = displayText;
   
   // Close dropdown
