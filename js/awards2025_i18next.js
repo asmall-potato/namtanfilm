@@ -163,10 +163,11 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.current-language').textContent = displayText;
 
 // Toggle dropdown visibility
-document.querySelector(".language-switcher").addEventListener("click", function () {
-    const dropdown = document.getElementById("languageDropdown");
-    dropdown.classList.toggle("show");
-});
+function toggleDropdown() {
+  const dropdown = document.getElementById("languageDropdown");
+  dropdown.classList.toggle("show");
+}
+
 
 // Switch language and update UI
 function switchLanguage(lang) {
@@ -218,12 +219,3 @@ function updateAllContent() {
 }
 
 
-// Close dropdown when clicking outside
-document.addEventListener('click', function(event) {
-  const dropdown = document.getElementById("languageDropdown");
-  const button = document.querySelector('.language-button');
-  
-  if (!event.target.closest('.language-switcher') && dropdown.classList.contains('show')) {
-    dropdown.classList.remove("show");
-  }
-});
