@@ -218,32 +218,6 @@ function updateAllContent() {
 }
 
 
-
-// Switch language and update UI
-function switchLanguage(lang) {
-  i18next.changeLanguage(lang, (err, t) => {
-      if (err) return console.error('Language change failed:', err);
-      updateAllContent();
-
-      //Save selected language to localStorage
-      localStorage.setItem('selectedLanguage', lang);
-
-      //Use the new lang, not savedLang
-      const displayText = lang === 'en' 
-          ? 'ENGLISH' 
-          : lang === 'zh' 
-          ? '中文' 
-          : lang === 'ja' 
-          ? '日本語' 
-          : 'FILIPINO';
-      document.querySelector('.current-language').textContent = displayText;
-
-      // Close dropdown
-      document.getElementById("languageDropdown").classList.remove("show");
-  });
-  return false;
-}
-
 // Close dropdown when clicking outside
 document.addEventListener('click', function(event) {
   const dropdown = document.getElementById("languageDropdown");
