@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const savedLang = sessionStorage.getItem('selectedLanguage') || 'en';
     i18next.init({
       lng: savedLang,
+      debug: true,
       resources: {
       en: {
       translation: {
@@ -177,61 +178,60 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 }, function(err, t) {
-  updateAllContent(); // Update translatable elements after initialization
-});
-
-// Set button text on page load
-//Add this inside the callback after i18next.init(...), right before or after updateAllContent();:
-const displayText = savedLang === 'en' ? 'ENGLISH' 
-? 'ENGLISH' 
-: savedLang === 'zh' 
-? '中文' 
-: savedLang === 'ja' 
-? '日本語' 
-: 'FILIPINO';
-document.querySelector('.current-language').textContent = displayText;
+    updateAllContent();
+    
+    // Update button text
+    const displayText = savedLang === 'en' ? 'ENGLISH' 
+      : savedLang === 'zh' ? '中文' 
+      : savedLang === 'ja' ? '日本語' 
+      : 'FILIPINO';
+    document.querySelector('.current-language').textContent = displayText;
+  });
 
 
 // Toggle dropdown visibility
-document.querySelector(".language-switcher").addEventListener("click", function () {
-  const dropdown = document.getElementById("languageDropdown");
-  dropdown.classList.toggle("show");
-});
+document.querySelector(".language-switcher").addEventListener("click", function(e) {
+    e.stopPropagation(); // Prevent event from bubbling up
+    const dropdown = document.getElementById("languageDropdown");
+    dropdown.classList.toggle("show");
+  });
 
 // Switch language and update UI
-function switchLanguage(lang) {
-i18next.changeLanguage(lang, (err, t) => {
-    if (err) return console.error('Language change failed:', err);
-    updateAllContent();
+// Toggle dropdown visibility - Fixed event delegation
+  document.querySelector(".language-switcher").addEventListener("click", function(e) {
+    e.stopPropagation(); // Prevent event from bubbling up
+    const dropdown = document.getElementById("languageDropdown");
+    dropdown.classList.toggle("show");
+  });
 
-    // Save language in sessionStorage (clears on browser close)
-    sessionStorage.setItem('selectedLanguage', lang);
-
-    //Use the new lang, not savedLang
-    const displayText = lang === 'en' 
-        ? 'ENGLISH' 
-        : lang === 'zh' 
-        ? '中文' 
-        : lang === 'ja' 
-        ? '日本語' 
+  // Single, consistent switchLanguage function
+  window.switchLanguage = function(lang) {
+    i18next.changeLanguage(lang, (err, t) => {
+      if (err) return console.error('Language change failed:', err);
+      updateAllContent();
+      
+      // Use sessionStorage consistently
+      sessionStorage.setItem('selectedLanguage', lang);
+      
+      // Update button text
+      const displayText = lang === 'en' ? 'ENGLISH' 
+        : lang === 'zh' ? '中文' 
+        : lang === 'ja' ? '日本語' 
         : 'FILIPINO';
-    document.querySelector('.current-language').textContent = displayText;
-
-    // Close dropdown
-    document.getElementById("languageDropdown").classList.remove("show");
-});
-return false;
-}
-
-// Close dropdown when clicking outside
-document.addEventListener('click', function(event) {
-  const dropdown = document.getElementById("languageDropdown");
-  const button = document.querySelector('.language-button');
-  
-  if (!event.target.closest('.language-switcher') && dropdown.classList.contains('show')) {
-      dropdown.classList.remove("show");
+      document.querySelector('.current-language').textContent = displayText;
+      
+      // Close dropdown
+      document.getElementById("languageDropdown").classList.remove("show");
+    });
+    return false;
   }
-});
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('.language-switcher')) {
+      document.getElementById("languageDropdown").classList.remove("show");
+    }
+  });
 });
 
 // Function to update all translatable content
@@ -248,27 +248,6 @@ if (element.hasAttribute('data-i18n-html')) {
 }
 
 
-// Switch language and update UI
-function switchLanguage(lang) {
-i18next.changeLanguage(lang, (err, t) => {
-  if (err) return console.error('Language change failed:', err);
-  updateAllContent();
-  
-  // Update button text
-  const displayText = lang === 'en' 
-  ? 'ENGLISH' 
-  : lang === 'zh' 
-  ? '中文' 
-  : lang === 'ja' 
-  ? '日本語' 
-  : 'FILIPINO';
-  document.querySelector('.current-language').textContent = displayText;
-  
-  // Close dropdown
-  document.getElementById("languageDropdown").classList.remove("show");
-});
-return false;
-}
 
 // Close dropdown when clicking outside
 document.addEventListener('click', function(event) {
