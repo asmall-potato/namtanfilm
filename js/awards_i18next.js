@@ -225,8 +225,8 @@ function switchLanguage(lang) {
       if (err) return console.error('Language change failed:', err);
       updateAllContent();
 
-      //Save selected language to localStorage
-      localStorage.setItem('selectedLanguage', lang);
+      // Use sessionStorage consistently
+      sessionStorage.setItem('selectedLanguage', lang);
 
       //Use the new lang, not savedLang
       const displayText = lang === 'en' 
