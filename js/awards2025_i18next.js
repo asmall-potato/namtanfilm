@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // awards2025_i18next.js
     const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     i18next.init({
-      lng: savedLang,
+      lng: localStorage.getItem('selectedLanguage') || 'en',
       resources: {
       en: {
       translation: {
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Set button text on page load
 //Add this inside the callback after i18next.init(...), right before or after updateAllContent();:
-const displayText = savedLang === 'en' 
+const displayText = i18next.language === 'en' 
 ? 'ENGLISH' 
 : savedLang === 'zh' 
 ? '中文' 
