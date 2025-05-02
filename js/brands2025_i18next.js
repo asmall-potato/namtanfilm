@@ -1,6 +1,7 @@
 // Initialize i18next when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-  const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+  // Get language from sessionStorage (clears when browser closes)
+  const savedLang = sessionStorage.getItem('selectedLanguage') || 'en';
     i18next.init({
       lng: savedLang,
       debug: true,
@@ -180,8 +181,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (err) return console.error('Language change failed:', err);
         updateAllContent();
 
-        //Save selected language to localStorage
-        localStorage.setItem('selectedLanguage', lang);
+        // Save language in sessionStorage (clears on browser close)
+    sessionStorage.setItem('selectedLanguage', lang);
 
         //Use the new lang, not savedLang
         const displayText = lang === 'en' 
@@ -230,6 +231,9 @@ function updateAllContent() {
       if (err) return console.error('Language change failed:', err);
       updateAllContent();
       
+      // Save language in sessionStorage (clears on browser close)
+    sessionStorage.setItem('selectedLanguage', lang);
+
       // Update button text
       const displayText = lang === 'en' 
       ? 'ENGLISH' 
