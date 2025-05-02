@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     i18next.init({
-      lng: savedLang,
+      lng: localStorage.getItem('selectedLanguage') || 'en',
       debug: true,
       resources: {
       en: {
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Set button text on page load
   //Add this inside the callback after i18next.init(...), right before or after updateAllContent();:
-  const displayText = savedLang === 'en' 
+  const displayText = i18next.language === 'en'  
   ? 'ENGLISH' 
   : savedLang === 'zh' 
   ? '中文' 
