@@ -1,0 +1,46 @@
+<div id="donationModal" class="donation-modal">
+    <div class="modal-content">
+        <p><strong>VOTE FOR NAMTANFILM</strong></p>
+        <p><strong>[KOM CHAD LUEK AWARDS 2025]</strong></p>
+        <p>Category: KA8. Popular Yuri Couple</p>
+        <p>KA81 - นํ้าตาล - ฟิล์ม</p>
+        <i>Vote every 10 minutes</i>
+        <a href="https://awards.komchadluek.net/KA8" class="donate-button">Vote Now</a>
+        <button onclick="closeDonationPrompt()">Close</button>
+    </div>
+</div>
+
+<style>
+    .donation-modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        z-index: 9999;
+        border-radius: 8px;
+    }
+    .donate-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        background-color: #ff4500;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+    window.onload = function () {
+        document.getElementById("donationModal").style.display = "block";
+    };
+
+    function closeDonationPrompt() {
+        document.getElementById("donationModal").style.display = "none";
+    }
+</script>
