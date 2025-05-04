@@ -226,7 +226,62 @@ const savedLang = sessionStorage.getItem('selectedLanguage') || 'en';
         "titlehz": "Sweet Journey - Namtan Fan Appreciation Party",
         "titlehz1": "Dream Vacation-Film Fan Appreciation Party"
       }
-    }
+    },
+    ita: {
+          translation: {
+
+            // NAVIGATION
+            "nav_home": "casa",
+            "nav_series": "serie",
+            "nav_pluto_series": "la serie \"Pluto\"",
+            "nav_girl_rules": "la serie \"Girl Rules\"",
+            "nav_livecount": "conteggio live",
+            "nav_livecount_pluto": "Conteggio live(Pluto)",
+            "nav_awards": "premi",
+            "nav_awards2025": "premi (anno 2025)",
+            "nav_fm": "incontro con i fan",
+            "nav_fm2025": "2025",
+            "nav_video": "video",
+            "nav_video2024": "video (anno 2024)",
+            "nav_video2025": "video (anno 2025)",
+            "nav_magazine": "rivista",
+            "nav_magazine2024": "rivista (anno 2024)",
+            "nav_magazine2025": "rivista (anno 2025)",
+            "nav_brands": "marchi",
+            "nav_brands2024": "marchi (anno 2024)",
+            "nav_brands2025": "marchi (anno 2025)",
+            "nav_vote": "votazione ",
+            "nav_social": "Social Media",
+            "nav_articles": "articoli",
+            "nav_trend": "trend X la prima posizione ",
+            "nav_trend2024": "Trend(2024)",
+            "nav_trend2025": "Trend(2025)",
+            "nav_soldout": "tutto esaurito",
+
+            //-------
+            "followTitle": "FAN MEETING",
+            "description": "fan meeting locali e oltre oceano ",
+            "year": "(Anno 2025)",
+            "ticketsales": "biglietti in vendita:19 aprile 2025 alle 10:00(orario di BKK) al ThaiTicketMajor",
+            "getticket": "compra il tuo biglietto al ThaiThicketMajor", 
+            "getticket2": "prendi il tuo biglietto alla ticket board ",
+            "venue": "il Venetian Theatre,il Venetian Macao",
+            "ticketsales2": "biglietti in vendita:dalle 15:00 ,il 19 Marzo 2025 su Cotaiticketing e Damai",
+            "venue2": "Straits Culture and Art Center Opera House",
+            "ticketsales4": "biglietti in vendita:dalle 18:00(GMT+8),2Aprile 2025 su 秀动ShowStart",
+            "venue3": "Ben Thanh Theater,citta' di HO CHI MINH ",
+            "ticketsales5": "biglietti in vendita dalle 12:00 dell' 8 Marzo 2025 su Ticketbox",
+            "description1": "streaming della live mondiale su TTM LIVE",
+            "ticketsales6": "biglietti in vendita:il 9Febbraio 2025 alle 00:30 (BKK)",
+            "getticket4": "acquista i tuoi biglietti qui",
+            "ticketsales3": "biglietti in vendita:dalle 19(GMT+8) il 2 aprile 2025 su 秀动ShowStart",
+            "venuehz": "Hangzhou, Provincia di Zhejiang ",
+            "ticketsaleshz": "biglietti in vendita:giovedì 1 Maggio 2025 alle 12:00 sull' App xiaomang",
+            "ticketsaleshz1": "biglietti in vendita:venerdì 2 Maggio 2025 alle 12:00 sull' app Xiaomang ",
+            "titlehz": "Sweet journey-festa di Apprezzamento per Namtan ",
+            "titlehz1": "Dream Vacation-festa di Apprezzamento per Film"
+          }
+        }
   }
 }, function(err, t) {
   updateAllContent(); // Update translatable elements after initialization
@@ -240,7 +295,9 @@ const displayText = savedLang === 'en'
 ? '中文' 
 : savedLang === 'ja' 
 ? '日本語' 
-: 'FILIPINO';
+: savedLang === 'tl'
+? 'FILIPINO'
+: 'Italian';
 document.querySelector('.current-language').textContent = displayText;
 
 
@@ -266,7 +323,9 @@ i18next.changeLanguage(lang, (err, t) => {
         ? '中文' 
         : lang === 'ja' 
         ? '日本語' 
-        : 'FILIPINO';
+        : savedLang === 'tl'
+        ? 'FILIPINO'
+        : 'Italian';
     document.querySelector('.current-language').textContent = displayText;
 
     // Close dropdown
@@ -316,7 +375,9 @@ i18next.changeLanguage(lang, (err, t) => {
   ? '中文' 
   : lang === 'ja' 
   ? '日本語' 
-  : 'FILIPINO';
+  : savedLang === 'tl'
+  ? 'FILIPINO'
+  : 'Italian';
   document.querySelector('.current-language').textContent = displayText;
   
   // Close dropdown
