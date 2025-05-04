@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "wink": "WINK MAGAZINE",
             "wink1": "Released Date: 11/1/2025",
             "elle": "ELLE Thailand",
-            "elle1": "Cover of the May 2025 issue"
+            "elle1": "Cover of May Issue 2025"
             
 
             }
