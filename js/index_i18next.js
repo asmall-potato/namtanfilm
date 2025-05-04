@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     "officialfc": "Official Fanclub",
                     "officialTA": "Official Trending Account",
                     "gmmtvshop": "Get NamtanFilm's official merchandise at",
-                    "globalofc": "Global Lunar Support"
+                    "globalofc": "Global Lunar Support",
+                    "highlights": "HIGHLIGHTS"
                 }
             },
             zh: {
@@ -105,7 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     "officialfc": "官方粉丝站",
                     "officialTA": "官方刷趋号",
                     "gmmtvshop": "点击以下购买NamtanFilm的官方周边商品",
-                    "globalofc": "全球LUNAR官方粉丝站"
+                    "globalofc": "全球LUNAR官方粉丝站",
+                    "highlights": "精选"
                 }
             },
             ja: {
@@ -157,7 +159,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     "officialfc": "公式ファンクラブ",
                     "officialTA": "トレンド公式アカウント",
                     "gmmtvshop": "NAMTANFILM 公式グッズはこちらで購入",
-                    "globalofc": "世界Lunarファンクラブ"
+                    "globalofc": "世界Lunarファンクラブ",
+                    "highlights": "HIGHLIGHTS"
                 }
               },
               tl: {
@@ -209,7 +212,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     "officialfc": "Official Fanclub",
                     "officialTA": "Official Trending Account",
                     "gmmtvshop": "Bumil ng opisyal na merchandise nina NamtanFilm sa",
-                    "globalofc": "Global Lunar Support"
+                    "globalofc": "Global Lunar Support",
+                    "highlights": "HIGHLIGHTS"
                 }
               }
 
