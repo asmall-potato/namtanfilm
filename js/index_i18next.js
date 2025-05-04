@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "description5": "Girl Rules Series",
                     "mascot": "Pangalan ng Fandom & Mascot:",
                     "schedule": "SUNDAN ANG KANILANG PINAKABAGONG SCHEDULE",
-                    "profile": "PROFILE nina NAMTANFIL",
+                    "profile": "PROFILE nina NAMTANFILM",
                     "clickprofile": "I-click para makita ang kanilang profile",
                     "info": "Para sa pinakabagong impormasyon, sundan ang:",
                     "xaccount": "X Account",
@@ -215,9 +215,62 @@ document.addEventListener('DOMContentLoaded', function() {
                     "globalofc": "Global Lunar Support",
                     "highlights": "HIGHLIGHTS"
                 }
-              }
+              },
+            ita: {
+          translation: {
 
+            // NAVIGATION
+            "nav_home": "casa",
+            "nav_series": "serie",
+            "nav_pluto_series": "la serie \"Pluto\"",
+            "nav_girl_rules": "la serie \"Girl Rules\"",
+            "nav_livecount": "conteggio live",
+            "nav_livecount_pluto": "Conteggio live(Pluto)",
+            "nav_awards": "premi",
+            "nav_awards2025": "premi (anno 2025)",
+            "nav_fm": "incontro con i fan",
+            "nav_fm2025": "2025",
+            "nav_video": "video",
+            "nav_video2024": "video (anno 2024)",
+            "nav_video2025": "video (anno 2025)",
+            "nav_magazine": "rivista",
+            "nav_magazine2024": "rivista (anno 2024)",
+            "nav_magazine2025": "rivista (anno 2025)",
+            "nav_brands": "marchi",
+            "nav_brands2024": "marchi (anno 2024)",
+            "nav_brands2025": "marchi (anno 2025)",
+            "nav_vote": "votazione ",
+            "nav_social": "Social Media",
+            "nav_articles": "articoli",
+            "nav_trend": "trend X la prima posizione ",
+            "nav_trend2024": "Trend(2024)",
+            "nav_trend2025": "Trend(2025)",
+            "nav_soldout": "tutto esaurito",
+
+            //-------
+            "description": "Namtan Tipnaree e Film Rachanun sono artiste della GMMTV.",
+            "description1": "Sono la seconda coppia ufficiale della GMMTV.",
+            "collaboratetitle": "Video collaborativi",
+            "description2": "Last Twilight",
+            "description3": "Ploy's Yearbook",
+            "description4": "serie Pluto",
+            "description5": "serie Girl Rules",
+            "mascot": "Nome del Fandom & Mascot:",
+            "schedule": "SEGUI I LORO ULTIMI EVENTI",
+            "profile": "PROFILO DI NAMTANFILM",
+            "clickprofile": "Premi per vedere il loro profilo",
+            "info": "Per le ultime informazioni,segui:",
+            "xaccount": "Account X",
+            "gmmtvofficial": "Account ufficiale GMMTV ",
+            "officialfc": "Fanclub ufficiale",
+            "officialTA": "Account ufficiale del trending",
+            "gmmtvshop": "Ottieni il merchandise ufficiale al",
+            "globalofc": "Supporto globale Di Lunar ",
+            "highlights": "HIGHLIGHTS"
+          }
         }
+
+      }
     }, function(err, t) {
         updateAllContent(); // Update translatable elements after initialization
     });
@@ -230,7 +283,9 @@ document.addEventListener('DOMContentLoaded', function() {
       ? '中文' 
       : savedLang === 'ja' 
       ? '日本語' 
-      : 'FILIPINO';
+      : savedLang === 'tl'
+      ? 'FILIPINO'
+      : 'Italian';
       document.querySelector('.current-language').textContent = displayText;
   
   
@@ -256,7 +311,9 @@ document.addEventListener('DOMContentLoaded', function() {
               ? '中文' 
               : lang === 'ja' 
               ? '日本語' 
-              : 'FILIPINO';
+              : savedLang === 'tl'
+              ? 'FILIPINO'
+              : 'Italian';
           document.querySelector('.current-language').textContent = displayText;
   
           // Close dropdown
@@ -306,7 +363,9 @@ document.addEventListener('DOMContentLoaded', function() {
         ? '中文' 
         : lang === 'ja' 
         ? '日本語' 
-        : 'FILIPINO';
+        : savedLang === 'tl'
+        ? 'FILIPINO'
+        : 'Italian';
         document.querySelector('.current-language').textContent = displayText;
         
         // Close dropdown
