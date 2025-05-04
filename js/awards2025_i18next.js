@@ -175,7 +175,50 @@ document.addEventListener('DOMContentLoaded', function() {
         "winner2": "GIRL RULES", 
         "small_desc": "*Ang parangal na ito ay pinili ng Technical Jury*"
       }
-    }
+    },
+    ita: {
+          translation: {
+
+            // NAVIGATION
+            "nav_home": "casa",
+            "nav_series": "serie",
+            "nav_pluto_series": "la serie \"Pluto\"",
+            "nav_girl_rules": "la serie \"Girl Rules\"",
+            "nav_livecount": "conteggio live",
+            "nav_livecount_pluto": "Conteggio live(Pluto)",
+            "nav_awards": "premi",
+            "nav_awards2025": "premi (anno 2025)",
+            "nav_fm": "incontro con i fan",
+            "nav_fm2025": "2025",
+            "nav_video": "video",
+            "nav_video2024": "video (anno 2024)",
+            "nav_video2025": "video (anno 2025)",
+            "nav_magazine": "rivista",
+            "nav_magazine2024": "rivista (anno 2024)",
+            "nav_magazine2025": "rivista (anno 2025)",
+            "nav_brands": "marchi",
+            "nav_brands2024": "marchi (anno 2024)",
+            "nav_brands2025": "marchi (anno 2025)",
+            "nav_vote": "votazione ",
+            "nav_social": "Social Media",
+            "nav_articles": "articoli",
+            "nav_trend": "trend X la prima posizione ",
+            "nav_trend2024": "Trend(2024)",
+            "nav_trend2025": "Trend(2025)",
+            "nav_soldout": "tutto esaurito",
+
+            //-------
+            "followTitle": "premi",
+            "description": "premi ricevuti da Namtan Tipnaree e Film Rachanun </br></br> (2025)",
+            "awardTitle": "HUB AWARDS 2024-miglior cinematografia dell'anno",
+            "awardTitle2": "HUB AWARDS 2024-la più attesa serie del 2025",
+            "awardTitle3": "HUB AWARDS 2024-miglior critica sociale dell'anno",
+            "awardTitle4": "Mellow pop miglior coppia del mese (Novembre 2024)",
+            "winner": "PLUTO",
+            "winner2": "GIRL RULES", 
+            "small_desc": "*questo premio è scelto dalla giuria tecnica *"
+          }
+        }
   }
 }, function(err, t) {
   updateAllContent(); // Update translatable elements after initialization
@@ -189,7 +232,9 @@ const displayText = savedLang === 'en'
 ? '中文' 
 : savedLang === 'ja' 
 ? '日本語' 
-: 'FILIPINO';
+: savedLang === 'tl'
+? 'FILIPINO'
+: 'Italian';
 document.querySelector('.current-language').textContent = displayText;
 
 
@@ -210,12 +255,14 @@ i18next.changeLanguage(lang, (err, t) => {
 
     //Use the new lang, not savedLang
     const displayText = lang === 'en' 
-        ? 'ENGLISH' 
-        : lang === 'zh' 
-        ? '中文' 
-        : lang === 'ja' 
-        ? '日本語' 
-        : 'FILIPINO';
+            ? 'ENGLISH' 
+            : lang === 'zh' 
+            ? '中文' 
+            : lang === 'ja' 
+            ? '日本語' 
+            : savedLang === 'tl'
+            ? 'FILIPINO'
+            : 'Italian';
     document.querySelector('.current-language').textContent = displayText;
 
     // Close dropdown
@@ -260,12 +307,14 @@ i18next.changeLanguage(lang, (err, t) => {
 
   // Update button text
   const displayText = lang === 'en' 
-  ? 'ENGLISH' 
-  : lang === 'zh' 
-  ? '中文' 
-  : lang === 'ja' 
-  ? '日本語' 
-  : 'FILIPINO';
+            ? 'ENGLISH' 
+            : lang === 'zh' 
+            ? '中文' 
+            : lang === 'ja' 
+            ? '日本語' 
+            : savedLang === 'tl'
+            ? 'FILIPINO'
+            : 'Italian';
   document.querySelector('.current-language').textContent = displayText;
   
   // Close dropdown
