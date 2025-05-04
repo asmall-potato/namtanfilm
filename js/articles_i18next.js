@@ -226,7 +226,9 @@ document.addEventListener('DOMContentLoaded', function() {
             ? '中文' 
             : lang === 'ja' 
             ? '日本語' 
-            : 'FILIPINO';
+            : savedLang === 'tl'
+            ? 'FILIPINO'
+            : 'Italian';
         document.querySelector('.current-language').textContent = displayText;
 
         // Close dropdown
