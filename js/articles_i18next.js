@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "nav_pluto_series": "la serie \"Pluto\"",
             "nav_girl_rules": "la serie \"Girl Rules\"",
             "nav_livecount": "conteggio live",
-            "nav_livecount_pluto": "conteggio live (la serie \"Pluto\")",
+            "nav_livecount_pluto": "Conteggio live(Pluto)",
             "nav_awards": "premi",
             "nav_awards2025": "premi (anno 2025)",
             "nav_fm": "incontro con i fan",
