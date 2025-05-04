@@ -145,7 +145,43 @@ document.addEventListener('DOMContentLoaded', function() {
           "followTitle": "Mga Parangal",
           "description": "Mga Parangal (2025)"
         }
-      }
+      },
+       ita: {
+          translation: {
+
+            // NAVIGATION
+            "nav_home": "casa",
+            "nav_series": "serie",
+            "nav_pluto_series": "la serie \"Pluto\"",
+            "nav_girl_rules": "la serie \"Girl Rules\"",
+            "nav_livecount": "conteggio live",
+            "nav_livecount_pluto": "Conteggio live(Pluto)",
+            "nav_awards": "premi",
+            "nav_awards2025": "premi (anno 2025)",
+            "nav_fm": "incontro con i fan",
+            "nav_fm2025": "2025",
+            "nav_video": "video",
+            "nav_video2024": "video (anno 2024)",
+            "nav_video2025": "video (anno 2025)",
+            "nav_magazine": "rivista",
+            "nav_magazine2024": "rivista (anno 2024)",
+            "nav_magazine2025": "rivista (anno 2025)",
+            "nav_brands": "marchi",
+            "nav_brands2024": "marchi (anno 2024)",
+            "nav_brands2025": "marchi (anno 2025)",
+            "nav_vote": "votazione ",
+            "nav_social": "Social Media",
+            "nav_articles": "articoli",
+            "nav_trend": "trend X la prima posizione ",
+            "nav_trend2024": "Trend(2024)",
+            "nav_trend2025": "Trend(2025)",
+            "nav_soldout": "tutto esaurito",
+
+            //-------
+            "followTitle": "premi",
+            "description": "premi (anno 2025)"
+          }
+        }
     }
   }, function(err, t) {
     updateAllContent(); // Update translatable elements after initialization
@@ -159,7 +195,9 @@ document.addEventListener('DOMContentLoaded', function() {
   ? '中文' 
   : savedLang === 'ja' 
   ? '日本語' 
-  : 'FILIPINO';
+  : savedLang === 'tl'
+  ? 'FILIPINO'
+  : 'Italian';
   document.querySelector('.current-language').textContent = displayText;
 
 // Toggle dropdown visibility
@@ -184,7 +222,9 @@ function switchLanguage(lang) {
           ? '中文' 
           : lang === 'ja' 
           ? '日本語' 
-          : 'FILIPINO';
+          : savedLang === 'tl'
+          ? 'FILIPINO'
+          : 'Italian';
         document.querySelector('.current-language').textContent = displayText;
 
         // Close dropdown
@@ -235,7 +275,9 @@ function switchLanguage(lang) {
           ? '中文' 
           : lang === 'ja' 
           ? '日本語' 
-          : 'FILIPINO';
+          : savedLang === 'tl'
+          ? 'FILIPINO'
+          : 'Italian';
       document.querySelector('.current-language').textContent = displayText;
 
       // Close dropdown
