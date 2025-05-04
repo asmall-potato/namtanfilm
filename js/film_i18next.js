@@ -325,7 +325,87 @@ document.addEventListener('DOMContentLoaded', function() {
                   "plutoSong": "\"พลูโต (Pluto)\" with Namtan Tipnaree (OST Pluto Series)",
                   "linger": "\"รอนะ (Linger)\" (OST Pluto Series)"
                 }
+              },
+            ita: {
+              translation: {
+
+            // NAVIGATION
+            "nav_home": "casa",
+            "nav_series": "serie",
+            "nav_pluto_series": "la serie \"Pluto\"",
+            "nav_girl_rules": "la serie \"Girl Rules\"",
+            "nav_livecount": "conteggio live",
+            "nav_livecount_pluto": "Conteggio live(Pluto)",
+            "nav_awards": "premi",
+            "nav_awards2025": "premi (anno 2025)",
+            "nav_fm": "incontro con i fan",
+            "nav_fm2025": "2025",
+            "nav_video": "video",
+            "nav_video2024": "video (anno 2024)",
+            "nav_video2025": "video (anno 2025)",
+            "nav_magazine": "rivista",
+            "nav_magazine2024": "rivista (anno 2024)",
+            "nav_magazine2025": "rivista (anno 2025)",
+            "nav_brands": "marchi",
+            "nav_brands2024": "marchi (anno 2024)",
+            "nav_brands2025": "marchi (anno 2025)",
+            "nav_vote": "votazione ",
+            "nav_social": "Social Media",
+            "nav_articles": "articoli",
+            "nav_trend": "trend X la prima posizione ",
+            "nav_trend2024": "Trend(2024)",
+            "nav_trend2025": "Trend(2025)",
+            "nav_soldout": "tutto esaurito",
+
+            //-------
+                  // Personal Info
+                  "filmName": "FILM RACHANUN",
+                  "background": "Background",
+                  "born": "Nata:14 Luglio,2000",
+                  "height": "Altezza:164cm",
+                  "agency": "Agencia:GMMTV ",
+                  "profileDetail": "Dettagli profilo ",
+                  
+                  // Drama Series
+                  "dramaSeries": "serie Drammatiche",
+                  "year2019": "Anno 2019:",
+                  "darkBlueKiss": "Dark Blue Kiss - Namwan - ruolo si supporto (ep 12)",
+                  "year2020": "Anno 2020:",
+                  "angelBesideMe": "Angel Beside Me - Bitoey - ruolo di supporto (ep 1-6)",
+                  "2gether":"​2gether - Earn - ruolo di supporto ",
+                  "imteemetoo": "I'm Tee, Me Too - Looksorn - ruolo di supporto (Ep, 2, 5, 8)",
+                  "year2021": "Anno 2021:",
+                  "thedebut": "The Debut - Farn -  ruolo di supporto ",
+                  "thecomments": "The Comments - Theerata / 'Toon' - ruolo principale ",
+                  "notme": "Not Me - Eugene - ruolo di supporto",
+                  "year2022": "Anno 2022:",
+                  "the3gentlebros": "The Three GentleBros - Nareeya / 'View' - ruolo principale ",
+                  "year2023": "Anno 2023:",
+                  "dirtylaundry": "Dirty Laundry - Neon - ruolo principale ",
+                  "doublesavage": "Double Savage - 'Rung' Rungtawan - ruolo principale ",
+                  "homeschool": "Home School - Maki - ruolo principale ",
+                  "wednesdayclub": "Wednesday Club - Tam - ruolo principale ",
+                  "lasttwilight": "Last Twilight - Gee - ruolo di supporto ",
+                  "year2024": "Anno 2024:",
+                  "myprecious": "My Precious - Lin - ruolo principale ",
+                  "ployyearbook": "Ploy's Yearbook - 'Ploy' Pandara - ruolo principale ",
+                  "pluto": "Pluto Series - 'May' Metavee - ruolo principale ",
+                  "year2025": "Anno 2025:",
+                  "girlrules": "Girl Rules Series - Bambi - ruolo principale ",
+                  
+                  //movie
+                  "movie": "Film",
+                  "2gethermovie": "2gether: The Movie - Earn - ruolo di supporto",
+                  "mypreciousmovie": "My Precious - Lin - ruolo principale ",
+
+                  // Songs
+                  "songs": "canzoni",
+                  "firstLove": "\"รักแรก (First Love) (หลิน Version)\" (OST My Precious la serie)",
+                  "princessTale": "\"เรื่องเล่าของเจ้าหญิง (A Princess' Tale)\" with Namtan Tipnaree (OST Pluto la serie)",
+                  "plutoSong": "\"พลูโต (Pluto)\" with Namtan Tipnaree (OST Pluto la serie)",
+                  "linger": "\"รอนะ (Linger)\" (OST Pluto la serie)"
               }
+            }
         }
     }, function(err, t) {
         updateAllContent(); // Update translatable elements after initialization
@@ -339,7 +419,9 @@ document.addEventListener('DOMContentLoaded', function() {
       ? '中文' 
       : savedLang === 'ja' 
       ? '日本語' 
-      : 'FILIPINO';
+      : savedLang === 'tl'
+      ? 'FILIPINO'
+      : 'Italian';
       document.querySelector('.current-language').textContent = displayText;
   
   
@@ -365,7 +447,9 @@ document.addEventListener('DOMContentLoaded', function() {
               ? '中文' 
               : lang === 'ja' 
               ? '日本語' 
-              : 'FILIPINO';
+              : savedLang === 'tl'
+              ? 'FILIPINO'
+              : 'Italian';
           document.querySelector('.current-language').textContent = displayText;
   
           // Close dropdown
@@ -415,7 +499,9 @@ document.addEventListener('DOMContentLoaded', function() {
         ? '中文' 
         : lang === 'ja' 
         ? '日本語' 
-        : 'FILIPINO';
+        : savedLang === 'tl'
+        ? 'FILIPINO'
+        : 'Italian';
         document.querySelector('.current-language').textContent = displayText;
         
         // Close dropdown
