@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
           "deadline1": "Voting Deadline: May 21, 2025, at 23:59",
           "votedesc1": "Voting Breakdown: </br>1. 50% from SMS votes </br>2. 50% from votes on website",
           "votehere": "Vote Here",
-          "nominee2": "Nominee: นํ้าตาล - ฟิล์ม (KA8. Popular Yuri Couple)",
-          "deadline2": "Voting Deadline: May 4, 2025",
+          "nominee2": "Nominee: Namtan Tipnaree , Film Rachanun",
+          "deadline2": "Voting Deadline: May 22, 2025",
           "vote3": "Nominations for BANGKOK PRIDE AWARDS 2025",
           "deadline3": "Nomination Deadline: April 29, 2025",
           "nominatehere": "Nominate Here"
@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
           "deadline1": "投票截止日期: 2025年5月21日, 晚上 11 点 59 分",
           "votedesc1": "投票规则和评分标准: </br>1. 50% 来自短信 </br>2. 50% 来自网上投票",
           "votehere": "点击投票",
-          "nominee2": "入围: นํ้าตาล - ฟิล์ม (KA8. Popular Yuri Couple)",
-          "deadline2": "投票截止日期: 2025年5月4日",
+          "nominee2": "入围: Namtan Tipnaree , Film Rachanun",
+          "deadline2": "投票截止日期: 2025年5月22日",
           "vote3": "BANGKOK PRIDE AWARDS 2025提名",
           "deadline3": "提名截止日期: 2025年4月29日",
           "nominatehere": "点击提名"
@@ -135,8 +135,8 @@ document.addEventListener('DOMContentLoaded', function() {
           "deadline1": "締切: 2025年5月21日 23:59",
           "votedesc1": "集計比率: </br>1. SMS投票: 50% </br>2. ウェブサイト投票: 50%",
           "votehere": "投票はこちら",
-          "nominee2": "ノミネート:นํ้าตาล - ฟิล์ม (KA8. Popular Yuri Couple)",
-          "deadline2": "締切: 2025年5月4日",
+          "nominee2": "ノミネート:Namtan Tipnaree , Film Rachanun",
+          "deadline2": "締切: 2025年5月22日",
           
         }
       },
@@ -178,8 +178,8 @@ document.addEventListener('DOMContentLoaded', function() {
           "deadline1": "Deadline ng Pagboto: May 21, 2025, 23:59",
           "votedesc1": "Breakdown ng voting: </br>1. 50% mula SMS vote </br>2. 50% mula sa boto sa website",
           "votehere": "Bumoto Dito",
-          "nominee2": "Nominado: นํ้าตาล - ฟิล์ม (KA8. Popular Yuri Couple)",
-          "deadline2": "Deadline ng Pagboto: Mayo 4, 2025",
+          "nominee2": "Nominado: Namtan Tipnaree , Film Rachanun",
+          "deadline2": "Deadline ng Pagboto: Mayo 22, 2025",
     
         }
       }
