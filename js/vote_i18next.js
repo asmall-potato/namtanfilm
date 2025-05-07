@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
           "votedesc1": "集計比率: </br>1. SMS投票: 50% </br>2. ウェブサイト投票: 50%",
           "votehere": "投票はこちら",
           "nominee2": "ノミネート:Namtan Tipnaree , Film Rachanun",
-          "deadline2": "締切: 2025年5月22日",
+          "deadline2": "投票締切：2025年5月22日 15:00（BKK）",
           
         }
       },
