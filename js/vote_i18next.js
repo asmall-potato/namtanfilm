@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
           "votedesc1": "Voting Breakdown: </br>1. 50% from SMS votes </br>2. 50% from votes on website",
           "votehere": "Vote Here",
           "nominee2": "Nominee: Namtan Tipnaree , Film Rachanun",
-          "deadline2": "Voting Deadline: May 22, 2025",
+          "deadline2": "Voting Deadline: May 22, 2025 until 3PM (BKK)",
           "vote3": "Nominations for BANGKOK PRIDE AWARDS 2025",
           "deadline3": "Nomination Deadline: April 29, 2025",
           "nominatehere": "Nominate Here"
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
           "votedesc1": "投票规则和评分标准: </br>1. 50% 来自短信 </br>2. 50% 来自网上投票",
           "votehere": "点击投票",
           "nominee2": "入围: Namtan Tipnaree , Film Rachanun",
-          "deadline2": "投票截止日期: 2025年5月22日",
+          "deadline2": "投票截止日期: 2025年5月22日 下午3时正（曼谷时间）",
           "vote3": "BANGKOK PRIDE AWARDS 2025提名",
           "deadline3": "提名截止日期: 2025年4月29日",
           "nominatehere": "点击提名"
