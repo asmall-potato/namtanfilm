@@ -59,7 +59,8 @@ const savedLang = sessionStorage.getItem('selectedLanguage') || 'en';
         "ticketsaleshz": "Ticket sales: Thursday, May 1, 2025,12:00 at Xiaomang APP",
         "ticketsaleshz1": "Ticket sales: Friday, May 2, 2025, 12:00 at Xiaomang APP",
         "titlehz": "Sweet Journey - Namtan Fan Appreciation Party",
-        "titlehz1": "Dream Vacation-Film Fan Appreciation Party"
+        "titlehz1": "Dream Vacation-Film Fan Appreciation Party",
+        "ticketsalesph": "Ticket sales: May 14, 2025,12:00PM at wishusluck.helixpay.ph"
       }
     },
     zh: {
@@ -113,7 +114,8 @@ const savedLang = sessionStorage.getItem('selectedLanguage') || 'en';
         "ticketsaleshz": "票务销售: 2025年5月1日（周四）12:00 在小芒APP",
         "ticketsaleshz1": "票务销售: 2025年5月2日（周五）12:00 在小芒APP",
         "titlehz": "甜蜜旅程-Namtan粉丝答谢会",
-        "titlehz1": "梦幻假期-Film粉丝答谢会"
+        "titlehz1": "梦幻假期-Film粉丝答谢会",
+        "ticketsalesph": "票务销售： 2025年5月14日, 中午12:00，在wishusluck.helixpay.ph"
         
       }
     },
