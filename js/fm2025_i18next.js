@@ -171,7 +171,8 @@ const savedLang = sessionStorage.getItem('selectedLanguage') || 'en';
         "ticketsaleshz": "チケット販売開始：2025年5月1日（木）12:00（Xiaomang APPにて）",
         "ticketsaleshz1": "チケット販売開始：2025年5月2日（金）12:00（Xiaomang APPにて）",
         "titlehz": "Sweet Journey - Namtan ファン感謝イベント",
-        "titlehz1": "Dream Vacation - Film ファン感謝イベント"
+        "titlehz1": "Dream Vacation - Film ファン感謝イベント",
+        "ticketsalesph": "チケット販売開始：2025年5月14日（木）12:00 http://wishusluck.helixpay.ph にて"
       }
     },
     tl: {
@@ -226,7 +227,8 @@ const savedLang = sessionStorage.getItem('selectedLanguage') || 'en';
         "ticketsaleshz": "Bentahan ng Ticket: Huwebes, Mayo 1, 2025,12:00 sa Xiaomang APP",
         "ticketsaleshz1": "Bentahan ng Ticket: Biyernes, Mayo 2, 2025, 12:00 sa Xiaomang APP",
         "titlehz": "Sweet Journey - Namtan Fan Appreciation Party",
-        "titlehz1": "Dream Vacation-Film Fan Appreciation Party"
+        "titlehz1": "Dream Vacation-Film Fan Appreciation Party",
+        "ticketsalesph": "Simula ng benta ng tiket: Huwebes, Mayo 14, 2025, 12:00PM sa http://wishusluck.helixpay.ph"
       }
     },
     ita: {
