@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "officialTA": "トレンド公式アカウント",
                     "gmmtvshop": "NAMTANFILM 公式グッズはこちらで購入",
                     "globalofc": "世界Lunarファンクラブ",
-                    "highlights": "ハイライト"，
+                    "highlights": "ハイライト",
                     "officialEng": "NamtanFilmに関するエンゲージメント",
                     "officialLunar": "Lunar公式アカウント"
                 }
