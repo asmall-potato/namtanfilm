@@ -55,7 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     "officialTA": "Official Trending Account",
                     "gmmtvshop": "Get NamtanFilm's official merchandise at",
                     "globalofc": "Global Lunar Support",
-                    "highlights": "HIGHLIGHTS"
+                    "highlights": "HIGHLIGHTS",
+                    "officialEng": "Engagement for NamtanFilm",
+                    "officialLunar": "Lunar Official Account"
                 }
             },
             zh: {
@@ -107,7 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     "officialTA": "官方刷趋号",
                     "gmmtvshop": "点击以下购买NamtanFilm的官方周边商品",
                     "globalofc": "全球LUNAR官方粉丝站",
-                    "highlights": "精选"
+                    "highlights": "精选",
+                    "officialEng": "NamtanFilm社交互动与品牌合作策略账号",
+                    "officialLunar": "Lunar官方账号"
                 }
             },
             ja: {
@@ -160,7 +164,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     "officialTA": "トレンド公式アカウント",
                     "gmmtvshop": "NAMTANFILM 公式グッズはこちらで購入",
                     "globalofc": "世界Lunarファンクラブ",
-                    "highlights": "ハイライト"
+                    "highlights": "ハイライト"，
+                    "officialEng": "Engagement for NamtanFilm",
+                    "officialLunar": "Lunar Official Account"
                 }
               },
               tl: {
@@ -213,7 +219,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     "officialTA": "Official Trending Account",
                     "gmmtvshop": "Bumil ng opisyal na merchandise nina NamtanFilm sa",
                     "globalofc": "Global Lunar Support",
-                    "highlights": "HIGHLIGHTS"
+                    "highlights": "HIGHLIGHTS"，
+                    "officialEng": "Engagement for NamtanFilm",
+                    "officialLunar": "Lunar Official Account"
                 }
               },
             ita: {
