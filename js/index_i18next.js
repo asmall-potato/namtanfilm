@@ -284,110 +284,108 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   
     // Set button text on page load
-    //Add this inside the callback after i18next.init(...), right before or after updateAllContent();:
-      const displayText = savedLang === 'en' 
-      ? 'ENGLISH' 
-      : savedLang === 'zh' 
-      ? '中文' 
-      : savedLang === 'ja' 
-      ? '日本語' 
-      : savedLang === 'tl'
-      ? 'FILIPINO'
-      : 'Italian';
-      document.querySelector('.current-language').textContent = displayText;
-  
-  
-    // Toggle dropdown visibility
-    document.querySelector(".language-switcher").addEventListener("click", function () {
-        const dropdown = document.getElementById("languageDropdown");
-        dropdown.classList.toggle("show");
-    });
-  
-    // Switch language and update UI
-    function switchLanguage(lang) {
-      i18next.changeLanguage(lang, (err, t) => {
-          if (err) return console.error('Language change failed:', err);
-          updateAllContent();
-  
-          // Save language in sessionStorage (clears on browser close)
-          sessionStorage.setItem('selectedLanguage', lang);
-        
-          //Use the new lang, not savedLang
-          const displayText = lang === 'en' 
-              ? 'ENGLISH' 
-              : lang === 'zh' 
-              ? '中文' 
-              : lang === 'ja' 
-              ? '日本語' 
-              : lang === 'tl'
-              ? 'FILIPINO'
-              : 'Italian';
-          document.querySelector('.current-language').textContent = displayText;
-  
-          // Close dropdown
-          document.getElementById("languageDropdown").classList.remove("show");
-      });
-      return false;
-  }
-  
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-        const dropdown = document.getElementById("languageDropdown");
-        const button = document.querySelector('.language-button');
-        
-        if (!event.target.closest('.language-switcher') && dropdown.classList.contains('show')) {
-            dropdown.classList.remove("show");
-        }
-    });
+  //Add this inside the callback after i18next.init(...), right before or after updateAllContent();:
+    const displayText = savedLang === 'en' 
+    ? 'ENGLISH' 
+    : savedLang === 'zh' 
+    ? '中文' 
+    : savedLang === 'ja' 
+    ? '日本語' 
+    : savedLang === 'tl'
+    ? 'FILIPINO'
+    : 'Italian';
+    document.querySelector('.current-language').textContent = displayText;
+
+
+  // Toggle dropdown visibility
+  document.querySelector(".language-switcher").addEventListener("click", function () {
+      const dropdown = document.getElementById("languageDropdown");
+      dropdown.classList.toggle("show");
   });
-  
-  // Function to update all translatable content
-  function updateAllContent() {
-    document.querySelectorAll('[data-i18n], [data-i18n-nav]').forEach(element => {
-      const key = element.getAttribute('data-i18n') || element.getAttribute('data-i18n-nav');
-  
-      if (element.hasAttribute('data-i18n-html')) {
-        element.innerHTML = i18next.t(key);
-      } else {
-        element.textContent = i18next.t(key);
-      }
-    });
-  }
-  
-    
-    // Switch language and update UI
-    function switchLanguage(lang) {
-      i18next.changeLanguage(lang, (err, t) => {
+
+  // Switch language and update UI
+  function switchLanguage(lang) {
+    i18next.changeLanguage(lang, (err, t) => {
         if (err) return console.error('Language change failed:', err);
         updateAllContent();
-        
-        // Save language in sessionStorage (clears on browser close)
-        sessionStorage.setItem('selectedLanguage', lang);
 
-        // Update button text
+        // Save language in sessionStorage (clears on browser close)
+    sessionStorage.setItem('selectedLanguage', lang);
+
+        //Use the new lang, not savedLang
         const displayText = lang === 'en' 
-        ? 'ENGLISH' 
-        : lang === 'zh' 
-        ? '中文' 
-        : lang === 'ja' 
-        ? '日本語' 
-        : lang === 'tl'
-        ? 'FILIPINO'
-        : 'Italian';
+            ? 'ENGLISH' 
+            : lang === 'zh' 
+            ? '中文' 
+            : lang === 'ja' 
+            ? '日本語' 
+            : savedLang === 'tl'
+            ? 'FILIPINO'
+            : 'Italian';
         document.querySelector('.current-language').textContent = displayText;
-        
+
         // Close dropdown
         document.getElementById("languageDropdown").classList.remove("show");
-      });
-      return false;
-    }
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
+    });
+    return false;
+}
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(event) {
       const dropdown = document.getElementById("languageDropdown");
       const button = document.querySelector('.language-button');
       
       if (!event.target.closest('.language-switcher') && dropdown.classList.contains('show')) {
-        dropdown.classList.remove("show");
+          dropdown.classList.remove("show");
       }
+  });
+});
+
+// Function to update all translatable content
+function updateAllContent() {
+  document.querySelectorAll('[data-i18n], [data-i18n-nav]').forEach(element => {
+    const key = element.getAttribute('data-i18n') || element.getAttribute('data-i18n-nav');
+
+    if (element.hasAttribute('data-i18n-html')) {
+      element.innerHTML = i18next.t(key);
+    } else {
+      element.textContent = i18next.t(key);
+    }
+  });
+}
+
+  
+  // Switch language and update UI
+  function switchLanguage(lang) {
+    i18next.changeLanguage(lang, (err, t) => {
+      if (err) return console.error('Language change failed:', err);
+      updateAllContent();
+      
+      // Save language in sessionStorage (clears on browser close)
+      sessionStorage.setItem('selectedLanguage', lang);
+
+      // Update button text
+      const displayText = lang === 'en' 
+      ? 'ENGLISH' 
+      : lang === 'zh' 
+      ? '中文' 
+      : lang === 'ja' 
+      ? '日本語' 
+      : 'FILIPINO';
+      document.querySelector('.current-language').textContent = displayText;
+      
+      // Close dropdown
+      document.getElementById("languageDropdown").classList.remove("show");
     });
+    return false;
+  }
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById("languageDropdown");
+    const button = document.querySelector('.language-button');
+    
+    if (!event.target.closest('.language-switcher') && dropdown.classList.contains('show')) {
+      dropdown.classList.remove("show");
+    }
+  });
