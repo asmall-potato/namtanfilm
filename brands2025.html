@@ -553,11 +553,8 @@
         <br>
     </main>
     
-    <footer>
-        <p>&copy; 2025 NAMTANFILM. All rights reserved.</p>
-        <p>Website developed and designed by @jieyan96.</p>
-       
-        </footer>
+    <div id="footer-container"></div>
+    
         <!-- Google Translate Element -->
         <div id="google_translate_element"></div>
     
@@ -566,6 +563,14 @@
 
         <script>
 
+        // footer
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+            
         // Fetch navigation list from navigation.html
         document.addEventListener("DOMContentLoaded", function () {
         fetch('navigation.html') // Fix the typo here: 'navigation.html' should be inside quotes
