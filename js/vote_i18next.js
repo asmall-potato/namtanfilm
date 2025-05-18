@@ -45,9 +45,21 @@ document.addEventListener('DOMContentLoaded', function() {
           "votehere": "Vote Here",
           "nominee2": "Nominee: Namtan Tipnaree , Film Rachanun",
           "deadline2": "Voting Deadline: May 22, 2025 until 3PM (BKK)",
-          "vote3": "Nominations for BANGKOK PRIDE AWARDS 2025",
-          "deadline3": "Nomination Deadline: April 29, 2025",
+          "voteon": "Vote on SMS & Website",
+          "deadline3": "Voting Deadline: May 23, 2025",
+          "nomineeSapphicSeriesStar": "Nominee: BKP305 Namtan Tipnaree & Film Rachanun",
+          "voteonsms1": "SMS: Send BKP305 to 4899777 (3 THB /1 Message)",
+          "nomineepopularseries": "Nominee: BKP606 Pluto",
+          "voteonsms2": "SMS: Send BKP606 to 4899777 (3 THB /1 Message)",
+          "nomineehitz": "Nominee: Namtan Tipnaree",
+          "deadlinehitz": "Voting Deadline: June 1, 2025",
+          "winnerhitz": "Winners announced: June 2, 2025",
+          "votehow": "Vote on X (@HITZThailand) & Website",
+          "voteX": "Vote via Poll on X - น้ำตาล ทิพนารี",
+          "votewebsite": "Vote via the Website",
+          "voteguide": "Voting Guidelines",
           "nominatehere": "Nominate Here"
+          
 
           }
       },
@@ -91,9 +103,20 @@ document.addEventListener('DOMContentLoaded', function() {
           "votehere": "点击投票",
           "nominee2": "入围: Namtan Tipnaree , Film Rachanun",
           "deadline2": "投票截止日期: 2025年5月22日 下午3时正（曼谷时间）",
-          "vote3": "BANGKOK PRIDE AWARDS 2025提名",
-          "deadline3": "提名截止日期: 2025年4月29日",
-          "nominatehere": "点击提名"
+          "voteon": "通过短信以及网站投票",
+          "deadline3": "投票截止日期: 2025年5月23日",
+          "nomineeSapphicSeriesStar": "入围: BKP305 Namtan Tipnaree & Film Rachanun",
+          "voteonsms1": "短信: 发送 BKP305 到 4899777 (1封短信3泰铢)",
+          "nomineepopularseries": "入围: BKP606 Pluto",
+          "voteonsms2": "短信: 发送 BKP606 到 4899777 (1封短信3泰铢)",
+          "nomineehitz": "入围: Namtan Tipnaree",
+          "deadlinehitz": "投票截止日期: 2025年6月1日",
+          "winnerhitz": "公布获胜者日期: 2025年6月2日",
+          "votehow": "通过X (@HITZThailand) 以及网站投票",
+          "voteX": "在 X 上参与投票 - น้ำตาล ทิพนารี",
+          "votewebsite": "通过网站投票",
+          "voteguide": "投票指南"
+         
 
         }
       },
@@ -137,7 +160,19 @@ document.addEventListener('DOMContentLoaded', function() {
           "votehere": "投票はこちら",
           "nominee2": "ノミネート:Namtan Tipnaree , Film Rachanun",
           "deadline2": "投票締切：2025年5月22日 15:00（BKK）",
-          
+          "voteon": "SMSとウェブサイトから投票できます。",
+          "deadline3": "投票締切：2025年5月23日",
+          "nomineeSapphicSeriesStar": "【ノミネート】： BKP305 Namtan Tipnaree & Film Rachanun",
+          "voteonsms1": "SMSで投票する場合：BKP305 と入力して 4899777 に送信（1メッセージあたり3バーツ）",
+          "nomineepopularseries": "【ノミネート】： BKP606 Pluto",
+          "voteonsms2": "SMSで投票する場合：BKP606 と入力して 4899777 に送信（1メッセージあたり3バーツ）",
+          "nomineehitz": "ノミネート： Namtan Tipnaree",
+          "deadlinehitz": "投票締切：2025年6月1日",
+          "winnerhitz": "受賞者発表：2025年6月2日",
+          "votehow": "投票は X（@HITZThailand） および 公式ウェブサイト にて",
+          "voteX": "Xの投票機能で「น้ำตาล ทิพนารี」に投票",
+          "votewebsite": "公式ウェブサイトからも投票可能",
+          "voteguide": "投票方法"
         }
       },
       tl: {
@@ -180,6 +215,19 @@ document.addEventListener('DOMContentLoaded', function() {
           "votehere": "Bumoto Dito",
           "nominee2": "Nominado: Namtan Tipnaree , Film Rachanun",
           "deadline2": "Deadline ng Pagboto: Mayo 22, 2025",
+          "voteon": "Bumoto sa SMS at Website",
+          "deadline3": "Huling Araw ng Pagboto: Mayo 23, 2025",
+          "nomineeSapphicSeriesStar": "Nominado: BKP305 Namtan Tipnaree & Film Rachanun",
+          "voteonsms1": "SMS: Ipadala ang BKP305 sa 4899777 (3 THB /1 Mensahe)",
+          "nomineepopularseries": "Nominado: BKP606 Pluto",
+          "voteonsms2": "SMS: Ipadala ang BKP606 sa 4899777 (3 THB /1 Mensahe)",
+          "nomineehitz": "Nominado: Namtan Tipnaree",
+          "deadlinehitz": "Huling Araw ng Pagboto: Hunyo 1, 2025",
+          "winnerhitz": "Mga Mananalo, Ihahayag sa: Hunyo 2, 2025",
+          "votehow": "Bumoto sa X (@HITZThailand) at Website",
+          "voteX": "Bumoto sa pamamagitan ng Poll sa X - น้ำตาล ทิพนารี",
+          "votewebsite": "Bumoto sa pamamagitan ng Website",
+          "voteguide": "Mga Panuntunan sa Pagboto"
     
         }
       }
