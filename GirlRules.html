@@ -96,13 +96,13 @@
     <script src="js/girlrules_i18next.js"></script>
 
     <script>
-        // footer
-     fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer-container').innerHTML = data;
-      })
-      .catch(error => console.error('Error loading footer:', error));
+     // footer
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
         
        // Fetch navigation list from navigation.html
         document.addEventListener("DOMContentLoaded", function () {
