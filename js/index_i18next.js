@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
               ? '中文' 
               : lang === 'ja' 
               ? '日本語' 
-              : savedLang === 'tl'
+              : lang === 'tl'
               ? 'FILIPINO'
               : 'Italian';
           document.querySelector('.current-language').textContent = displayText;
@@ -371,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ? '中文' 
         : lang === 'ja' 
         ? '日本語' 
-        : savedLang === 'tl'
+        : lang === 'tl'
         ? 'FILIPINO'
         : 'Italian';
         document.querySelector('.current-language').textContent = displayText;
