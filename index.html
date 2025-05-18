@@ -360,6 +360,21 @@
         
 
         <script>
+        // 1. First, define global functions (like toggleDropdown) at the top
+    function toggleDropdown() {
+        const dropdown = document.getElementById('languageDropdown');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // 2. Then add event listeners for language dropdown
+    document.addEventListener('click', function(event) {
+        const dropdown = document.getElementById('languageDropdown');
+        const button = document.querySelector('.language-button');
+        
+        if (!button.contains(event.target)) {  // Fixed missing parenthesis
+            dropdown.style.display = 'none';
+        }
+    });
 
         // Fetch navigation list from navigation.html
         document.addEventListener("DOMContentLoaded", function () {
