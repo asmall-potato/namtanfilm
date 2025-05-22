@@ -554,7 +554,8 @@
             "time": "4:00PM (BKK Time)",
             "location": "RAVIPA at Megabangna (1/F)",
             "artist": "Film Rachanun",
-            "url": "https://www.instagram.com/p/DJtpwawhqBo/?img_index=5"
+            "url": "https://www.instagram.com/p/DJtpwawhqBo/?img_index=5",
+            "status": "passed"
         }
     ],
     "2025-05-22": [
@@ -563,7 +564,8 @@
             "time": "17:00PM (BKK Time)",
             "live": "LINE MAN’s Facebook, YouTube, & TikTok",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1924801385251668186/photo/3"
+            "url": "https://x.com/GMMTV/status/1924801385251668186/photo/3",
+            "status": "passed"
         }
     ],
     "2025-05-23": [
