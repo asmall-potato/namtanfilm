@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "height": "Height: 169cm",
                     "agency": "Agency: GMMTV",
                     "profileDetail": "Profile Detail",
+                    "personalbrand": "Personal Brand: angelplays.club",
                     
                     // Drama Series
                     // Drama Series
@@ -153,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "height": "身高: 169厘米",
                     "agency": "经纪公司: GMMTV",
                     "profileDetail": "个人资料详情",
+                    "personalbrand": "个人品牌：angelplays.club",
                     
                     // Drama Series
                     "dramaSeries": "电视剧",
@@ -262,6 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   "height": "身長：169cm",
                   "agency": "所属：GMMTV",
                   "profileDetail": "プロフィールの詳細",
+                  "personalbrand": "Personal Brand: angelplays.club",
                   
                   // Drama Series
                   "dramaSeries": "ドラマ",
@@ -371,6 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   "height": "Taas: 5'5",
                   "agency": "Kumpanya: GMMTV",
                   "profileDetail": "Mga Detalye ng Profile",
+                  "personalbrand": "Personal Brand: angelplays.club",  
                   
                   // Drama Series
                   "dramaSeries": "Seryeng Drama",
