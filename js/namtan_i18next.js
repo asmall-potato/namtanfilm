@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   "height": "Taas: 5'5",
                   "agency": "Kumpanya: GMMTV",
                   "profileDetail": "Mga Detalye ng Profile",
-                  "personalbrand": "Personal Brand: angelplays.club",  
+                  "personalbrand": "mga personal na brand: angelplays.club",  
                   
                   // Drama Series
                   "dramaSeries": "Seryeng Drama",
