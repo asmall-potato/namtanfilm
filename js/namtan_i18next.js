@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   "height": "身長：169cm",
                   "agency": "所属：GMMTV",
                   "profileDetail": "プロフィールの詳細",
-                  "personalbrand": "Personal Brand: angelplays.club",
+                  "personalbrand": "個人ブランド: angelplays.club",
                   
                   // Drama Series
                   "dramaSeries": "ドラマ",
