@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "plutoseries": "Pluto Series - Ai-oon | Oab-oom - Main Role",
 
                     "year2025": "Year 2025:",
-                    "breakup": "Break Up Service - (TBA) - Guest Role",
+                    "breakup": "Break Up Service - Cherry - Guest Role(EP8,9)",
                     "girlrules": "Girl Rules Series - Prim - Main Role",
                     "enigma2": "Enigma 2 - Anya - Support Role",
                     
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "plutoseries": "冥王星之恋 - Ai-oon | Oab-oom - 主演",
 
                     "year2025": "2025年:",
-                    "breakup": "分手服务 - (待公布) - 特别出演",
+                    "breakup": "分手服务 - Cherry - 特别出演 (EP8,9)",
                     "girlrules": "女生规则：禁爱游戏 - Prim - 主演",
                     "enigma2": "咒中人2 - Anya - 配角",
                     
@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   "plutoseries": "『Pluto Series』- Ai-oon | Oab-oom（主役）",
 
                   "year2025": "2025年：",
-                  "breakup": "『Break Up Service』（未発表）（ゲスト出演）",
+                  "breakup": "『Break Up Service』- Cherry（第8、9話ゲスト出演）",
                   "girlrules": "『Girl Rules Series』- Prim（主役）",
                   "enigma2": "『Enigma 2』 - Anya（脇役）",
                   
@@ -433,7 +433,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   "plutoseries": "Pluto Series - Ai-oon | Oab-oom - Main Role",
 
                   "year2025": "2025:",
-                  "breakup": "Break Up Service - (TBA) - Guest Role",
+                  "breakup": "Break Up Service - Cherry - Guest Role",
                   "girlrules": "Girl Rules Series - Prim - Main Role",
                   "enigma2": "Enigma 2 - Anya - Support Role",
                   
