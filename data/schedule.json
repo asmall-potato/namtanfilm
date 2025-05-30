@@ -595,7 +595,8 @@
             "time": "03:00PM (BKK Time)",
             "location": "G Floor, Siam Discovery",
             "artist": "NamtanFilm",
-            "url": "https://www.instagram.com/p/DJ_pZNAvSnc/?img_index=1"
+            "url": "https://www.instagram.com/p/DJ_pZNAvSnc/?img_index=1",
+            "status": "passed"
         }
     ],
     "2025-05-29": [
@@ -604,7 +605,8 @@
             "time": "06:00PM (BKK Time)",
             "location": "Prada Store , M floor ,Emporium",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1926876823817744410/photo/1"
+            "url": "https://x.com/GMMTV/status/1926876823817744410/photo/1",
+            "status": "passed"
         }
     ],
     "2025-05-31": [
