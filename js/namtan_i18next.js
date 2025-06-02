@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // ========== REVISED FETCH FUNCTION ==========
   async function fetchTranslationsFromScript() {
     // nav + namtan
-  const url = 'https://script.google.com/macros/s/AKfycby75uSMEzXK7lxss5q7pE-sgriWHdgPJDKrFzCmdL5DnqxH20ojiNNDHdRjmlKLZfv8/exec'; 
+  const url = 'https://script.google.com/macros/s/AKfycbxJht3lXVo5OoCmUN2HwJrbFIp3MDbYWxYdDJ1JUFdopHDRVGb-qrPlH2SO6zMxZ0E2jg/exec'; 
 
   try {
     const response = await fetch(url);
