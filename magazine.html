@@ -24,17 +24,20 @@
 
              <!-- Language Switcher (Updated) -->
             <div class="language-switcher">
-                <button class="language-button" onclick="toggleDropdown()">
-                <span class="current-language">ENGLISH</span>
-                <span class="dropdown-icon">▼</span>
-                </button>
-                <div class="language-dropdown" id="languageDropdown">
-                    <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
-                    <a href="#" onclick="switchLanguage('zh')">中文</a>
-                    <a href="#" onclick="switchLanguage('ja')">日本語</a>
-                    <a href="#" onclick="switchLanguage('tl')">FILIPINO</a>
-                  </div>
-            </div>
+    	        <button class="language-button">
+        		    <span class="current-language">ENGLISH</span>
+        		    <span class="dropdown-icon">▼</span>
+    	        </button>
+   	         <div class="language-dropdown" id="languageDropdown">
+        	    <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
+        	    <a href="#" onclick="switchLanguage('zh')">中文</a>
+        	    <a href="#" onclick="switchLanguage('ja')">日本語</a>
+        	    <a href="#" onclick="switchLanguage('tl')">FILIPINO</a>
+        	    <a href="#" onclick="switchLanguage('ita')">ITALIAN</a>
+        	    <a href="#" onclick="switchLanguage('id')">INDONESIAN</a>
+        	    <a href="#" onclick="switchLanguage('spa')">SPANISH</a>
+    	    </div>
+        </div>
 
         </div>
         
@@ -134,7 +137,7 @@
     </main>
     
     <div id="footer-container"></div>
-        
+        <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/dist/umd/i18next.min.js"></script>
         <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
         <script src="js/magazine2024_i18next.js"></script>
 
