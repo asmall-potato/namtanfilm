@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // ========== REVISED FETCH FUNCTION ==========
   async function fetchTranslationsFromScript() {
     // nav + trend2024
-  const url = 'https://script.google.com/macros/s/AKfycbx9VYHHPjCqMHjN6HlVwLdYYBeTWHjXbzJ3BOH-onCPXK4m6xmQ59l0QFsnBHNgzrVRXg/exec'; 
+  const url = 'https://script.google.com/macros/s/AKfycbyy2xZuVdL0p5L7pCZGafiLPPw8NGp4s-CeZ2iyobuURneaW04DdsnJmfrWDoAJq14mqQ/exec'; 
 
   try {
     const response = await fetch(url);
