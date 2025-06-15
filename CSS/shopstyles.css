@@ -1,0 +1,112 @@
+.popular-items-section {
+  padding: 60px 20px;
+  background-color: #fff8f0;
+  text-align: center;
+}
+
+.popular-items-section .section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #000380;
+  text-transform: uppercase;
+}
+
+.popular-item-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.popular-item-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 200px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popular-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.popular-item-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.popular-item-info {
+  padding: 15px 10px;
+}
+
+.popular-item-info span {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.popular-item-info strong {
+  color: #e60000;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .popular-item-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 400px) {
+  .popular-item-card {
+    width: 100%;
+  }
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Pagination Buttons */
+.pagination a {
+    color: #0000cc; /* deep blue text */
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 0 4px;
+    transition: all 0.3s ease;
+    border: 1px solid #0000cc;
+    margin-bottom: 5px;
+    font-size: 16px;
+    background-color: #fff; /* keep background white for clean contrast */
+}
+
+/* Hover and Active Styles */
+.pagination a:hover {
+    background-color: #ffff00; /* bright yellow on hover */
+    color: #000; /* black text on yellow */
+    cursor: pointer;
+    border-color: #cccc00;
+}
+
+.pagination .current {
+    background-color: #0000cc; /* active page = deep blue */
+    color: white;
+    border-color: #0000cc;
+}
