@@ -656,7 +656,8 @@
             "time": "18:00 (BKK time)",
             "location": "Event Area, G Floor, Samyan Mitrtown",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1934625749019103561/photo/1"
+            "url": "https://x.com/GMMTV/status/1934625749019103561/photo/1",
+            "status": "passed"
             
         },
         {
@@ -664,7 +665,8 @@
             "time": "6:00PM (BKK time)",
             "live": "Watch it at GMMTV RECORDS Youtube Channel",
             "artist": "NamtanFilm (with MilkLove, EmiBonnie, ViewMim & JuneMewnich)",
-            "url": "https://x.com/GMMTV/status/1933848644517781889"
+            "url": "https://x.com/GMMTV/status/1933848644517781889",
+            "status": "passed"
         }
     ],
     "2025-06-20": [
