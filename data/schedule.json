@@ -698,7 +698,8 @@
             "time": "12:00PM (BKK Time)",
             "live": "Facebook/YouTube/Tiktok: GMMTV",
             "artist": "NamtanFilm (with MilkLove, EmiBonnie, ViewMim & JuneMewnich)",
-            "url": "https://x.com/GMMTV/status/1938099910601044163"
+            "url": "https://x.com/GMMTV/status/1938099910601044163",
+            "status": "passed"
         }
     ],
     "2025-06-28": [
@@ -717,6 +718,15 @@
             "location": "Union Hall, Union Mall",
             "artist": "NamtanFilm (with MilkLove, EmiBonnie, ViewMim & JuneMewnich)",
             "url": "https://x.com/GMMTV/status/1909909205076881766"
+        }
+    ],
+    "2025-06-30": [
+        {
+            "description": "LINE MAN LIVE",
+            "time": "5:00PM (BKK Time)",
+            "live": "Facebook/Tiktok/YouTube : LINEMAN",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/1938578428770619638/photo/4"
         }
     ],
     "2025-07-11": [
