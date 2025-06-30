@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, #87CEEB, #FFFACD); /* Sky blue to light yellow */
+  overflow: hidden;
+  color: white; /* Text color – adjust if needed for contrast */
+  font-family: sans-serif;
+}
+
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      
+    }
+
+    .center-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+      transition: opacity 0.8s ease;
+    }
+
+    .z-10 {
+      z-index: 10;
+    }
+
+    .fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Mascot on top of "H" */
+    .mascot-img {
+      position: absolute;
+      width: 60px;
+      bottom: 80%;
+      left: -10px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Floating effect for mascot */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Mascot on top of "E" */
+    .mascot-img-1 {
+      position: absolute;
+      width: 60px;
+      bottom: 25%;
+      left: 300px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Floating effect for mascot */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+
+    /* Letter animation */
+    .animated-text .char {
+      display: inline-block;
+      animation: bounce 1.2s infinite ease-in-out;
+    }
+
+    .animated-text .char:nth-child(1) { animation-delay: 0s; }
+    .animated-text .char:nth-child(2) { animation-delay: 0.05s; }
+    .animated-text .char:nth-child(3) { animation-delay: 0.1s; }
+    .animated-text .char:nth-child(4) { animation-delay: 0.15s; }
+    .animated-text .char:nth-child(5) { animation-delay: 0.2s; }
+    .animated-text .char:nth-child(6) { animation-delay: 0.25s; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .glow {
+      text-shadow: 0 0 5px #fff, 0 0 10px #ffc107, 0 0 20px #004ed5;
+    }
+
+    .name-lines .char {
+      color: #ADD8E6; /* Light blue */
+    }
+
+
+    /* Close Button */
+    #closeFireworksBtn {
+      z-index: 15;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <!-- Canvas for fireworks -->
+  <canvas id="fireworkCanvas"></canvas>
+
+  <!-- Close Button -->
+  <button id="closeFireworksBtn" class="btn btn-outline-light">
+    ✖ Close Fireworks
+  </button>
+
+  <!-- Text overlay -->
+  <div class="center-text text-center" id="birthdayText">
+    <div class="position-relative d-inline-block animated-text">
+      <!-- Mascot Image standing on H -->
+      <img src="Images/Picturegfdgd1 trans.png" alt="lunar" class="mascot-img">
+      <img src="Images/Gtpjwa9asAAoN8o.png" alt="lunar" class="mascot-img-1">
+
+      <!-- Animated "Happy Birthday" -->
+      <h1 class="display-3 fw-bold text-warning glow">
+        <span class="char">H</span><span class="char">a</span><span class="char">p</span><span class="char">p</span><span class="char">y</span>
+        <br>
+        <span class="char">B</span><span class="char">i</span><span class="char">r</span><span class="char">t</span><span class="char">h</span><span class="char">d</span><span class="char">a</span><span class="char">y</span>
+        <br>
+        <br>
+        <!-- Wrap the name section in a new class -->
+      <div class="name-lines">
+        <span class="char">N</span><span class="char">A</span><span class="char">M</span><span class="char">T</span><span class="char">A</span><span class="char">N</span>
+        <br>
+        <span class="char">T</span><span class="char">I</span><span class="char">P</span><span class="char">N</span><span class="char">A</span><span class="char">R</span><span class="char">E</span><span class="char">E</span>
+        </div>
+      </h1>
+      <h3>#29thHappyNamtanDay</h3>
+    </div>
+  </div>
+
+  <!-- JavaScript Fireworks -->
+  <script>
+  window.onload = () => {
+    // ✅ Check sessionStorage once the page is loaded
+    if (sessionStorage.getItem("skipFireworks")) {
+      
+      return; // Do NOT run fireworks again
+    }
+
+    const canvas = document.getElementById("fireworkCanvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+    let fireworkInterval;
+    let isRunning = true;
+
+    class Particle {
+      constructor(x, y, color, shape = 'circle') {
+        this.x = x;
+        this.y = y;
+        this.radius = shape === 'flower' ? 10 : Math.random() * 3 + 1;
+        this.color = color;
+        this.shape = shape;
+        this.speedX = Math.random() * 6 - 3;
+        this.speedY = Math.random() * 6 - 3;
+        this.alpha = 1;
+
+        if (shape === 'flower') {
+          this.image = new Image();
+          this.image.src = "Images/e38213f3-4a13-4523-ab3e-81991fe77937.png";
+        }
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.alpha -= 0.015;
+      }
+
+      draw() {
+        ctx.globalAlpha = this.alpha;
+        if (this.shape === 'flower' && this.image.complete) {
+          ctx.drawImage(this.image, this.x - 10, this.y - 10, 20, 20);
+        } else {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+      }
+    }
+
+    function createFirework() {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height / 2;
+      const colors = ["#007BFF", "#FFC107"];
+      const shapes = ['circle', 'flower'];
+
+      for (let i = 0; i < 40; i++) {
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const shape = Math.random() < 0.3 ? 'flower' : 'circle';
+        particles.push(new Particle(x, y, color, shape));
+      }
+    }
+
+    function animate() {
+      if (!isRunning) return;
+      ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      particles = particles.filter(p => p.alpha > 0);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    function startFireworks() {
+      fireworkInterval = setInterval(createFirework, 800);
+      animate();
+    }
+
+    function stopFireworks() {
+  isRunning = false;
+  clearInterval(fireworkInterval);
+
+  // ✅ Set the flag to skip next time
+  sessionStorage.setItem("skipFireworks", "true");
+
+  // Fade out UI
+  document.getElementById("fireworkCanvas").classList.add("fade-out");
+  document.getElementById("birthdayText").classList.add("fade-out");
+  document.getElementById("closeFireworksBtn").classList.add("fade-out");
+
+  // Return to index.html
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 800);
+}
+
+ 
+
+    document.getElementById("closeFireworksBtn").addEventListener("click", stopFireworks);
+
+    startFireworks(); // Only runs if skipFireworks wasn't set
+  };
+</script>
+
+</body>
+</html>
