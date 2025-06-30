@@ -359,25 +359,7 @@
         
 
         <script>
-        //Special for Birthday Firework
-            document.addEventListener("DOMContentLoaded", function () {
-    const now = new Date();
-
-    // Bangkok is UTC+7
-    const bangkokOffset = 7 * 60; // minutes
-    const localOffset = now.getTimezoneOffset(); // minutes
-    const offset = (bangkokOffset + localOffset) * 60 * 1000; // in ms
-
-    const bangkokTime = new Date(now.getTime() + offset);
-
-    const startDate = new Date('2025-07-01T00:00:00+07:00');
-    const endDate = new Date('2025-07-01T23:59:59+07:00');
-
-    if (bangkokTime < startDate || bangkokTime > endDate) {
-      // Redirect back to index if not within valid time
-      window.location.href = "index.html";
-    }
-  });
+        
         // footer
             fetch('footer.html')
             .then(response => response.text())
@@ -511,6 +493,26 @@ document.addEventListener("DOMContentLoaded", function () {
     */
 });
 
+    //Special for Birthday Firework
+            document.addEventListener("DOMContentLoaded", function () {
+    const now = new Date();
+
+    // Bangkok is UTC+7
+    const bangkokOffset = 7 * 60; // minutes
+    const localOffset = now.getTimezoneOffset(); // minutes
+    const offset = (bangkokOffset + localOffset) * 60 * 1000; // in ms
+
+    const bangkokTime = new Date(now.getTime() + offset);
+
+    const startDate = new Date('2025-07-01T00:00:00+07:00');
+    const endDate = new Date('2025-07-01T23:59:59+07:00');
+
+    if (bangkokTime < startDate || bangkokTime > endDate) {
+      // Redirect back to index if not within valid time
+      window.location.href = "index.html";
+    }
+  });
+            
         //Video replaced youtube embedded
         var videoData = [
     { videoId: '3ZHj7DMH3sE', title: 'MY IDEAL FAN (NAMTANFILM)- LUNAR' },
