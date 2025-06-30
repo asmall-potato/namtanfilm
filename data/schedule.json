@@ -708,7 +708,8 @@
             "time": "17:00PM (BKK Time)",
             "location": "Union Hall, Union Mall",
             "artist": "NamtanFilm (with MilkLove, EmiBonnie, ViewMim & JuneMewnich)",
-            "url": "https://x.com/GMMTV/status/1909909205076881766"
+            "url": "https://x.com/GMMTV/status/1909909205076881766",
+            "status": "passed"
         }
     ],
     "2025-06-29": [
@@ -717,7 +718,8 @@
             "time": "17:00PM (BKK Time)",
             "location": "Union Hall, Union Mall",
             "artist": "NamtanFilm (with MilkLove, EmiBonnie, ViewMim & JuneMewnich)",
-            "url": "https://x.com/GMMTV/status/1909909205076881766"
+            "url": "https://x.com/GMMTV/status/1909909205076881766",
+            "status": "passed"
         }
     ],
     "2025-06-30": [
@@ -726,7 +728,17 @@
             "time": "5:00PM (BKK Time)",
             "live": "Facebook/Tiktok/YouTube : LINEMAN",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1938578428770619638/photo/4"
+            "url": "https://x.com/GMMTV/status/1938578428770619638/photo/4",
+            "status": "passed"
+        }
+    ],
+    "2025-07-01": [
+        {
+            "description": "NAMTANTOPIA Birthday Party",
+            "time": "04.00 PM - 08.00 PM (BKK Time)",
+            "location": "THAISUMMIT TOWER ",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/Tipnaree_OFC/status/1938193036548378889"
         }
     ],
     "2025-07-11": [
