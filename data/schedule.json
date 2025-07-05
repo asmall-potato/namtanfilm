@@ -738,7 +738,8 @@
             "time": "04.00 PM - 08.00 PM (BKK Time)",
             "location": "THAISUMMIT TOWER ",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/Tipnaree_OFC/status/1938193036548378889"
+            "url": "https://x.com/Tipnaree_OFC/status/1938193036548378889",
+            "status": "passed"
         }
     ],
     "2025-07-03": [
@@ -747,7 +748,8 @@
             "time": "18:00PM (BKK Time)",
             "location": "SFW CentralWorld, Cinema 15",
             "artist": "NamtanFilm",
-            "url": "https://x.com/WeLoveSF/status/1939942054173245596"
+            "url": "https://x.com/WeLoveSF/status/1939942054173245596",
+            "status": "passed"
         }
     ],
     "2025-07-11": [
