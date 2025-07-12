@@ -758,7 +758,8 @@
             "time": "19:00PM",
             "location": "Legacy TERA",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1931278803063693323"
+            "url": "https://x.com/GMMTV/status/1931278803063693323",
+            "status": "passed"
         }
     ],
     "2025-07-18": [
@@ -768,6 +769,15 @@
             "location": "UP Theater, Manila",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/1920773237945815176"
+        }
+    ],
+    "2025-07-27": [
+        {
+            "description": "Fan Sign event of GMMTV OFFICIAL MERCHANDISE Booth (International Novel Festival 2025)",
+            "time": "5:00PM (BKK Time)",
+            "location": "Fan Sign Venue: Meeting Rooms 2 - 3, 5th Floor, Samyan Mitrtown. | Assembly Point: Sky Garden, cinema side (subject to change)",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1943584848863764604"
         }
     ]
 }
