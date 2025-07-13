@@ -762,6 +762,24 @@
             "status": "passed"
         }
     ],
+    "2025-07-15": [
+        {
+            "description": "FilmRacha 25th Birthday Event",
+            "time": "08.30 A.M. - 12.00 P.M. (Bkk time)",
+            "location": "Wat Yannawa, Bangkok",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/RachanunFanbase/status/1943294137509572921"
+        }
+    ],
+    "2025-07-16": [
+        {
+            "description": "GARNIER วิทย์ตี้ Academy",
+            "time": "18:00 (Bkk time)",
+            "live": "Youtube - GMMTVOfficial",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1943596903549268230"
+        }
+    ],
     "2025-07-18": [
         {
             "description": "NAMTAN FILM 1ST FAN MEETING IN MANILA",
@@ -771,6 +789,15 @@
             "url": "https://x.com/GMMTV/status/1920773237945815176"
         }
     ],
+    "2025-07-26": [
+        {
+            "description": "บุหงาหมื่นภมร Enigma Black Stage First Screening",
+            "time": "8:00PM (Bkk time)",
+            "location": "CINEMA 15, SF WORLD CINEMA, CENTRAL WORLD 9th Floor",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/1943973863295267213"
+        }
+    ],
     "2025-07-27": [
         {
             "description": "Fan Sign event of GMMTV OFFICIAL MERCHANDISE Booth (International Novel Festival 2025)",
@@ -778,6 +805,15 @@
             "location": "Fan Sign Venue: Meeting Rooms 2 - 3, 5th Floor, Samyan Mitrtown. | Assembly Point: Sky Garden, cinema side (subject to change)",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/1943584848863764604"
+        }
+    ],
+    "2025-08-10": [
+        {
+            "description": "Starry Night: NamtanFilm 1st Fanmeeting in Hong Kong",
+            "time": "4:00PM (HK time)",
+            "location": "AXA Dreamland,Go Park | AXA 安盛創夢館",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1937782820409344169"
         }
     ]
 }
