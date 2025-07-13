@@ -6,6 +6,7 @@
     <meta name="description" content="A Namtanfilm fan site built to help more people discover Namtanfilm. Stay updated and access a variety of contents in one place.">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/switchlanguage.css">
+    <link rel="stylesheet" href="CSS/bdpopup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     
@@ -76,6 +77,21 @@
             </div>
         </section>
 
+        <!-- BD pop up -->
+        <div class="modal-overlay" id="popupModal">
+          <div class="modal">
+            <div class="modal-image">
+              <img src="Images/film25thbd.png" alt="Birthday" style="width: 100%; height: 100%; object-fit: contain;" />
+            </div>
+            <div class="modal-content">
+              <span class="close-btn" onclick="closeModal()">&times;</span>
+              <h2>Celebrate Film Rachanun Birthday by using:</h2>
+              <p>Keyword: <strong>FILMRACHA ANGEL ON EARTH</strong></p>
+              <p>Hashtag: <strong>#Happy25thFilmrachaDay</strong></p>
+            </div>
+      </div>
+    </div>
+        
         <!--Introduce namtanfilm-->
         <section class="cast-container">
             <h3 data-i18n="profile">NAMTANFILM's PROFILE</h3>
@@ -366,6 +382,20 @@
     sessionStorage.removeItem("skipFireworks"); // Optional: so it triggers again on refresh
   }
 */
+    /*BD pop up scripts*/
+        function showModal() {
+        document.getElementById("popupModal").style.display = "flex";
+        }
+
+       function closeModal() {
+        document.getElementById("popupModal").style.display = "none";
+        }
+
+        // Auto-show on page load
+        window.onload = function () {
+            showModal();
+        };
+
         // footer
             fetch('footer.html')
             .then(response => response.text())
