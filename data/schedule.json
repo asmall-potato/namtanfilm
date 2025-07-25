@@ -788,7 +788,8 @@
             "time": "7:00PM (Bkk time)",
             "location": "One Bangkok, Tower 4",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1946526028182282481/photo/3"
+            "url": "https://x.com/GMMTV/status/1946526028182282481/photo/3",
+            "status": "passed"
         }
     ],
     "2025-07-23": [
@@ -797,14 +798,16 @@
             "time": "-",
             "location": "Prachinratsadorn - amroong School | โรงเรียนปราจิณราษฎรอำรุง จ.ปราจีนบุรี",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/1945755354887073922"
+            "url": "https://x.com/GMMTV/status/1945755354887073922",
+            "status": "passed"
         },
         {
             "description": "ARMSHARE EP183",
             "time": "6:00PM (Bkk Time)",
             "live": "GMMTV OFFICIAL Youtube",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1947589940839358555"
+            "url": "https://x.com/GMMTV/status/1947589940839358555",
+            "status": "passed"
         }
     ],
     "2025-07-25": [
