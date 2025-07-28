@@ -816,7 +816,8 @@
             "time": "6:00PM (bkk time)",
             "location": "Central Court, Central World",
             "artist": "NamtanFilm",
-            "url": "https://www.instagram.com/p/DMW8XHQPddq/?img_index=3"
+            "url": "https://www.instagram.com/p/DMW8XHQPddq/?img_index=3",
+            "status": "passed"
         }
     ],
     "2025-07-26": [
@@ -825,14 +826,16 @@
             "time": "8:00PM (Bkk time)",
             "location": "CINEMA 15, SF WORLD CINEMA, CENTRAL WORLD 9th Floor",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1943973863295267213"
+            "url": "https://x.com/GMMTV/status/1943973863295267213",
+            "status": "passed"
         },
         {
             "description": "Enigma Black Stage EP1",
             "time": "8:30PM (Bkk time)",
             "live": "Channel One 31 | Rerun on Netflix at 9:30PM (Bkk time)",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1943958761884021131"
+            "url": "https://x.com/GMMTV/status/1943958761884021131",
+            "status": "passed"
         }
     ],
     "2025-07-27": [
@@ -841,7 +844,8 @@
             "time": "5:00PM (BKK Time)",
             "location": "Fan Sign Venue: Meeting Rooms 2 - 3, 5th Floor, Samyan Mitrtown. | Assembly Point: Sky Garden, cinema side (subject to change)",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1943584848863764604"
+            "url": "https://x.com/GMMTV/status/1943584848863764604",
+            "status": "passed"
         }
     ],
     "2025-08-10": [
