@@ -854,7 +854,19 @@
             "time": "6:00PM (BKK Time)",
             "live": "GMMTV OFFICIAL Youtube",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1950149313415565631"
+            "url": "https://x.com/GMMTV/status/1950149313415565631",
+            "status": "passed"
+            
+        }
+    ],
+    "2025-08-01": [
+        {
+            "description": "GMMTV PRO-TEEN SCHOOL TOUR 2025",
+            "time": "-",
+            "location": "Ang Thong Patthamarot Witthayakhom School, Ang Thong",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/GMMTV/status/1949016845668995389"
+            
             
         }
     ],
