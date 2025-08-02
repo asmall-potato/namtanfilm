@@ -865,9 +865,27 @@
             "time": "-",
             "location": "Ang Thong Patthamarot Witthayakhom School, Ang Thong",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/1949016845668995389"
+            "url": "https://x.com/GMMTV/status/1949016845668995389",
+            "status": "passed"           
             
-            
+        }
+    ],
+    "2025-08-02": [
+        {
+            "description": "Enigma Black Stage EP2",
+            "time": "8:30PM (Bkk time)",
+            "live": "Channel One 31 | Rerun on Netflix at 9:30PM (Bkk time)",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/1951500707330482552"          
+        }
+    ],
+    "2025-08-08": [
+        {
+            "description": "GMMTV PRO-TEEN SCHOOL TOUR 2025",
+            "time": "-",
+            "location": "โรงเรียนสงวนหญิง | Sa-Nguan Ying School",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1951508260173090846"
         }
     ],
     "2025-08-10": [
@@ -880,3 +898,4 @@
         }
     ]
 }
+
