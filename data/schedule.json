@@ -876,7 +876,8 @@
             "time": "8:30PM (Bkk time)",
             "live": "Channel One 31 | Rerun on Netflix at 9:30PM (Bkk time)",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1951500707330482552"          
+            "url": "https://x.com/GMMTV/status/1951500707330482552",
+            "status": "passed"
         }
     ],
     "2025-08-08": [
@@ -898,4 +899,5 @@
         }
     ]
 }
+
 
