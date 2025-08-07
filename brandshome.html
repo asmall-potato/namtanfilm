@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/brandshome-styles.css">
-    <link rel="stylesheet" href="CSS/switchlanguage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <title>NAMTANFILM | BRANDS</title>
@@ -21,22 +20,6 @@
             </button>
             <div id="navigation"></div>
 
-            <!-- Language Switcher (Updated) -->
-            <div class="language-switcher">
-    <button class="language-button">
-        <span class="current-language">ENGLISH</span>
-        <span class="dropdown-icon">▼</span>
-    </button>
-    <div class="language-dropdown" id="languageDropdown">
-        <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
-        <a href="#" onclick="switchLanguage('zh')">中文</a>
-        <a href="#" onclick="switchLanguage('ja')">日本語</a>
-        <a href="#" onclick="switchLanguage('tl')">FILIPINO</a>
-        <a href="#" onclick="switchLanguage('ita')">ITALIAN</a>
-        <a href="#" onclick="switchLanguage('id')">INDONESIAN</a>
-        <a href="#" onclick="switchLanguage('spa')">SPANISH</a>
-    </div>
-</div>
 
         </div>
        
@@ -45,14 +28,14 @@
     
 
     <main>
-        <h2 data-i18n="followTitle">BRANDS</h2>
+        <h2 >BRANDS</h2>
         <br>
         <div class="brands-container">
             <div class="column">
-              <h3><a href="brands.html" data-i18n="description">BRANDS (Year 2024)</a></h3>
+              <h3><a href="brands.html" >BRANDS (Year 2024)</a></h3>
             </div>
             <div class="column">
-              <h3><a href="brands2025.html" data-i18n="description2">BRANDS (Year 2025)</a></h3>
+              <h3><a href="brands2025.html" >BRANDS (Year 2025)</a></h3>
             </div>
           </div>
 
@@ -65,10 +48,6 @@
     <div id="footer-container"></div>
         <!-- Google Translate Element -->
         <div id="google_translate_element"></div>
-
-        <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/dist/umd/i18next.min.js"></script>
-        <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
-        <script src="js/brands_i18next.js"></script>
 
         <script>
         // footer
