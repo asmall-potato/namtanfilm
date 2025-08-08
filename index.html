@@ -61,35 +61,48 @@
         </section>
 
         <!-- pop up-->
-        <div class="modal-overlay" id="popupModal">
-          <div class="modal">
-            <div class="modal-image">
-              <img src="Images/vote_howe_ntf_pluto.png" alt="Call for voting HOWE Awards 2025 (NamtanFilm)" style="width: 100%; height: 100%; object-fit: contain;" />
-            </div>
-            <div class="modal-content">
-              <span class="close-btn" onclick="closeModal()">&times;</span>
-              <h2>HOWE AWARDS 2025</h2>
-              <i>Voting Deadline: <b>August 10, 2025 at 11:59 PM</b></i>
-              <p>LINE Vote (Free) 1 Vote per day - 20% </br>
-              WEB Vote (Paid) Unlimited [5 Baht per vote] - 80%</p>
-              </br>
-              <b>HOWE HOTTEST ACTRESS AWARD - Namtan Tipnaree (HC3)</b></br>
-              <a href="https://today.line.me/th/v3/poll/x2Pm1gr?utm_source=copyshare&liff.referrer=https%3A%2F%2Ft.co%2F" title = "HOWE HOTTEST ACTRESS AWARD - Namtan Tipnaree (HC3)">LINE VOTE</a></br>
-              <a href="https://shop.howemagazine.com/product/vote-hc-howe-hottest-actress-award-2025/" title = "HOWE HOTTEST ACTRESS AWARD - Namtan Tipnaree (HC3)">WEB VOTE</a>
-              </br>
-              <b>HOWE SHINING FEMALE AWARD - Film Rachanun (HJ6)</b></br>
-              <a href="https://today.line.me/th/v3/poll/j7QLoKg?utm_source=copyshare&liff.referrer=https%3A%2F%2Ft.co%2F" title = "HOWE SHINING FEMALE AWARD - Film Rachanun (HJ6)">LINE VOTE</a></br>
-              <a href="https://shop.howemagazine.com/product/vote-hj-howe-shining-female-award-2025/" title = "HOWE SHINING FEMALE AWARD - Film Rachanun (HJ6)">WEB VOTE</a>
-              </br>
-              <b>HOWE HOTTEST SERIES AWARD - Pluto Series (HG3)</b></br>
-              <a href="https://today.line.me/th/v3/poll/QwJ9Exj?utm_source=copyshare&liff.referrer=https%3A%2F%2Ft.co%2F" title = "HOWE HOTTEST SERIES AWARD - Pluto Series (HG3)">LINE VOTE</a></br>
-              <a href="https://shop.howemagazine.com/product/vote-hg-howe-hottest-series-award-2025/" title = "HOWE HOTTEST SERIES AWARD - Pluto Series (HG3)">WEB VOTE</a>
-              </br>
-              </br>
-              <h4>Let’s Bring Home the Win for Namtan Tipnaree, Film Rachanun and Pluto Series! 🚀🏆</h4></br>
-            </div>
+<div class="modal-overlay" id="popupModal">
+  <div class="modal">
+    <div class="modal-image">
+      <div class="slideshow-container">
+        <img class="slide" src="Images/Picture1.png" alt="HOWE HOTTEST ACTRESS AWARD - Namtan Tipnaree (HC3)" />
+        <img class="slide" src="Images/Picture3.png" alt="HOWE SHINING FEMALE AWARD - Film Rachanun (HJ6)" />
+        <img class="slide" src="Images/Picture2.png" alt="HOWE HOTTEST SERIES AWARD - Pluto Series (HG3)" />
+
+        <div class="dots-container">
+          <span class="dot" onclick="setSlide(0)"></span>
+          <span class="dot" onclick="setSlide(1)"></span>
+          <span class="dot" onclick="setSlide(2)"></span>
+        </div>
       </div>
     </div>
+
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>HOWE AWARDS 2025</h2>
+      <i>Voting Deadline: <b>August 10, 2025 at 11:59 PM</b></i>
+      <p>
+        LINE Vote (Free) 1 Vote per day - 20%<br />
+        WEB Vote (Paid) Unlimited [5 Baht per vote] - 80%
+      </p>
+      <br />
+
+      <b>HOWE HOTTEST ACTRESS AWARD - Namtan Tipnaree (HC3)</b><br />
+      <a href="https://today.line.me/th/v3/poll/x2Pm1gr" target="_blank">LINE VOTE</a><br />
+      <a href="https://shop.howemagazine.com/product/vote-hc-howe-hottest-actress-award-2025/" target="_blank">WEB VOTE</a><br /><br />><br />
+
+      <b>HOWE SHINING FEMALE AWARD - Film Rachanun (HJ6)</b><br />
+      <a href="https://today.line.me/th/v3/poll/j7QLoKg" target="_blank">LINE VOTE</a><br />
+      <a href="https://shop.howemagazine.com/product/vote-hj-howe-shining-female-award-2025/" target="_blank">WEB VOTE</a><br /><br />><br />
+
+      <b>HOWE HOTTEST SERIES AWARD - Pluto Series (HG3)</b><br />
+      <a href="https://today.line.me/th/v3/poll/QwJ9Exj" target="_blank">LINE VOTE</a><br />
+      <a href="https://shop.howemagazine.com/product/vote-hg-howe-hottest-series-award-2025/" target="_blank">WEB VOTE</a><br /><br />><br />
+
+      <h4>Let’s Bring Home the Win for Namtan Tipnaree, Film Rachanun and Pluto Series! 🚀🏆</h4><br />
+    </div>
+  </div>
+</div>
          
         <!--Introduce namtanfilm-->
         <section class="cast-container">
@@ -381,7 +394,7 @@
 */
 
             
-    /*Pop up scripts*/
+    /*Pop up scripts
         function showModal() {
         document.getElementById("popupModal").style.display = "flex";
         }
@@ -394,7 +407,55 @@
         window.onload = function () {
             showModal();
         };
+*/
 
+            /*ANother pop up with slidehsow*/
+            // Modal show and close
+function showModal() {
+  document.getElementById("popupModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("popupModal").style.display = "none";
+}
+
+// Slideshow control
+let slideIndex = 0;
+let slides, dots;
+
+function showSlide(n) {
+  slides = document.getElementsByClassName("slide");
+  dots = document.getElementsByClassName("dot");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; // Hide all slides
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active-dot"); // Remove active class from all dots
+  }
+
+  slides[n].style.display = "block"; // Show the selected slide
+  dots[n].classList.add("active-dot"); // Highlight the active dot
+  slideIndex = n; // Update the current slide index
+}
+
+function nextSlide() {
+  slideIndex = (slideIndex + 1) % document.getElementsByClassName("slide").length;
+  showSlide(slideIndex); // Show the next slide
+}
+
+function setSlide(n) {
+  showSlide(n); // Show the selected slide based on dot click
+}
+
+// Auto-slide every 4 seconds
+window.onload = function () {
+  showModal(); // Show the modal when page loads
+  showSlide(slideIndex); // Show the first slide
+  setInterval(nextSlide, 4000); // Auto-slide every 4 seconds
+};
+
+            
             
         // footer
             fetch('footer.html')
@@ -588,6 +649,7 @@ loadYouTubeAPI();
 
         </body>
         </html>
+
 
 
 
