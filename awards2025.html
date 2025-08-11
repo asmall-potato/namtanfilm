@@ -104,24 +104,21 @@
             
         // Fetch navigation list from navigation.html
         document.addEventListener("DOMContentLoaded", function () {
-        fetch('navigation.html') // Fix the typo here: 'navigation.html' should be inside quotes
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navigation').innerHTML = data;
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
 
-            // Now update the content after navigation is loaded
-            updateAllContent(); // Make sure this runs after the navigation is inserted
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
 
-            // Attach the event listener after navigation is loaded
-            const navToggle = document.querySelector(".nav-toggle");
-            const navMenu = document.querySelector("#navigation ul");
-
-            navToggle.addEventListener("click", function () {
-                navMenu.classList.toggle("showing");
-            });
-        })
-        .catch(error => console.error('Error loading navigation:', error));
-});
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
     
         // Scroll reveal effect
         const sections = document.querySelectorAll('section');
@@ -199,3 +196,4 @@
         </body>
         </html>
         
+
