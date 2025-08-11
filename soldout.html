@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/soldoutcss.css">
-    <link rel="stylesheet" href="CSS/switchlanguage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <title>NAMTANFILM | SOLD OUT</title>
@@ -21,23 +20,6 @@
             </button>
              <div id="navigation"></div>
 
-             <!-- Language Switcher (Updated) -->
-            <div class="language-switcher">
-    	        <button class="language-button">
-        		    <span class="current-language">ENGLISH</span>
-        		    <span class="dropdown-icon">▼</span>
-    	        </button>
-   	         <div class="language-dropdown" id="languageDropdown">
-        	    <a href="#" onclick="switchLanguage('en')">ENGLISH</a>
-        	    <a href="#" onclick="switchLanguage('zh')">中文</a>
-        	    <a href="#" onclick="switchLanguage('ja')">日本語</a>
-        	    <a href="#" onclick="switchLanguage('tl')">FILIPINO</a>
-        	    <a href="#" onclick="switchLanguage('ita')">ITALIAN</a>
-        	    <a href="#" onclick="switchLanguage('id')">INDONESIAN</a>
-        	    <a href="#" onclick="switchLanguage('spa')">SPANISH</a>
-    	    </div>
-        </div>
-
         </div>
         </div>
         
@@ -46,22 +28,22 @@
     
 
      <main> 
-        <h2 style="text-align: center; margin-bottom: 20px;" data-i18n="followTitle">SOLD OUT</h2>
-        <p><center data-i18n="description">Fan Meeting, Official Merchandise and other events </center></p>
+        <h2 style="text-align: center; margin-bottom: 20px;" >SOLD OUT</h2>
+        <p><center>Fan Meeting, Official Merchandise and other events </center></p>
        
             <div class="filter-buttons">
-                <button onclick="filterItems('all')" data-i18n="all">All</button>
-                <button onclick="filterItems('Fan Meeting')" data-i18n="fm">Fan Meeting</button>
-                <button onclick="filterItems('Merchandise')" data-i18n="merch">Merchandise</button>
-                <button onclick="filterItems('Others')" data-i18n="others">Others</button>
+                <button onclick="filterItems('all')">All</button>
+                <button onclick="filterItems('Fan Meeting')">Fan Meeting</button>
+                <button onclick="filterItems('Merchandise')">Merchandise</button>
+                <button onclick="filterItems('Others')">Others</button>
               </div>
             
               <div id="gallery" class="gallery"></div>
             
               <div class="pagination">
-                <button onclick="prevPage()" data-i18n="prev">Prev</button>
+                <button onclick="prevPage()">Prev</button>
                 <span id="page-number">1</span>
-                <button onclick="nextPage()" data-i18n="next">Next</button>
+                <button onclick="nextPage()">Next</button>
               </div>
             
 
@@ -70,9 +52,7 @@
     </main>
     
     <div id="footer-container"></div>
-        <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.3/dist/umd/i18next.min.js"></script>
-        <script src="https://unpkg.com/i18next@21.6.4/i18next.min.js"></script>
-        <script src="js/soldout_i18next.js"></script>
+        
     
         <script>
 
@@ -86,24 +66,21 @@
             
         // Fetch navigation list from navigation.html
         document.addEventListener("DOMContentLoaded", function () {
-        fetch('navigation.html') // Fix the typo here: 'navigation.html' should be inside quotes
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navigation').innerHTML = data;
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
 
-            // Now update the content after navigation is loaded
-            updateAllContent(); // Make sure this runs after the navigation is inserted
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
 
-            // Attach the event listener after navigation is loaded
-            const navToggle = document.querySelector(".nav-toggle");
-            const navMenu = document.querySelector("#navigation ul");
-
-            navToggle.addEventListener("click", function () {
-                navMenu.classList.toggle("showing");
-            });
-        })
-        .catch(error => console.error('Error loading navigation:', error));
-});
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
         
         // Scroll reveal effect
         const sections = document.querySelectorAll('section');
@@ -250,3 +227,4 @@
         </body>
         </html>
         
+
