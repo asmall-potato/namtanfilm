@@ -98,29 +98,6 @@
                 <a href="https://apps.apple.com/us/app/k-actor-vote-choeaedol-celeb/id1202089963" class="external-link-button" >Download App at here (iOS)</a>
             </div>
                 
-            <div class="general-item">
-                <h4>HOWE Awards 2025</h4>
-                <p><i>HOWE HOTTEST ACTRESS AWARD</i></p>
-                <p >Nominee: <b>Namtan Tipnaree (HC3)</b> </p>
-                <a href="https://shop.howemagazine.com/product/vote-hc-howe-hottest-actress-award-2025/" class="external-link-button" >Vote via the Website</a>
-                <a href="https://today.line.me/th/v3/poll/x2Pm1gr?utm_source=copyshare&liff.referrer=https%3A%2F%2Ft.co%2F" class="external-link-button" >Vote via LINE Poll Today</a>
-                </br>
-                <p><i>HOWE SHINING FEMALE AWARD</i></p>
-                <p >Nominee: <b>Film Rachanun (HJ6)</b></p>
-                <a href="https://shop.howemagazine.com/product/vote-hj-howe-shining-female-award-2025/" class="external-link-button" >Vote via the Website</a>
-                <a href="https://today.line.me/th/v3/poll/j7QLoKg?utm_source=copyshare&liff.referrer=https%3A%2F%2Ft.co%2F" class="external-link-button" >Vote via LINE Poll Today</a>
-                </br>
-                <p><i>HOWE HOTTEST SERIES AWARD</i></p>
-                <p >Nominee: <b>Pluto Series (HG3)</b></p>
-                <a href="https://shop.howemagazine.com/product/vote-hg-howe-hottest-series-award-2025/" class="external-link-button" >Vote via the Website</a>
-                <a href="https://today.line.me/th/v3/poll/QwJ9Exj?utm_source=copyshare&liff.referrer=https%3A%2F%2Ft.co%2F" class="external-link-button" >Vote via LINE Poll Today</a>
-                </br>
-                <p >Voting Deadline: August 10, 2025 at 11:59 PM</p>
-                </br>
-                <a href="https://x.com/VoteNamtanFilm/status/1939704023927624057" class="external-link-button">Voting Guidelines</a>
-                
-            </div>
-                
         </div>    
         <div class="pagination" id="pagination"></div>
         
@@ -143,24 +120,21 @@
             
         // Fetch navigation list from navigation.html
         document.addEventListener("DOMContentLoaded", function () {
-        fetch('navigation.html') // Fix the typo here: 'navigation.html' should be inside quotes
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navigation').innerHTML = data;
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
 
-            // Now update the content after navigation is loaded
-            updateAllContent(); // Make sure this runs after the navigation is inserted
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
 
-            // Attach the event listener after navigation is loaded
-            const navToggle = document.querySelector(".nav-toggle");
-            const navMenu = document.querySelector("#navigation ul");
-
-            navToggle.addEventListener("click", function () {
-                navMenu.classList.toggle("showing");
-            });
-        })
-        .catch(error => console.error('Error loading navigation:', error));
-});
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
             
         // Scroll reveal effect
         const sections = document.querySelectorAll('section');
@@ -238,5 +212,6 @@
         </body>
         </html>
         
+
 
 
