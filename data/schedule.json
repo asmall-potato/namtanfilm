@@ -896,7 +896,8 @@
             "time": "4:00PM (HK time)",
             "location": "AXA Dreamland,Go Park | AXA 安盛創夢館",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1937782820409344169"
+            "url": "https://x.com/GMMTV/status/1937782820409344169",
+            "status": "passed"
         }
     ],
     "2025-08-17": [
@@ -909,6 +910,7 @@
         }
     ]
 }
+
 
 
 
