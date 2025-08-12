@@ -1,12 +1,11 @@
 .video-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(360px, 360px)); /* fixed card width */
+  justify-content: center; /* center leftover space */
   gap: 20px;
   padding: 20px;
   background-color: #f9fbfd;
-  justify-items: center;
-  width: 100%; /* Ensure full width */
-  box-sizing: border-box; /* Include padding in width */
+  box-sizing: border-box;
 }
 
 .video-item {
@@ -44,6 +43,39 @@
     margin: 0; /* Important: remove default <div> spacing */
 }
 
+.filter-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin: 20px 0;
+}
+
+.filter-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 999px; /* Makes them pill-shaped */
+    flex: 1 1 auto; /* Let buttons grow/shrink evenly */
+    min-width: 120px; /* Minimum touch size */
+    max-width: 200px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: #f1c40f;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: #f1c40f;
+}
+
+
 /* Remove max-width from media queries */
 @media (max-width: 768px) {
     .video-container {
@@ -57,6 +89,16 @@
     .video-item {
         max-width: 100%;
     }
+    .filter-container {
+        flex-direction: row; /* Arrange the buttons horizontally */
+        justify-content: space-around; /* Space out buttons */
+        align-items: center; /* Center vertically */
+    }
+
+     .filter-btn {
+        font-size: 15px;
+        min-width: 110px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -67,5 +109,15 @@
     .video-title {
         font-size: 0.9rem;
         padding: 10px;
+    }
+    .filter-container {
+        gap: 8px;
+        padding: 0 10px;
+    }
+    .filter-btn {
+        flex: 1 1 45%; /* Two per row */
+        min-width: auto;
+        padding: 10px;
+        font-size: 14px;
     }
 }
