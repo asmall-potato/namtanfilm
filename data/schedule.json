@@ -906,7 +906,8 @@
             "time": "2:00PM (BKK time)",
             "location": "Siam takashimaya, ICONSIAM",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1954789601471770915/photo/1"
+            "url": "https://x.com/GMMTV/status/1954789601471770915/photo/1",
+            "status": "passed"
             
         }
     ],
@@ -918,8 +919,18 @@
             "artist": "Namtan Tipnaree",
             "url": "https://x.com/GMMTV/status/1954789646111854641"
         }
+    ],
+    "2025-08-19": [
+        {
+            "description": "Paul Smith - new flagship store",
+            "time": "06:00PM (BKK Time)",
+            "location": "M Floor, The EmQuartier Shopping Mall",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/1956329270017683472/photo/2"
+        }
     ]
 }
+
 
 
 
