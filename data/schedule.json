@@ -917,7 +917,8 @@
             "time": "06:00PM (BKK Time)",
             "location": "-",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1954789646111854641"
+            "url": "https://x.com/GMMTV/status/1954789646111854641",
+            "status": "passed"
         }
     ],
     "2025-08-19": [
@@ -930,6 +931,7 @@
         }
     ]
 }
+
 
 
 
