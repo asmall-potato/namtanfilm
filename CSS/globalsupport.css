@@ -1,0 +1,175 @@
+/* === Global Fanbase / Support Grid Styling === */
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #f9fbff, #f1f5ff);
+  border-radius: 12px;
+}
+
+/* === Individual Support Card === */
+.support-block {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.support-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* === Header Section (flag + name) === */
+.support-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.flag-img {
+  width: 28px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.support-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #1e293b;
+  flex: 1;
+}
+
+/* === Link Styling === */
+.support-link {
+  display: inline-block;
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.support-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/*For <p></p>*/
+.support-subtitle {
+  font-size: 1.5rem;        /* slightly smaller than main title */
+  font-weight: 600;         /* semi-bold */
+  color: #2a2a2a;           /* dark gray (easier on eyes than black) */
+  margin: 25px 0 15px;      /* space above and below */
+  border-left: 4px solid #007bff;  /* blue accent bar */
+  padding-left: 10px;       /* spacing after accent */
+  text-transform: uppercase; /* make it subtitle style */
+  letter-spacing: 0.5px;    /* slight spacing for clean look */
+}
+
+/*design for the h2 title*/
+.support-bigtitle {
+  text-align: center;         /* center the text */
+  font-family: 'Poppins', sans-serif;  /* modern, clean font */
+  font-size: 2rem;            /* slightly large */
+  font-weight: 600;           /* semi-bold */
+  color: #000000;             /* deep blue */
+  letter-spacing: 1px;        /* spacing for elegance */
+  margin: 30px 0 20px;        /* spacing around */
+  position: relative;         /* allow decoration */
+}
+
+/* ✅ Isolated Toggle Styles */
+/* Toggle Container */
+.toggle-container {
+  display: flex;
+  align-items: center;    /* keep vertically centered */
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+/* Toggle Button (FULLY ISOLATED from logo) */
+.toggle-button {
+    all: unset; /* reset ALL inherited styles */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-transform: none;
+
+    padding: 10px 20px;
+    background: #87CEFA;   /* light blue */
+    color: #FFFACD;        /* light yellow */
+    border-radius: 25px;   /* pill style */
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.toggle-button:hover {
+      background: #FFFACD;   /* light yellow */
+      color: #4682B4;        /* softer blue text */
+}
+
+/* Content */
+.tab-content {
+  display: none;
+  margin-top: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .support-grid {
+    grid-template-columns: 1fr; /* one card per row */
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .support-bigtitle {
+    font-size: 1.6rem;
+    margin: 20px 0 15px;
+  }
+
+  .support-subtitle {
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+  }
+
+  .toggle-button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .support-grid {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .support-bigtitle {
+    font-size: 1.4rem;
+  }
+
+  .support-subtitle {
+    font-size: 1rem;
+  }
+
+  .toggle-button {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    border-radius: 20px;
+  }
+}
