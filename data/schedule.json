@@ -953,8 +953,18 @@
             "status": "passed"
             
         }
+    ],
+    "2025-08-27": [
+        {
+            "description": "MCM Frieze Seoul",
+            "time": "06:00PM (Seoul Time)",
+            "location": "MCM Haus, Seoul, South Korea",
+            "artist": "Namtan Tipnaree",
+            "url": "https://www.instagram.com/p/DN8GLBrD0oD/?img_index=3"
+        }
     ]
 }
+
 
 
 
