@@ -960,10 +960,22 @@
             "time": "06:00PM (Seoul Time)",
             "location": "MCM Haus, Seoul, South Korea",
             "artist": "Namtan Tipnaree",
-            "url": "https://www.instagram.com/p/DN8GLBrD0oD/?img_index=3"
+            "url": "https://www.instagram.com/p/DN8GLBrD0oD/?img_index=3",
+            "status": "passed"
+        }
+    ],
+    "2025-09-07": [
+        {
+            "description": "Mchoice & Mint Awards 2025",
+            "time": "05:00PM (BKK Time) - Red Carpet | 06:30PM (BKK Time) - Show Start",
+            "location": "True Icon Hall, Iconsiam",
+            "live": "Youtube: MCHOICE TH",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1963112697349677146/photo/3"
         }
     ]
 }
+
 
 
 
