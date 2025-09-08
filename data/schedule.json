@@ -971,7 +971,8 @@
             "location": "True Icon Hall, Iconsiam",
             "live": "Youtube: MCHOICE TH",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1963112697349677146/photo/3"
+            "url": "https://x.com/GMMTV/status/1963112697349677146/photo/3",
+            "status": "passed"
         }
     ],
     "2025-09-10": [
@@ -981,6 +982,24 @@
             "location": "GENTLE MONSTER STORE, 1F, SIAM PARAGON",
             "artist": "Namtan Tipnaree",
             "url": "https://x.com/Siam_Paragon/status/1963883299442659828"
+        }
+    ],
+    "2025-09-12": [
+        {
+            "description": "Givenchy Fall Winter 2025 Women's Collection Press Presentation",
+            "time": "11:00AM (BKK Time)",
+            "location": "-",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/1964938113366806748/photo/3"
+        }
+    ],
+    "2025-09-13": [
+        {
+            "description": "FEED x Khaosod Awards 2025",
+            "time": "5:00PM (BKK Time)",
+            "location": "Paragon Hall, Siam Paragon",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/GMMTV/status/1964938155595120793/photo/1"
         }
     ],
     "2025-09-20": [
@@ -993,6 +1012,7 @@
         }
     ]
 }
+
 
 
 
