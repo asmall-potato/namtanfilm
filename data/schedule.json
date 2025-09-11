@@ -981,7 +981,8 @@
             "time": "1:00PM (BKK Time)",
             "location": "GENTLE MONSTER STORE, SIAM PARAGON, 1F South wings",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1965267091520684420"
+            "url": "https://x.com/GMMTV/status/1965267091520684420",
+            "status": "passed"
         }
     ],
     "2025-09-12": [
@@ -1012,6 +1013,7 @@
         }
     ]
 }
+
 
 
 
