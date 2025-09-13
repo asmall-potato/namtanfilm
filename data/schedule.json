@@ -991,7 +991,8 @@
             "time": "11:00AM (BKK Time)",
             "location": "-",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1964938113366806748/photo/3"
+            "url": "https://x.com/GMMTV/status/1964938113366806748/photo/3",
+            "status": "passed"
         }
     ],
     "2025-09-13": [
@@ -999,6 +1000,7 @@
             "description": "FEED x Khaosod Awards 2025",
             "time": "5:00PM (BKK Time)",
             "location": "Paragon Hall, Siam Paragon",
+            "live": "Youtube: FEED",
             "artist": "Film Rachanun",
             "url": "https://x.com/GMMTV/status/1964938155595120793/photo/1"
         }
@@ -1022,6 +1024,7 @@
         }
     ]
 }
+
 
 
 
