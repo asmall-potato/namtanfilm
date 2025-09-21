@@ -1023,10 +1023,40 @@
             "time": "3:00PM (BKK Time)",
             "location": "THE COFFEE HOUSE BY DOITUNG at Parade One Bangkok",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1967462048943779996/photo/3"
+            "url": "https://x.com/GMMTV/status/1967462048943779996/photo/3",
+            "status": "passed"
+        }
+    ],
+    "2025-09-23": [
+        {
+            "description": "Y ENTERTAIN AWARDS 2025",
+            "time": "4:00PM (BKK Time)",
+            "location": "True Icon Hall, ICONSIAM",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1969009280914256061/photo/2"
+            
+        }
+    ],
+    "2025-10-13": [
+        {
+            "description": "เปิดตัวนวนิยาย “Girl Rules กฎหลัก...ห้ามรักเธอ” ในงาน GMMTV Fanival",
+            "time": "2:00PM (BKK Time)",
+            "location": "Fansign Venue: Phenix Grand Ballroom, 5th Floor | Assembly Point: Food Lounge, 4th Floor",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1969020476706931134/photo/1"
+            
+        },
+        {
+            "description": "Fan Sign งาน GMMTV Fanival",
+            "time": "5:00PM (BKK Time)",
+            "location": "Fansign Venue: Phenix Grand Ballroom, 5th Floor | Assembly Point: Food Lounge, 4th Floor",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1969020476706931134/photo/3"
+            
         }
     ]
 }
+
 
 
 
