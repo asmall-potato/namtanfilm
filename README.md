@@ -14,10 +14,13 @@ Features
 10. Voting
 11. Trend X Highest Rank
 12. Sold Out
+13. Fanbase
+14. Shop Now
 
 License
 This project is licensed under a custom license. For more details, please refer to the LICENSE file.
 
 Contact
 For any questions or suggestions, please contact me at itdoglife@gmail.com.
+
 
