@@ -1046,14 +1046,16 @@
             "location": "KBS Hall, Seoul, South Korea",
             "live": "Youtube - SeoulInternationalDramaAwards",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/1972563315131048195/photo/1"
+            "url": "https://x.com/GMMTV/status/1972563315131048195/photo/1",
+            "status": "passed"
         },
         {
             "description": "COS STORE ONE BANGKOK AUTUMN WINTER 25",
             "time": "10AM (BKK Time)",
             "location": "COS One Bangkok",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1972997421291741543/photo/1"
+            "url": "https://x.com/GMMTV/status/1972997421291741543/photo/1",
+            "status": "passed"
         }
     ],
     "2025-10-04": [
@@ -1062,7 +1064,8 @@
             "time": "5PM (Paris Time)",
             "location": "10 Rue Portalis, Paris, France",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1972997421291741543/photo/3"
+            "url": "https://x.com/GMMTV/status/1972997421291741543/photo/3",
+            "status": "passed"
         }
     ],
     "2025-10-13": [
@@ -1102,6 +1105,7 @@
         }
     ]
 }
+
 
 
 
