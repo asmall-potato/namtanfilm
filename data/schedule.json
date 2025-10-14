@@ -1074,7 +1074,8 @@
             "time": "4PM (BKK Time)",
             "location": "The Mall Lifestore Ngamwongwan, 1st Floor",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/1976152960649556282/photo/3"
+            "url": "https://x.com/GMMTV/status/1976152960649556282/photo/3",
+            "status": "passed"
         }
     ],
     "2025-10-13": [
@@ -1083,7 +1084,8 @@
             "time": "2:00PM (BKK Time)",
             "location": "Fansign Venue: Phenix Grand Ballroom, 5th Floor | Assembly Point: Food Lounge, 4th Floor",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1969020476706931134/photo/1"
+            "url": "https://x.com/GMMTV/status/1969020476706931134/photo/1",
+            "status": "passed"
             
         },
         {
@@ -1091,8 +1093,18 @@
             "time": "5:00PM (BKK Time)",
             "location": "Fansign Venue: Phenix Grand Ballroom, 5th Floor | Assembly Point: Food Lounge, 4th Floor",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1969020476706931134/photo/3"
+            "url": "https://x.com/GMMTV/status/1969020476706931134/photo/3",
+            "status": "passed"
             
+        }
+    ],
+    "2025-10-15": [
+        {
+            "description": "Brand Prime Day",
+            "time": "8:00PM (BKK Time)",
+            "live": "Tiktok: Mac Cosmetics",
+            "artist": "Namtan Tipnaree",
+            "url": "https://www.instagram.com/p/DPvLKlAD3zk/?img_index=2"
         }
     ],
     "2025-11-01": [
@@ -1114,6 +1126,7 @@
         }
     ]
 }
+
 
 
 
