@@ -1104,7 +1104,17 @@
             "time": "8:00PM (BKK Time)",
             "live": "Tiktok: Mac Cosmetics",
             "artist": "Namtan Tipnaree",
-            "url": "https://www.instagram.com/p/DPvLKlAD3zk/?img_index=2"
+            "url": "https://www.instagram.com/p/DPvLKlAD3zk/?img_index=2",
+            "status": "passed"
+        }
+    ],
+    "2025-10-17": [
+        {
+            "description": "เติมเธอ (Fill My Heart) - KRIST MV",
+            "time": "6:00PM (BKK Time)",
+            "live": "YouTube: RISER MUSIC",
+            "artist": "Namtan Tipnaree",
+            "url": "http://instagram.com/p/DP3Nk0mE6PH/?img_index=2"
         }
     ],
     "2025-11-01": [
@@ -1126,6 +1136,7 @@
         }
     ]
 }
+
 
 
 
