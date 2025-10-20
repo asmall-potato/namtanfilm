@@ -1452,17 +1452,35 @@
         
         //pagination
         const itemsPerPage = 12;
-        const generalItems = document.querySelectorAll('.general-item');
-        const totalPages = Math.ceil(generalItems.length / itemsPerPage);
+    const generalItems = document.querySelectorAll('.general-item');
+    const totalPages = Math.ceil(generalItems.length / itemsPerPage);
+    let currentPage = 1;
 
     function showPage(page) {
         generalItems.forEach((item, index) => {
             item.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? 'block' : 'none';
         });
+        currentPage = page;
     }
 
     function createPagination() {
         const paginationContainer = document.getElementById('pagination');
+        paginationContainer.innerHTML = '';
+
+        // « Previous
+        const prevLink = document.createElement('a');
+        prevLink.href = "#";
+        prevLink.innerHTML = "&laquo;";
+        prevLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (currentPage > 1) {
+                showPage(currentPage - 1);
+                updateActivePage(currentPage);
+            }
+        });
+        paginationContainer.appendChild(prevLink);
+
+        // Numbered Pages
         for (let i = 1; i <= totalPages; i++) {
             const pageLink = document.createElement('a');
             pageLink.href = "#";
@@ -1474,7 +1492,21 @@
             });
             paginationContainer.appendChild(pageLink);
         }
-        updateActivePage(1); // Set page 1 as active on load
+
+        // » Next
+        const nextLink = document.createElement('a');
+        nextLink.href = "#";
+        nextLink.innerHTML = "&raquo;";
+        nextLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                showPage(currentPage + 1);
+                updateActivePage(currentPage);
+            }
+        });
+        paginationContainer.appendChild(nextLink);
+
+        updateActivePage(currentPage);
     }
 
     function updateActivePage(activePage) {
@@ -1482,10 +1514,14 @@
         paginationLinks.forEach(link => {
             link.classList.remove('active');
         });
-        paginationLinks[activePage - 1].classList.add('active');
+
+        // Add .active to the correct numbered link (offset by 1 because of the « button)
+        if (activePage >= 1 && activePage <= totalPages) {
+            paginationLinks[activePage].classList.add('active');
+        }
     }
 
-    // Initialize pagination on page load
+    // Initialize
     showPage(1);
     createPagination();
 /*
@@ -1499,6 +1535,7 @@
         </body>
         </html>
         
+
 
 
 
