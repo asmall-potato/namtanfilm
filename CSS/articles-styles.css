@@ -5,7 +5,7 @@
     align-items: center;
     margin: 20px;
     padding: 20px;
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    background: linear-gradient(135deg, #fdfbfb 0%, #e3f2fd 100%);
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     max-width: 900px;
@@ -23,7 +23,7 @@
 
 /* List item styling with card effect */
 .articles-container li {
-    background: white;
+    background: #ffffff;
     margin: 15px 0;
     padding: 20px;
     border-radius: 8px;
@@ -39,7 +39,7 @@
 .articles-container a {
     display: block;
     text-decoration: none;
-    color: #ff6f61;
+    color: #1976d2; /* Blue */
     font-weight: 600;
     font-size: 20px;
     transition: color 0.3s, background-color 0.3s;
@@ -48,7 +48,7 @@
 
 .articles-container a:hover {
     color: #ffffff;
-    background-color: #ff6f61;
+    background-color: #ffeb3b; /* Yellow */
     padding: 12px 15px;
     border-radius: 5px;
 }
@@ -56,41 +56,41 @@
 /* Pagination Container */
 .pagination {
     display: flex;
-    flex-direction: row; /* This ensures the pagination items are aligned horizontally */
+    flex-direction: row;
     justify-content: center;
     margin-top: 30px;
     width: 100%;
     flex-wrap: wrap;
-    gap: 10px; /* This will add spacing between pagination buttons */
+    gap: 10px;
 }
 
 /* Pagination Buttons */
 .pagination a {
-    color: #ff6f61;
+    color: #1976d2; /* Blue */
     padding: 8px 16px;
     text-decoration: none;
     font-weight: 600;
     border-radius: 5px;
     margin: 0 4px;
     transition: all 0.3s ease;
-    border: 1px solid #ff6f61;
+    border: 1px solid #1976d2; /* Blue border */
     margin-bottom: 5px;
-    font-size: 16px; /* Ensure readability */
+    font-size: 16px;
+    background-color: #e3f2fd; /* Light blue background */
 }
 
 /* Hover and Active Styles */
 .pagination a:hover {
-    background-color: #ff6f61;
-    color: white;
+    background-color: #ffeb3b; /* Yellow */
+    color: #0d47a1; /* Dark blue text */
     cursor: pointer;
 }
 
 .pagination .current {
-    background-color: #ff6f61;
-    color: white;
-    border-color: #ff6f61;
+    background-color: #1976d2; /* Blue */
+    color: #ffffff;
+    border-color: #1976d2;
 }
-
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -98,7 +98,7 @@
         padding: 15px;
         margin: 10px auto;
         max-width: 95%;
-        background-color: #f9f9f9;
+        background-color: #e3f2fd;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -119,16 +119,16 @@
 
     .articles-container a {
         font-size: 18px;
-        color: #009688;
+        color: #1976d2;
         text-decoration: none;
         font-weight: 600;
         transition: color 0.3s ease;
     }
 
     .articles-container a:hover {
-        color: #00796b;
+        color: #0d47a1;
     }
-    
+
     .pagination a {
         padding: 6px 12px;
         font-size: 14px;
@@ -150,7 +150,7 @@
     .articles-container a {
         font-size: 16px;
     }
-    
+
     .pagination a {
         padding: 4px 8px;
         margin: 2px;
