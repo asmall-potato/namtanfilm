@@ -1452,78 +1452,75 @@
         
         //pagination
         const itemsPerPage = 12;
-    const generalItems = document.querySelectorAll('.general-item');
-    const totalPages = Math.ceil(generalItems.length / itemsPerPage);
-    let currentPage = 1;
+const generalItems = document.querySelectorAll('.general-item');
+const totalPages = Math.ceil(generalItems.length / itemsPerPage);
+let currentPage = 1;
+const maxVisiblePages = 10;
 
-    function showPage(page) {
-        generalItems.forEach((item, index) => {
-            item.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? 'block' : 'none';
-        });
-        currentPage = page;
+function showPage(page) {
+    generalItems.forEach((item, index) => {
+        item.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? 'block' : 'none';
+    });
+    currentPage = page;
+    createPagination(); // Re-render pagination to reflect updated range
+}
+
+function createPagination() {
+    const paginationContainer = document.getElementById('pagination');
+    paginationContainer.innerHTML = '';
+
+    // Calculate page range
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = startPage + maxVisiblePages - 1;
+
+    if (endPage > totalPages) {
+        endPage = totalPages;
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
     }
 
-    function createPagination() {
-        const paginationContainer = document.getElementById('pagination');
-        paginationContainer.innerHTML = '';
-
-        // « Previous
-        const prevLink = document.createElement('a');
-        prevLink.href = "#";
-        prevLink.innerHTML = "&laquo;";
-        prevLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (currentPage > 1) {
-                showPage(currentPage - 1);
-                updateActivePage(currentPage);
-            }
-        });
-        paginationContainer.appendChild(prevLink);
-
-        // Numbered Pages
-        for (let i = 1; i <= totalPages; i++) {
-            const pageLink = document.createElement('a');
-            pageLink.href = "#";
-            pageLink.innerHTML = i;
-            pageLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                showPage(i);
-                updateActivePage(i);
-            });
-            paginationContainer.appendChild(pageLink);
+    // « Previous
+    const prevLink = document.createElement('a');
+    prevLink.href = "#";
+    prevLink.innerHTML = "&laquo;";
+    prevLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (currentPage > 1) {
+            showPage(currentPage - 1);
         }
+    });
+    paginationContainer.appendChild(prevLink);
 
-        // » Next
-        const nextLink = document.createElement('a');
-        nextLink.href = "#";
-        nextLink.innerHTML = "&raquo;";
-        nextLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (currentPage < totalPages) {
-                showPage(currentPage + 1);
-                updateActivePage(currentPage);
-            }
-        });
-        paginationContainer.appendChild(nextLink);
-
-        updateActivePage(currentPage);
-    }
-
-    function updateActivePage(activePage) {
-        const paginationLinks = document.querySelectorAll('.pagination a');
-        paginationLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-
-        // Add .active to the correct numbered link (offset by 1 because of the « button)
-        if (activePage >= 1 && activePage <= totalPages) {
-            paginationLinks[activePage].classList.add('active');
+    // Numbered page links
+    for (let i = startPage; i <= endPage; i++) {
+        const pageLink = document.createElement('a');
+        pageLink.href = "#";
+        pageLink.innerHTML = i;
+        if (i === currentPage) {
+            pageLink.classList.add('active');
         }
+        pageLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            showPage(i);
+        });
+        paginationContainer.appendChild(pageLink);
     }
 
-    // Initialize
-    showPage(1);
-    createPagination();
+    // » Next
+    const nextLink = document.createElement('a');
+    nextLink.href = "#";
+    nextLink.innerHTML = "&raquo;";
+    nextLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (currentPage < totalPages) {
+            showPage(currentPage + 1);
+        }
+    });
+    paginationContainer.appendChild(nextLink);
+}
+
+// Initialize
+showPage(1);
+
 /*
             //hamburger for only display at mobile devices
         document.querySelector('.nav-toggle').addEventListener('click', function() {
@@ -1535,6 +1532,7 @@
         </body>
         </html>
         
+
 
 
 
