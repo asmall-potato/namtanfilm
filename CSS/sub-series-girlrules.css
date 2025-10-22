@@ -47,134 +47,219 @@ section {
 }
 
 .intro-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    color: #2c3e50;
+  font-size: 34px;
+  margin-bottom: 25px;
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  position: relative;
+}
+
+.intro-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(36, 141, 108);
+  margin: 12px auto 0;
+  border-radius: 2px;
 }
 
 .intro-section p {
-    font-size: 18px;
-    line-height: 1.8;
-    font-family: 'Roboto', sans-serif;
-    color: #7f8c8d;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #606e79;
+  max-width: 850px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Video Section */
 .video-section {
-    background-color: #F5F3F1;
-    padding: 40px;
+  background: #fff;
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 900px;      /* Limits section width */
+  margin: 50px auto;     /* Centers the section horizontally */
 }
 
+
 .video-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    color: #2c3e50;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #1c2c38;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.video-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(36, 141, 108);
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .video-section iframe {
-    max-width: 80%;
-    margin: auto;
-    display: block;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 80%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Watch Section */
+/*Watch Section*/
+/* 🎬 Watch Section */
 .watch-section {
-    background-color: #fff;
-    padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
-    margin: auto;
-    border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  padding: 50px 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  max-width: 1100px;
+  margin: 50px auto;
+  border-radius: 16px;
+  text-align: center;
 }
 
 .watch-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    color: #2c3e50;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #1c2c38;
+  margin-bottom: 30px;
+  position: relative;
 }
 
-/* Flexbox for Side-by-Side Videos */
+.watch-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(36, 141, 108);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* 🎥 Video Container - 3 in a Row */
 .video-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .watch-section iframe {
-    flex: 1 1 30%; /* Each iframe takes up about one-third of the container width */
-    max-width: 30%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Watch Link Styling */
+.watch-section iframe:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔗 Watch Button */
 .watch-link {
-    display: inline-block;
-    margin: 10px 20px;
-    padding: 12px 24px;
-    background-color: rgb(36, 141, 108);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 30px;
+  background-color: rgb(36, 141, 108);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 30px;
+  letter-spacing: 0.3px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .watch-link:hover {
-    background-color: rgb(25, 100, 80);
-    transform: scale(1.05);
+  background-color: rgb(25, 100, 80);
+  transform: translateY(-3px);
 }
 
-/* Watch on Streaming Platforms Section */
-.watch-platforms-section {
-    background-color: #F5F3F1;
-    padding: 40px;
-    text-align: center;
-    max-width: 1000px;
-    margin: 30px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/*book CSS*/
+.book-section {
+  display: flex;
+  width: 80%;
+  min-height: 400px;
+  background-color: #f8f8f8;
 }
 
-.watch-platforms-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    color: #2c3e50;
+.book-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-.watch-platforms-section p {
-    font-size: 18px;
-    color: #7f8c8d;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 30px;
+.physical-book {
+  background: #fff;
+  border-right: 2px solid #e0e0e0;
 }
 
-.platform-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.ebook {
+  background: #f2f2f2;
 }
 
-.watch-link {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: rgb(36, 141, 108);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+.book-option h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
-.watch-link:hover {
-    background-color: rgb(25, 100, 80);
-    transform: scale(1.05);
+.book-option p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 300px;
 }
+
+.book-btn {
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.book-btn:hover {
+  background-color: #444;
+}
+
+.book-option:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .book-section {
+    flex-direction: column;
+  }
+
+  .physical-book {
+    border-right: none;
+    border-bottom: 2px solid #e0e0e0;
+  }
+}
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -305,40 +390,7 @@ section {
     transition: background-color 0.3s ease;
 }
 
-/* Wrapper for the side-by-side content */
-.ost-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
 
-/* 40% width for Twitter Embed */
-.ost-twitter {
-    flex: 0 0 40%; /* 40% width */
-}
-
-/* 60% width for OST Tracks */
-.ost-tracks {
-    flex: 0 0 60%; /* 60% width */
-}
-
-/* Optional: Additional styling to ensure the sections are visually appealing */
-.ost-content > div {
-    box-sizing: border-box;
-}
-
-/* Platform-specific colors */
-.spotify-button {
-    background-color: #1ED760;
-}
-
-.apple-music-button {
-    background-color: #FA243C;
-}
-
-.youtube-music-button {
-    background-color: #FF0000;
-}
 
 /* Hover effect */
 .platform-button:hover {
@@ -347,50 +399,72 @@ section {
 
 /* Introduce Actresses Section */
 .cast-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping of columns */
-    justify-content: space-evenly; /* Space out the columns evenly */
-    gap: 20px; /* Add gap between the columns */
-    margin: auto;
-    padding: 0 10px; /* Add padding to the container to avoid touching edges */
-    text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .cast-container h3 {
-    width: 100%;
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #333;
+  width: 100%;
+  font-size: 34px;
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.cast-container h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(36, 141, 108);
+  margin: 12px auto 0;
+  border-radius: 2px;
 }
 
 /* Column inside cast container */
 .column {
-    flex: 1 1 30%; /* Each column takes up 30% of the container width */
-    max-width: 30%; /* Ensure it doesn’t exceed 30% */
-    text-align: center;
-    margin: 10px;
-    background: linear-gradient(135deg, #ffffff, #e0e0e0); /* Gradient background */
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    padding: 10px; /* Padding inside the column */
-    box-sizing: border-box; /* Ensure padding is included in the width calculation */
-    transition: transform 0.3s, box-shadow 0.3s;
+  flex: 1 1 30%;
+  max-width: 30%;
+  background: linear-gradient(145deg, #ffffff, #e9e9e9);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Hover effect for the column */
 .column:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Column image styling */
 .column img {
-    width: 100%; /* Ensure the image takes up the full width of the column */
-    height: auto; /* Maintain aspect ratio of the image */
-    display: block;
-    border-bottom: 2px solid #ddd; /* Divider at the bottom of the image */
-    object-fit: cover; /* Ensures images are cropped and maintain aspect ratio */
-    box-sizing: border-box; /* Make sure padding and border are included in the width calculation */
+  width: 100%;
+  height: auto;
+  border-bottom: 3px solid rgb(36, 141, 108);
+  display: block;
+}
+
+.column h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  color: #2c3e50;
+  margin-top: 15px;
+}
+
+.column p {
+  font-size: 16px;
+  color: #555;
+  padding: 0 15px 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width: 768px) {
