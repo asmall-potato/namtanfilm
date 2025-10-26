@@ -1,34 +1,72 @@
 
 
+/* Fix for background staying visible during scroll */
 body {
-   
-    font-family: 'Open Sans', sans-serif;
-/*  line-height: 1.6;*/
-    color: #333;
-    background-color: #F5F3F1;
-  
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-image: url('../Images/GZC-rDqboAAhiU0.jfif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* keeps it still on scroll */
+  background-repeat: no-repeat;
 }
+
+/* Keep the wallpaper header section for overlay or extra style */
+.header-wallpaper-sub-series {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFEB3B; /* bright yellow text */
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Optional hover effect */
+.header-wallpaper-sub-series:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.5s ease-in-out;
+}
+
+/* Fix white boxes covering wallpaper */
+.intro-section,
+.video-section,
+.watch-section,
+.watch-platforms-section {
+  background: rgba(255, 235, 59, 0.75); /* transparent bright yellow */
+  box-shadow: 0 4px 12px rgba(0, 0, 80, 0.2);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 40px;
+  color: #0D47A1; /* Dark blue text */
+}
+
+
 
 /* Bottom-right Text inside Wallpaper */
 .bottom-right-text-sub {
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    color: white;
-    text-align: right;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  color: #FFEB3B; /* Yellow */
+  text-align: right;
 }
 
 .bottom-right-text-sub h1 {
-    font-size: 80px;
-    font-weight: 600;
-    color: rgb(55, 232, 232);
-    font-family: 'Lora', serif;
+  font-size: 80px;
+  font-weight: 600;
+  color: #2196F3; /* Bright blue */
+  font-family: 'Lora', serif;
 }
 
 .bottom-right-text-sub p {
-    font-size: 24px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #FFEB3B; /* Yellow */
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Section Styling */
@@ -40,7 +78,7 @@ section {
 
 /* Introduction Section */
 .intro-section {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
@@ -52,27 +90,54 @@ section {
     font-size: 32px;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
-    color: #2c3e50;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
 }
+
+.intro-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
+}
+
 
 .intro-section p {
     font-size: 18px;
     line-height: 1;
     font-family: 'Roboto', sans-serif;
-    color: #7f8c8d;
+    color: #073B8A; /* Balanced deep blue */
 }
 
 /* Video Section */
 .video-section {
-    background-color: #F5F3F1;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 40px;
 }
 
 .video-section h2 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
-    color: #2c3e50;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
+}
+
+.video-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
 }
 
 .video-section iframe {
@@ -85,19 +150,33 @@ section {
 
 /* Watch Section */
 .watch-section {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
     margin: auto;
     border-radius: 12px;
+    margin-bottom: 40px; /* adds space below Watch Now section */
 }
 
 .watch-section h2 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
-    color: #2c3e50;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
+}
+
+.watch-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
 }
 
 /* Flexbox for Side-by-Side Videos */
@@ -134,7 +213,7 @@ section {
 
 /* Watch on Streaming Platforms Section */
 .watch-platforms-section {
-    background-color: #F5F3F1;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 40px;
     text-align: center;
     max-width: 1000px;
@@ -144,15 +223,28 @@ section {
 }
 
 .watch-platforms-section h2 {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
-    color: #2c3e50;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
+}
+
+.watch-platforms-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
 }
 
 .watch-platforms-section p {
     font-size: 18px;
-    color: #7f8c8d;
+    color: #073B8A; /* Balanced deep blue */
     font-family: 'Roboto', sans-serif;
     margin-bottom: 30px;
 }
@@ -165,17 +257,47 @@ section {
 
 .watch-link {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: rgb(36, 141, 108);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 12px 24px;
+  background-color: #1565C0;
+  color: #FFEB3B;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .watch-link:hover {
-    background-color: rgb(25, 100, 80);
-    transform: scale(1.05);
+    background-color: #0D47A1;
+  transform: scale(1.05);
+}
+
+.engagement {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 12px;
+}
+
+.engagement h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
+}
+
+.engagement h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
 }
 
 /* Media Queries for Responsiveness */
@@ -194,39 +316,71 @@ section {
     }
 
     .bottom-right-text-sub h1 {
-        font-size: 40px; /* Reduce font size for tablets */
-        margin-bottom: 8px; /* Reduce spacing below <h1> */
+        font-size: 40px;
+        margin-bottom: 8px;
+        color: #0D47A1; /* Deep Blue */
     }
 
     .bottom-right-text-sub p {
-        font-size: 18px; /* Reduce font size for tablets */
+        font-size: 18px;
+        color: #FFEB3B; /* Yellow accent text */
     }
 
-    .intro-section, .watch-section {
-        padding: 30px; /* Add padding for better spacing */
-        background-color: #f9f9f9; /* Light background for sections */
-        border-radius: 10px; /* Rounded corners for a modern look */
-        margin: 20px 0; /* Add spacing between sections */
+    .intro-section,
+    .watch-section,
+    .video-section,
+    .watch-platforms-section,
+    .ost-section {
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 12px;
+        margin: 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .intro-section h2, .watch-section h2 {
-        font-size: 28px; /* Adjust font size for tablets */
-        color: #009688; /* Teal color for headings */
-        margin-bottom: 10px; /* Spacing below headings */
+    .intro-section h2,
+    .watch-section h2,
+    .video-section h2,
+    .watch-platforms-section h2
+     {
+        font-size: 28px;
+        color: #1B263B; /* Blue heading */
+        margin-bottom: 10px;
+        position: relative;
     }
 
-    .intro-section p, .watch-section p {
+    .intro-section h2::after,
+    .watch-section h2::after,
+    .video-section h2::after,
+    .watch-platforms-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the underline */
+    width: 100px;
+    height: 4px;
+    background-color: #FFEB3B; /* Yellow underline */
+    border-radius: 2px;
+}
+
+
+    .intro-section p, .watch-section p, .watch-platforms-section p {
         font-size: 16px; /* Adjust font size for tablets */
         color: #333; /* Dark gray color for text */
         line-height: 1; /* Improve readability with line height */
     }
 
     .video-section iframe {
-        max-width: 90%; /* Ensure iframe doesn't exceed container width */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 10px; /* Rounded corners for iframe */
-        margin: 10px 0; /* Add spacing around iframe */
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid; /* Border thickness */
+    border-image: linear-gradient(to right, #FFEB3B 50%, #0D47A1 50%) 1;
+    margin: 10px 0;
     }
+
+
 
     .video-container {
         flex-direction: column; /* Stack video and content vertically */
@@ -240,6 +394,8 @@ section {
         height: auto; /* Maintain aspect ratio */
         border-radius: 10px; /* Rounded corners for iframe */
         margin: 10px 0; /* Add spacing around iframe */
+        border: 2px solid;
+        border-image: linear-gradient(to right, #FFEB3B 50%, #0D47A1 50%) 1;
     }
 
     .platform-buttons {
@@ -252,18 +408,45 @@ section {
         width: 80%; /* Adjust button width */
         margin-bottom: 15px; /* Add spacing below buttons */
         padding: 12px 20px; /* Add padding for better clickability */
-        background-color: #009688; /* Teal background for buttons */
-        color: white; /* White text color */
-        border-radius: 5px; /* Rounded corners for buttons */
+        background-color: #0D47A1; /* Blue background */
+        color: #FFEB3B; /* Yellow text */
+        border-radius: 6px; /* Rounded corners for buttons */
         text-align: center; /* Center-align text */
         text-decoration: none; /* Remove underline */
         transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
     }
 
     .watch-link:hover {
-        background-color: #00796b; /* Darker teal on hover */
+        background-color: #1565C0; /* Lighter blue */
         transform: translateY(-3px); /* Slight lift effect on hover */
     }
+
+    .ost-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* slightly smaller gap */
+        padding: 10px; /* reduce padding */
+    }
+
+    .ost-twitter, .ost-tracks {
+        width: 100%; /* ensure full width */
+        max-width: 100%;
+        margin-bottom: 0; /* gap handles spacing */
+        padding: 15px; /* keep readable padding */
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .ost-twitter:hover, .ost-tracks:hover {
+        transform: none; /* remove hover effect on mobile */
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Optional: Add spacing for mobile */
+    .ost-content > div {
+        margin-bottom: 20px;
+    }
+
+    
    
 }
 
@@ -310,6 +493,8 @@ section {
         width: 90%; /* Adjust button width for smaller screens */
         padding: 10px 15px; /* Reduce padding for smaller screens */
     }
+
+    
 }
 
 .platform-button {
@@ -323,29 +508,103 @@ section {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-/* Wrapper for the side-by-side content */
+/* === OST SECTION (Blue & Yellow Theme, Side-by-Side) === */
+.ost-section {
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 50px;
+    max-width: 1100px;
+    margin: 60px auto;
+    
+}
+
+/* Section Title */
+.ost-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
+}
+
+.ost-section h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #FFEB3B;
+    margin: 10px auto 20px;
+    border-radius: 2px;
+}
+
+/* Subtitle */
+.ost-section p {
+    font-size: 18px;
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+    color: #333;; /* Balanced deep blue */
+}
+
+/* Wrapper for side-by-side content */
 .ost-content {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-/* 40% width for Twitter Embed */
+/* Twitter Embed (40%) */
 .ost-twitter {
-    flex: 0 0 40%; /* 40% width */
+    flex: 0 0 40%;
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(255, 235, 59, 0.6);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 60% width for OST Tracks */
+/* OST Track List (60%) */
 .ost-tracks {
-    flex: 0 0 60%; /* 60% width */
+    flex: 0 0 50%; /* reduce width from 58% to 50% */
+    background: rgba(255, 255, 255, 0.65); /* slightly more transparent */
+    border: 1.5px solid rgba(21, 101, 192, 0.4);
+    border-radius: 10px;
+    padding: 20px; /* reduce internal padding */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-/* Optional: Additional styling to ensure the sections are visually appealing */
-.ost-content > div {
-    box-sizing: border-box;
+/* Track Titles */
+.ost-tracks p {
+    font-size: 17px;
+    color: #0D47A1;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
-/* Platform-specific colors */
+/* Music platform buttons container */
+.music-platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    justify-content: center; /* centers the buttons horizontally */
+}
+
+/* Platform Buttons */
+.platform-button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
 .spotify-button {
     background-color: #1ED760;
 }
@@ -358,40 +617,12 @@ section {
     background-color: #FF0000;
 }
 
-/* Hover effect */
+/* Hover Effects */
 .platform-button:hover {
-    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Mobile view - Stack vertically when screen width is 768px or less */
-@media (max-width: 768px) {
-    .ost-content {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center the elements */
-        gap: 20px; /* Add spacing between elements */
-        padding: 15px; /* Add padding for better spacing */
-    }
-
-    .ost-twitter, .ost-tracks {
-        flex: 0 0 100%; /* Full width for both elements */
-        max-width: 100%; /* Ensure no element exceeds 100% width */
-        margin-bottom: 20px; /* Add spacing below each element */
-        background-color: #ffffff; /* White background for elements */
-        border-radius: 10px; /* Rounded corners for a modern look */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    }
-
-    .ost-twitter:hover, .ost-tracks:hover {
-        transform: translateY(-5px); /* Slight lift effect on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-    }
-
-    /* Optional: Add spacing for mobile */
-    .ost-content > div {
-        margin-bottom: 20px;
-    }
-}
 
 button.collapsible {
     background-color: #4A90E2; /* Softer Blue */
@@ -447,19 +678,33 @@ button.collapsible:focus {
 }
 
 .columns {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
     width: 100%;
 }
 
 .column {
-    width: 30%;
-    padding: 20px;
-    background-color: #E3F2FD; /* Very light blue */
-    border-radius: 6px;
+    width: 30%; 
+    padding: 20px; 
+    background-color: #E3F2FD; /* Very light blue */ 
+    border-radius: 6px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Instagram embed wrapper */
+.ig-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.ig-wrapper blockquote.instagram-media {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
 
 .column h3 {
     margin-top: 0;
