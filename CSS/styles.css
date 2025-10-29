@@ -16,6 +16,15 @@ body {
  
 }
 
+/* Sub Wallpaper */
+.header-wallpaper-sub {
+  height: 30vh; /* Use viewport height */
+  max-height: 250px; /* Keep a maximum height */
+  background-image: url('../Images/GhAv2K4aYAApf1y.jpg');
+  background-size: cover;
+  background-position: center 85%;
+}
+
 
 /*girl rules*/
 .header-wallpaper-sub-series-gr {
@@ -1068,4 +1077,5 @@ footer {
   text-align: center;
   padding: 15px 0;
 }
+
 
