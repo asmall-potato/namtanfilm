@@ -1147,7 +1147,8 @@
             "time": "6PM (BKK Time)",
             "live": "YouTube / Facebook : GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1983821176318328939"
+            "url": "https://x.com/GMMTV/status/1983821176318328939",
+            "status": "passed"
         }
     ],
     "2025-11-01": [
@@ -1156,7 +1157,8 @@
             "time": "18:30 (SGT Time)",
             "location": "GVMAX, VIVOCITY",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1971031904431337497"
+            "url": "https://x.com/GMMTV/status/1971031904431337497",
+            "status": "passed"
         }
     ],
     "2025-11-04": [
@@ -1178,6 +1180,7 @@
         }
     ]
 }
+
 
 
 
