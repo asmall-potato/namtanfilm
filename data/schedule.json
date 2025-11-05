@@ -1167,7 +1167,8 @@
             "time": "5PM (BKK Time)",
             "location": "-",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1984226986135544251/photo/1"
+            "url": "https://x.com/GMMTV/status/1984226986135544251/photo/1",
+            "status": "passed"
         }
     ],
     "2025-11-30": [
@@ -1180,6 +1181,7 @@
         }
     ]
 }
+
 
 
 
