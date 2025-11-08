@@ -1,32 +1,67 @@
-
-
 body {
-   
-    font-family: 'Open Sans', sans-serif;
-    color: #333;
-    background-color: #F5F3F1;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background-image: url('../Images/sub series/1500x500.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* keeps it still on scroll */
+  background-repeat: no-repeat;
+}
+
+/* Keep the wallpaper header section for overlay or extra style */
+.header-wallpaper-sub-series-gr {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFEB3B; /* bright yellow text */
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Optional hover effect */
+.header-wallpaper-sub-series-gr:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.5s ease-in-out;
+}
+
+/* Fix white boxes covering wallpaper */
+.intro-section,
+.video-section,
+.watch-section,
+.watch-platforms-section {
+  background: rgba(255, 235, 59, 0.75); /* transparent bright yellow */
+  box-shadow: 0 4px 12px rgba(0, 0, 80, 0.2);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 40px;
+  color: #0D47A1; /* Dark blue text */
 }
 
 /* Bottom-right Text inside Wallpaper */
 .bottom-right-text-sub {
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    color: white;
-    text-align: right;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  color: #FFEB3B; /* Yellow */
+  text-align: right;
 }
 
 .bottom-right-text-sub h1 {
-    font-size: 80px;
-    font-weight: 600;
-    color: rgb(55, 232, 232);
-    font-family: 'Lora', serif;
+  font-size: 80px;
+  font-weight: 600;
+  color: #2196F3; /* Bright blue */
+  font-family: 'Lora', serif;
 }
 
 .bottom-right-text-sub p {
-    font-size: 24px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #FFEB3B; /* Yellow */
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Section Styling */
@@ -38,7 +73,7 @@ section {
 
 /* Introduction Section */
 .intro-section {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
@@ -47,154 +82,145 @@ section {
 }
 
 .intro-section h2 {
-  font-size: 34px;
-  margin-bottom: 25px;
-  font-family: 'Poppins', sans-serif;
-  color: #2c3e50;
-  position: relative;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
 }
 
 .intro-section h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: rgb(36, 141, 108);
-  margin: 12px auto 0;
-  border-radius: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
 }
 
 .intro-section p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #606e79;
-  max-width: 850px;
-  margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+    color: #073B8A; /* Balanced deep blue */
 }
 
 /* Video Section */
 .video-section {
-  background: #fff;
-  padding: 40px 20px;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 900px;      /* Limits section width */
-  margin: 50px auto;     /* Centers the section horizontally */
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px;
 }
 
 
 .video-section h2 {
-  font-size: 30px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  color: #1c2c38;
-  margin-bottom: 30px;
-  position: relative;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
 }
 
 .video-section h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: rgb(36, 141, 108);
-  margin: 10px auto 0;
-  border-radius: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
 }
 
 .video-section iframe {
-  width: 80%;
-  aspect-ratio: 16 / 9;
-  display: block;
-  margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 80%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /*Watch Section*/
 /* 🎬 Watch Section */
 .watch-section {
-  background: linear-gradient(135deg, #ffffff, #f9f9f9);
-  padding: 50px 30px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  max-width: 1100px;
-  margin: 50px auto;
-  border-radius: 16px;
-  text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 12px;
+    margin-bottom: 40px; /* adds space below Watch Now section */
 }
 
 .watch-section h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 30px;
-  font-weight: 600;
-  color: #1c2c38;
-  margin-bottom: 30px;
-  position: relative;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
 }
 
 .watch-section h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: rgb(36, 141, 108);
-  margin: 10px auto 0;
-  border-radius: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
 }
 
 /* 🎥 Video Container - 3 in a Row */
 .video-container {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 25px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .watch-section iframe {
-  flex: 1 1 calc(33.333% - 20px);
-  max-width: calc(33.333% - 20px);
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.watch-section iframe:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* 🔗 Watch Button */
-.watch-link {
-  display: inline-block;
-  padding: 12px 30px;
-  margin-top: 30px;
-  background-color: rgb(36, 141, 108);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  border-radius: 30px;
-  letter-spacing: 0.3px;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.watch-link:hover {
-  background-color: rgb(25, 100, 80);
-  transform: translateY(-3px);
+  flex: 1 1 30%; /* Each iframe takes up about one-third of the container width */
+    max-width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /*book CSS*/
 .book-section {
-  display: flex;
-  width: 80%;
-  min-height: 400px;
-  background-color: #f8f8f8;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 12px;
+    margin-bottom: 40px; /* adds space below Watch Now section */
 }
+
+.book-section h2{
+  font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
+}
+
+.book-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
+}
+
 
 .book-option {
   flex: 1;
@@ -205,32 +231,35 @@ section {
   padding: 40px;
   text-align: center;
   transition: all 0.3s ease;
+  background-color: transparent; /* Transparent background */
 }
 
 .physical-book {
-  background: #fff;
-  border-right: 2px solid #e0e0e0;
+  background: transparent; /* Transparent background for physical book */
+  
 }
 
 .ebook {
-  background: #f2f2f2;
+  background: transparent; /* Transparent background for eBook */
+  
 }
 
-.book-option h2 {
+.book-option h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
+  color: #003366; /* Blue text color */
 }
 
 .book-option p {
   font-size: 1rem;
-  color: #555;
+  color: #222; /* Dark navy blue text for better readability and theme consistency */
   margin-bottom: 20px;
   max-width: 300px;
 }
 
 .book-btn {
-  background-color: #222;
-  color: #fff;
+  background-color: #003366; /* Blue button */
+  color: #FFCC00; /* Yellow text */
   text-decoration: none;
   padding: 12px 28px;
   border-radius: 25px;
@@ -240,12 +269,13 @@ section {
 }
 
 .book-btn:hover {
-  background-color: #444;
+  background-color: #0055a5; /* Slightly lighter blue on hover */
 }
 
 .book-option:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  border: 2px solid #003366; /* Add blue border on hover */
 }
 
 /* Responsive */
@@ -256,36 +286,55 @@ section {
 
   .physical-book {
     border-right: none;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #003366; /* Blue border */
   }
 }
 
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    body {
+      background-image: url('../Images/sub series/GdT_iL0aoAMV2TC.jpg'); /* your mobile version */
+      background-repeat: no-repeat;
+      
+    }
+
     .bottom-right-text-sub h1 {
         font-size: 60px; /* Adjust font size for tablets */
-        color: #009688; /* Teal color for headings */
+        color: #003366; /* Deep blue */
         margin-bottom: 10px; /* Spacing below headings */
     }
 
     .bottom-right-text-sub p {
         font-size: 20px; /* Adjust font size for tablets */
-        color: #555; /* Dark gray color for text */
+        color: #FFCC00; /* Yellow for subtext */
         line-height: 1.5; /* Improve readability with line height */
     }
 
     .intro-section, .watch-section {
-        padding: 30px; /* Add padding for better spacing */
-        background-color: #f9f9f9; /* Light background for sections */
-        border-radius: 10px; /* Rounded corners for a modern look */
-        margin: 20px 0; /* Add spacing between sections */
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 12px;
+        margin: 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .intro-section h2, .watch-section h2 {
         font-size: 28px; /* Adjust font size for tablets */
-        color: #009688; /* Teal color for headings */
+        color: #1B263B; /* Blue heading */
         margin-bottom: 15px; /* Spacing below headings */
+    }
+
+    .intro-section h2::after, .watch-section h2::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%); /* Centers the underline */
+        width: 100px;
+        height: 4px;
+        background-color: #FFEB3B; /* Yellow underline */
+        border-radius: 2px;
     }
 
     .intro-section p, .watch-section p {
@@ -295,10 +344,12 @@ section {
     }
 
     .video-section iframe {
-        max-width: 90%; /* Ensure iframe doesn't exceed container width */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 10px; /* Rounded corners for iframe */
-        margin: 10px 0; /* Add spacing around iframe */
+        max-width: 90%;
+        height: auto;
+        border-radius: 10px;
+        border: 4px solid; /* Border thickness */
+        border-image: linear-gradient(to right, #FFEB3B 50%, #0D47A1 50%) 1;
+        margin: 10px 0;
     }
 
     .video-container {
@@ -313,40 +364,20 @@ section {
         height: auto; /* Maintain aspect ratio */
         border-radius: 10px; /* Rounded corners for iframe */
         margin: 10px 0; /* Add spacing around iframe */
+        border: 2px solid;
+        border-image: linear-gradient(to right, #FFEB3B 50%, #0D47A1 50%) 1;
     }
 
-    .platform-buttons {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center-align buttons horizontally */
-        gap: 15px; /* Add spacing between buttons */
-    }
-
-    .watch-link {
-        width: 80%; /* Adjust button width */
-        margin-bottom: 15px; /* Add spacing below buttons */
-        padding: 12px 20px; /* Add padding for better clickability */
-        background-color: #009688; /* Teal background for buttons */
-        color: white; /* White text color */
-        border-radius: 5px; /* Rounded corners for buttons */
-        text-align: center; /* Center-align text */
-        text-decoration: none; /* Remove underline */
-        transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-    }
-
-    .watch-link:hover {
-        background-color: #00796b; /* Darker teal on hover */
-        transform: translateY(-3px); /* Slight lift effect on hover */
-    }
 }
 
 @media (max-width: 480px) {
     .bottom-right-text-sub h1 {
-        font-size: 40px; /* Adjust font size for mobile devices */
-        margin-bottom: 8px; /* Reduce spacing below headings */
+        font-size: 30px; /* Further reduce font size for mobile */
+        margin-bottom: 5px; /* Reduce spacing below <h1> */
     }
 
     .bottom-right-text-sub p {
-        font-size: 18px; /* Adjust font size for mobile devices */
+        font-size: 16px; /* Further reduce font size for mobile */
     }
 
     .intro-section, .watch-section {
@@ -378,121 +409,158 @@ section {
     }
 }
 
-.platform-button {
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-
-
-/* Hover effect */
-.platform-button:hover {
-    opacity: 0.9;
-}
-
 /* Introduce Actresses Section */
-.cast-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin: 0 auto;
-  padding: 20px;
+/* --- Outer section wrapper --- */
+.cast-section {
+  background-color: rgba(255, 255, 255, 0.5); /* Soft white transparency */
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px; /* Matches your desired size */
+  margin: 40px auto; /* Centers the section */
+  border-radius: 12px;
 }
 
-.cast-container h3 {
-  width: 100%;
+.cast-section h2 {
   font-size: 34px;
   font-family: 'Poppins', sans-serif;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  text-align: center;
+  color: #1B263B; /* Muted dark navy-gray*/
+  margin-bottom: 30px;
   position: relative;
+  display: inline-block; /* 👈 limits width to text */
 }
 
-.cast-container h3::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: rgb(36, 141, 108);
-  margin: 12px auto 0;
+.cast-section h2::after {
+    content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 4px;
+  background-color: #FFEB3B; /* Bright yellow underline */
   border-radius: 2px;
+}
+
+.cast-container {
+  display: flex;
+  flex-wrap: nowrap; /* Force images into the same row */
+  justify-content: space-between; /* Spread evenly */
+  align-items: stretch; /* Make all same height */
+  gap: 20px;
+  background: transparent;
+  flex-direction: row;
 }
 
 /* Column inside cast container */
 .column {
   flex: 1 1 30%;
   max-width: 30%;
-  background: linear-gradient(145deg, #ffffff, #e9e9e9);
+  background: rgba(0, 51, 102, 0.05); /* Transparent bluish tint */
+  border: 2px solid #003366; /* Blue border */
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 /* Hover effect for the column */
 .column:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 24px rgba(0, 51, 102, 0.4);
+  border-color: #FFCC00; /* Highlight with yellow on hover */
 }
 
 /* Column image styling */
 .column img {
   width: 100%;
   height: auto;
-  border-bottom: 3px solid rgb(36, 141, 108);
+  border-bottom: 3px solid #003366; /* Blue line under image */
   display: block;
 }
 
 .column h4 {
   font-family: 'Poppins', sans-serif;
-  font-size: 22px;
-  color: #2c3e50;
+  font-size: 20px;
+  color: #CC9900; /* Dark yellow */
   margin-top: 15px;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Black border effect */
 }
 
 .column p {
   font-size: 16px;
-  color: #555;
+  color: #1a1a1a; /* Darker text for better visibility on transparency */
   padding: 0 15px 20px;
   font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width: 768px) {
+
+    .cast-container {
+      display: flex;
+      flex-direction: column; /* Stack vertically */
+      align-items: center; /* Center align each column */
+      gap: 20px; /* Space between items */
+    }
+
     .column {
-        flex: 1 1 100%; /* Each column takes up full width on smaller screens */
-        max-width: 100%; /* Ensures columns use full width on smaller screens */
-        margin: 10px 0; /* Add spacing around columns */
-        padding: 15px; /* Add padding inside columns */
-        background-color: #ffffff; /* White background for columns */
-        border-radius: 10px; /* Rounded corners for a modern look */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+      flex: 1 1 100%; /* Each column takes full width */
+      max-width: 90%; /* Slight margin from screen edges */
+      margin: 12px 0;
+      padding: 20px;
+      background: rgba(0, 51, 102, 0.05); /* Transparent bluish tint */
+      border: 2px solid #003366; /* Blue border */
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 51, 102, 0.15); /* Subtle blue shadow */
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     }
 
     .column:hover {
-        transform: translateY(-5px); /* Slight lift effect on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        transform: translateY(-5px);
+        box-shadow: 0 8px 18px rgba(0, 51, 102, 0.3);
+        border-color: #FFCC00; /* Yellow highlight on hover */
     }
 
-    .column h3 {
-        font-size: 1.4em; /* Adjust font size for tablets */
-        color: #009688; /* Teal color for headings */
-        margin-bottom: 10px; /* Spacing below headings */
+    /* --- h2: Main Title (e.g., Character Name) --- */
+    .column h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5em;
+      color: #003366; /* Deep blue */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 15px 0 8px;
+      border-bottom: 2px solid #FFCC00; /* Yellow underline */
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+  /* --- h4: Subheading (e.g., Role or Description) --- */
+    .column h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2em;
+      color: #FFCC00; /* Bright yellow */
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
+                 -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline for visibility */
+      margin: 10px 0 8px;
+      font-weight: 600;
     }
 
     .column p {
-        font-size: 0.95em; /* Adjust font size for tablets */
-        color: #555; /* Dark gray color for text */
-        line-height: 1.5; /* Improve readability with line height */
+      font-size: 1.2em;
+      color: #003366; /* Deep blue text */
+      line-height: 1.6;
+      margin-bottom: 10px;
+      font-family: 'Roboto', sans-serif;
     }
+    .column img {
+      width: 100%;
+      height: auto;
+      border-bottom: 3px solid #2E2EFF;
+      border-radius: 10px 10px 0 0;
+      display: block;
+  }
 }
