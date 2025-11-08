@@ -303,6 +303,12 @@ section {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
 
+  body {
+      background-image: url('../Images/sub series/GZHk81nbgAA_6QJ.jfif'); /* your mobile version */
+      background-repeat: no-repeat;
+      
+    }
+
    .nav-list {
         display: flex;
         flex-direction: column; /* Stack items vertically */
@@ -803,3 +809,4 @@ button.collapsible:focus {
         font-size: 0.85em;
     }
 }
+
