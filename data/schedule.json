@@ -1177,7 +1177,8 @@
             "time": "10AM (BKK Time)",
             "location": "Lobby GMM GRAMMY Place",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1986322572338995308/photo/2"
+            "url": "https://x.com/GMMTV/status/1986322572338995308/photo/2",
+            "status": "passed"
         }
     ],
     "2025-11-12": [
@@ -1187,7 +1188,8 @@
             "location": "BITEC BANGNA Grand Hall 201-203, 2nd Floor",
             "live":"Facebook: Howe Magazine | YouTube: Howe Channel",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1987855456044515649/photo/4"
+            "url": "https://x.com/GMMTV/status/1987855456044515649/photo/4",
+            "status": "passed"
             
         },
         {
@@ -1195,7 +1197,8 @@
             "time": "20:30 (BKK Time)",
             "live": "GMM25",
             "artist": "NamtanFilm",
-            "url": "https://www.instagram.com/p/DQtHn69Dzkb/"
+            "url": "https://www.instagram.com/p/DQtHn69Dzkb/",
+            "status": "passed"
         }
     ],
     "2025-11-30": [
@@ -1208,6 +1211,7 @@
         }
     ]
 }
+
 
 
 
