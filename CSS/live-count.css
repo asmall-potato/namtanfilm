@@ -4,10 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 body {
-    background: linear-gradient(to bottom right, #B0B3B8, #A8D3E0); /* Updated gradient colors for Pluto */
-    font-family: 'Open Sans', sans-serif; /* Updated font style */
-    /* padding: 20px; /* Add some padding around the body */
-    /* min-height: 100vh; /* Ensure the body takes full height */
+    background: linear-gradient(to bottom right, #E0F7FA, #FFEB3B); /* Soft blue to warm yellow gradient */
+    font-family: 'Open Sans', sans-serif; /* Clean modern font */
+    color: #333333; /* Dark gray text for better readability */
 }
 
 .wrapper {
@@ -21,28 +20,28 @@ body {
 h2 {
     margin: 20px 0; /* Spacing above and below */
     font-size: 2.5em; /* Larger title font size */
-    color: #004d40; /* Darker color for headings */
+    color: #005B96; /* Rich blue for headings */
     text-align: center; /* Center the heading */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .live-count-container {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     width: 100%; /* Full width */
     max-width: 800px; /* Limit max width for better readability */
-    background: linear-gradient(135deg, #B0B3B8, #A8D3E0); /* Gradient background */
+    background: linear-gradient(135deg, #E0F7FA, #FFEB3B); /* Soft blue to yellow gradient */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
     padding: 20px; /* Padding inside container */
 }
 
 .live-count-row {
-    margin: 15px 0; 
-    width: 100%; 
-    text-align: center; 
-    background: linear-gradient(135deg, #B0B3B8, #A8D3E0); /* Linear gradient background */
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(135deg, #E0F7FA, #FFEB3B); /* Gradient background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
     padding: 20px; /* Padding inside each row */
@@ -63,33 +62,35 @@ h2 {
 }
 
 .counter-item {
-    text-align: center; /* Center align the text */
-    flex: 1; /* Allow items to grow and fill the space evenly */
-    min-width: 300px; /* Ensure minimum width for responsive design */
-    background: linear-gradient(135deg, #F9F9F9, #A8D3E0); /* Gradient background for items */
-    border-radius: 10px; /* Rounded corners */
-    padding: 15px; /* Padding inside each counter item */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+    background: linear-gradient(135deg, #FFFFFF, #DBEAFE); /* Clean blue card */
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #FACC15; /* Small yellow accent */
 }
 
 .counter-item:hover {
-    background: linear-gradient(135deg, #e0f7fa, #b2dfdb); /* Change background on hover */
-    transform: translateY(-5px); /* Lift effect on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
 h4 {
-    margin: 5px 0; /* Add some spacing around the titles */
-    color: #004d40; /* Darker color for subheadings */
+    margin: 5px 0;
+    color: #1E3A8A; /* Deep blue subheadings */
 }
 
 iframe {
-    border: none; /* Remove default border */
-    border-radius: 10px; /* Rounded corners for iframes */
-    transition: transform 0.2s; /* Smooth scaling effect */
-    width: 100%; /* Ensure iframe takes full width */
-    max-width: 600px; /* Limit max width */
-    background: linear-gradient(135deg, #ffffff, #b2dfdb); /* Gradient background for iframe */
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+    width: 100%;
+    max-width: 600px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 iframe:hover {
@@ -99,58 +100,74 @@ iframe:hover {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .counter-item {
-        min-width: 45%; /* Adjust min width for tablets */
-        margin: 10px; /* Add spacing around counter items */
-        padding: 15px; /* Add padding inside counter items */
-        background-color: #ffffff; /* White background for counter items */
-        border-radius: 10px; /* Rounded corners for a modern look */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        min-width: 48%;
+        margin: 12px 0;
+        padding: 18px;
+        border-radius: 14px;
+        /* Modern soft card */
+        background: #ffffff;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .counter-item:hover {
-        transform: translateY(-5px); /* Slight lift effect on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
     }
 
     iframe {
-        width: 100%; /* Ensure iframe takes full width on smaller screens */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 10px; /* Rounded corners for iframe */
-        margin: 10px 0; /* Add spacing around iframe */
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        margin: 14px 0;
+        background: #ffffff;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
-        font-size: 2em; /* Adjust font size for tablets */
-        color: #009688; /* Teal color for headings */
-        margin-bottom: 15px; /* Spacing below headings */
+        font-size: 2.1em;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     h4 {
-        font-size: 1.4em; /* Adjust font size for tablets */
-        color: #333; /* Dark gray color for subheadings */
-        margin-bottom: 10px; /* Spacing below subheadings */
+        font-size: 1.35em;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+    .counter-container {
+        gap: 18px; /* cleaner spacing */
     }
 }
 
 @media (max-width: 480px) {
     .counter-item {
-        min-width: 100%; /* Adjust min width for mobile devices */
-        margin: 8px 0; /* Adjust spacing for smaller screens */
-        padding: 12px; /* Reduce padding for smaller screens */
+        min-width: 100%;
+        margin: 12px 0;
+        padding: 16px;
+        border-radius: 14px;
+        /* Cleanest possible mobile card */
+        background: #ffffff;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
     }
 
     iframe {
-        margin: 8px 0; /* Adjust spacing for smaller screens */
+        border-radius: 14px;
+        margin: 12px 0;
     }
 
     h2 {
-        font-size: 1.8em; /* Adjust font size for mobile devices */
-        margin-bottom: 12px; /* Reduce spacing below headings */
+        font-size: 1.9em;
+        margin-bottom: 16px;
+        text-align: center;
     }
 
     h4 {
-        font-size: 1.2em; /* Adjust font size for mobile devices */
-        margin-bottom: 8px; /* Reduce spacing below subheadings */
+        font-size: 1.15em;
+        margin-bottom: 10px;
+    }
+
+    .counter-container {
+        gap: 14px;
     }
 }
