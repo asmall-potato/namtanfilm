@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="CSS/pagination.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>NAMTANFILM | FAN MEETING (Y2026)</title>
+</head>
+<body>
+    <header class="header-wallpaper-sub">
+        <div class="header-container">
+            <h1 class="logo">
+                <span class="blue">NAMTAN</span><span class="yellow">FILM</span>
+            </h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+            ☰
+            </button>
+             <div id="navigation"></div>
+
+             
+
+        </div>
+        </div>
+        
+        
+    </header>
+    
+
+     <main>
+        <h2 style="text-align: center; margin-bottom: 20px;" >FAN MEETING</h2>
+        <p><center >Local & Overseas fan meeting
+            </center></p>
+        <p><center>(Year 2026)</center></p>
+        <div class="general-container">
+
+            <div class="general-item">
+                <h3>NamtanFilm Fan Meeting in Taipei 2026</h3>
+                <p>January 18, 2026 (Sun) 18:00 (UTC+8)</p>
+                <p>Zepp New Taipei</p>
+                <p >Tickets on sale : December 13, 2025, 12:00 (UTC+8) AT KKTIX and FamiPort (available at FamilyMart convenience stores)</p>
+                <p>For more details follow <a href = "https://x.com/RoverFilmX">Rover Film</a></p>
+                <blockquote class="twitter-tweet"><p lang="zh" dir="ltr">新年一起閃耀登場！<br><br>2026年的第一場相聚，Namtan &amp; Film 要和 Lunar 在台北開心見面囉！<br>讓我們用笑容迎接新的一年，把最閃亮的回憶留在這一刻✨💖🌙<br><br>NamtanFilm Fan Meeting in Taipei 2026<br>活動時間｜2026年1月18日（日）18:00 (UTC+8)<br>活動地點｜Zepp New Taipei<br>門票售價｜VIP $7,300 / A區… <a href="https://t.co/sovAXWPzR7">pic.twitter.com/sovAXWPzR7</a></p>&mdash; Rover Film (@RoverFilmX) <a href="https://twitter.com/RoverFilmX/status/1991386298012299460?ref_src=twsrc%5Etfw">November 20, 2025</a></blockquote> 
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>           
+            
+        </div>
+
+        <div class="pagination" id="pagination"></div>
+        <br>
+    </main>
+    
+    <div id="footer-container"></div>
+    
+        <!-- Google Translate Element -->
+        <div id="google_translate_element"></div>
+        
+
+        <script>
+
+        // footer
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+            
+        // Fetch navigation list from navigation.html
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
+
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
+
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
+        
+        // Scroll reveal effect
+        const sections = document.querySelectorAll('section');
+        const options = {
+        root: null,
+        threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        observer.unobserve(entry.target);
+        }
+        });
+        }, options);
+        
+        sections.forEach(section => {
+        observer.observe(section);
+        });
+        
+        // Change header transparency on scroll
+        const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
+        
+        //pagination
+        const itemsPerPage = 12;
+        const generalItems = document.querySelectorAll('.general-item');
+        const totalPages = Math.ceil(generalItems.length / itemsPerPage);
+
+    function showPage(page) {
+        generalItems.forEach((item, index) => {
+            item.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? 'block' : 'none';
+        });
+    }
+
+    function createPagination() {
+        const paginationContainer = document.getElementById('pagination');
+        for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('a');
+            pageLink.href = "#";
+            pageLink.innerHTML = i;
+            pageLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage(i);
+                updateActivePage(i);
+            });
+            paginationContainer.appendChild(pageLink);
+        }
+        updateActivePage(1); // Set page 1 as active on load
+    }
+
+    function updateActivePage(activePage) {
+        const paginationLinks = document.querySelectorAll('.pagination a');
+        paginationLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        paginationLinks[activePage - 1].classList.add('active');
+    }
+
+    // Initialize pagination on page load
+    showPage(1);
+    createPagination();
+/*
+            //hamburger for only display at mobile devices
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('showing');
+        });
+*/
+            
+        </script>
+        </body>
+        </html>
+        
+
+
+
+
+
