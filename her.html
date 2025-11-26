@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/sub-series-her.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>NAMTANFILM | Her รักของเธอ</title>
+</head>
+<body>
+    <header class="header-wallpaper-sub-series-gr">
+        <div class="header-container">
+            <h1 class="logo">
+                <span class="blue">NAMTAN</span><span class="yellow">FILM</span>
+            </h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+            ☰
+            </button>
+            <div id="navigation"></div>
+
+            
+
+        </div>
+        <div class="bottom-right-text-sub">
+            <h1>Her รักของเธอ</h1>
+            <p>#Herรักของเธอ</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <h2 >ABOUT Her รักของเธอ</h2>
+            <p >​​"Her รักของเธอ" is an original series by GMMTV, starring by Namtan Tipnaree, Film Rachanun, Junior Panachai & Aye Sarunchana.</p>
+            <p > The series is directed by Snap25.</p>
+        </section>
+    
+        <!-- YouTube Section -->
+        <section class="video-section">
+            <h2 >Watch the Official Pilot</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OXfExloO350?si=8uvzbpseHAGoYzTy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <!--Introduce main cast-->
+        <section class="cast-section">
+            <h2>CAST</h2>
+        <div class="cast-container">
+            <!-- First row with 2 main cast members -->
+            <div class="cast-row">
+                <div class="cast-item">
+                    <div class="cast-image">
+                        <img src="Images/Screenshot_41.jpg" alt="Namtan Tipnaree">
+                    </div>
+                    <h4>Namtan Tipnaree</h4>
+                    <p>as "Arpo"</p>
+                </div>
+                <div class="cast-item">
+                    <div class="cast-image">
+                        <img src="Images/Screenshot_42.jpg" alt="Film Rachanun">
+                    </div>
+                    <h4>Film Rachanun</h4>
+                    <p>as "Porpan"</p>
+                </div>
+            </div>
+            
+            <!-- Second row with 5 cast members -->
+            <div class="cast-row1">
+                <div class="cast-item1">
+                    <div class="cast-image">
+                        <img src="Images/Screenshot_40.jpg" alt="Junior Panachai">
+                    </div>
+                    <h4>Junior Panachai</h4>
+                    
+                </div>
+                <div class="cast-item1">
+                    <div class="cast-image">
+                        <img src="Images/Screenshot_43.jpg" alt="Aye Sarunchana">
+                    </div>
+                    <h4>Aye Sarunchana</h4>
+                    
+                </div>
+                <div class="cast-item1">
+                    <div class="cast-image">
+                        <img src="Images/Screenshot_39.jpg" alt="Nam Rapeepat">
+                    </div>
+                    <h4>Nam Rapeepat</h4>
+                    
+                </div>
+                <div class="cast-item1">
+                    <div class="cast-image">
+                        <img src="Images/Screenshot_38.jpg" alt="Ann Nantana">
+                    </div>
+                    <h4>Ann Nantana</h4>
+                    
+                </div>
+                <div class="cast-item1">
+                    <div class="cast-image">
+                        <img src="Images/Screenshot_37.jpg" alt="Mint Thishar">
+                    </div>
+                    <h4>Mint Thishar</h4>
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Watch Now Section -->
+        <section class="watch-section">
+            <h2 >Related to Her รักของเธอ</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aOE3DW6fLYA?si=Rho-32S9WzzEBxzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+            </div>
+            
+        </section>
+
+    </main>
+
+    <div id="footer-container"></div>
+
+    <!-- Google Translate Element -->
+    <div id="google_translate_element"></div>
+    
+    
+
+    <script>
+     // footer
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+        
+       
+        // Fetch navigation list from navigation.html
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
+
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
+
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
+
+        
+        // Scroll reveal effect
+        const sections = document.querySelectorAll('section');
+        const options = {
+            root: null,
+            threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+        
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Change header transparency on scroll
+        const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
+/*
+        // Hamburger for mobile devices
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('showing');
+        });*/
+    </script>
+</body>
+</html>
