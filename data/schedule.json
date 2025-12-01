@@ -1219,7 +1219,8 @@
             "time": "19:30 (Macau Time)",
             "location": "Fisherman’s Wharf Convention & Exhibition Center, Macau",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1968181622534287506"
+            "url": "https://x.com/GMMTV/status/1968181622534287506",
+            "status": "passed"
         }
     ],
     "2025-12-02": [
@@ -1238,11 +1239,29 @@
             "url": "https://x.com/GMMTV/status/1994255158071710070?s=20"
         }
     ],
+    "2025-12-03": [
+        {
+            "description": "The Opening of The New DG Caffè in Bangkok",
+            "time": "4:00PM (BKK Time)",
+            "location": "Dolce&Gabbana Cafe, 1st Floor, Siam Paragon",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1995377451304993203/photo/2"
+        }
+    ],
+    "2025-12-04": [
+        {
+            "description": "SRICHAND Haus of Base Event",
+            "time": "7:00PM (BKK Time)",
+            "location": "Siam Square Block I",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/GMMTV/status/1995377465016168776/photo/2"
+        }
+    ],
     "2025-12-07": [
         {
-            "description": "SF Friends Screening Disney’s Zootopia 2",
+            "description": "Disney’s Zootopia 2 SF Friends Screening",
             "time": "17:00 (BKK Time)",
-            "location": "SFW CentralWorld, movie theater number 15",
+            "location": "SF World Cinema Central World",
             "artist": "NamtanFilm",
             "url": "https://x.com/WeLoveSF/status/1990404640412782990?s=20"
         }
@@ -1255,8 +1274,28 @@
             "artist": "Namtan Tipnaree",
             "url": "https://www.instagram.com/p/DRmm1XjiUmJ/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
         }
+    ],
+    "2025-12-15": [
+        {
+            "description": "Lenskart's special event",
+            "time": "-",
+            "location": "Tampines 1 Atrium, Singapore",
+            "artist": "Namtan Tipnaree",
+            "url": "https://www.instagram.com/p/DRgW89xGBaP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+        }
+    ],
+    "2025-12-20": [
+        {
+            "description": "GMMTV STARLYMPICS 2025",
+            "time": "2PM (BKK Time)",
+            "location": "Impact Arena, Muang Thong Thani",
+            "live": "TTM LIVE (Buy live streaming ticket at ThaiTicketMajor)",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1975486297176498271?s=20"
+        }
     ]
 }
+
 
 
 
