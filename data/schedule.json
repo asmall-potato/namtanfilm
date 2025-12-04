@@ -1287,6 +1287,20 @@
             "url": "https://x.com/GMMTV/status/1996557723820003480?s=20"
         },
         {
+            "description": "Karmart 𝙂𝙞𝙧𝙡𝙨’ 𝙇𝙤𝙫𝙚 𝙇𝙞𝙫𝙚 𝙁𝙚𝙨𝙩𝙞𝙫𝙖𝙡",
+            "time": "17:00 - 18:00 (BKK Time)",
+            "live": "Tiktok: karmartsclub",
+            "artist": "Namtan Tipnaree",
+            "url": "https://www.instagram.com/p/DR1UJEmE8M1/"
+        },
+        {
+            "description": "Karmart 𝙂𝙞𝙧𝙡𝙨’ 𝙇𝙤𝙫𝙚 𝙇𝙞𝙫𝙚 𝙁𝙚𝙨𝙩𝙞𝙫𝙖𝙡",
+            "time": "18:00 - 19:00 (BKK Time)",
+            "live": "Tiktok: karmartsclub",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/Karmartsclub/status/1996180929421902132?s=20"
+        },
+        {
             "description": "รายการ Face Off แฝดคนละฝา",
             "time": "08:05PM (BKK Time)",
             "live": "ทางช่อง Workpoint23",
@@ -1301,6 +1315,15 @@
             "location": "Work & Play, 1st Floor, CENTRAL RAMA 9, Bangkok",
             "artist": "Namtan Tipnaree",
             "url": "https://www.instagram.com/p/DRmm1XjiUmJ/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
+        }
+    ],
+    "2025-12-12": [
+        {
+            "description": "Every Moment With You",
+            "time": "6PM (BKK Time)",
+            "location": "central chidlom",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/Centralnews/status/1996436876308468134?s=20="
         }
     ],
     "2025-12-15": [
@@ -1323,6 +1346,7 @@
         }
     ]
 }
+
 
 
 
