@@ -1229,14 +1229,16 @@
             "time": "-",
             "location": "MaxMara Store, Central Embassy, 1st Floor",
             "artist": "Namtan Tipnaree",
-            "url": "https://www.instagram.com/p/DRj2t-jj0ew/?img_index=6"
+            "url": "https://www.instagram.com/p/DRj2t-jj0ew/?img_index=6",
+            "status": "passed"
         },
         {
             "description": "GMMTV PRO-TEEN SCHOOL TOUR 2025",
             "time": "2:00PM (BKK Time)",
             "location": "โรงเรียนศรีบุณยานนท์ | SRIBOONYANON SCHOOL",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/1994255158071710070?s=20"
+            "url": "https://x.com/GMMTV/status/1994255158071710070?s=20",
+            "status": "passed"
         }
     ],
     "2025-12-03": [
@@ -1245,7 +1247,8 @@
             "time": "4:00PM (BKK Time)",
             "location": "Dolce&Gabbana Cafe, 1st Floor, Siam Paragon",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1995377451304993203/photo/2"
+            "url": "https://x.com/GMMTV/status/1995377451304993203/photo/2",
+            "status": "passed"
         }
     ],
     "2025-12-04": [
@@ -1264,6 +1267,31 @@
             "location": "SF World Cinema Central World",
             "artist": "NamtanFilm",
             "url": "https://x.com/WeLoveSF/status/1990404640412782990?s=20"
+        }
+    ],
+    "2025-12-08": [
+        {
+            "description": "Mugler's re/edit capsule collection at Central Embassy",
+            "time": "6:00PM (BKK Time)",
+            "location": "Mugler, Level 1, Central Embassy",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/1996556476694040871/photo/1"
+        }
+    ],
+    "2025-12-09": [
+        {
+            "description": "GMMTV PRO-TEEN SCHOOL TOUR 2025",
+            "time": "-",
+            "location": "โรงเรียนวัดราชโอรส | WAT RAJA-O-ROS SCHOOL",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/1996557723820003480?s=20"
+        },
+        {
+            "description": "รายการ Face Off แฝดคนละฝา",
+            "time": "08:05PM (BKK Time)",
+            "live": "ทางช่อง Workpoint23",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1996556481031008422/photo/2"
         }
     ],
     "2025-12-11": [
@@ -1295,6 +1323,7 @@
         }
     ]
 }
+
 
 
 
