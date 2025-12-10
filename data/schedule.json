@@ -1257,7 +1257,8 @@
             "time": "7:00PM (BKK Time)",
             "location": "Siam Square Block I",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/1995377465016168776/photo/2"
+            "url": "https://x.com/GMMTV/status/1995377465016168776/photo/2",
+            "status": "passed"
         }
     ],
     "2025-12-07": [
@@ -1266,7 +1267,8 @@
             "time": "17:00 (BKK Time)",
             "location": "SF World Cinema Central World",
             "artist": "NamtanFilm",
-            "url": "https://x.com/WeLoveSF/status/1990404640412782990?s=20"
+            "url": "https://x.com/WeLoveSF/status/1990404640412782990?s=20",
+            "status": "passed"
         }
     ],
     "2025-12-08": [
@@ -1275,7 +1277,8 @@
             "time": "6:00PM (BKK Time)",
             "location": "Mugler, Level 1, Central Embassy",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1996556476694040871/photo/1"
+            "url": "https://x.com/GMMTV/status/1996556476694040871/photo/1",
+            "status": "passed"
         }
     ],
     "2025-12-09": [
@@ -1284,37 +1287,41 @@
             "time": "-",
             "location": "โรงเรียนวัดราชโอรส | WAT RAJA-O-ROS SCHOOL",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1996557723820003480?s=20"
+            "url": "https://x.com/GMMTV/status/1996557723820003480?s=20",
+            "status": "passed"
         },
         {
             "description": "Karmart x 𝙂𝙞𝙧𝙡𝙨’ 𝙇𝙤𝙫𝙚 𝙇𝙞𝙫𝙚 𝙁𝙚𝙨𝙩𝙞𝙫𝙖𝙡",
             "time": "17:00 - 18:00 (BKK Time)",
             "live": "Tiktok: karmartsclub",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1996917632805883916/photo/3"
+            "url": "https://x.com/GMMTV/status/1996917632805883916/photo/3",
+            "status": "passed"
         },
         {
             "description": "Karmart x 𝙂𝙞𝙧𝙡𝙨’ 𝙇𝙤𝙫𝙚 𝙇𝙞𝙫𝙚 𝙁𝙚𝙨𝙩𝙞𝙫𝙖𝙡",
             "time": "18:00 - 19:00 (BKK Time)",
             "live": "Tiktok: karmartsclub",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/1996917632805883916/photo/4"
+            "url": "https://x.com/GMMTV/status/1996917632805883916/photo/4",
+            "status": "passed"
         },
         {
             "description": "รายการ Face Off แฝดคนละฝา",
             "time": "08:05PM (BKK Time)",
             "live": "ทางช่อง Workpoint23",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1996556481031008422/photo/2"
+            "url": "https://x.com/GMMTV/status/1996556481031008422/photo/2",
+            "status": "passed"
         }
     ],
     "2025-12-11": [
         {
-            "description": "CHJ Jewellery Christmas Surprise Event",
-            "time": "17:00-18:30 (BKK Time)",
+            "description": "CHJ JewelleryxNamtanTipnaree: Christmas Surprise Event",
+            "time": "5:00PM (BKK Time)",
             "location": "Work & Play, 1st Floor, CENTRAL RAMA 9, Bangkok",
             "artist": "Namtan Tipnaree",
-            "url": "https://www.instagram.com/p/DRmm1XjiUmJ/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
+            "url": "https://x.com/GMMTV/status/1998368240435900866/photo/2"
         }
     ],
     "2025-12-12": [
@@ -1323,7 +1330,7 @@
             "time": "6PM (BKK Time)",
             "location": "central chidlom",
             "artist": "NamtanFilm",
-            "url": "https://x.com/Centralnews/status/1996436876308468134?s=20="
+            "url": "https://x.com/GMMTV/status/1998368254545494172?s=20"
         }
     ],
     "2025-12-15": [
@@ -1344,8 +1351,18 @@
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/1975486297176498271?s=20"
         }
+    ],
+    "2025-12-23": [
+        {
+            "description": "SF Friends Screening Avatar : Fire and Ash",
+            "time": "17.00 (BKK Time)",
+            "location": "SF World Cinema Central World",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/WeLoveSF/status/1998331871206547597?s=20"
+        }
     ]
 }
+
 
 
 
