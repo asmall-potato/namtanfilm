@@ -1321,7 +1321,15 @@
             "time": "5:00PM (BKK Time)",
             "location": "Work & Play, 1st Floor, CENTRAL RAMA 9, Bangkok",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/1998368240435900866/photo/2"
+            "url": "https://x.com/GMMTV/status/1998368240435900866/photo/2",
+            "status": "passed"
+        },
+        {
+            "description": "GMMTV Live House @ GIRL RULES กฎหลัก...ห้ามรักเธอ",
+            "time": "9:30PM (BKK Time)",
+            "live": "YouTube : GMMTV Official | TikTok : GMMTV",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/1999034171168317493?s=20"
         }
     ],
     "2025-12-12": [
@@ -1362,6 +1370,7 @@
         }
     ]
 }
+
 
 
 
