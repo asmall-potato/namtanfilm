@@ -1350,7 +1350,8 @@
             "time": "4:30PM (SGT Time)",
             "location": "Tampines 1 Atrium, Singapore",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2000124497010258184/photo/2"
+            "url": "https://x.com/GMMTV/status/2000124497010258184/photo/2",
+            "status": "passed"
         }
     ],
     "2025-12-20": [
@@ -1373,6 +1374,7 @@
         }
     ]
 }
+
 
 
 
