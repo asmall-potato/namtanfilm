@@ -1361,7 +1361,8 @@
             "location": "Impact Arena, Muang Thong Thani",
             "live": "TTM LIVE (Buy live streaming ticket at ThaiTicketMajor)",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/1975486297176498271?s=20"
+            "url": "https://x.com/GMMTV/status/1975486297176498271?s=20",
+            "status": "passed"
         }
     ],
     "2025-12-23": [
@@ -1374,6 +1375,7 @@
         }
     ]
 }
+
 
 
 
