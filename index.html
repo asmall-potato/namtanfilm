@@ -374,6 +374,7 @@ window.onload = function () {
         });
 
         // Show the dialog box for today's schedule and then donation info
+// Show the dialog box for today's schedule and then donation info
 document.addEventListener("DOMContentLoaded", function () {
     // Get today's date
     const today = new Date();
@@ -383,7 +384,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const todayDate = `${year}-${month}-${day}`;
 
     // Fetch schedule data
-    fetch("data/schedule.json")
+    const scheduleFile = `data/schedule-${year}.json`; // matches your calendar JS
+    fetch(scheduleFile)
         .then(response => {
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
             return response.json();
@@ -505,6 +507,7 @@ loadYouTubeAPI();
 
         </body>
         </html>
+
 
 
 
