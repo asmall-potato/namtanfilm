@@ -1,11 +1,12 @@
 /* Calendar Container - Adding gradient and smooth shadow */
 .calendar-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align left, no extra space between flex items */
     align-items: flex-start;
     width: 100%;
-    max-width: 1400px;
-    background: linear-gradient(to right, #A8D3E0, #009688); /* Gradient background */
+    max-width: 100%;
+    background: linear-gradient(to right, #A8D3E0, #009688);
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     margin-top: 60px;
@@ -22,18 +23,22 @@
 
 /* Left Side Calendar */
 .calendar-left {
-    width: 60%;
+    flex: 1 1 60%;
+    min-width: 280px;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+    overflow-x: auto; /* allow horizontal scroll */
+    overflow-y: visible; /* or as needed */
+    margin-right: 20px;   /* <-- This creates the gap */
 }
 
 /* Right Side Schedule List */
 .calendar-right {
-    width: 35%;
+    flex: 0 0 35%;       /* Fixed width */
+    min-width: 280px;
     padding: 20px;
     box-sizing: border-box;
     background-color: #fafafa;
@@ -77,29 +82,41 @@
     table-layout: fixed; /* Ensures equal column width */
     border-collapse: collapse;
     margin-top: 15px;
+    min-width: 600px; /* Adjust based on number of columns */
 }
 
 .calendar th, .calendar td {
     padding: 15px;
     text-align: center;
     border: 1px solid #e0e0e0;
-    height: 100px;   /* Fixed height for rows */
+    height: 100px;          /* fixed row height */
     vertical-align: top;
     background-color: #fff;
     box-sizing: border-box;
     position: relative;
     border-radius: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    overflow: hidden;  /* Hide overflow text */
-    word-wrap: break-word; /* Ensure words break and wrap within the cell */
-    word-break: break-word; /* Prevent text from overflowing */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    overflow: hidden;       /* hide overflow outside the box */
+    word-wrap: break-word;  /* wrap long words */
+    word-break: break-word; /* break words if too long */
+    white-space: normal;    /* allow wrapping inside the box */
 }
+
 
 /* Prevent word breaks in calendar cells */
 .calendar td {
     word-wrap: break-word; /* Break long words if necessary */
     text-overflow: ellipsis; /* Add ellipsis when text overflows */
 }
+
+/* Date number styling */
+.calendar td strong {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
 
 /* Hover Effects on Calendar Cells */
 .calendar td:hover {
@@ -124,14 +141,25 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Tooltip for events */
+/* Event details container */
 .schedule-details {
-    font-size: 14px;
-    color: #555;
-    margin-top: 5px;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    max-height: 70px;  /* fixed max height */
+    overflow-y: auto;  /* vertical scroll if overflow */
+    font-size: 13px;
+    line-height: 1.2;
+    padding-right: 6px; /* space for scrollbar */
 }
+
+/* Scrollbar styling for webkit browsers */
+.schedule-details::-webkit-scrollbar {
+    width: 6px;
+}
+
+.schedule-details::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
 
 /* Smooth hover transition for schedule cells */
 .schedule-details:hover {
@@ -264,15 +292,13 @@
 
 @media (max-width: 768px) {
     .calendar-container {
-        flex-direction: column;  /* Stack the left and right sections vertically */
-        padding: 15px;           /* Reduced padding for better spacing */
-        margin-top: 30px;        /* Provide extra space from top */
-        overflow-x: hidden;      /* Hide horizontal overflow */
+        flex-direction: column;
     }
 
     .calendar-left, .calendar-right {
         width: 100%;             /* Full width for both sections */
         margin-bottom: 20px;     /* Add spacing between the calendar and schedule */
+        overflow-x: hidden; /* ❌ no horizontal scroll */
     }
 
     .calendar-header {
@@ -281,9 +307,9 @@
     }
 
     .calendar {
-        width: 100%;            /* Ensure the calendar takes full width */
-        margin-top: 15px;       /* Provide some top space */
-        overflow-x: auto;       /* Allow horizontal scroll for tight spaces */
+        width: 100%;
+        min-width: 0;           /* ✅ key fix */
+        table-layout: fixed;    /* keep equal columns */
     }
 
     .calendar th, .calendar td {
@@ -348,9 +374,13 @@
     }
 
     .calendar th, .calendar td {
-        padding: 10px;          /* More compact padding */
-        font-size: 12px;        /* Adjust font size */
+        padding: 4px;
+        font-size: 11px;
         height: 50px;           /* Reduced row height */
+    }
+
+    .calendar td strong {
+        font-size: 12px;
     }
 
     .schedule-list h3 {
