@@ -91,312 +91,233 @@
         observer.observe(section);
     });
 
-    // Global schedule data
-    let schedules = {};
+// =======================
+// Global schedule data
+// =======================
+let schedules = {};
 
-    // Fetch schedule data
-    /*
-    async function loadScheduleData() {
-    try {
-       /* const response = await fetch('data/schedule.json');
-        const response = await fetch('http://localhost:8000/data/schedule.json');
-        if (!response.ok) throw new Error('Failed to load schedule data');
-        schedules = await response.json();
-        initializeCalendar();
-    } catch (error) {
-        console.error('Error loading schedule data:', error);
-        // You can add error handling UI here if needed
-        alert('There was an issue loading the schedule data.');
-    }
-}
-*/
+// =======================
+// Global variables
+// =======================
+let currentYear, currentMonth, selectedDate;
+let malaysiaDate;
+
+// =======================
+// Load schedule JSON by year
+// =======================
 async function loadScheduleData() {
     try {
-        const response = await fetch('data/schedule.json', {
-            method: 'GET',
-            mode: 'no-cors',  // Disables CORS for this request
-        });
-        if (!response.ok) throw new Error('Failed to load schedule data');
+        const response = await fetch(`data/schedule-${currentYear}.json`); //load schedule json file by year, name format: schedule-20xx
+        if (!response.ok) throw new Error("Schedule file not found");
+
         schedules = await response.json();
-        initializeCalendar();
     } catch (error) {
-        console.error('Error loading schedule data:', error);
-        // You can add error handling UI here if needed
-        alert('There was an issue loading the schedule data.');
+        console.warn(`No schedule for year ${currentYear}`);
+        schedules = {};
     }
+
+    initializeCalendar();
 }
 
-    // Global variables
-    let currentYear, currentMonth, selectedDate;
-    let malaysiaDate; // Declare globally
+// =======================
+// Initialize calendar (render only)
+// =======================
+function initializeCalendar() {
+    generateCalendar();
+    updateScheduleList();
+}
 
-    // Initialize calendar after data load
-    function initializeCalendar() {
-    // Get the current date in Malaysia's timezone (UTC+8)
-    const today = new Date().toLocaleString("en-US", { timeZone: "Asia/Kuala_Lumpur" });
-    malaysiaDate = new Date(today); // Now malaysiaDate is available globally
+// =======================
+// App startup (correct order)
+// =======================
+(function init() {
+    const today = new Date().toLocaleString("en-US", {
+        timeZone: "Asia/Kuala_Lumpur"
+    });
+    malaysiaDate = new Date(today);
 
-    // Initialize currentYear and currentMonth
     currentMonth = malaysiaDate.getMonth();
     currentYear = malaysiaDate.getFullYear();
-    selectedDate = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${malaysiaDate.getDate().toString().padStart(2, '0')}`;
-    
-    generateCalendar(); // Call after malaysiaDate is defined
-    }
+    selectedDate = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(malaysiaDate.getDate()).padStart(2, "0")}`;
 
-    // Call initializeCalendar to initialize the current month and year
-    initializeCalendar();
+    loadScheduleData();
+})();
 
-    function generateCalendar() {
+// =======================
+// Generate calendar (CSS SAFE)
+// =======================
+function generateCalendar() {
     const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
     const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
     const lastDateOfMonth = lastDayOfMonth.getDate();
     const firstWeekday = firstDayOfMonth.getDay();
 
-    // Set the calendar title
-    document.getElementById("calendar-title").textContent = `${firstDayOfMonth.toLocaleString('default', { month: 'long' })} ${currentYear}`;
-    document.getElementById("schedule-month").textContent = `${firstDayOfMonth.toLocaleString('default', { month: 'long' })} ${currentYear}`;
+    document.getElementById("calendar-title").textContent =
+        `${firstDayOfMonth.toLocaleString("default", { month: "long" })} ${currentYear}`;
+    document.getElementById("schedule-month").textContent =
+        `${firstDayOfMonth.toLocaleString("default", { month: "long" })} ${currentYear}`;
 
-    let calendarBody = '';
+    let calendarBody = "";
     let dayCounter = 1;
 
-    // Generate the calendar grid
     for (let i = 0; i < 6; i++) {
-        calendarBody += '<tr>';
+        calendarBody += "<tr>";
         for (let j = 0; j < 7; j++) {
-            // Fill days of the current month
             if (i === 0 && j < firstWeekday) {
-                calendarBody += '<td></td>';
+                calendarBody += "<td></td>";
             } else if (dayCounter <= lastDateOfMonth) {
-                const dayString = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${dayCounter.toString().padStart(2, '0')}`;
-                const isToday = dayCounter === malaysiaDate.getDate() && currentMonth === malaysiaDate.getMonth() && currentYear === malaysiaDate.getFullYear();
+                const dayString = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(dayCounter).padStart(2, "0")}`;
+
+                const isToday =
+                    dayCounter === malaysiaDate.getDate() &&
+                    currentMonth === malaysiaDate.getMonth() &&
+                    currentYear === malaysiaDate.getFullYear();
+
                 const hasSchedule = schedules[dayString] !== undefined;
                 const eventStatus = hasSchedule ? schedules[dayString][0].status : null;
 
-                // Apply styles based on event status
+                // 🔑 CSS-CRITICAL CLASSES
                 let cellClass = "";
-                if (isToday) {
-                    cellClass = "today"; // Add "today" class if it's today's date
-                }
-                if (eventStatus === "postponed") {
-                    cellClass += " postponed-event"; // For postponed events, apply red text
-                } else if (eventStatus === "cancelled") {
-                    cellClass += " cancelled-event"; // For cancelled events, apply grey text and strikethrough
-                } else if (eventStatus === "passed") {
-                    cellClass += " passed-event"; // For passed events, add a stroke
-                }
+                if (isToday) cellClass += " today";
+                if (hasSchedule) cellClass += " has-schedule";
+                if (eventStatus === "postponed") cellClass += " postponed-event";
+                if (eventStatus === "cancelled") cellClass += " cancelled-event";
+                if (eventStatus === "passed") cellClass += " passed-event";
 
-                // Display multiple events for the day
                 const eventList = hasSchedule ? schedules[dayString] : [];
+                let eventDetails = "";
 
-                let eventDetails = '';
                 eventList.forEach(event => {
-                    const artistName = event.artist;
+                    let eventColor = "black";
+                    if (event.artist === "Namtan Tipnaree") eventColor = "blue";
+                    if (event.artist === "Film Rachanun") eventColor = "#e0b300";
 
-                    // Check for exact match on artist name
-                    let eventColor = 'black';  // Default color
-                    if (artistName === "Namtan Tipnaree") {
-                        eventColor = 'blue';
-                    } else if (artistName === "Film Rachanun") {
-                        eventColor = '#e0b300';
-                    }
-
-                    eventDetails += `<div class="schedule-event" style="color: ${eventColor}; word-wrap: break-word; max-width: 100%; white-space: normal;">
-                                        <strong>${event.description}</strong>
-                                      </div>`;
+                    eventDetails += `
+                        <div class="schedule-event" style="color:${eventColor}">
+                            <strong>${event.description}</strong>
+                        </div>`;
                 });
 
-                calendarBody += `<td class="${cellClass}" onclick="showScheduleDetails('${dayString}')">
-                                    <strong>${dayCounter}</strong>
-                                    <div class="schedule-details" style="overflow-y: auto; max-height: 60px;">${eventDetails}</div>
-                                </td>`;
+                calendarBody += `
+                    <td class="${cellClass}" onclick="showScheduleDetails('${dayString}')">
+                        <strong>${dayCounter}</strong>
+                        <div class="schedule-details">
+                            ${eventDetails}
+                        </div>
+                    </td>`;
                 dayCounter++;
             } else {
-                calendarBody += '<td></td>';
+                calendarBody += "<td></td>";
             }
         }
-        calendarBody += '</tr>';
+        calendarBody += "</tr>";
         if (dayCounter > lastDateOfMonth) break;
     }
 
     document.getElementById("calendar-body").innerHTML = calendarBody;
-    updateScheduleList(); // Update the full schedule list on the right side
 }
 
-
+// =======================
+// Update schedule list (RIGHT PANEL)
+// =======================
 function updateScheduleList() {
     const scheduleItems = document.getElementById("schedule-items");
-    scheduleItems.innerHTML = ''; // Clear previous schedule
+    scheduleItems.innerHTML = "";
 
-    // Filter events for the current month and year
-    const filteredEvents = Object.keys(schedules).filter(date => {
-        const eventDate = new Date(date);
-        return eventDate.getMonth() === currentMonth && eventDate.getFullYear() === currentYear;
+    // If a date is selected → show only that date
+    if (selectedDate && schedules[selectedDate]) {
+        renderDateWithEvents(selectedDate, schedules[selectedDate]);
+        return;
+    }
+
+    // Otherwise → show all events for current month
+    const monthKey = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}`;
+
+    Object.keys(schedules)
+        .filter(date => date.startsWith(monthKey))
+        .sort()
+        .forEach(date => {
+            renderDateWithEvents(date, schedules[date]);
+        });
+}
+
+
+function renderDateWithEvents(date, events) {
+    const scheduleItems = document.getElementById("schedule-items");
+
+    const li = document.createElement("li");
+
+    // Date + all events in ONE block
+    let html = `<strong>${date}</strong><br><br>`;
+
+    events.forEach((event, index) => {
+        html += `
+            <div class="schedule-details">
+                <strong>${event.description}</strong><br>
+                Time: ${event.time || "-"}<br>
+                ${event.location ? `Location: ${event.location}<br>` : ""}
+                ${event.live ? `Live: ${event.live}<br>` : ""}
+                ${event.artist ? `Artist: ${event.artist}<br>` : ""}
+                ${event.status === "postponed" ? `<div class="postponed-stamp">Postponed</div>` : ""}
+                ${event.status === "cancelled" ? `<div class="cancelled-stamp">Cancelled</div>` : ""}
+            </div>
+        `;
+
+        if (event.url) {
+            html += `<a href="${event.url}" target="_blank">View Details</a>`;
+        }
+
+        if (index < events.length - 1) {
+            html += `<hr>`;
+        }
     });
 
-    // If a specific date is selected, show its details
-    if (selectedDate && schedules[selectedDate]) {
-        const events = schedules[selectedDate];
-        events.forEach((event, index) => {
-            const li = document.createElement("li");
-
-            // Event description
-            li.innerHTML = `<div class="schedule-details"><strong>${event.description}</strong></div>`;
-
-            // Event time (separate line)
-            li.innerHTML += `<div>Time: ${event.time}</div>`;
-
-            // Display both location and live (if available)
-            if (event.location) {
-                li.innerHTML += `<div>Location: ${event.location}</div>`;
-            }
-            if (event.live) {
-                li.innerHTML += `<div>Live: ${event.live}</div>`;
-            }
-
-            // Add the Artist information (if available)
-            if (event.artist) {
-                li.innerHTML += `<div>Artist: ${event.artist}</div>`;
-            } else {
-                li.innerHTML += `<div>No artist information available</div>`;
-            }
-
-            // Add a "Postponed" or "Cancelled" stamp if the event is postponed or cancelled
-            if (event.status === "postponed") {
-                li.innerHTML += `<div class="postponed-stamp">Postponed</div>`;
-            } else if (event.status === "cancelled") {
-                li.innerHTML += `<div class="cancelled-stamp">Cancelled</div>`;
-            }
-
-            // Handle URL(s)
-            if (event.url || event.url1) {
-                // Create an array of URLs (url, url1)
-                const urls = [];
-                if (event.url) urls.push(event.url);
-                if (event.url1) urls.push(event.url1);
-
-                // Display each URL as a separate link
-                urls.forEach(url => {
-                    const link = document.createElement("a");
-                    link.href = url;
-                    link.textContent = "View Details";
-                    link.target = "_blank";
-                    li.appendChild(link);
-                    li.innerHTML += "<br>"; // Add line break after each URL
-                });
-            }
-
-            // Add a break line (`<hr>`) between events, but not after the last event
-            if (index < events.length - 1) {
-                li.innerHTML += `<hr>`;
-            }
-
-            scheduleItems.appendChild(li);
-        });
-    } else {
-        // Otherwise, show the entire month's schedule
-        filteredEvents.forEach(date => {
-            const events = schedules[date];
-            const li = document.createElement("li");
-            li.innerHTML = `<strong>${date}</strong>`;
-            events.forEach((event, index) => {
-                const eventLine = document.createElement("div");
-                eventLine.classList.add("schedule-details");
-
-                // Event description
-                eventLine.innerHTML = `<strong>${event.description}</strong>`;
-
-                // Event time (separate line)
-                eventLine.innerHTML += `<br>Time: ${event.time}`;
-
-                // Display both location and live (if available)
-                if (event.location) {
-                    eventLine.innerHTML += `<br>Location: ${event.location}`;
-                }
-                if (event.live) {
-                    eventLine.innerHTML += `<br>Live: ${event.live}`;
-                }
-
-                // Add the Artist information (if available)
-                if (event.artist) {
-                    eventLine.innerHTML += `<br>Artist: ${event.artist}`;
-                } else {
-                    eventLine.innerHTML += `<br>No artist information available`;
-                }
-
-                // Add a "Postponed" or "Cancelled" stamp if the event is postponed or cancelled
-                if (event.status === "postponed") {
-                    eventLine.innerHTML += `<br><span class="postponed-stamp">Postponed</span>`;
-                } else if (event.status === "cancelled") {
-                    eventLine.innerHTML += `<br><span class="cancelled-stamp">Cancelled</span>`;
-                }
-
-                li.appendChild(eventLine);
-
-                // Handle URL(s)
-                if (event.url || event.url1) {
-                    // Create an array of URLs (url, url1)
-                    const urls = [];
-                    if (event.url) urls.push(event.url);
-                    if (event.url1) urls.push(event.url1);
-
-                    // Display each URL as a separate link
-                    urls.forEach(url => {
-                        const link = document.createElement("a");
-                        link.href = url;
-                        link.textContent = "View Details";
-                        link.target = "_blank";
-                        li.appendChild(link);
-                        li.innerHTML += "<br>"; // Add line break after each URL
-                    });
-                }
-
-                // Add a break line (`<hr>`) between events, but not after the last event
-                if (index < events.length - 1) {
-                    li.appendChild(document.createElement("hr"));
-                }
-            });
-            scheduleItems.appendChild(li);
-        });
-    }
+    li.innerHTML = html;
+    scheduleItems.appendChild(li);
 }
 
+
+
+// =======================
+// Click date
+// =======================
 function showScheduleDetails(date) {
     selectedDate = date;
-    updateScheduleList(); // Update the right-side schedule details when a date is clicked
+    updateScheduleList();
 }
 
-// Initialize calendar with today's date (Malaysia time)
-generateCalendar();
-
-// Change month forward
+// =======================
+// Month navigation (reload year)
+// =======================
 document.getElementById("next-month").addEventListener("click", () => {
+    const oldYear = currentYear;
+
     if (currentMonth === 11) {
         currentMonth = 0;
         currentYear++;
     } else {
         currentMonth++;
     }
-    selectedDate = null; // Reset the selected date
-    generateCalendar();
-    updateScheduleList(); // Update the schedule list for the new month
+
+    selectedDate = null;
+    currentYear !== oldYear ? loadScheduleData() : initializeCalendar();
 });
 
-// Change month backward
 document.getElementById("prev-month").addEventListener("click", () => {
+    const oldYear = currentYear;
+
     if (currentMonth === 0) {
         currentMonth = 11;
         currentYear--;
     } else {
         currentMonth--;
     }
-    selectedDate = null; // Reset the selected date
-    generateCalendar();
-    updateScheduleList(); // Update the schedule list for the new month
+
+    selectedDate = null;
+    currentYear !== oldYear ? loadScheduleData() : initializeCalendar();
 });
 
-// Initial load
-loadScheduleData();
+
 
 // Change header transparency on scroll
 const header = document.querySelector('.header-container');
