@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="CSS/pagination.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>NAMTANFILM | AWARDS (Y2026)</title>
+</head>
+<body>
+    <header class="header-wallpaper-sub">
+        <div class="header-container">
+            <h1 class="logo">
+                <span class="blue">NAMTAN</span><span class="yellow">FILM</span>
+            </h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+            ☰
+            </button>
+             <div id="navigation"></div>
+
+             
+
+        </div>
+        </div>
+        
+        
+        
+    </header>
+
+    <main>
+    <h2 style="text-align: center; margin-bottom: 20px;">Awards</h2>
+        <p><center>Awards that received by Namtan Tipnaree & Film Rachanun </br></br>
+            (Year 2026)</center> </p>
+
+            <div class="general-container">
+
+                
+        </div>
+        
+        <div class="pagination" id="pagination"></div>
+    </main>
+
+    <div id="footer-container"></div>
+        <!-- Google Translate Element -->
+        <div id="google_translate_element"></div>
+
+
+        <script>
+
+        // footer
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+            
+        // Fetch navigation list from navigation.html
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
+
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
+
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
+    
+        // Scroll reveal effect
+        const sections = document.querySelectorAll('section');
+        const options = {
+        root: null,
+        threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        observer.unobserve(entry.target);
+        }
+        });
+        }, options);
+        
+        sections.forEach(section => {
+        observer.observe(section);
+        });
+        
+        // Change header transparency on scroll
+        const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
+        
+        //pagination
+        const itemsPerPage = 12;
+        const generalItems = document.querySelectorAll('.general-item');
+        const totalPages = Math.ceil(generalItems.length / itemsPerPage);
+
+    function showPage(page) {
+        generalItems.forEach((item, index) => {
+            item.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? 'block' : 'none';
+        });
+    }
+
+    function createPagination() {
+        const paginationContainer = document.getElementById('pagination');
+        for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement('a');
+            pageLink.href = "#";
+            pageLink.innerHTML = i;
+            pageLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage(i);
+                updateActivePage(i);
+            });
+            paginationContainer.appendChild(pageLink);
+        }
+        updateActivePage(1); // Set page 1 as active on load
+    }
+
+    function updateActivePage(activePage) {
+        const paginationLinks = document.querySelectorAll('.pagination a');
+        paginationLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+        paginationLinks[activePage - 1].classList.add('active');
+    }
+
+    // Initialize pagination on page load
+    showPage(1);
+    createPagination();
+/*
+            //hamburger for only display at mobile devices
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('nav ul').classList.toggle('showing');
+        });
+
+       */     
+        </script>
+        </body>
+        </html>
+        
+
+
+
+
+
+
+
+
+
