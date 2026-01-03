@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/general-xtrend.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <title>NAMTANFILM | Trend X Highest Rank (Y2026)</title>
+</head>
+<body>
+    <header class="header-wallpaper-sub">
+        <div class="header-container">
+            <h1 class="logo">
+                <span class="blue">NAMTAN</span><span class="yellow">FILM</span>
+            </h1>
+            <button class="nav-toggle" aria-label="toggle navigation">
+            ☰
+            </button>
+            <div id="navigation"></div>
+
+        </div>
+        
+        
+    </header>
+    
+
+    <main>
+        <h2 style="text-align: center; margin-bottom: 20px;" >Trend X Highest Rank (Year 2026)</h2>
+        <p><center >Follow <a href="https://x.com/imnot_NTFtrend" target="_blank" rel="noopener noreferrer">@imnot_NTFtrend</a> to stay updated with the latest trending activities.</center></p>
+        <button class="collapsible" >January 2026<span class="icon">+</span></button>
+        <div class="content">
+            
+            <div class="columns">
+                
+            </div>
+
+            
+        </div>
+        
+        <button class="collapsible" >February 2026<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                
+            </div>
+    
+            
+        </div>
+
+        <button class="collapsible" >March 2026<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                
+            </div>
+            
+        </div>
+
+        <button class="collapsible">April 2026<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                
+            </div>
+
+            
+        </div>
+
+        <button class="collapsible">May 2026<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                
+            </div>
+            
+        </div>
+
+        <button class="collapsible">June 2026<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                
+            </div>
+
+            
+        </div>
+
+        <button class="collapsible" >July 2026<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                
+            </div>
+
+            
+        </div>
+
+        <button class="collapsible"  >August 2026<span class="icon">+</span></button>
+        <div class="content">
+         <div class="columns">
+            
+         </div>
+            
+        
+        </div>
+
+        <button class="collapsible" >September 2026<span class="icon">+</span></button>
+        <div class="content">
+          <div class="columns">
+            
+         </div>
+
+         
+        </div>
+
+        <button class="collapsible"  >October 2026<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+                
+            </div>
+
+            
+        </div>
+
+        <button class="collapsible"  >November 2026<span class="icon">+</span></button>
+        <div class="content">
+            <div class="columns">
+            
+            </div>
+        </div>
+
+        <button class="collapsible">December 2026<span class="icon">+</span></button>
+        <div class="content">
+             <div class="columns">
+                
+                
+            /div>
+        </div>
+        
+    </main>
+    
+    <div id="footer-container"></div>
+        
+    
+
+        <script>
+
+        // footer
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+            
+        // Fetch navigation list from navigation.html
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('https://asmall-potato.github.io/namtanfilm/navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navigation').innerHTML = data;
+
+                    // Now attach the event listener after navigation is loaded
+                    const navToggle = document.querySelector(".nav-toggle");
+                    const navMenu = document.querySelector("#navigation ul");
+
+                    navToggle.addEventListener("click", function () {
+                        navMenu.classList.toggle("showing");
+                    });
+                })
+                .catch(error => console.error('Error loading navigation:', error));
+        });
+
+
+        //collapse
+        const collapsibles = document.querySelectorAll('.collapsible');
+
+collapsibles.forEach(function(button) {
+    button.addEventListener('click', function() {
+        const content = this.nextElementSibling; // Get the associated content div
+        const icon = this.querySelector('.icon'); // Get the icon span inside the button
+        
+        // Toggle content visibility
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        
+        // Change icon between "+" and "-" depending on content visibility
+        if (content.style.display === 'block') {
+            icon.textContent = "-"; // Change to minus when expanded
+        } else {
+            icon.textContent = "+"; // Change to plus when collapsed
+        }
+    });
+});
+
+        // Scroll reveal effect
+        const sections = document.querySelectorAll('section');
+        const options = {
+        root: null,
+        threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        observer.unobserve(entry.target);
+        }
+        });
+        }, options);
+        
+        sections.forEach(section => {
+        observer.observe(section);
+        });
+        
+        // Change header transparency on scroll
+        const header = document.querySelector('.header-container');
+        window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        header.style.backgroundColor = scrollPosition > 50 ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)';
+        });
+        
+       
+    
+        </script>
+        </body>
+        </html>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
