@@ -17,7 +17,8 @@
             "time": "-",
             "location": "-",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2010684774185304177/photo/2"
+            "url": "https://x.com/GMMTV/status/2010684774185304177/photo/2",
+            "status": "passed"
             
         }
     ],
@@ -27,7 +28,19 @@
             "time": "18:00 (UTC+8)",
             "location": "Zepp New Taipei",
             "artist": "NamtanFilm",
-            "url": "https://x.com/RoverFilmX/status/1991386298012299460"
+            "url": "https://x.com/RoverFilmX/status/1991386298012299460",
+            "status": "passed"
+            
+        }
+    ],
+    "2026-01-24": [
+        {
+            "description": "Vaseline Radiant Pop-Up Live Event",
+            "time": "3:30PM (BKK Time)",
+            "location": "Lido Connect, Siam Square",
+            "live": "Tiktok: Vaseline",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/2013583484690784718/photo/2"
             
         }
     ],
@@ -72,6 +85,7 @@
         }
     ]
 }
+
 
 
 
