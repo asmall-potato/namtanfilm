@@ -61,50 +61,75 @@
             </div>
         </section>
 
-        <!-- pop up
-<div class="modal-overlay" id="popupModal">
-  <div class="modal">
-    <div class="modal-image">
-      <div class="slideshow-container">
-        <img class="slide" src="Images/Picture1.png" alt="HOWE HOTTEST ACTRESS AWARD - Namtan Tipnaree (HC3)" />
-        <img class="slide" src="Images/Picture3.png" alt="HOWE SHINING FEMALE AWARD - Film Rachanun (HJ6)" />
-        <img class="slide" src="Images/Picture2.png" alt="HOWE HOTTEST SERIES AWARD - Pluto Series (HG3)" />
+        <!-- pop up -->
+    <div class="popup-overlay" id="popup">
+        <div class="popup">
 
-        <div class="dots-container">
-          <span class="dot" onclick="setSlide(0)"></span>
-          <span class="dot" onclick="setSlide(1)"></span>
-          <span class="dot" onclick="setSlide(2)"></span>
+        <!-- Close button -->
+        <div class="close-btn" onclick="closePopup()">✕</div>
+
+        <!-- SLIDER WRAPPER (IMPORTANT) -->
+        <div class="slider-wrapper">
+
+          <!-- LEFT ARROW -->
+          <button id="prev" class="nav-arrow left">&#10094;</button>
+
+          <!-- Slideshow container -->
+          <div class="slides-container">
+
+        <!-- Slide 1 -->
+        <div class="slide active">
+          <div class="popup-left">
+            <img src="Images/popups/G_Em7TOWYAAHgmg.jpg" />
+            <span>Join and be 1 of the 50 𝐋𝐔𝐂𝐊𝐘 𝐅𝐀𝐍𝐒</span>
+          </div>
+
+          <div class="popup-right">
+            <h2>Swensen's X NamtanFilm</h2>
+            <p>Date: <b>12 Feb 2026</b></p>
+            <p>Location: <b>Siam Paragon, 4th Floor (SCBX NEXT STAGE @ NEXT TECH)</b></p>
+            <br>
+            <p>How to be the lucky fans ? Click here 👇</p>
+            <a href="https://x.com/SwensensTH/status/2013433317090025835?s=20" class="cta-btn" target="_blank" rel="noopener">
+              Click here for more information
+            </a>
+          </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <div class="popup-left">
+            <img src="Images/popups/G_By9DfWEAAFcg0.jpg" />
+            <span>Join SF Friends Screening HUMAN RESOURCE with NamtanFilm & Lunar on <b>1 February 2026</b></span>
+          </div>
+
+          <div class="popup-right">
+            <h2>SF Friends Screening HUMAN RESOURCE พนักงานใหม่ (โปรดรับไว้พิจารณา)</h2>
+            <p>
+              Ticket Sales:<br>
+              → 24 Jan 2026 12:00PM (BKK Time) at 7-Eleven Counter Service<br>
+              → 24 Jan 2026 14:00 (BKK Time) at AllTicket website
+            </p>
+            <a href="https://www.allticket.com/event/SF_FRIENDS_SCREENING_6" class="cta-btn" target="_blank" rel="noopener">
+              Click here to buy the ticket
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+          <!-- RIGHT ARROW -->
+          <button id="next" class="nav-arrow right">&#10095;</button>
+
+        </div>
+
+        <!-- Dots -->
+        <div class="dots" id="dots"></div>
+
       </div>
     </div>
-
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h2>HOWE AWARDS 2025</h2>
-      <i>Voting Deadline: <b>August 10, 2025 at 11:59 PM</b></i>
-      <p>
-        LINE Vote (Free) 1 Vote per day - 20%<br />
-        WEB Vote (Paid) Unlimited [5 Baht per vote] - 80%
-      </p>
-      <br />
-
-      <b>HOWE HOTTEST ACTRESS AWARD - Namtan Tipnaree (HC3)</b><br />
-      <a href="https://today.line.me/th/v3/poll/x2Pm1gr" target="_blank">LINE VOTE</a><br />
-      <a href="https://shop.howemagazine.com/product/vote-hc-howe-hottest-actress-award-2025/" target="_blank">WEB VOTE</a><br /><br /><br />
-
-      <b>HOWE SHINING FEMALE AWARD - Film Rachanun (HJ6)</b><br />
-      <a href="https://today.line.me/th/v3/poll/j7QLoKg" target="_blank">LINE VOTE</a><br />
-      <a href="https://shop.howemagazine.com/product/vote-hj-howe-shining-female-award-2025/" target="_blank">WEB VOTE</a><br /><br /><br />
-
-      <b>HOWE HOTTEST SERIES AWARD - Pluto Series (HG3)</b><br />
-      <a href="https://today.line.me/th/v3/poll/QwJ9Exj" target="_blank">LINE VOTE</a><br />
-      <a href="https://shop.howemagazine.com/product/vote-hg-howe-hottest-series-award-2025/" target="_blank">WEB VOTE</a><br /><br /><br />
-
-      <h4>Let’s Bring Home the Win for Namtan Tipnaree, Film Rachanun and Pluto Series! 🚀🏆</h4>
-    </div>
-  </div>
-</div>
-         -->
+         
+        
         <!--Introduce namtanfilm-->
         <section class="cast-container">
             <h3 >NAMTANFILM's PROFILE</h3>
@@ -247,29 +272,61 @@
         
 
         <script>
-        /*
-  if (!sessionStorage.getItem("skipFireworks")) {
-    window.location.href = "firework.html";
-  } else {
-    sessionStorage.removeItem("skipFireworks"); // Optional: so it triggers again on refresh
+        /*Pop up scripts*/
+
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.slide');
+  const dotsContainer = document.getElementById('dots');
+  const popup = document.getElementById('popup');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+
+  let current = 0;
+
+  // Init slides
+  slides.forEach((slide, index) => {
+    slide.classList.toggle('active', index === 0);
+  });
+
+  // Create dots
+  dotsContainer.innerHTML = '';
+  slides.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.addEventListener('click', () => showSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  updateDots();
+
+  // Show slide
+  function showSlide(index) {
+    slides[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    updateDots();
   }
-*/
 
-            
-    /*Pop up scripts
-        function showModal() {
-        document.getElementById("popupModal").style.display = "flex";
-        }
+  // Arrow controls
+  prevBtn.addEventListener('click', () => {
+    showSlide(current - 1);
+  });
 
-       function closeModal() {
-        document.getElementById("popupModal").style.display = "none";
-        }
+  nextBtn.addEventListener('click', () => {
+    showSlide(current + 1);
+  });
 
-        // Auto-show on page load
-        window.onload = function () {
-            showModal();
-        };
-*/
+  // Update dots
+  function updateDots() {
+    [...dotsContainer.children].forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  // Close popup
+  window.closePopup = function () {
+    popup.style.display = 'none';
+  };
+});
 
             /*ANother pop up with slidehsow*/
             // Modal show and close
@@ -509,6 +566,7 @@ loadYouTubeAPI();
 
         </body>
         </html>
+
 
 
 
