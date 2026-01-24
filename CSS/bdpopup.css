@@ -1,124 +1,182 @@
 * {
-      box-sizing: border-box;
-    }
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    
+body {
+  margin: 0;
+}
 
-    .modal-overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    .modal {
-      display: flex;
-      background: white;
-      width: 90%;
-      max-width: 700px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-      position: relative;
-    }
-
-    .modal-image {
-  width: 50%;
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff; /* optional */
+  z-index: 999;
 }
 
-    .modal-content {
-      width: 50%;
-      padding: 30px;
-    }
-
-    .modal-content h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-
-    .modal-content input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .modal-content p {
-      margin-top: 10px;
-      font-size: 15px;
-      color: #666;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 24px;
-      color: #999;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .modal {
-        flex-direction: column;
-        max-width: 90%;
-      }
-      .modal-image, .modal-content {
-        width: 100%;
-      }
-      .modal-image {
-        height: 200px;
-      }
-
-    }
-
-/*For slideshow*/
-.modal-image {
-  position: relative;
+/* Popup */
+.popup {
+  width: 720px;
+  max-width: 92%;
+  background: #fff;
+  border-radius: 14px;
   overflow: hidden;
+  position: relative;
 }
 
-.slide {
-  display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.dots-container {
-  text-align: center;
+/* Close */
+.close-btn {
   position: absolute;
-  bottom: 10px;
-  width: 100%;
-}
-
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
+  top: 12px;
+  right: 14px;
+  font-size: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  z-index: 10;
 }
 
-.dot.active-dot {
-  background-color: #717171;
+/* Slides container */
+.slides-container {
+  position: relative;
 }
 
-/* Ensure modal-image height adapts on smaller screens */
-@media (max-width: 768px) {
-  .modal-image {
-    height: 200px;
+/* Slides */
+.slide {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.slide:not(.active) {
+  display: none !important;
+}
+
+
+
+.slide.active {
+  display: flex;
+}
+
+/* Left / Right */
+.popup-left {
+  width: 45%;
+  background: #5bb7da;
+  display: flex;
+  flex-direction: column;   /*key line */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.popup-left img {
+  max-width: 80%;
+}
+
+.popup-right {
+  width: 55%;
+  padding: 40px;
+}
+
+.popup-right h2 {
+  font-size: 26px;
+  color: #0b3c5d;
+}
+
+.popup-right span {
+  color: #f4c430;
+}
+
+.popup-right p {
+  margin: 16px 0 28px;
+  color: #555;
+}
+
+/* Button */
+.cta-btn {
+  background: linear-gradient(135deg, #0b6efd, #f4c430);
+  border: none;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  gap: 8px;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots span.active {
+  background: #0b6efd;
+}
+
+/* wrapper that controls arrow position */
+.slider-wrapper {
+  position: relative;
+}
+
+/* arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 20;
+}
+
+/* yellow left */
+.nav-arrow.left {
+  left: -22px;
+  background-color: #f5c400;
+}
+
+/* blue right */
+.nav-arrow.right {
+  right: -22px;
+  background-color: #1bb6c9;
+}
+
+
+
+/* Mobile */
+@media (max-width: 640px) {
+  .slide.active {
+    flex-direction: column;
+  }
+
+  .popup-left,
+  .popup-right {
+    width: 100%;
+  }
+
+  .popup-right {
+    padding: 24px;
+    text-align: center;
   }
 }
