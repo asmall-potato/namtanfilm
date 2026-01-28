@@ -51,7 +51,8 @@
             "time": "10:30AM (BKK Time)",
             "location": "Central Court, 1st Floor, Central @ CentralWorld",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2014671263093162075/photo/2"
+            "url": "https://x.com/GMMTV/status/2014671263093162075/photo/2",
+            "status": "passed"
             
         }
     ],
@@ -96,6 +97,7 @@
         }
     ]
 }
+
 
 
 
