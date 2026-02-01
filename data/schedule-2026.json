@@ -77,6 +77,16 @@
             
         }
     ],
+    "2026-02-12": [
+        {
+            "description": "Swensen’s X NamtanFilm",
+            "time": "6PM (BKK Time)",
+            "location": "Siam Paragon, 4th Floor (SCBX NEXT STAGE @ NEXT TECH)",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/SwensensTH/status/2013433317090025835?s=20"
+            
+        }
+    ],
     "2026-03-15": [
         {
             "description": "GMMTV FANDAY 30 IN OSAKA",
@@ -98,6 +108,7 @@
         }
     ]
 }
+
 
 
 
