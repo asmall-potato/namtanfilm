@@ -73,7 +73,19 @@
             "time": "16.00 (BKK Time)",
             "location": "Cinema 15, SF World Cinema, CentralWorld",
             "artist": "NamtanFilm",
-            "url": "https://x.com/WeLoveSF/status/2013235435624124616?s=20"
+            "url": "https://x.com/WeLoveSF/status/2013235435624124616?s=20",
+            "status": "passed"
+            
+        }
+    ],
+    "2026-02-05": [
+        {
+            "description": "Loewe Spring Summer 2026 Collection presentation in Singapore",
+            "time": "-",
+            "location": "-",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/GMMTV/status/2018191019033207209/photo/1"
+            
             
         }
     ],
@@ -108,6 +120,7 @@
         }
     ]
 }
+
 
 
 
