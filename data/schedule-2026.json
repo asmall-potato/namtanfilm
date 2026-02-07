@@ -84,7 +84,8 @@
             "time": "-",
             "location": "-",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2018191019033207209/photo/1"
+            "url": "https://x.com/GMMTV/status/2018191019033207209/photo/1",
+            "status": "passed"
             
             
         }
@@ -153,6 +154,7 @@
         }
     ]
 }
+
 
 
 
