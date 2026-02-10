@@ -96,7 +96,8 @@
             "time": "2PM (BKK Time)",
             "location": "KAZE Stage, centralwOrld",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2019018778517135584?s=20"
+            "url": "https://x.com/GMMTV/status/2019018778517135584?s=20",
+            "status": "passed"
             
             
         }
@@ -108,6 +109,17 @@
             "live": "Shopee -> Eucerin Official Store",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/2019753081362157834/photo/3"
+            
+            
+        }
+    ],
+    "2026-02-11": [
+        {
+            "description": "GrabFood ถูกกว่าชัวร์* กับ Namtan Film & Lunar",
+            "time": "7PM (BKK Time)",
+            "live": "YouTube/Facebook -> GMMTV | Facebook -> GrabTH",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2021132028423335993?s=20"
             
             
         }
@@ -154,6 +166,7 @@
         }
     ]
 }
+
 
 
 
