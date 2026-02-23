@@ -169,6 +169,22 @@
             
         }
     ],
+    "2026-03-09": [
+        {
+            "description": "Girl Rules : The 1st Rule",
+            "time": "7:30PM (BKK Time)",
+            "location":"MCC HALL FL. 3, THE MALL LIFESTORE BANGKAPI",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2025873343992180955?s=20"
+        },
+        {
+            "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 1",
+            "time": "8:30PM (BKK Time)",
+            "live":"iQiyi.com / iq.com",
+            "artist": "NamtanFilm",
+            "url": "-"
+        }
+    ],
     "2026-03-15": [
         {
             "description": "GMMTV FANDAY 30 IN OSAKA",
@@ -190,6 +206,7 @@
         }
     ]
 }
+
 
 
 
