@@ -250,6 +250,42 @@
             
         }
     ],
+    "2026-03-16": [
+        {
+            "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 2",
+            "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
+            "live":"GMM25 | iQiyi & iq.com",
+            "artist": "NamtanFilm",
+            "url": "-"
+        }
+    ],
+    "2026-03-23": [
+        {
+            "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 3",
+            "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
+            "live":"GMM25 | iQiyi & iq.com",
+            "artist": "NamtanFilm",
+            "url": "-"
+        }
+    ],
+    "2026-03-30": [
+        {
+            "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 4",
+            "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
+            "live":"GMM25 | iQiyi & iq.com",
+            "artist": "NamtanFilm",
+            "url": "-"
+        }
+    ],
+    "2026-04-05": [
+        {
+            "description": "Framed in Love: NamtanFilm Fanmeeting in Hong Kong 2026",
+            "time": "5PM (HK Time)",
+            "location":"AXA Dreamland,Go Park",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2025510879501177308?s=20"
+        }
+    ],
     "2026-06-21": [
         {
             "description": "Namtan Film 1st Fan Meeting in Madrid",
@@ -261,6 +297,7 @@
         }
     ]
 }
+
 
 
 
