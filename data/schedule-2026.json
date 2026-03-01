@@ -169,6 +169,16 @@
             "status": "passed"
         }
     ],
+    "2026-03-01": [
+        {
+            "description": "Running Man Thailand EP2",
+            "time": "18:00 (BKK Time) | 20：00 （BKK Time）",
+            "live":"One31 channel | iQIYI (iq.com)",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/RunningMan_TH/status/2028092904053350782?s=20"
+            
+        }
+    ],
     "2026-03-02": [
         {
             "description": "Girl Rules Series Special EP",
@@ -297,6 +307,7 @@
         }
     ]
 }
+
 
 
 
