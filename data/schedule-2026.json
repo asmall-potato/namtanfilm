@@ -154,8 +154,8 @@
             "time": "9:30PM (BKK Time)",
             "live": "YouTube : GMMTV Official , TikTok : GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2026219325133303808?s=20"
-            
+            "url": "https://x.com/GMMTV/status/2026219325133303808?s=20",
+            "status": "passed"
         }
     ],
     "2026-02-26": [
@@ -165,7 +165,17 @@
             "location": "Fondazione Prada, 2 Largo Isarco, 20139 Milan, Italy",
             "live":"X: @Prada | prada.com",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2024829136318185506?s=20"
+            "url": "https://x.com/GMMTV/status/2024829136318185506?s=20",
+            "status": "passed"
+        }
+    ],
+    "2026-03-02": [
+        {
+            "description": "Girl Rules Series Special EP",
+            "time": "19:00 (BKK Time)",
+            "live":"Youtube: GMMTV Official",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2027972097642008593?s=20"
             
         }
     ],
@@ -179,6 +189,40 @@
             "url": "https://x.com/GMMTV/status/2018289549777227833?s=20"
             
         }
+    ],
+    "2026-03-06": [
+        {
+            "description": "Girl Rules Series LIVE @ PRESS TOUR",
+            "time": "11AM (BKK Time)",
+            "live":"Youtube: GMMTV Official",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2027953221973713108?s=20"
+            
+        },
+        {
+            "description": "วันบันเทิง Interview @ PRESS TOUR",
+            "time": "1PM (BKK Time)",
+            "live":"-",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2027953221973713108?s=20"
+            
+        },
+        {
+            "description": "Katanyu Tonight @ PRESS TOUR",
+            "time": "2:30PM (BKK Time)",
+            "live":"-",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2027953221973713108?s=20"
+            
+        },
+        {
+            "description": "Flex 104.5 @ PRESS TOUR",
+            "time": "7PM (BKK Time)",
+            "live":"Facebook/Youtube: Flex 104.5 & FlexConnect",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/Flex_Connect/status/2027972146681794885?s=20"
+            
+        },
     ],
     "2026-03-09": [
         {
@@ -217,6 +261,7 @@
         }
     ]
 }
+
 
 
 
