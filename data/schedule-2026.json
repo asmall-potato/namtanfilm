@@ -175,7 +175,8 @@
             "time": "18:00 (BKK Time) | 20：00 （BKK Time）",
             "live":"One31 channel | iQIYI (iq.com)",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/RunningMan_TH/status/2028092904053350782?s=20"
+            "url": "https://x.com/RunningMan_TH/status/2028092904053350782?s=20",
+            "status": "passed"
             
         }
     ],
@@ -185,7 +186,8 @@
             "time": "19:00 (BKK Time)",
             "live":"Youtube: GMMTV Official",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2027972097642008593?s=20"
+            "url": "https://x.com/GMMTV/status/2027972097642008593?s=20",
+            "status": "passed"
             
         }
     ],
@@ -197,6 +199,26 @@
             "live":"Live Streaming by TTM LIVE (Get ticket on www.thaiticketmajor.com)",
             "artist": "Namtan Tipnaree",
             "url": "https://x.com/GMMTV/status/2018289549777227833?s=20"
+            
+        }
+    ],
+    "2026-03-04": [
+        {
+            "description": "SRICHAND IN-SKIN PDRN Event The Symphony of GLOWolution ",
+            "time": "5PM (BKK Time)",
+            "location": "Parc Paragon at Siam Paragon",
+            "artist": "Namtan Tipnaree",
+            "url": "https://www.instagram.com/p/DVXx5OjAJHA/?img_index=2"
+            
+        }
+    ],
+    "2026-03-05": [
+        {
+            "description": "Samsøe Samsøe: Store Opening",
+            "time": "2PM (BKK Time)",
+            "location": "3rd Floor, Central Chidlom",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/2028728982561304782/photo/1"
             
         }
     ],
@@ -231,6 +253,16 @@
             "live":"Facebook/Youtube: Flex 104.5 & FlexConnect",
             "artist": "NamtanFilm",
             "url": "https://x.com/Flex_Connect/status/2027972146681794885?s=20"
+            
+        }
+    ],
+    "2026-03-07": [
+        {
+            "description": "Sunsilk Sway Run Club",
+            "time": "5:50AM (BKK Time)",
+            "location": "Chulalongkorn University Centenary Park",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2028352905712152610/photo/1"
             
         }
     ],
@@ -307,6 +339,7 @@
         }
     ]
 }
+
 
 
 
