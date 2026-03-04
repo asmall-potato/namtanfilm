@@ -198,7 +198,8 @@
             "location": "Union Hall, Union Mall",
             "live":"Live Streaming by TTM LIVE (Get ticket on www.thaiticketmajor.com)",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2018289549777227833?s=20"
+            "url": "https://x.com/GMMTV/status/2018289549777227833?s=20",
+            "status": "passed"
             
         }
     ],
@@ -282,6 +283,16 @@
             "url": "-"
         }
     ],
+    "2026-03-10": [
+        {
+            "description": "GMMTV Live House",
+            "time": "9:30PM (BKK Time)",
+            "live": "YouTube/Tiktok: GMMTV",
+            "artist": "NamtanFilm",
+            "url": "https://www.instagram.com/p/DVc91lAk4QZ/"
+            
+        }
+    ],
     "2026-03-15": [
         {
             "description": "GMMTV FANDAY 30 IN OSAKA",
@@ -339,6 +350,7 @@
         }
     ]
 }
+
 
 
 
