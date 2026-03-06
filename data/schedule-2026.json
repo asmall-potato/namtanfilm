@@ -209,7 +209,8 @@
             "time": "5PM (BKK Time)",
             "location": "Parc Paragon at Siam Paragon",
             "artist": "Namtan Tipnaree",
-            "url": "https://www.instagram.com/p/DVXx5OjAJHA/?img_index=2"
+            "url": "https://www.instagram.com/p/DVXx5OjAJHA/?img_index=2",
+            "status": "passed"
             
         }
     ],
@@ -219,7 +220,8 @@
             "time": "2PM (BKK Time)",
             "location": "3rd Floor, Central Chidlom",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2028728982561304782/photo/1"
+            "url": "https://x.com/GMMTV/status/2028728982561304782/photo/1",
+            "status": "passed"
             
         }
     ],
@@ -229,7 +231,8 @@
             "time": "11AM (BKK Time)",
             "live":"Youtube: GMMTV Official",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2027953221973713108?s=20"
+            "url": "https://x.com/GMMTV/status/2027953221973713108?s=20",
+            "status": "passed"
             
         },
         {
@@ -237,7 +240,8 @@
             "time": "1PM (BKK Time)",
             "live":"-",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2027953221973713108?s=20"
+            "url": "https://x.com/GMMTV/status/2027953221973713108?s=20",
+            "status": "passed"
             
         },
         {
@@ -245,7 +249,8 @@
             "time": "2:30PM (BKK Time)",
             "live":"-",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2027953221973713108?s=20"
+            "url": "https://x.com/GMMTV/status/2027953221973713108?s=20",
+            "status": "passed"
             
         },
         {
@@ -253,7 +258,8 @@
             "time": "7PM (BKK Time)",
             "live":"Facebook/Youtube: Flex 104.5 & FlexConnect",
             "artist": "NamtanFilm",
-            "url": "https://x.com/Flex_Connect/status/2027972146681794885?s=20"
+            "url": "https://x.com/Flex_Connect/status/2027972146681794885?s=20",
+            "status": "passed"
             
         }
     ],
@@ -284,6 +290,14 @@
         }
     ],
     "2026-03-10": [
+        {
+            "description": "Crocs Ripple Collection Launch Event",
+            "time": "4:00PM (BKK Time)",
+            "location": "Carnival at Siam Square",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/GMMTV/status/2029903208890699949/photo/2"
+            
+        },
         {
             "description": "GMMTV Live House",
             "time": "9:30PM (BKK Time)",
@@ -321,6 +335,15 @@
             "url": "-"
         }
     ],
+    "2026-03-28": [
+        {
+            "description": "GMMTV Fanival 2026",
+            "time": "5:00PM (BKK Time)",
+            "location":"CENTRALWORLD PULSE 7th FLOOR",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2029859532797784505?s=20"
+        }
+    ],
     "2026-03-30": [
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 4",
@@ -350,6 +373,7 @@
         }
     ]
 }
+
 
 
 
