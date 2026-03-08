@@ -153,6 +153,7 @@ section {
     margin: auto;
     border-radius: 12px;
     margin-bottom: 40px; /* adds space below Watch Now section */
+    overflow: hidden;
 }
 
 .watch-section h2 {
@@ -176,33 +177,100 @@ section {
 }
 
 /* 🎥 Video Container - 3 in a Row */
-.video-container {
+  .video-slider{
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+    align-items: center;
+    justify-content: space-between; /* arrows stick to edges */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    gap: 10px; /* space between cards */
+  }
 
-.watch-section iframe {
-  flex: 1 1 30%; /* Each iframe takes up about one-third of the container width */
-    max-width: 30%;
-    border-radius: 10px;
+  /* Container holding all cards */
+  .video-container {
+    display: flex;
+    gap: 20px; /* space between cards */
+    transition: transform 0.4s ease;
+    flex-wrap: nowrap; /* keep cards in one row */
+  }
+
+  /* Each video card */
+  .video-card {
+    flex: 0 0 300px; /* fixed width for cards */
+    /* Optional styling */
+    border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Video inside the card */
+  .video-card iframe {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    display: block;
+  }
+
+  /* Active card styling (optional) */
+  .video-card.active {
+    transform: scale(1.1);
+    z-index: 5;
+  }
+
+  /* Navigation Buttons */
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    padding: 12px 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;           /* round buttons */
+    background: linear-gradient(145deg, #2196F3, #FFEB3B); /* blue to yellow gradient */
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav:hover {
+      transform: translateY(-50%) scale(1.15); /* slight zoom */
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      filter: brightness(1.1); /* make gradient pop more */
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 5px;
+  }
 
 /*book CSS*/
-.book-section {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
-    margin: auto;
-    border-radius: 12px;
+.book-section{
+    background: rgba(255,255,255,0.5);
+    padding:40px;
+    max-width:1000px;
+    margin:auto;
+    border-radius:12px;
+    text-align:center;
     margin-bottom: 40px; /* adds space below Watch Now section */
 }
 
-.book-section h2{
-  font-size: 32px;
+/* Title */
+.book-title h2{
+    font-size: 32px;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     color: #1B263B; /* Muted dark navy-gray*/
@@ -210,7 +278,7 @@ section {
     display: inline-block; /* Keeps underline the same width as text */
 }
 
-.book-section h2::after {
+.book-title h2::after {
     content: "";
     position: absolute;
     left: 0;
@@ -221,80 +289,250 @@ section {
     border-radius: 2px;
 }
 
-
-.book-option {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  text-align: center;
-  transition: all 0.3s ease;
-  background-color: transparent; /* Transparent background */
+/* Container */
+.book-container{
+    display:flex;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
 }
 
-.physical-book {
-  background: transparent; /* Transparent background for physical book */
-  
+/* Book Boxes */
+.book-box{
+    flex: 1;
+    max-width: 380px;
+    padding: 30px 25px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    transition: all 0.25s ease;
 }
 
-.ebook {
-  background: transparent; /* Transparent background for eBook */
-  
+/* Hover effect */
+.book-box:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
-.book-option h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #003366; /* Blue text color */
+/* Book title */
+.book-box h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1B263B;
 }
 
-.book-option p {
-  font-size: 1rem;
-  color: #222; /* Dark navy blue text for better readability and theme consistency */
-  margin-bottom: 20px;
-  max-width: 300px;
+/* Version text */
+.book-box .version{
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-bottom: 22px;
 }
 
-.book-btn {
-  background-color: #003366; /* Blue button */
-  color: #FFCC00; /* Yellow text */
-  text-decoration: none;
-  padding: 12px 28px;
-  border-radius: 25px;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-  display: inline-block;
+/* Thai version text */
+.version{
+    color:#1B3A4B;
+    font-weight:600;
+    margin-bottom:30px;
 }
 
-.book-btn:hover {
-  background-color: #0055a5; /* Slightly lighter blue on hover */
+/* BUY Button */
+.buy-btn{
+    display:inline-block;
+    background:#003366;
+    color:#FFCC00;
+    padding:16px 38px;
+    font-size:22px;
+    font-weight:700;
+    border-radius:16px;
+    text-decoration:none;
+    border:2px solid #1B3A4B;
+    transition:0.3s;
 }
 
-.book-option:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-  border: 2px solid #003366; /* Add blue border on hover */
+/* Hover */
+.buy-btn:hover{
+    background:#3d74ad;
+    transform:scale(1.05);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .book-section {
-    flex-direction: column;
+/*Collapse section for enagagement wall*/
+
+  /* Wrapper section */
+  .engagement-section {
+    background: rgba(255,255,255,0.5);
+    padding:40px;
+    max-width:1000px;
+    margin:auto;
+    border-radius:12px;
+    text-align:center;
+    margin-bottom: 40px; /* adds space below Watch Now section */
   }
 
-  .physical-book {
-    border-right: none;
-    border-bottom: 2px solid #003366; /* Blue border */
+  .engagement-title h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
   }
+
+  .engagement-title h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
 }
 
+  /* Main collapsible heading (h4) */
+  .collapsible-heading {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    user-select: none;
+    transition: background-color 0.3s;
+  }
+
+  .collapsible-heading:hover {
+    background-color: #0056b3;
+  }
+
+  /* Glow effect when active */
+  .collapsible-heading.active {
+    box-shadow: 0 0 15px 5px #FFEB3B; /* yellow glow */
+  }
+
+  /* Collapsible content container */
+  .content {
+    padding: 0 15px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  /* Paragraph inside content */
+  .content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  /* Grid for items */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .grid-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /*streaming platform*/
+  .streaming-section {
+    background: rgba(255,255,255,0.5);
+    padding:40px;
+    max-width:1000px;
+    margin:auto;
+    border-radius:12px;
+    text-align:center;
+    margin-bottom: 40px; /* adds space below Watch Now section */
+  }
+
+  .streaming-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
+  }
+
+  .streaming-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
+  }
+
+  /* Flex container for platforms */
+  .platforms {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .platform {
+    background-color: #fff; /* White background */
+    border-radius: 12px;
+    padding: 25px 20px;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  }
+
+  .platform-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #007BFF;
+    margin-bottom: 5px;
+  }
+
+  .platform-time {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #1B263B;
+  }
+
+  .platform-btn {
+    display: block;
+    background-color: #FFEB3B;
+    color: #1B263B;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 5px auto;
+    width: 80%;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .platform-btn:hover {
+    background-color: #ffd600;
+    transform: scale(1.05);
+  }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     body {
-      background-image: url('../Images/sub series/GdT_iL0aoAMV2TC.jpg'); /* your mobile version */
+      background-image: url('../Images/sub series/HB1DZY-b0AAj19F.jpg'); /* your mobile version */
       background-repeat: no-repeat;
       
     }
@@ -352,12 +590,6 @@ section {
         margin: 10px 0;
     }
 
-    .video-container {
-        flex-direction: column; /* Stack video and content vertically */
-        align-items: center; /* Center-align items horizontally */
-        gap: 20px; /* Add spacing between items */
-    }
-
     .watch-section iframe {
         flex: 1 1 100%; /* Full width for iframe */
         max-width: 90%; /* Ensure iframe doesn't exceed container width */
@@ -366,6 +598,38 @@ section {
         margin: 10px 0; /* Add spacing around iframe */
         border: 2px solid;
         border-image: linear-gradient(to right, #FFEB3B 50%, #0D47A1 50%) 1;
+    }
+
+    .video-card {
+    flex: 0 0 200px;
+    }
+
+    .video-card iframe {
+      height: 140px;
+    }
+
+    .nav {
+      font-size: 28px;
+      padding: 10px 14px;
+    }
+
+    .book-container{
+      flex-direction: column;
+    }
+
+    .book-box{
+      border-right: none;
+      border-bottom: 2px solid #003366; /* Blue border */
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .platforms {
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
     }
 
 }
@@ -406,6 +670,19 @@ section {
     .watch-link {
         width: 90%; /* Adjust button width for smaller screens */
         padding: 10px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .video-card {
+      flex: 0 0 160px;
+    }
+
+    .video-card iframe {
+      height: 120px;
+    }
+
+    .nav {
+      font-size: 24px;
+      padding: 8px 12px;
     }
 }
 
@@ -488,13 +765,6 @@ section {
      1px -1px 0 #000,
     -1px  1px 0 #000,
      1px  1px 0 #000; /* Black border effect */
-}
-
-.column p {
-  font-size: 16px;
-  color: #1a1a1a; /* Darker text for better visibility on transparency */
-  padding: 0 15px 20px;
-  font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width: 768px) {
