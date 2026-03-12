@@ -269,7 +269,8 @@
             "time": "5:50AM (BKK Time)",
             "location": "Chulalongkorn University Centenary Park",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2028352905712152610/photo/1"
+            "url": "https://x.com/GMMTV/status/2028352905712152610/photo/1",
+            "status": "passed"
             
         }
     ],
@@ -279,14 +280,16 @@
             "time": "7:30PM (BKK Time)",
             "location":"MCC HALL FL. 3, THE MALL LIFESTORE BANGKAPI",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2025873343992180955?s=20"
+            "url": "https://x.com/GMMTV/status/2025873343992180955?s=20",
+            "status": "passed"
         },
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 1",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
             "live":"GMM25 | iQiyi & iq.com",
             "artist": "NamtanFilm",
-            "url": "-"
+            "url": "-",
+            "status": "passed"
         }
     ],
     "2026-03-10": [
@@ -295,7 +298,8 @@
             "time": "4:00PM (BKK Time)",
             "location": "Carnival at Siam Square",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2029903208890699949/photo/2"
+            "url": "https://x.com/GMMTV/status/2029903208890699949/photo/2",
+            "status": "passed"
             
         },
         {
@@ -303,7 +307,8 @@
             "time": "9:30PM (BKK Time)",
             "live": "YouTube/Tiktok: GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://www.instagram.com/p/DVc91lAk4QZ/"
+            "url": "https://www.instagram.com/p/DVc91lAk4QZ/",
+            "status": "passed"
             
         }
     ],
@@ -321,16 +326,25 @@
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 2",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
-            "live":"GMM25 | iQiyi & iq.com",
+            "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
             "url": "-"
+        }
+    ],
+    "2026-03-22": [
+        {
+            "description": "THE MALL LIFESTORE SUMMER-CATION",
+            "time": "17:00PM (BKK Time)",
+            "location":"M LIFESTYLE HALL, Ground Floor, The Mall Lifestore THAPRA",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/TheMallThailand/status/2032034324070219859?s=20"
         }
     ],
     "2026-03-23": [
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 3",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
-            "live":"GMM25 | iQiyi & iq.com",
+            "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
             "url": "-"
         }
@@ -348,7 +362,7 @@
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 4",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
-            "live":"GMM25 | iQiyi & iq.com",
+            "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
             "url": "-"
         }
@@ -373,6 +387,7 @@
         }
     ]
 }
+
 
 
 
