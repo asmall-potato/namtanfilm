@@ -318,7 +318,8 @@
             "time": "16:45 (Japan Time)",
             "location": "COOL JAPAN PARK OSAKA WW HALL",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2010285914355077315?s=20"
+            "url": "https://x.com/GMMTV/status/2010285914355077315?s=20",
+            "status": "passed"
             
         }
     ],
@@ -328,7 +329,17 @@
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
             "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
-            "url": "-"
+            "url": "-",
+            "status": "passed"
+        }
+    ],
+    "2026-03-19": [
+        {
+            "description": "#legendInfluence",
+            "time": "6:00PM (BKK Time)",
+            "live":"Facebook/Instagram/YouTube/Tiktok: Hashtag Legend TH",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2033882462854819974/photo/2"
         }
     ],
     "2026-03-22": [
