@@ -349,10 +349,18 @@
             "time": "17:00PM (BKK Time)",
             "location":"M LIFESTYLE HALL, G Floor, The Mall Lifestore THAPRA",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2034496723494879486/photo/3"
+            "url": "https://x.com/GMMTV/status/2034496723494879486/photo/3",
+            "status": "passed"
         }
     ],
     "2026-03-23": [
+        {
+            "description": "Based on 2 Stories EP.7",
+            "time": "16:00 (BKK Time)",
+            "live":"Youtube: GMMTV Official",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/2035650875268661567?s=20"
+        },
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 3",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
