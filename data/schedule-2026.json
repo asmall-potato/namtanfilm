@@ -380,9 +380,27 @@
         {
             "description": "Central Park The Grand Celebration",
             "time": "18:00PM (BKK Time)",
-            "location":"Central Park Bangkok",
+            "location":"G/F Main Entrance",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/centralparkBKK/status/2034638830469632156?s=20"
+            "url": "https://x.com/GMMTV/status/2035952295884808272/photo/2"
+        }
+    ],
+    "2026-03-26": [
+        {
+            "description": "Levi's Behind Every Original A World's First Experience BANGKOK",
+            "time": "4:00PM (BKK Time)",
+            "location":"Parc Paragon, Siam Paragon",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/2035952309235249465/photo/1"
+        }
+    ],
+    "2026-03-27": [
+        {
+            "description": "47th Bangkok International Motor Show 2026",
+            "time": "3:45PM (BKK Time)",
+            "location":"Booth 21A, Challenger Hall 2, Entrance 1, IMPACT Muang Thong Thani",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/2035952309235249465/photo/4"
         }
     ],
     "2026-03-28": [
@@ -392,6 +410,15 @@
             "location":"CENTRALWORLD PULSE 7th FLOOR",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/2029859532797784505?s=20"
+        }
+    ],
+    "2026-03-29": [
+        {
+            "description": "ท้า..เล่น WerewolfxGirlRulesSeries",
+            "time": "2:00PM (BKK Time)",
+            "live":"YouTube : ตู้ซ่อนหมี",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2035952335143538790/photo/2"
         }
     ],
     "2026-03-30": [
