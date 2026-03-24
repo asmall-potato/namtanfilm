@@ -30,6 +30,7 @@ body {
 
 /* Fix white boxes covering wallpaper */
 .intro-section,
+.trailer-section,
 .video-section,
 .watch-section,
 .watch-platforms-section {
@@ -108,6 +109,41 @@ section {
     color: #073B8A; /* Balanced deep blue */
 }
 
+/*Official Trailer Section*/
+.trailer-section {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px;
+}
+
+.trailer-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #1B263B; /* Muted dark navy-gray*/
+    position: relative;
+    display: inline-block; /* Keeps underline the same width as text */
+}
+
+.trailer-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* space between text and underline */
+    width: 100%;
+    height: 4px;
+    background-color: #FFEB3B; /* Bright yellow underline */
+    border-radius: 2px;
+}
+
+.trailer-section iframe {
+    max-width: 80%;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
 /* Video Section */
 .video-section {
   background-color: rgba(255, 255, 255, 0.5);
@@ -135,9 +171,16 @@ section {
     border-radius: 2px;
 }
 
+/* Add a wrapper for videos */
+.video-container-mv {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .video-section iframe {
-    max-width: 80%;
-    margin: auto;
+    width: 30%; /* 3 videos in one row */
     display: block;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -446,6 +489,22 @@ section {
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
   }
 
+  .grid-item h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1B263B; /* same dark tone as your title */
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .grid-item p {
+      font-size: 16px;
+      color: #555; /* soft gray for readability */
+      line-height: 1.6;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+  }
+
   /*streaming platform*/
   .streaming-section {
     background: rgba(255,255,255,0.5);
@@ -481,7 +540,7 @@ section {
   .platforms {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
   }
 
@@ -581,14 +640,29 @@ section {
         line-height: 1.6; /* Improve readability with line height */
     }
 
-    .video-section iframe {
-        max-width: 90%;
-        height: auto;
-        border-radius: 10px;
-        border: 4px solid; /* Border thickness */
-        border-image: linear-gradient(to right, #FFEB3B 50%, #0D47A1 50%) 1;
-        margin: 10px 0;
+    .video-container {
+      display: block !important;  /* stop it from being flex row */
     }
+
+    .video-section, .video-container {
+      width: 100%;          /* full width */
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .video-container iframe {
+        width: 90%;
+        max-width: 90%;
+        aspect-ratio: 16 / 9;    /* keeps 16:9 ratio automatically */
+        border-radius: 10px;
+        border: 4px solid;
+        border-image: linear-gradient(to right, #FFEB3B 50%, #0D47A1 50%) 1;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        margin: 10px auto;
+        display: block;
+    }
+    
 
     .watch-section iframe {
         flex: 1 1 100%; /* Full width for iframe */
@@ -635,6 +709,13 @@ section {
 }
 
 @media (max-width: 480px) {
+
+    body {
+      background-image: url('../Images/sub series/HB1DZY-b0AAj19F.jpg'); /* your mobile version */
+      background-repeat: no-repeat;
+      
+    }
+
     .bottom-right-text-sub h1 {
         font-size: 30px; /* Further reduce font size for mobile */
         margin-bottom: 5px; /* Reduce spacing below <h1> */
