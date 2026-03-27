@@ -406,9 +406,16 @@
     ],
     "2026-03-28": [
         {
+            "description": "Girl Rules @ GMMTV TALK - GMMTV Fanival 2026",
+            "time": "1:00PM (BKK Time)",
+            "live":"Facebook/YouTube/Tiktok: GMMTV",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2037514976823304348/photo/1"
+        },
+        {
             "description": "GMMTV Fanival 2026",
             "time": "5:00PM (BKK Time)",
-            "location":"CENTRALWORLD PULSE 7th FLOOR",
+            "location":"CENTRALWORLD PULSE 7th FLOOR | FAN GATHERING: Gate 1, Groove Jewelry Zone, Area opposite the Police General Hospital",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/2036005327037252077/photo/2"
         }
@@ -431,6 +438,7 @@
             "url": "-"
         }
     ],
+    
     "2026-04-05": [
         {
             "description": "Framed in Love: NamtanFilm Fanmeeting in Hong Kong 2026",
