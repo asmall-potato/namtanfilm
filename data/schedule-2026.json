@@ -507,13 +507,33 @@
             
         }
     ],
+    "2026-04-08": [
+        {
+            "description": "Katanyu Tonight",
+            "time": "7:00PM (BKK Time)",
+            "live":"YouTube: Katanyu Tonight",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2040687299844006251/photo/2"
+            
+        }
+    ],
+    "2026-04-10": [
+        {
+            "description": "Katanyu Tonight",
+            "time": "7:00PM (BKK Time)",
+            "live":"YouTube: Katanyu Tonight",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2040687299844006251/photo/2"
+            
+        }
+    ],
     "2026-06-21": [
         {
             "description": "Namtan Film 1st Fan Meeting in Madrid",
-            "time": "TBA",
-            "location": "TBA",
+            "time": "11AM (Madrid Time)",
+            "location": "La Estación - Gran Teatro CaixaBank Príncipe",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2011777891940327870?s=20"
+            "url": "https://x.com/PanoSpotlight/status/2013666756309442884/photo/1"
             
         }
     ]
