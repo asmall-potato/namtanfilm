@@ -494,10 +494,19 @@
             "time": "5PM (HK Time)",
             "location":"AXA Dreamland,Go Park",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2025510879501177308?s=20"
+            "url": "https://x.com/GMMTV/status/2025510879501177308?s=20",
+            "status": "passed"
         }
     ],
     "2026-04-06": [
+        {
+            "description": "Girl Rules Series tiktok live",
+            "time": "7:30PM (BKK Time)",
+            "live":"Tiktok: namtantipnaree, fr.racha99",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2041021937850462209"
+            
+        },
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 5",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
