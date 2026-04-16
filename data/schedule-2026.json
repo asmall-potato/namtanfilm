@@ -578,13 +578,36 @@
             
         }
     ],
+    "2026-04-19": [
+        {
+            "description": "ELLE Ask Me Anything",
+            "time": "7:00PM (BKK Time)",
+            "live":"Youtube: ELLE Thaialnd",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2044754422664945792?s=20"
+        }
+    ],
     "2026-04-20": [
+        {
+            "description": "Girl Rules กฎหลัก...ห้ามรักเธอ LIVE",
+            "time": "6:30PM (BKK Time)",
+            "live":"Youtube/Tiktok/Facebook: GMMTV",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2044698873793507362?s=20"
+        },
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 6",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
             "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
             "url": "-"
+        },
+        {
+            "description": "แฉ (chae show)",
+            "time": "9:30PM (BKK Time)",
+            "live":"GMM25",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2044754435671560552?s=20"
         }
     ],
     "2026-04-27": [
