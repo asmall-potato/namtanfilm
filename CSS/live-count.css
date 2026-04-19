@@ -144,7 +144,7 @@ iframe:hover {
     .counter-item {
         min-width: 100%;
         margin: 12px 0;
-        padding: 16px;
+        padding: 6px;
         border-radius: 14px;
         /* Cleanest possible mobile card */
         background: #ffffff;
