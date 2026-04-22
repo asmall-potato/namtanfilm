@@ -504,7 +504,8 @@
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
             "live":"GMM25 | Youtube: GMMTV Official | iQiyi & iq.com ",
             "artist": "NamtanFilm",
-            "url": "-"
+            "url": "-",
+            "status": "passed"
             
         },
         {
@@ -512,7 +513,8 @@
             "time": "9:45PM (BKK Time)",
             "live":"Tiktok: namtantipnaree, fr.racha99",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2041083779998187596?s=20"
+            "url": "https://x.com/GMMTV/status/2041083779998187596?s=20",
+            "status": "passed"
             
         }
     ],
@@ -522,7 +524,8 @@
             "time": "7:00PM (BKK Time)",
             "live":"YouTube: Katanyu Tonight",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2040687299844006251/photo/2"
+            "url": "https://x.com/GMMTV/status/2040687299844006251/photo/2",
+            "status": "passed"
             
         }
     ],
@@ -532,49 +535,56 @@
             "time": "11:00AM (BKK Time)",
             "live":"Youtube: TripleClickTH",
             "artist": "NamtanFilm",
-            "url": "https://x.com/TripleclickTH/status/2042424148845347029?s=20"
+            "url": "https://x.com/TripleclickTH/status/2042424148845347029?s=20",
+            "status": "passed"
         },
         {
             "description": "ข่าวเที่ยงช่องวัน @ Blush Blossom Fan Fest 2026 : Midnight Bloom Press Tour",
             "time": "11:50AM (BKK Time)",
             "live":"YouTube: @onenews31",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2041455964822650882/photo/2"
+            "url": "https://x.com/GMMTV/status/2041455964822650882/photo/2",
+            "status": "passed"
         },
         {
             "description": "วันบันเทิง (One Bunterng Interview) @ Blush Blossom Fan Fest 2026 : Midnight Bloom Press Tour",
             "time": "12:30PM (BKK Time)",
             "live":"-",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2041455964822650882/photo/2"
+            "url": "https://x.com/GMMTV/status/2041455964822650882/photo/2",
+            "status": "passed"
         },
         {
             "description": "Praew @ Blush Blossom Fan Fest 2026 : Midnight Bloom Press Tour",
             "time": "2PM (BKK Time)",
             "live":"YouTube: Praew Magazine",
             "artist": "NamtanFilm",
-            "url": "https://x.com/Praewdaily/status/2042196936498037047?s=20"
+            "url": "https://x.com/Praewdaily/status/2042196936498037047?s=20",
+            "status": "passed"
         },
         {
             "description": "FEED Interview @ Blush Blossom Fan Fest 2026 : Midnight Bloom Press Tour",
             "time": "4PM (BKK Time)",
             "live":"-",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2041455964822650882/photo/2"
+            "url": "https://x.com/GMMTV/status/2041455964822650882/photo/2",
+            "status": "passed"
         },
         {
             "description": "GMMTV Live @ Blush Blossom Fan Fest 2026 : Midnight Bloom Press Tour",
             "time": "5:30PM (BKK Time)",
             "live":"YouTube: GMMTV Official",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2041455964822650882/photo/2"
+            "url": "https://x.com/GMMTV/status/2041455964822650882/photo/2",
+            "status": "passed"
         },
         {
             "description": "Katanyu Tonight",
             "time": "7:00PM (BKK Time)",
             "live":"YouTube: Katanyu Tonight",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2040687299844006251/photo/2"
+            "url": "https://x.com/GMMTV/status/2040687299844006251/photo/2",
+            "status": "passed"
             
         }
     ],
@@ -584,7 +594,8 @@
             "time": "7:00PM (BKK Time)",
             "live":"Youtube: ELLE Thaialnd",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2044754422664945792?s=20"
+            "url": "https://x.com/GMMTV/status/2044754422664945792?s=20",
+            "status": "passed"
         }
     ],
     "2026-04-20": [
@@ -593,21 +604,24 @@
             "time": "6:30PM (BKK Time)",
             "live":"Youtube/Tiktok/Facebook: GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2044698873793507362?s=20"
+            "url": "https://x.com/GMMTV/status/2044698873793507362?s=20",
+            "status": "passed"
         },
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 6",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
             "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
-            "url": "-"
+            "url": "-",
+            "status": "passed"
         },
         {
             "description": "แฉ (chae show)",
             "time": "9:30PM (BKK Time)",
             "live":"GMM25",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2044754435671560552?s=20"
+            "url": "https://x.com/GMMTV/status/2044754435671560552?s=20",
+            "status": "passed"
         }
     ],
     "2026-04-27": [
