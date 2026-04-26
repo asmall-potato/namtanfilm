@@ -187,25 +187,30 @@ section {
 }
 
 /*Watch Section*/
-/* 🎬 Watch Section */
 .watch-section {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
-    margin: auto;
     border-radius: 12px;
-    margin-bottom: 40px; /* adds space below Watch Now section */
+    position: relative;
     overflow: hidden;
+    color: white;
+    margin-bottom: 40px; /* adds space below Watch Now section */
+}
+
+/* center title */
+.watch-title {
+  text-align: center;
+  margin: 0;
 }
 
 .watch-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    color: #1B263B; /* Muted dark navy-gray*/
-    position: relative;
-    display: inline-block; /* Keeps underline the same width as text */
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #1B263B; /* Muted dark navy-gray*/
+  position: relative;
+  display: inline-block; /* Keeps underline the same width as text */
 }
 
 .watch-section h2::after {
@@ -219,85 +224,74 @@ section {
     border-radius: 2px;
 }
 
+.watch-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
 /* 🎥 Video Container - 3 in a Row */
-  .video-slider{
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* arrows stick to edges */
-    width: 100%;
+  .watch-video-slider {
     overflow: hidden;
-    position: relative;
-    gap: 10px; /* space between cards */
+    width: 100%;
   }
 
   /* Container holding all cards */
-  .video-container {
+  .watch-video-container {
     display: flex;
-    gap: 20px; /* space between cards */
+    gap: 15px;
     transition: transform 0.4s ease;
-    flex-wrap: nowrap; /* keep cards in one row */
+    width: max-content;
   }
 
   /* Each video card */
-  .video-card {
-    flex: 0 0 300px; /* fixed width for cards */
-    /* Optional styling */
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .video-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  .watch-video-card {
+    flex: 0 0 180px;
+    text-align: center;
+    color: white;
   }
 
   /* Video inside the card */
-  .video-card iframe {
+  .watch-video-card iframe {
     width: 100%;
     height: 180px;
-    border-radius: 8px;
-    display: block;
-  }
-
-  /* Active card styling (optional) */
-  .video-card.active {
-    transform: scale(1.1);
-    z-index: 5;
-  }
+    border: none;
+  }  
 
   /* Navigation Buttons */
-  .nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 28px;
-    padding: 12px 16px;
-    cursor: pointer;
+  .watch-nav {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
     border: none;
-    border-radius: 50%;           /* round buttons */
-    background: linear-gradient(145deg, #2196F3, #FFEB3B); /* blue to yellow gradient */
-    color: #fff;
+    cursor: pointer;
+    /* 🔵🟡 Blue + Yellow gradient */
+    background: linear-gradient(135deg, #0D47A1, #FFEB3B);
+    color: #0D47A1; /* arrow icon color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.25s ease;
   }
 
-  .nav:hover {
-      transform: translateY(-50%) scale(1.15); /* slight zoom */
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-      filter: brightness(1.1); /* make gradient pop more */
+  .watch-nav:hover {
+    transform: scale(1.15);
+    background: linear-gradient(135deg, #1565C0, #FFD600);
+    color: #002366;
   }
 
-  .prev {
-    left: 5px;
-  }
-
-  .next {
-    right: 5px;
+  .watch-arrows {
+    justify-self: end;
+    display: flex;
+    gap: 10px;
   }
 
 /*book CSS*/
@@ -588,6 +582,98 @@ section {
     transform: scale(1.05);
   }
 
+  /* 🛍️ Merchandise Section */
+.merch-section {
+  background: rgba(255,255,255,0.5);
+  padding: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Title */
+.merch-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #1B263B;
+  position: relative;
+  display: inline-block;
+}
+
+.merch-section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 4px;
+  background-color: #FFEB3B;
+  border-radius: 2px;
+}
+
+/* Grid Layout */
+.merch-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Card */
+.merch-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.merch-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
+/* Image */
+.merch-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.merch-item h3 {
+  font-size: 20px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.merch-item p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.merch-btn {
+  display: inline-block;
+  background: #003366;
+  color: #FFEB3B;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.merch-btn:hover {
+  background: #3d74ad;
+  transform: scale(1.05);
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     body {
@@ -640,8 +726,15 @@ section {
         line-height: 1.6; /* Improve readability with line height */
     }
 
-    .video-container {
-      display: block !important;  /* stop it from being flex row */
+    .watch-video-slider {
+      overflow: visible; /* remove scroll bar */
+    }
+
+    .watch-video-container {
+      display: flex;
+      flex-direction: row;   /* ✅ keep horizontal */
+      gap: 15px;
+      width: max-content;    /* ✅ allows scrolling */
     }
 
     .video-section, .video-container {
@@ -674,15 +767,15 @@ section {
         border-image: linear-gradient(to right, #FFEB3B 50%, #0D47A1 50%) 1;
     }
 
-    .video-card {
-    flex: 0 0 200px;
+    .watch-video-card {
+      flex: 0 0 220px; /* slightly smaller for mobile */
     }
 
-    .video-card iframe {
-      height: 140px;
+    .watch-video-card iframe {
+      height: 130px;
     }
 
-    .nav {
+    .watch-nav {
       font-size: 28px;
       padding: 10px 14px;
     }
@@ -705,6 +798,10 @@ section {
       gap: 30px;
       align-items: center;
     }
+
+    .merch-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
 
 }
 
@@ -753,18 +850,22 @@ section {
         padding: 10px 15px; /* Reduce padding for smaller screens */
     }
 
-    .video-card {
+    .watch-video-card {
       flex: 0 0 160px;
     }
 
-    .video-card iframe {
+    .watch-video-card iframe {
       height: 120px;
     }
 
-    .nav {
+    .watch-nav {
       font-size: 24px;
       padding: 8px 12px;
     }
+
+    .merch-container {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
 }
 
 /* Introduce Actresses Section */
