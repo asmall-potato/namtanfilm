@@ -630,7 +630,8 @@
             "time": "11:00AM (BKK Time)",
             "location":"Maje Pop-Up Store, 1st Floor, Centralworld",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2047291584216207425/photo/1"
+            "url": "https://x.com/GMMTV/status/2047291584216207425/photo/1",
+            "status": "passed"
         }
     ],
     "2026-04-27": [
@@ -639,7 +640,8 @@
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
             "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
-            "url": "-"
+            "url": "-",
+            "status": "passed"
         }
     ],
     "2026-05-03": [
@@ -658,6 +660,15 @@
             "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
             "url": "-"
+        }
+    ],
+    "2026-05-05": [
+        {
+            "description": "La Roche-Posay Bright Unlocked Exclusive Guests",
+            "time": "4:00PM (BKK Time)",
+            "location":"Central Court, 1st Floor, centralwOrld",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/2049829431901130809/photo/3"
         }
     ],
     "2026-05-11": [
