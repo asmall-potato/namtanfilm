@@ -650,7 +650,8 @@
             "time": "7:30PM (BKK Time)",
             "live":"Tiktok: Charmiss_Official",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2048734535995855185/photo/2"
+            "url": "https://x.com/GMMTV/status/2048734535995855185/photo/2",
+            "status": "passed"
         }
     ],
     "2026-05-04": [
@@ -659,14 +660,16 @@
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
             "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
-            "url": "-"
+            "url": "-",
+            "status": "passed"
         },
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 8 (SPACES on X",
             "time": "9:45PM (BKK Time)",
             "live":"X: @GirlRulesGMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2051172470380511427?s=20"
+            "url": "https://x.com/GMMTV/status/2051172470380511427?s=20",
+            "status": "passed"
         }
     ],
     "2026-05-05": [
