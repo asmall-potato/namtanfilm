@@ -729,7 +729,8 @@
             "location":"BITEC BANGNA",
             "live": "Facebook: KAZZ Magazine | YouTube: KAZZ CHANNEL",
             "artist": "Film Rachanun",
-            "url": "https://www.instagram.com/p/DYMqIW4j783/?img_index=12"
+            "url": "https://www.instagram.com/p/DYMqIW4j783/?img_index=12",
+            "status": "passed"
         }
     ],
     "2026-05-15": [
@@ -738,7 +739,8 @@
             "time": "2:00PM (BKK Time)",
             "location":"ASICS 2fl. Siam Square One",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2054126412043588009/photo/2"
+            "url": "https://x.com/GMMTV/status/2054126412043588009/photo/2",
+            "status": "passed"
         }
     ],
     "2026-05-18": [
@@ -747,14 +749,25 @@
             "time": "6:00PM (BKK Time)",
             "location":"Lobby, GMM Grammy Place",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2055258639779426308/photo/1"
+            "url": "https://x.com/GMMTV/status/2055258639779426308/photo/1",
+            "status": "passed"
         },
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 10",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
             "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
-            "url": "-"
+            "url": "-",
+            "status": "passed"
+        }
+    ],
+    "2026-05-20": [
+        {
+            "description": "LOOKS Robinson Srisaman Launching Event",
+            "time": "10:30AM (BKK Time)",
+            "location":"Robinson Lifestyle Srisaman",
+            "artist": "Namtan Tipnaree",
+            "url": "https://www.instagram.com/p/DYeteEXD9MG/?img_index=1"
         }
     ],
     "2026-05-25": [
@@ -814,6 +827,16 @@
             "location": "KWANGWOON UNIVERSITY DONGHAE CULTURE ART CENTER",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/2055952121871397274?s=20"
+            
+        }
+    ],
+    "2026-08-15": [
+        {
+            "description": "Girl Rules Fan Meeting in Taipei",
+            "time": "16:00 (Time in Taipei, Taiwan)",
+            "location": "NCCU Art & Culture Center, Auditorium (No. 64, Sec. 2, Zhinan Rd., Wenshan Dist., Taipei City)",
+            "artist": "NamtanFilm",
+            "url": "https://www.instagram.com/p/DYhMP5OjWI3"
             
         }
     ]
