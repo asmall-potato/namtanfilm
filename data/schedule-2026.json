@@ -767,7 +767,8 @@
             "time": "10:30AM (BKK Time)",
             "location":"Robinson Lifestyle Srisaman",
             "artist": "Namtan Tipnaree",
-            "url": "https://www.instagram.com/p/DYeteEXD9MG/?img_index=1"
+            "url": "https://www.instagram.com/p/DYeteEXD9MG/?img_index=1",
+            "status": "passed"
         }
     ],
     "2026-05-25": [
@@ -781,7 +782,14 @@
     ],
     "2026-06-01": [
         {
-            "description": "Girl Rules กฎหลัก...ห้ามรักเธอ EP 12",
+            "description": "Girl Rules Final EP. Fan Meeting",
+            "time": "7:30PM (BKK Time)",
+            "location":"ICONSIAM HALL, 7th FLOOR ICONSIAM",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2053849290762850707"
+        },
+        {
+            "description": "Girl Rules กฎหลัก...ห้ามรักเธอ Final EP",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
             "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
