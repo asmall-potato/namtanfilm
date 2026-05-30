@@ -787,7 +787,8 @@
             "time": "8:00PM (BKK Time)",
             "live":"Shopee Thailand: Garnier",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2059164949512110190/photo/4"
+            "url": "https://x.com/GMMTV/status/2059164949512110190/photo/4",
+            "status": "passed"
         }
     ],
     "2026-05-30": [
@@ -798,6 +799,15 @@
             "live":"Facebook: BioActive TH | YouTube: BioActive.Official",
             "artist": "NamtanFilm",
             "url": "https://x.com/BioActiveTH/status/2057418395025584399?s=20"
+        }
+    ],
+    "2026-05-31": [
+        {
+            "description": "มิตรชวน EAT By PEPSI มิตรชวนกิน EP.1",
+            "time": "20:30 (BKK Time)",
+            "live":"Tiktok: gmmtvofficial",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2060654954583363624?s=20"
         }
     ],
     "2026-06-01": [
