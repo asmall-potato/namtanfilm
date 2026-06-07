@@ -818,14 +818,16 @@
             "time": "7:30PM (BKK Time)",
             "location":"ICONSIAM HALL, 7th FLOOR ICONSIAM",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2053849290762850707"
+            "url": "https://x.com/GMMTV/status/2053849290762850707",
+            "status": "passed"
         },
         {
             "description": "Girl Rules กฎหลัก...ห้ามรักเธอ Final EP",
             "time": "8:30PM (BKK Time) | 9:30PM (BKK Time)",
             "live":"GMM25 | iQiyi & iq.com | Youtube: GMMTV Official",
             "artist": "NamtanFilm",
-            "url": "-"
+            "url": "-",
+            "status": "passed"
         }
     ],
     "2026-06-03": [
@@ -834,7 +836,8 @@
             "time": "-",
             "location": "New York, USA",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2061417713394942308/photo/1"
+            "url": "https://x.com/GMMTV/status/2061417713394942308/photo/1",
+            "status": "passed"
             
         }
     ],
@@ -844,7 +847,8 @@
             "time": "-",
             "location": "New York, USA",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2061417713394942308/photo/1"
+            "url": "https://x.com/GMMTV/status/2061417713394942308/photo/1",
+            "status": "passed"
             
         }
     ],
@@ -854,7 +858,8 @@
             "time": "8:15AM (BKK Time)",
             "live": "Channel 3 HD | YouTube: @preawpakth",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2061417755002421728/photo/4"
+            "url": "https://x.com/GMMTV/status/2061417755002421728/photo/4",
+            "status": "passed"
             
         }
     ],
