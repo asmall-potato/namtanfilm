@@ -887,7 +887,8 @@
             "time": "1PM (BKK Time)",
             "live":"Facebook/YouTube/TikTok : GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2064588372249833736?s=20"
+            "url": "https://x.com/GMMTV/status/2064588372249833736?s=20",
+            "status": "passed"
         }
     ],
     "2026-06-13": [
@@ -897,7 +898,8 @@
             "location": "BITEC LIVE",
             "live": "TTM LIVE",
             "artist": "NamtanFilm (with MilkLove, EmiBonnie, ViewMim, JuneMewnich, JanJingjing, PahnFond & KapookCiize)",
-            "url": "https://x.com/GMMTV/status/2041712681909153996?s=20"
+            "url": "https://x.com/GMMTV/status/2041712681909153996?s=20",
+            "status": "passed"
             
         }
     ],
@@ -908,7 +910,18 @@
             "location": "BITEC LIVE",
             "live": "TTM LIVE",
             "artist": "NamtanFilm (with MilkLove, EmiBonnie, ViewMim, JuneMewnich, JanJingjing, PahnFond & KapookCiize)",
-            "url": "https://x.com/GMMTV/status/2041712681909153996?s=20"
+            "url": "https://x.com/GMMTV/status/2041712681909153996?s=20",
+            "status": "passed"
+            
+        }
+    ],
+    "2026-06-20": [
+        {
+            "description": "รายการ คำต้องเชื่อม",
+            "time": "9:45AM (BKK Time)",
+            "live": "YouTube : ยกกำลัง (@yokgamlang)",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2066509552724652343/photo/4"
             
         }
     ],
