@@ -932,7 +932,18 @@
             "time": "11AM (Madrid Time)",
             "location": "La Estación - Gran Teatro CaixaBank Príncipe",
             "artist": "NamtanFilm",
-            "url": "https://x.com/PanoSpotlight/status/2013666756309442884/photo/1"
+            "url": "https://x.com/PanoSpotlight/status/2013666756309442884/photo/1",
+            "status": "passed"
+            
+        }
+    ],
+    "2026-06-25": [
+        {
+            "description": "OPPO Reno 16 Series Launch Event",
+            "time": "16:00 (BKK Time)",
+            "live": "Facebook: OPPO (TH) | TikTok : OPPO Thailand | YouTube : OPPO Thailand",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/OPPOThailand/status/2068952306335486032?s=20"
             
         }
     ],
