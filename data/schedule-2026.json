@@ -943,7 +943,8 @@
             "time": "9:30 PM (BKK Time)",
             "live": "YouTube : GMMTV Official | TikTok : GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2069372867373101104?s=20"
+            "url": "https://x.com/GMMTV/status/2069372867373101104?s=20",
+            "status": "passed"
             
             
         }
@@ -954,7 +955,8 @@
             "time": "7:00 PM (BKK Time)",
             "location": "Bobbi Brown, Central Chidlom",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2069299867189702827/photo/3"
+            "url": "https://x.com/GMMTV/status/2069299867189702827/photo/3",
+            "status": "passed"
             
             
         }
@@ -968,6 +970,14 @@
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/2069393783830217107/photo/3"
             
+        },
+        {
+            "description": "GMMTV Live House @ Moonshadow series",
+            "time": "9:30 PM (BKK Time)",
+            "live": "YouTube : GMMTV Official | TikTok : GMMTV",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/GMMTV/status/2070053236791255100?s=20"
+
         }
     ],
     "2026-06-28": [
