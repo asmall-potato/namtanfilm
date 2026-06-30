@@ -968,7 +968,8 @@
             "location": "centralwOrld PULSE, 7th Floor",
             "live": "Facebook: OPPO (TH) | TikTok : OPPO Thailand | YouTube : OPPO Thailand",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2069393783830217107/photo/3"
+            "url": "https://x.com/GMMTV/status/2069393783830217107/photo/3",
+            "status": "passed"
             
         },
         {
@@ -976,7 +977,8 @@
             "time": "9:30 PM (BKK Time)",
             "live": "YouTube : GMMTV Official | TikTok : GMMTV",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2070053236791255100?s=20"
+            "url": "https://x.com/GMMTV/status/2070053236791255100?s=20",
+            "status": "passed"
 
         }
     ],
@@ -986,7 +988,8 @@
             "time": "16:00 (BKK Time)",
             "location": "SF World Cinema Central World",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2069045595105534377/photo/3"
+            "url": "https://x.com/GMMTV/status/2069045595105534377/photo/3",
+            "status": "passed"
             
         }
     ],
@@ -997,6 +1000,16 @@
             "location": "KWANGWOON UNIVERSITY DONGHAE CULTURE ART CENTER",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/2055952121871397274?s=20"
+            
+        }
+    ],
+    "2026-07-17": [
+        {
+            "description": "SF Friends Screening Disney's Moana",
+            "time": "18:00 (BKK Time)",
+            "location": "SF World Cinema Central World",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/WeLoveSF/status/2071911662559408535?s=20"
             
         }
     ],
