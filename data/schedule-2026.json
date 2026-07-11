@@ -999,7 +999,8 @@
             "time": "3pm (Korea Time)",
             "location": "KWANGWOON UNIVERSITY DONGHAE CULTURE ART CENTER",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2055952121871397274?s=20"
+            "url": "https://x.com/GMMTV/status/2055952121871397274?s=20",
+            "status": "passed"
             
         }
     ],
@@ -1060,6 +1061,16 @@
             "location": "NCCU Art & Culture Center, Auditorium (No. 64, Sec. 2, Zhinan Rd., Wenshan Dist., Taipei City)",
             "artist": "NamtanFilm",
             "url": "https://www.instagram.com/p/DYhMP5OjWI3"
+            
+        }
+    ],
+    "2026-10-03": [
+        {
+            "description": "Girl Rules Fan Meeting in Manila",
+            "time": "6:00PM (Time in Manila)",
+            "location": "Function Room 3-5, 2nd Floor, SMX Convention Center Manila",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2075869833246495230?s=20"
             
         }
     ]
