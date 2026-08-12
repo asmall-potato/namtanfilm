@@ -1076,7 +1076,8 @@
             "time": "8:30PM (Time in Bangkok)",
             "live": "GMM25 and YouTube: GMMTV OFFICIAL",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2084262502653935878?s=20"
+            "url": "https://x.com/GMMTV/status/2084262502653935878?s=20",
+            "status": "passed"
             
         }
     ],
@@ -1086,7 +1087,8 @@
             "time": "4:00PM (Time in Bangkok)",
             "location": "Event arena Fl.1 Central @centralwOrld",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2084264488568787214/photo/1"
+            "url": "https://x.com/GMMTV/status/2084264488568787214/photo/1",
+            "status": "passed"
             
         }
     ],
@@ -1096,7 +1098,18 @@
             "time": "15:00 (Time in Macau)",
             "location": "Macau Fisherman`s Wharf Convention and Exhibition Center Halls TWO",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2059582473663615430?s=20"
+            "url": "https://x.com/GMMTV/status/2059582473663615430?s=20",
+            "status": "passed"
+            
+        }
+    ],
+    "2026-08-13": [
+        {
+            "description": "Black Card - PHUWIN",
+            "time": "-",
+            "live": "YOUTUBE: RISER MUSIC",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/RiserMusic/status/2087479369765937377?s=20"
             
         }
     ],
