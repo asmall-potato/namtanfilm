@@ -1109,7 +1109,8 @@
             "time": "-",
             "live": "YOUTUBE: RISER MUSIC",
             "artist": "Film Rachanun",
-            "url": "https://x.com/RiserMusic/status/2087479369765937377?s=20"
+            "url": "https://x.com/RiserMusic/status/2087479369765937377?s=20",
+            "status": "passed"
             
         }
     ],
@@ -1119,7 +1120,18 @@
             "time": "16:00 (Time in Taipei, Taiwan)",
             "location": "NCCU Art & Culture Center, Auditorium (No. 64, Sec. 2, Zhinan Rd., Wenshan Dist., Taipei City)",
             "artist": "NamtanFilm",
-            "url": "https://www.instagram.com/p/DYhMP5OjWI3"
+            "url": "https://www.instagram.com/p/DYhMP5OjWI3",
+            "status": "passed"
+            
+        }
+    ],
+    "2026-08-17": [
+        {
+            "description": "TREND TO ร่างทอง EP11",
+            "time": "17:00 (Time in Bangkok)",
+            "live": "Youtube : GMMTV Official",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/2088921206611497357?s=20"
             
         }
     ],
