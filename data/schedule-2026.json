@@ -1131,7 +1131,19 @@
             "time": "17:00 (Time in Bangkok)",
             "live": "Youtube : GMMTV Official",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2088921206611497357?s=20"
+            "url": "https://x.com/GMMTV/status/2088921206611497357?s=20",
+            "status": "passed"
+            
+        }
+    ],
+    "2026-08-21": [
+        {
+            "description": "BEAUTERRY My Home Becoming",
+            "time": "4:00PM (Time in Bangkok)",
+            "location": "Sphere Gallery 1, Emsphere",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2089684971229524475/photo/3"
+            
             
         }
     ],
