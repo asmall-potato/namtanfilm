@@ -1142,7 +1142,8 @@
             "time": "9:30 PM (Time in Bangkok)",
             "live": "YouTube : GMMTV Official | TikTok : GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2090425348198695360?s=20"
+            "url": "https://x.com/GMMTV/status/2090425348198695360?s=20",
+            "status": "passed"
             
             
         }
@@ -1153,7 +1154,8 @@
             "time": "4:00PM (Time in Bangkok)",
             "location": "Sphere Gallery 1, Emsphere",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2089684971229524475/photo/3"
+            "url": "https://x.com/GMMTV/status/2089684971229524475/photo/3",
+            "status": "passed"
             
             
         }
@@ -1164,7 +1166,8 @@
             "time": "7:00PM (Time in Bangkok)",
             "live": "Shopee Live : MAYBELLINE",
             "artist": "Film Rachanun",
-            "url": "https://x.com/Maybelline_TH/status/2090331755463209176?s=20"
+            "url": "https://x.com/Maybelline_TH/status/2090331755463209176?s=20",
+            "status": "passed"
             
             
         }
@@ -1175,7 +1178,8 @@
             "time": "2:00PM (Time in Bangkok)",
             "live": "-",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2091860324995698738/photo/1"
+            "url": "https://x.com/GMMTV/status/2091860324995698738/photo/1",
+            "status": "passed"
             
             
         }
@@ -1186,7 +1190,8 @@
             "time": "6:00PM (Time in Bangkok)",
             "location": "-",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2093308835306045660/photo/1"
+            "url": "https://x.com/GMMTV/status/2093308835306045660/photo/1",
+            "status": "passed"
             
             
         }
@@ -1197,7 +1202,8 @@
             "time": "7:00PM (Time in Bangkok)",
             "location": "Fashion Hall, 1st Floor, Siam Paragon",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2093308835306045660/photo/2"
+            "url": "https://x.com/GMMTV/status/2093308835306045660/photo/2",
+            "status": "passed"
             
             
         },
@@ -1206,7 +1212,8 @@
             "time": "TBA",
             "live": "YouTube: GMMTV Official",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2094357220360409441?s=20"
+            "url": "https://x.com/GMMTV/status/2094357220360409441?s=20",
+            "status": "passed"
             
             
         }
@@ -1219,6 +1226,53 @@
             "live": "Facebook: Central Department",
             "artist": "Film Rachanun",
             "url": "https://x.com/GMMTV/status/2094397212357017818/photo/1"
+            
+            
+        }
+    ],
+    "2026-09-04": [
+        {
+            "description": "GMMTV Live @ Namtan Film Fancon | PRESS TOUR",
+            "time": "11:00AM (Time in Bangkok)",
+            "live": "GMMTV",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20"
+            
+            
+        },
+        {
+            "description": "วันบันเทิง @ Namtan Film Fancon | PRESS TOUR",
+            "time": "1:00PM (Time in Bangkok)",
+            "live": "-",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20"
+            
+            
+        },
+        {
+            "description": "Nine Entertain @ Namtan Film Fancon | PRESS TOUR",
+            "time": "2:30PM (Time in Bangkok)",
+            "live": "-",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20"
+            
+            
+        },
+        {
+            "description": "The Momentum @ Namtan Film Fancon | PRESS TOUR",
+            "time": "3:30PM (Time in Bangkok)",
+            "live": "-",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20"
+            
+            
+        },
+         {
+            "description": "Flex 104.5 @ Namtan Film Fancon | PRESS TOUR",
+            "time": "19:00 (Time in Bangkok)",
+            "live": "Facebook & YouTube: FlexConnect",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/Flex_Connect/status/2094998754973888649?s=20"
             
             
         }
