@@ -1225,7 +1225,8 @@
             "location": "Central Chidlom, G fl (GUESS Watch, Counter 2 Fl)",
             "live": "Facebook: Central Department",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2094397212357017818/photo/1"
+            "url": "https://x.com/GMMTV/status/2094397212357017818/photo/1",
+            "status": "passed"
             
             
         }
@@ -1236,7 +1237,8 @@
             "time": "11:00AM (Time in Bangkok)",
             "live": "GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20"
+            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20",
+            "status": "passed"
             
             
         },
@@ -1245,7 +1247,8 @@
             "time": "1:00PM (Time in Bangkok)",
             "live": "-",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20"
+            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20",
+            "status": "passed"
             
             
         },
@@ -1254,7 +1257,8 @@
             "time": "2:30PM (Time in Bangkok)",
             "live": "-",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20"
+            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20",
+            "status": "passed"
             
             
         },
@@ -1263,7 +1267,8 @@
             "time": "3:30PM (Time in Bangkok)",
             "live": "-",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20"
+            "url": "https://x.com/GMMTV/status/2095106965542224286?s=20",
+            "status": "passed"
             
             
         },
@@ -1272,7 +1277,19 @@
             "time": "19:00 (Time in Bangkok)",
             "live": "Facebook & YouTube: FlexConnect",
             "artist": "NamtanFilm",
-            "url": "https://x.com/Flex_Connect/status/2094998754973888649?s=20"
+            "url": "https://x.com/Flex_Connect/status/2094998754973888649?s=20",
+            "status": "passed"
+            
+            
+        }
+    ],
+    "2026-09-10": [
+        {
+            "description": "Viviene Westwood & Jewellery Exhibition Bangkok 2026",
+            "time": "3:00PM (Time in Bangkok)",
+            "location": "The Event Hall, 2nd Floor, Central Chidlom",
+            "artist": "Namtan Tipnaree",
+            "url": "https://www.instagram.com/p/DdESYqnHwRO/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ=="
             
             
         }
