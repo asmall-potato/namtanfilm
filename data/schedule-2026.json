@@ -1289,7 +1289,8 @@
             "time": "3:00PM (Time in Bangkok)",
             "location": "The Event Hall, 2nd Floor, Central Chidlom",
             "artist": "Namtan Tipnaree",
-            "url": "https://www.instagram.com/p/DdESYqnHwRO/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ=="
+            "url": "https://www.instagram.com/p/DdESYqnHwRO/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+            "status": "passed"
             
             
         }
@@ -1300,9 +1301,17 @@
             "time": "5:00PM (JST Time)",
             "location": "Media Department, Shibuya",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2098398133176910193/photo/2"
-            
-            
+            "url": "https://x.com/GMMTV/status/2098398133176910193/photo/2",
+            "status": "passed"
+        }
+    ],
+    "2026-09-16": [
+        {
+            "description": "BONIA Autumn Winter 2026 - Find Your Rhythm with Namtan",
+            "time": "3:00PM (Malaysia Time)",
+            "location": "BONIA Pavillion, Kuala Lumpur, Malaysia",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/2099482812974035379/photo/3" 
         }
     ],
     "2026-09-18": [
