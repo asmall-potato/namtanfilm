@@ -1311,23 +1311,36 @@
             "time": "3:00PM (Malaysia Time)",
             "location": "BONIA Pavillion, Kuala Lumpur, Malaysia",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2099482812974035379/photo/3" 
+            "url": "https://x.com/GMMTV/status/2099482812974035379/photo/3",
+            "status": "passed"
         },
         {
             "description": " Moonshadow Series Recap",
             "time": "9:45PM (BKK Time)",
             "live": "X: @MoonShadowGMMTV",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2100112927626027243/photo/1" 
+            "url": "https://x.com/GMMTV/status/2100112927626027243/photo/1",
+            "status": "passed"
         }
     ],
     "2026-09-18": [
         {
             "description": "Balmain Hair Backstage Access Workshop with Film Rachanun and Lunar",
-            "time": "7:00PM (Time in Bangkok)",
-            "location": "-",
+            "time": "2:00PM (Time in Bangkok)",
+            "location": "King Power City Boutique, One Bangkok",
             "artist": "Film Rachanun",
-            "url": "https://x.com/haircoutureth/status/2090013256073281569?s=20"
+            "url": "https://x.com/GMMTV/status/2100195895262548365/photo/2"
+            
+            
+        }
+    ],
+    "2026-09-22": [
+        {
+            "description": "Prada Spring Summer 2027 Womenswear Show",
+            "time": "2:00PM (Time in Milan)",
+            "location": "Fondazione Prada, 2 Largo Isarco, 20139 Milan, Italy",
+            "artist": "Namtan Tipnaree",
+            "url": "https://x.com/GMMTV/status/2100195908965261471/photo/3"
             
             
         }
