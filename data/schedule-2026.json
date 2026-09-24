@@ -1329,7 +1329,8 @@
             "time": "2:00PM (Time in Bangkok)",
             "location": "King Power City Boutique, One Bangkok",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2100195895262548365/photo/2"
+            "url": "https://x.com/GMMTV/status/2100195895262548365/photo/2",
+            "status": "passed"
             
             
         }
@@ -1340,7 +1341,8 @@
             "time": "2:00PM (Time in Milan)",
             "location": "Fondazione Prada, 2 Largo Isarco, 20139 Milan, Italy",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2100195908965261471/photo/3"
+            "url": "https://x.com/GMMTV/status/2100195908965261471/photo/3",
+            "status": "passed"
             
             
         },
@@ -1349,7 +1351,18 @@
             "time": "2:00PM (Time in Bangkok)",
             "location": "Eden Zone, 1st Floor, centralwOrld",
             "artist": "Film Rachanun",
-            "url": "https://www.instagram.com/p/DdbfPe7H2Nu/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ=="
+            "url": "https://www.instagram.com/p/DdbfPe7H2Nu/?utm_source=ig_web_copy_link&stkn=NTc4MTIwNjQ2YQ==",
+             "status": "passed"
+        }
+    ],
+    "2026-09-25": [
+        {
+            "description": "The Celebrities",
+            "time": "8:00PM (Time in Bangkok)",
+            "live": "TrueID",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2102016101047767090/photo/4"
+            
         }
     ],
     "2026-10-03": [
