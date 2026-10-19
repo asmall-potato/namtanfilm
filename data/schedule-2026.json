@@ -1381,7 +1381,8 @@
             "time": "9:30PM (Time in Bangkok)",
             "live": "YouTube : GMMTV Official | TikTok : GMMTV",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2104895463736713496/photo/1"
+            "url": "https://x.com/GMMTV/status/2104895463736713496/photo/1",
+            "status": "passed"
             
         }
     ],
@@ -1391,7 +1392,8 @@
             "time": "6:00PM (Time in Manila)",
             "location": "Function Room 3-5, 2nd Floor, SMX Convention Center Manila",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2075869833246495230?s=20"
+            "url": "https://x.com/GMMTV/status/2075869833246495230?s=20",
+            "status": "passed"
             
         }
     ],
@@ -1401,7 +1403,8 @@
             "time": "7:00PM (Time in Bangkok)",
             "live": "Tiktok: @armanibeauty_thailand",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2107082518981951751/photo/2"
+            "url": "https://x.com/GMMTV/status/2107082518981951751/photo/2",
+            "status": "passed"
             
         }
     ],
@@ -1411,7 +1414,8 @@
             "time": "8:00PM (Time in Bangkok)",
             "live": "Tiktok: Mille thailand",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2107442581693194548/photo/1"
+            "url": "https://x.com/GMMTV/status/2107442581693194548/photo/1",
+            "status": "passed"
             
         }
     ],
@@ -1421,7 +1425,8 @@
             "time": "6:30PM (Time in Bangkok)",
             "location": "Union Hall, Union Mall",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2105259164545278106?s=20"
+            "url": "https://x.com/GMMTV/status/2105259164545278106?s=20",
+            "status": "passed"
             
         }
     ],
@@ -1431,7 +1436,8 @@
             "time": "8:00PM (Time in Bangkok)",
             "live": "Tiktok: @GarnierThailand",
             "artist": "Namtan Tipnaree",
-            "url": "https://x.com/GMMTV/status/2107086431806181554/photo/2"
+            "url": "https://x.com/GMMTV/status/2107086431806181554/photo/2",
+            "status": "passed"
             
         },
         {
@@ -1439,7 +1445,8 @@
             "time": "8:00PM (Time in Bangkok)",
             "live": "Shopee Live: @ZA Cosmetics",
             "artist": "Film Rachanun",
-            "url": "https://x.com/GMMTV/status/2107082564569862442/photo/4"
+            "url": "https://x.com/GMMTV/status/2107082564569862442/photo/4",
+            "status": "passed"
             
         }
     ],
@@ -1449,7 +1456,18 @@
             "time": "3:00PM (Time in Bangkok)",
             "location": "-",
             "artist": "NamtanFilm",
-            "url": "https://x.com/GMMTV/status/2108534482617987496/photo/2"
+            "url": "https://x.com/GMMTV/status/2108534482617987496/photo/2",
+            "status": "passed"
+            
+        }
+    ],
+    "2026-10-20": [
+        {
+            "description": "Mardi Mercredi FW26 Collection",
+            "time": "2:00PM (Time in Bangkok)",
+            "location": "Level 3, Central Embassy",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/GMMTV/status/2112160303622533306/photo/1"
             
         }
     ],
