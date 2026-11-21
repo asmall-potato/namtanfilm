@@ -1609,6 +1609,26 @@
             
         }
     ],
+    "2026-11-28": [
+        {
+            "description": "GMMTV STARLYMPICS 2026",
+            "time": "2PM (Time in Bangkok)",
+            "location": "Impact Arena, Muang Thong Thani",
+            "artist": "NamtanFilm",
+            "url": "https://x.com/GMMTV/status/2100162930318983254"
+            
+        }
+    ],
+    "2026-12-03": [
+        {
+            "description": "Asian Academy Creative Awards 2026",
+            "time": "4:30PM (Time in Singapore)",
+            "location": "Capitol Theatre, Singapore",
+            "artist": "Namtan Tipnaree",
+            "url": "https://www.instagram.com/p/Df_Um9BDQq6/?utm_source=ig_web_copy_link&dmpr=NTc4MTIwNjQ2YQ=="
+            
+        }
+    ],
     "2026-12-13": [
         {
             "description": "NAMTANFILM - DOUBLE TROUBLE WITH LUNAR IN HO CHI MINH CITY",
@@ -1616,6 +1636,16 @@
             "location": "C30 Stage, Ho Chi Minh City",
             "artist": "NamtanFilm",
             "url": "https://x.com/GMMTV/status/2116395565508632585?a=tVRowLGysd_G3L_znKo&s=20"
+            
+        }
+    ],
+    "2026-12-20": [
+        {
+            "description": "FILM & LUNAR 1st FAN MEETING IN KUALA LUMPUR",
+            "time":  "3:30 (Time in Malaysia)",
+            "location": "JioSpace, Kuala Lumpur",
+            "artist": "Film Rachanun",
+            "url": "https://x.com/sanyansiyu29/status/2113450360065134670"
             
         }
     ]
